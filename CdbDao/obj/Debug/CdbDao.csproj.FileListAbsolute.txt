@@ -1,0 +1,5 @@
+E:\pimnovo\PIM-1\CdbDao\obj\Debug\CdbDao.csprojResolveAssemblyReference.cache
+E:\pimnovo\PIM-1\CdbDao\bin\Debug\CdbDao.dll
+E:\pimnovo\PIM-1\CdbDao\bin\Debug\CdbDao.pdb
+E:\pimnovo\PIM-1\CdbDao\obj\Debug\CdbDao.dll
+E:\pimnovo\PIM-1\CdbDao\obj\Debug\CdbDao.pdb
