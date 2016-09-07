@@ -17,29 +17,34 @@ namespace PIM
             InitializeComponent();
         }
 
+        //Abre cadastro geral
         private void btnCadastro_Click(object sender, EventArgs e)
         {
-            //Abre cadastro geral
             Cadastro cadastro = new Cadastro();
-            //cadastro.MdiParent = this; 
-            //this.Hide();
             cadastro.StartPosition = FormStartPosition.CenterScreen;
             cadastro.Show();
         }
 
+        //Encerra a aplicacao
         private void BtnSair_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        //Abre Aluguel geral
         private void BtnAluguel_Click(object sender, EventArgs e)
         {
-            //Abre Aluguel geral
             Aluguel aluguel = new Aluguel();
-            //cadastro.MdiParent = this; 
-            //this.Hide();
             aluguel.StartPosition = FormStartPosition.CenterScreen;
             aluguel.Show();
+        }
+
+        //abre localizacao geral
+        private void btnLocalizar_Click(object sender, EventArgs e)
+        {
+            LocalizarMenu localizar = new LocalizarMenu();
+            localizar.StartPosition = FormStartPosition.CenterScreen;
+            localizar.Show();
         }
     }
 }

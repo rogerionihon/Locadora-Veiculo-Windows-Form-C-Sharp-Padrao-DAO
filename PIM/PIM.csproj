@@ -33,7 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -88,6 +90,18 @@
     <Compile Include="DevolucaoAutomovel.Designer.cs">
       <DependentUpon>DevolucaoAutomovel.cs</DependentUpon>
     </Compile>
+    <Compile Include="LocalizarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocalizarCliente.Designer.cs">
+      <DependentUpon>LocalizarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocalizarMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocalizarMenu.Designer.cs">
+      <DependentUpon>LocalizarMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +131,12 @@
     <EmbeddedResource Include="DevolucaoAutomovel.resx">
       <DependentUpon>DevolucaoAutomovel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LocalizarCliente.resx">
+      <DependentUpon>LocalizarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalizarMenu.resx">
+      <DependentUpon>LocalizarMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
@@ -140,7 +160,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CdbDao\CdbDao.csproj">
+      <Project>{63b2c094-578e-42f5-8d4a-136dd7607ae2}</Project>
+      <Name>CdbDao</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

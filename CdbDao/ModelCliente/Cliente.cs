@@ -22,13 +22,16 @@ namespace CdbDao.ModelCliente
         public string nome_fantasia { get; set; }
         public string cpf { get; set; }
         public string cnh { get; set; }
-        public Boolean sexo { get; set; }
+        public string sexo { get; set; }
         public string email { get; set; }
         public string telefone { get; set; }
         public string celular { get; set; }
         public string observacoes { get; set; }
-        public int numero_casa { get; set; }
+        public string numero_casa { get; set; }
         public string rne { get; set; }
         public string bairro { get; set; }
+        public string Estado_civil { get; set; }
+        public string complemento { get; set; }
+       
     }
 }
