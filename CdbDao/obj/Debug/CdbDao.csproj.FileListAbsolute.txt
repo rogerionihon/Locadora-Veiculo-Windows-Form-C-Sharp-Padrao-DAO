@@ -7,3 +7,4 @@ F:\pimnovo\PIM-2\CdbDao\bin\Debug\CdbDao.dll
 F:\pimnovo\PIM-2\CdbDao\bin\Debug\CdbDao.pdb
 F:\pimnovo\PIM-2\CdbDao\obj\Debug\CdbDao.dll
 F:\pimnovo\PIM-2\CdbDao\obj\Debug\CdbDao.pdb
+F:\pimnovo\PIM-2\CdbDao\obj\Debug\CdbDao.csprojResolveAssemblyReference.cache

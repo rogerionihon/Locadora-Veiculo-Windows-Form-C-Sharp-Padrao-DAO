@@ -32,6 +32,7 @@ namespace CdbDao.ModelCliente
         public string bairro { get; set; }
         public string Estado_civil { get; set; }
         public string complemento { get; set; }
+        public Boolean idf_ativo { get; set; }
        
     }
 }

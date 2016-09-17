@@ -103,7 +103,7 @@
             // BtnSair
             // 
             this.BtnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSair.Location = new System.Drawing.Point(1252, 497);
+            this.BtnSair.Location = new System.Drawing.Point(1193, 497);
             this.BtnSair.Name = "BtnSair";
             this.BtnSair.Size = new System.Drawing.Size(158, 104);
             this.BtnSair.TabIndex = 1;

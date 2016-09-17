@@ -38,7 +38,7 @@ namespace PIM
             //campos pessoa fisica
             txtNome.Text = "";
             mskCpf.Text = "";
-            txtCnh.Text = "";
+            mskCnh.Text = "";
             txtRne.Text = "";
             mskCelularf.Text = "";
             mskTelefonef.Text = "";
@@ -58,9 +58,9 @@ namespace PIM
             //campos pessoa juridica
             txtRazaosocial.Text = "";
             txtNomefantasia.Text = "";
-            txtCnpj.Text = "";
-            txtInsc_estadual.Text = "";
-            txtInsc_municipal.Text = "";
+            mskCnpj.Text = "";
+            mskIncr_est.Text = "";
+            mskInsc_mun.Text = "";
             mskCelularj.Text = "";
             msktelefonej.Text = "";
             txtemailj.Text = "";
@@ -72,10 +72,6 @@ namespace PIM
             txtBairrojur.Text = "";
             txtEndjur.Text = "";
             txtNumjur.Text = "";
-           
-            
-            
-
         }
 
         //metodo que limpa os dados do formulario
@@ -91,7 +87,7 @@ namespace PIM
             try
             {
                 //string de conneccao centralizada
-                string connectionString = ConfigurationManager.ConnectionStrings["BancoLocadora"].ConnectionString;
+                string connectionString = ConfigurationManager.ConnectionStrings["Locadoraveiculos"].ConnectionString;
                 
                 con = new MySqlConnection(connectionString);
                 con.Open();//abre a conneccao com o banco de dados
@@ -100,45 +96,45 @@ namespace PIM
                 {
                     novocliente.nome = (txtNome.Text).ToString();
                     novocliente.cpf = (mskCpf.Text).ToString();
-                    novocliente.cnh = (txtCnh.Text).ToString();
                     novocliente.rne = (txtRne.Text).ToString();
-                    novocliente.celular = (mskCelularf.Text).ToString();
-                    novocliente.telefone = (mskTelefonef.Text).ToString();
-                    novocliente.sexo = (cmbSexof.Text).ToString();
-                    novocliente.email = (txtEmailf.Text).ToString();
-                    novocliente.Estado_civil = (cmbEst_civilf.Text).ToString();
+                    novocliente.cnh = (mskCnh.Text).ToString();
                     novocliente.data_nascimento = (mskDta_nascf.Text).ToString();
-                    novocliente.cep = (mskCepf.Text).ToString();
+                    novocliente.email = (txtEmailf.Text).ToString();
+                    novocliente.telefone = (mskTelefonef.Text).ToString();
+                    novocliente.celular = (mskCelularf.Text).ToString();
+                    novocliente.sexo = (cmbSexof.Text).ToString();
+                    novocliente.Estado_civil = (cmbEst_civilf.Text).ToString();
                     novocliente.endereco = (txtEndf.Text).ToString();
                     novocliente.numero_casa = (txtNumf.Text).ToString();
                     novocliente.complemento = (txtComplemf.Text).ToString();
+                    novocliente.cep = (mskCepf.Text).ToString();
                     novocliente.cidade = (txtCidadef.Text).ToString();
+                    novocliente.bairro = (txtBairrof.Text).ToString();
                     novocliente.estado = (cmbEstadof.Text).ToString();
                     novocliente.observacoes = (txtobsf.Text).ToString();
-                    novocliente.bairro = (txtBairrof.Text).ToString();
-                    Cdb.InserirPessoaFisica(novocliente);
-                    LimparCampos();
+                    Cdb.InserirPessoaFisica(novocliente); // chama o dao de adicao do cliente fisico
+                    LimparCampos();// chama o metodo limpar campos
                 }
                 else if (rbtPessoajur.Checked == true) //caso pessoa juridica esteja em check
                 {
                     novocliente.razao_social = (txtRazaosocial.Text).ToString();
+                    novocliente.cnpj = (mskCnpj.Text).ToString();
                     novocliente.nome_fantasia = (txtNomefantasia.Text).ToString();
-                    novocliente.cnpj = (txtCnpj.Text).ToString();
-                    novocliente.insc_estadual = (txtInsc_estadual.Text).ToString();
-                    novocliente.insc_municipal = (txtInsc_municipal.Text).ToString();
-                    novocliente.celular = (mskCelularj.Text).ToString();
-                    novocliente.telefone = (msktelefonej.Text).ToString();
+                    novocliente.insc_estadual = (mskIncr_est.Text).ToString();
+                    novocliente.insc_municipal = (mskInsc_mun.Text).ToString();
                     novocliente.email = (txtemailj.Text).ToString();
-                   // novocliente.data_nascimento = (mskNascimento.Text).ToString();
-                    novocliente.cep = (mskCepjur.Text).ToString();
+                    novocliente.telefone = (msktelefonej.Text).ToString();
+                    novocliente.celular = (mskCelularj.Text).ToString();
                     novocliente.endereco = (txtEndjur.Text).ToString();
                     novocliente.numero_casa = (txtNumjur.Text).ToString();
                     novocliente.complemento = (txtComplemjur.Text).ToString();
+                    novocliente.cep = (mskCepjur.Text).ToString();
                     novocliente.cidade = (txtCidadejur.Text).ToString();
+                    novocliente.bairro = (txtBairrojur.Text).ToString();
                     novocliente.estado = (cmbEstadojur.Text).ToString();
                     novocliente.observacoes = (txtobsj.Text).ToString();
-                    novocliente.bairro = (txtBairrojur.Text).ToString();
-                    //fazer o dao de adicao do cliente fisico
+                    Cdb.InserirPessoaJuridica(novocliente);//chama o dao de adicao do cliente juridico
+                    LimparCampos();// chama o metodo limpar campos
                 }       
                     
 
@@ -186,7 +182,7 @@ namespace PIM
                 //campos visiveis de pessoa fisica
                 txtNome.Visible = true;
                 mskCpf.Visible = true;
-                txtCnh.Visible = true;
+                mskCnh.Visible = true;
                 txtRne.Visible = true;
                 mskCelularf.Visible = true;
                 mskTelefonef.Visible = true;
@@ -203,16 +199,16 @@ namespace PIM
                 txtobsf.Visible = true;
                 txtBairrof.Visible = true;
                 grbDadospessoais.Visible = true;
-                grbEnderecof.Visible = true;
+                grbEnderecoF.Visible = true;
                 grbInfof.Visible = true;
                
                 
                 //campos invisiveis de pessoa juridica
                 txtRazaosocial.Visible = false;
                 txtNomefantasia.Visible = false;
-                txtCnpj.Visible = false;
-                txtInsc_estadual.Visible = false;
-                txtInsc_municipal.Visible = false;
+                mskCnpj.Visible = false;
+                mskIncr_est.Visible = false;
+                mskInsc_mun.Visible = false;
                 txtemailj.Visible = false;
                 msktelefonej.Visible = false;
                 mskCelularj.Visible = false;
@@ -239,53 +235,53 @@ namespace PIM
             if (rbtPessoajur.Checked == true)
             {
                 // chama o metedo para limpar os campos
-            LimparCampos();
+                LimparCampos();
 
-            //campos visiveis de pessoa juridica
-            txtRazaosocial.Visible = true;
-            txtNomefantasia.Visible = true;
-            txtCnpj.Visible = true;
-            txtInsc_estadual.Visible = true;
-            txtInsc_municipal.Visible = true;
-            txtemailj.Visible = true;
-            msktelefonej.Visible = true;
-            mskCelularj.Visible = true;
-            txtEndjur.Visible = true;
-            txtNumjur.Visible = true;
-            txtComplemjur.Visible = true;
-            mskCepjur.Visible = true;
-            txtCidadejur.Visible = true;
-            txtBairrojur.Visible = true;
-            cmbEstadojur.Visible = true;
-            txtobsj.Visible = true;
-            grbEmpresariais.Visible = true;
-            grbEndj.Visible = true;
-            grbInfoj.Visible = true;
+                //campos visiveis de pessoa juridica
+                txtRazaosocial.Visible = true;
+                txtNomefantasia.Visible = true;
+                mskCnpj.Visible = true;
+                mskIncr_est.Visible = true;
+                mskInsc_mun.Visible = true;
+                txtemailj.Visible = true;
+                msktelefonej.Visible = true;
+                mskCelularj.Visible = true;
+                txtEndjur.Visible = true;
+                txtNumjur.Visible = true;
+                txtComplemjur.Visible = true;
+                mskCepjur.Visible = true;
+                txtCidadejur.Visible = true;
+                txtBairrojur.Visible = true;
+                cmbEstadojur.Visible = true;
+                txtobsj.Visible = true;
+                grbEmpresariais.Visible = true;
+                grbEndj.Visible = true;
+                grbInfoj.Visible = true;
 
-            //campos invisiveis de pessoa fisica
-            txtNome.Visible = false;
-            mskCpf.Visible = false;
-            txtCnh.Visible = false;
-            txtRne.Visible = false;
-            mskCelularf.Visible = false;
-            mskTelefonef.Visible = false;
-            cmbSexof.Visible = false;
-            txtEmailf.Visible = false;
-            cmbEst_civilf.Visible = false;
-            mskDta_nascf.Visible = false;
-            mskCepf.Visible = false;
-            txtEndf.Visible = false;
-            txtNumf.Visible = false;
-            txtComplemf.Visible = false;
-            txtCidadef.Visible = false;
-            cmbEstadof.Visible = false;
-            txtobsf.Visible = false;
-            txtBairrof.Visible = false;
-            grbDadospessoais.Visible = false;
-            rbtPessoafis.Checked = false;
-            grbDadospessoais.Visible = false;
-            grbEnderecof.Visible = false;
-            grbInfof.Visible = false;
+                //campos invisiveis de pessoa fisica
+                txtNome.Visible = false;
+                mskCpf.Visible = false;
+                mskCnh.Visible = false;
+                txtRne.Visible = false;
+                mskCelularf.Visible = false;
+                mskTelefonef.Visible = false;
+                cmbSexof.Visible = false;
+                txtEmailf.Visible = false;
+                cmbEst_civilf.Visible = false;
+                mskDta_nascf.Visible = false;
+                mskCepf.Visible = false;
+                txtEndf.Visible = false;
+                txtNumf.Visible = false;
+                txtComplemf.Visible = false;
+                txtCidadef.Visible = false;
+                cmbEstadof.Visible = false;
+                txtobsf.Visible = false;
+                txtBairrof.Visible = false;
+                grbDadospessoais.Visible = false;
+                rbtPessoafis.Checked = false;
+                grbDadospessoais.Visible = false;
+                grbEnderecoF.Visible = false;
+                grbInfof.Visible = false;
 
             }
           

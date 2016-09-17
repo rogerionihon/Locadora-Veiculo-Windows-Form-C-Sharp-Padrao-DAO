@@ -36,7 +36,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.mskPlaca = new System.Windows.Forms.MaskedTextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.cbFabric = new System.Windows.Forms.ComboBox();
+            this.cmbFabric = new System.Windows.Forms.ComboBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.mskChassi = new System.Windows.Forms.MaskedTextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -53,16 +53,15 @@
             this.groupBox23 = new System.Windows.Forms.GroupBox();
             this.cbPortas = new System.Windows.Forms.ComboBox();
             this.groupBox22 = new System.Windows.Forms.GroupBox();
-            this.groupBox26 = new System.Windows.Forms.GroupBox();
             this.cbCombustivel = new System.Windows.Forms.ComboBox();
             this.groupBox21 = new System.Windows.Forms.GroupBox();
             this.cbCor = new System.Windows.Forms.ComboBox();
             this.groupBox20 = new System.Windows.Forms.GroupBox();
-            this.txtModelo = new System.Windows.Forms.TextBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.mskRenavam = new System.Windows.Forms.MaskedTextBox();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
+            this.cmbModelo = new System.Windows.Forms.ComboBox();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -82,10 +81,10 @@
             // 
             // BtnCancelaAutomovel
             // 
-            this.BtnCancelaAutomovel.Location = new System.Drawing.Point(575, 365);
+            this.BtnCancelaAutomovel.Location = new System.Drawing.Point(201, 12);
             this.BtnCancelaAutomovel.Name = "BtnCancelaAutomovel";
-            this.BtnCancelaAutomovel.Size = new System.Drawing.Size(101, 65);
-            this.BtnCancelaAutomovel.TabIndex = 52;
+            this.BtnCancelaAutomovel.Size = new System.Drawing.Size(83, 49);
+            this.BtnCancelaAutomovel.TabIndex = 17;
             this.BtnCancelaAutomovel.Text = "Cancelar";
             this.BtnCancelaAutomovel.UseVisualStyleBackColor = true;
             this.BtnCancelaAutomovel.Click += new System.EventHandler(this.BtnCancelaAutomovel_Click);
@@ -98,10 +97,10 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.cbModelo);
-            this.groupBox3.Location = new System.Drawing.Point(290, 16);
+            this.groupBox3.Location = new System.Drawing.Point(569, 33);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(114, 46);
-            this.groupBox3.TabIndex = 3;
+            this.groupBox3.Size = new System.Drawing.Size(107, 55);
+            this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Ano modelo";
             // 
@@ -139,45 +138,45 @@
             "2015",
             "2016",
             "2017"});
-            this.cbModelo.Location = new System.Drawing.Point(6, 17);
+            this.cbModelo.Location = new System.Drawing.Point(11, 19);
             this.cbModelo.Name = "cbModelo";
-            this.cbModelo.Size = new System.Drawing.Size(94, 21);
-            this.cbModelo.TabIndex = 1;
+            this.cbModelo.Size = new System.Drawing.Size(80, 26);
+            this.cbModelo.TabIndex = 4;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.mskPlaca);
-            this.groupBox1.Location = new System.Drawing.Point(6, 16);
+            this.groupBox1.Location = new System.Drawing.Point(17, 33);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(114, 46);
+            this.groupBox1.Size = new System.Drawing.Size(114, 55);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Placa";
             // 
             // mskPlaca
             // 
-            this.mskPlaca.Location = new System.Drawing.Point(6, 19);
+            this.mskPlaca.Location = new System.Drawing.Point(8, 19);
             this.mskPlaca.Mask = "000-0000";
             this.mskPlaca.Name = "mskPlaca";
-            this.mskPlaca.Size = new System.Drawing.Size(55, 20);
+            this.mskPlaca.Size = new System.Drawing.Size(94, 24);
             this.mskPlaca.TabIndex = 0;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.cbFabric);
-            this.groupBox2.Location = new System.Drawing.Point(148, 16);
+            this.groupBox2.Controls.Add(this.cmbFabric);
+            this.groupBox2.Location = new System.Drawing.Point(454, 33);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(114, 46);
-            this.groupBox2.TabIndex = 2;
+            this.groupBox2.Size = new System.Drawing.Size(100, 55);
+            this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Ano fabric.";
             // 
-            // cbFabric
+            // cmbFabric
             // 
-            this.cbFabric.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cbFabric.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbFabric.FormattingEnabled = true;
-            this.cbFabric.Items.AddRange(new object[] {
+            this.cmbFabric.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbFabric.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbFabric.FormattingEnabled = true;
+            this.cmbFabric.Items.AddRange(new object[] {
             "1990",
             "1991",
             "1992",
@@ -206,36 +205,36 @@
             "2015",
             "2016",
             "2017"});
-            this.cbFabric.Location = new System.Drawing.Point(6, 17);
-            this.cbFabric.Name = "cbFabric";
-            this.cbFabric.Size = new System.Drawing.Size(94, 21);
-            this.cbFabric.TabIndex = 0;
+            this.cmbFabric.Location = new System.Drawing.Point(9, 19);
+            this.cmbFabric.Name = "cmbFabric";
+            this.cmbFabric.Size = new System.Drawing.Size(79, 26);
+            this.cmbFabric.TabIndex = 3;
             // 
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.mskChassi);
-            this.groupBox6.Location = new System.Drawing.Point(428, 16);
+            this.groupBox6.Location = new System.Drawing.Point(273, 33);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(124, 46);
-            this.groupBox6.TabIndex = 4;
+            this.groupBox6.Size = new System.Drawing.Size(165, 55);
+            this.groupBox6.TabIndex = 3;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Chassi";
             // 
             // mskChassi
             // 
-            this.mskChassi.Location = new System.Drawing.Point(6, 19);
+            this.mskChassi.Location = new System.Drawing.Point(8, 19);
             this.mskChassi.Mask = "00000000000000000";
             this.mskChassi.Name = "mskChassi";
-            this.mskChassi.Size = new System.Drawing.Size(114, 20);
-            this.mskChassi.TabIndex = 1;
+            this.mskChassi.Size = new System.Drawing.Size(146, 24);
+            this.mskChassi.TabIndex = 2;
             // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.cbMarca);
-            this.groupBox4.Location = new System.Drawing.Point(148, 69);
+            this.groupBox4.Location = new System.Drawing.Point(454, 103);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(114, 46);
-            this.groupBox4.TabIndex = 6;
+            this.groupBox4.Size = new System.Drawing.Size(222, 55);
+            this.groupBox4.TabIndex = 7;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Marca";
             // 
@@ -260,46 +259,46 @@
             "Volkswagen",
             "Chery",
             "Jac Motors"});
-            this.cbMarca.Location = new System.Drawing.Point(6, 18);
+            this.cbMarca.Location = new System.Drawing.Point(9, 18);
             this.cbMarca.Name = "cbMarca";
-            this.cbMarca.Size = new System.Drawing.Size(94, 21);
-            this.cbMarca.TabIndex = 2;
+            this.cbMarca.Size = new System.Drawing.Size(197, 26);
+            this.cbMarca.TabIndex = 6;
             // 
             // groupBox13
             // 
             this.groupBox13.Controls.Add(this.txtCidade);
-            this.groupBox13.Location = new System.Drawing.Point(6, 173);
+            this.groupBox13.Location = new System.Drawing.Point(17, 240);
             this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Size = new System.Drawing.Size(114, 46);
+            this.groupBox13.Size = new System.Drawing.Size(421, 55);
             this.groupBox13.TabIndex = 13;
             this.groupBox13.TabStop = false;
             this.groupBox13.Text = "Cidade";
             // 
             // txtCidade
             // 
-            this.txtCidade.Location = new System.Drawing.Point(6, 19);
+            this.txtCidade.Location = new System.Drawing.Point(8, 19);
             this.txtCidade.MaxLength = 25;
             this.txtCidade.Name = "txtCidade";
-            this.txtCidade.Size = new System.Drawing.Size(100, 20);
-            this.txtCidade.TabIndex = 0;
+            this.txtCidade.Size = new System.Drawing.Size(402, 24);
+            this.txtCidade.TabIndex = 12;
             // 
             // groupBox15
             // 
             this.groupBox15.Controls.Add(this.txtKM);
-            this.groupBox15.Location = new System.Drawing.Point(290, 121);
+            this.groupBox15.Location = new System.Drawing.Point(569, 171);
             this.groupBox15.Name = "groupBox15";
-            this.groupBox15.Size = new System.Drawing.Size(114, 46);
-            this.groupBox15.TabIndex = 11;
+            this.groupBox15.Size = new System.Drawing.Size(100, 56);
+            this.groupBox15.TabIndex = 12;
             this.groupBox15.TabStop = false;
-            this.groupBox15.Text = "Quilometragem";
+            this.groupBox15.Text = "Km";
             // 
             // txtKM
             // 
-            this.txtKM.Location = new System.Drawing.Point(6, 19);
+            this.txtKM.Location = new System.Drawing.Point(9, 19);
             this.txtKM.MaxLength = 10;
             this.txtKM.Name = "txtKM";
-            this.txtKM.Size = new System.Drawing.Size(100, 20);
-            this.txtKM.TabIndex = 0;
+            this.txtKM.Size = new System.Drawing.Size(82, 24);
+            this.txtKM.TabIndex = 11;
             // 
             // groupBox19
             // 
@@ -317,19 +316,20 @@
             this.groupBox19.Controls.Add(this.groupBox3);
             this.groupBox19.Controls.Add(this.groupBox15);
             this.groupBox19.Controls.Add(this.groupBox4);
-            this.groupBox19.Location = new System.Drawing.Point(12, 26);
+            this.groupBox19.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox19.Location = new System.Drawing.Point(12, 81);
             this.groupBox19.Name = "groupBox19";
-            this.groupBox19.Size = new System.Drawing.Size(572, 250);
+            this.groupBox19.Size = new System.Drawing.Size(760, 322);
             this.groupBox19.TabIndex = 0;
             this.groupBox19.TabStop = false;
-            this.groupBox19.Text = "Geral";
+            this.groupBox19.Text = "Informacoes gerais";
             // 
             // groupBox25
             // 
             this.groupBox25.Controls.Add(this.cbUF);
-            this.groupBox25.Location = new System.Drawing.Point(148, 173);
+            this.groupBox25.Location = new System.Drawing.Point(454, 240);
             this.groupBox25.Name = "groupBox25";
-            this.groupBox25.Size = new System.Drawing.Size(114, 46);
+            this.groupBox25.Size = new System.Drawing.Size(100, 55);
             this.groupBox25.TabIndex = 14;
             this.groupBox25.TabStop = false;
             this.groupBox25.Text = "UF";
@@ -367,18 +367,18 @@
             "SP",
             "SE",
             "TO"});
-            this.cbUF.Location = new System.Drawing.Point(6, 18);
+            this.cbUF.Location = new System.Drawing.Point(9, 18);
             this.cbUF.Name = "cbUF";
-            this.cbUF.Size = new System.Drawing.Size(65, 21);
-            this.cbUF.TabIndex = 2;
+            this.cbUF.Size = new System.Drawing.Size(79, 26);
+            this.cbUF.TabIndex = 13;
             // 
             // groupBox24
             // 
             this.groupBox24.Controls.Add(this.cbTipo);
-            this.groupBox24.Location = new System.Drawing.Point(428, 121);
+            this.groupBox24.Location = new System.Drawing.Point(454, 171);
             this.groupBox24.Name = "groupBox24";
-            this.groupBox24.Size = new System.Drawing.Size(114, 46);
-            this.groupBox24.TabIndex = 12;
+            this.groupBox24.Size = new System.Drawing.Size(100, 56);
+            this.groupBox24.TabIndex = 11;
             this.groupBox24.TabStop = false;
             this.groupBox24.Text = "Tipo";
             // 
@@ -398,17 +398,17 @@
             "2.5",
             "3.0",
             "3.5"});
-            this.cbTipo.Location = new System.Drawing.Point(6, 18);
+            this.cbTipo.Location = new System.Drawing.Point(9, 18);
             this.cbTipo.Name = "cbTipo";
-            this.cbTipo.Size = new System.Drawing.Size(65, 21);
-            this.cbTipo.TabIndex = 2;
+            this.cbTipo.Size = new System.Drawing.Size(79, 26);
+            this.cbTipo.TabIndex = 10;
             // 
             // groupBox23
             // 
             this.groupBox23.Controls.Add(this.cbPortas);
-            this.groupBox23.Location = new System.Drawing.Point(148, 121);
+            this.groupBox23.Location = new System.Drawing.Point(347, 171);
             this.groupBox23.Name = "groupBox23";
-            this.groupBox23.Size = new System.Drawing.Size(114, 46);
+            this.groupBox23.Size = new System.Drawing.Size(91, 56);
             this.groupBox23.TabIndex = 10;
             this.groupBox23.TabStop = false;
             this.groupBox23.Text = "Portas";
@@ -423,29 +423,20 @@
             "2",
             "4",
             "5"});
-            this.cbPortas.Location = new System.Drawing.Point(6, 18);
+            this.cbPortas.Location = new System.Drawing.Point(8, 19);
             this.cbPortas.Name = "cbPortas";
-            this.cbPortas.Size = new System.Drawing.Size(65, 21);
-            this.cbPortas.TabIndex = 2;
+            this.cbPortas.Size = new System.Drawing.Size(72, 26);
+            this.cbPortas.TabIndex = 9;
             // 
             // groupBox22
             // 
-            this.groupBox22.Controls.Add(this.groupBox26);
             this.groupBox22.Controls.Add(this.cbCombustivel);
-            this.groupBox22.Location = new System.Drawing.Point(6, 121);
+            this.groupBox22.Location = new System.Drawing.Point(17, 171);
             this.groupBox22.Name = "groupBox22";
-            this.groupBox22.Size = new System.Drawing.Size(114, 46);
-            this.groupBox22.TabIndex = 9;
+            this.groupBox22.Size = new System.Drawing.Size(159, 56);
+            this.groupBox22.TabIndex = 8;
             this.groupBox22.TabStop = false;
             this.groupBox22.Text = "Combustivel";
-            // 
-            // groupBox26
-            // 
-            this.groupBox26.Location = new System.Drawing.Point(97, 36);
-            this.groupBox26.Name = "groupBox26";
-            this.groupBox26.Size = new System.Drawing.Size(572, 176);
-            this.groupBox26.TabIndex = 39;
-            this.groupBox26.TabStop = false;
             // 
             // cbCombustivel
             // 
@@ -458,18 +449,18 @@
             "Flex",
             "Gaz",
             "Gasolina"});
-            this.cbCombustivel.Location = new System.Drawing.Point(6, 18);
+            this.cbCombustivel.Location = new System.Drawing.Point(8, 18);
             this.cbCombustivel.Name = "cbCombustivel";
-            this.cbCombustivel.Size = new System.Drawing.Size(94, 21);
-            this.cbCombustivel.TabIndex = 2;
+            this.cbCombustivel.Size = new System.Drawing.Size(147, 26);
+            this.cbCombustivel.TabIndex = 7;
             // 
             // groupBox21
             // 
             this.groupBox21.Controls.Add(this.cbCor);
-            this.groupBox21.Location = new System.Drawing.Point(428, 69);
+            this.groupBox21.Location = new System.Drawing.Point(190, 172);
             this.groupBox21.Name = "groupBox21";
-            this.groupBox21.Size = new System.Drawing.Size(114, 46);
-            this.groupBox21.TabIndex = 8;
+            this.groupBox21.Size = new System.Drawing.Size(138, 55);
+            this.groupBox21.TabIndex = 9;
             this.groupBox21.TabStop = false;
             this.groupBox21.Text = "Cor";
             // 
@@ -489,69 +480,70 @@
             "Verde",
             "Vermelho",
             "Laranja"});
-            this.cbCor.Location = new System.Drawing.Point(6, 18);
+            this.cbCor.Location = new System.Drawing.Point(8, 18);
             this.cbCor.Name = "cbCor";
-            this.cbCor.Size = new System.Drawing.Size(94, 21);
-            this.cbCor.TabIndex = 2;
+            this.cbCor.Size = new System.Drawing.Size(114, 26);
+            this.cbCor.TabIndex = 8;
             // 
             // groupBox20
             // 
-            this.groupBox20.Controls.Add(this.txtModelo);
-            this.groupBox20.Location = new System.Drawing.Point(290, 69);
+            this.groupBox20.Controls.Add(this.cmbModelo);
+            this.groupBox20.Location = new System.Drawing.Point(17, 103);
             this.groupBox20.Name = "groupBox20";
-            this.groupBox20.Size = new System.Drawing.Size(114, 46);
-            this.groupBox20.TabIndex = 7;
+            this.groupBox20.Size = new System.Drawing.Size(421, 55);
+            this.groupBox20.TabIndex = 6;
             this.groupBox20.TabStop = false;
             this.groupBox20.Text = "Modelo";
-            // 
-            // txtModelo
-            // 
-            this.txtModelo.Location = new System.Drawing.Point(6, 19);
-            this.txtModelo.Name = "txtModelo";
-            this.txtModelo.Size = new System.Drawing.Size(100, 20);
-            this.txtModelo.TabIndex = 0;
             // 
             // groupBox7
             // 
             this.groupBox7.Controls.Add(this.mskRenavam);
-            this.groupBox7.Location = new System.Drawing.Point(6, 69);
+            this.groupBox7.Location = new System.Drawing.Point(145, 33);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(114, 46);
-            this.groupBox7.TabIndex = 5;
+            this.groupBox7.Size = new System.Drawing.Size(114, 55);
+            this.groupBox7.TabIndex = 2;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Renavam";
             // 
             // mskRenavam
             // 
-            this.mskRenavam.Location = new System.Drawing.Point(6, 19);
+            this.mskRenavam.Location = new System.Drawing.Point(8, 19);
             this.mskRenavam.Mask = "00000000000";
             this.mskRenavam.Name = "mskRenavam";
-            this.mskRenavam.Size = new System.Drawing.Size(79, 20);
+            this.mskRenavam.Size = new System.Drawing.Size(94, 24);
             this.mskRenavam.TabIndex = 1;
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(315, 365);
+            this.btnSalvar.Location = new System.Drawing.Point(12, 12);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(101, 65);
-            this.btnSalvar.TabIndex = 50;
+            this.btnSalvar.Size = new System.Drawing.Size(77, 49);
+            this.btnSalvar.TabIndex = 15;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             // 
             // btnLimpar
             // 
-            this.btnLimpar.Location = new System.Drawing.Point(445, 365);
+            this.btnLimpar.Location = new System.Drawing.Point(107, 12);
             this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(101, 65);
-            this.btnLimpar.TabIndex = 51;
+            this.btnLimpar.Size = new System.Drawing.Size(80, 49);
+            this.btnLimpar.TabIndex = 16;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
+            // 
+            // cmbModelo
+            // 
+            this.cmbModelo.FormattingEnabled = true;
+            this.cmbModelo.Location = new System.Drawing.Point(8, 18);
+            this.cmbModelo.Name = "cmbModelo";
+            this.cmbModelo.Size = new System.Drawing.Size(402, 26);
+            this.cmbModelo.TabIndex = 5;
             // 
             // CadastroAutomovel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(688, 448);
+            this.ClientSize = new System.Drawing.Size(784, 448);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.groupBox19);
@@ -577,7 +569,6 @@
             this.groupBox22.ResumeLayout(false);
             this.groupBox21.ResumeLayout(false);
             this.groupBox20.ResumeLayout(false);
-            this.groupBox20.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
             this.ResumeLayout(false);
@@ -599,7 +590,7 @@
         private System.Windows.Forms.TextBox txtKM;
         private System.Windows.Forms.MaskedTextBox mskPlaca;
         private System.Windows.Forms.GroupBox groupBox19;
-        private System.Windows.Forms.ComboBox cbFabric;
+        private System.Windows.Forms.ComboBox cmbFabric;
         private System.Windows.Forms.ComboBox cbModelo;
         private System.Windows.Forms.MaskedTextBox mskChassi;
         private System.Windows.Forms.ComboBox cbMarca;
@@ -610,15 +601,14 @@
         private System.Windows.Forms.GroupBox groupBox23;
         private System.Windows.Forms.ComboBox cbPortas;
         private System.Windows.Forms.GroupBox groupBox22;
-        private System.Windows.Forms.GroupBox groupBox26;
         private System.Windows.Forms.ComboBox cbCombustivel;
         private System.Windows.Forms.GroupBox groupBox21;
         private System.Windows.Forms.ComboBox cbCor;
         private System.Windows.Forms.GroupBox groupBox20;
-        private System.Windows.Forms.TextBox txtModelo;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.MaskedTextBox mskRenavam;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnLimpar;
+        private System.Windows.Forms.ComboBox cmbModelo;
     }
 }

@@ -52,13 +52,10 @@
             this.grbCelularj = new System.Windows.Forms.GroupBox();
             this.mskCelularj = new System.Windows.Forms.MaskedTextBox();
             this.grbCnpj = new System.Windows.Forms.GroupBox();
-            this.txtCnpj = new System.Windows.Forms.TextBox();
             this.grbInsc_mun = new System.Windows.Forms.GroupBox();
-            this.txtInsc_municipal = new System.Windows.Forms.TextBox();
             this.grbTelefonej = new System.Windows.Forms.GroupBox();
             this.msktelefonej = new System.Windows.Forms.MaskedTextBox();
             this.grbIns_est = new System.Windows.Forms.GroupBox();
-            this.txtInsc_estadual = new System.Windows.Forms.TextBox();
             this.grbNomefantasia = new System.Windows.Forms.GroupBox();
             this.txtNomefantasia = new System.Windows.Forms.TextBox();
             this.grbRazaosocial = new System.Windows.Forms.GroupBox();
@@ -69,7 +66,6 @@
             this.grbEst_civilf = new System.Windows.Forms.GroupBox();
             this.cmbEst_civilf = new System.Windows.Forms.ComboBox();
             this.grbCnh = new System.Windows.Forms.GroupBox();
-            this.txtCnh = new System.Windows.Forms.TextBox();
             this.grbSexof = new System.Windows.Forms.GroupBox();
             this.cmbSexof = new System.Windows.Forms.ComboBox();
             this.grbRne = new System.Windows.Forms.GroupBox();
@@ -89,7 +85,7 @@
             this.rbtPessoajur = new System.Windows.Forms.RadioButton();
             this.grbFisica = new System.Windows.Forms.GroupBox();
             this.rbtPessoafis = new System.Windows.Forms.RadioButton();
-            this.grbEnderecof = new System.Windows.Forms.GroupBox();
+            this.grbEnderecoF = new System.Windows.Forms.GroupBox();
             this.grbBairrof = new System.Windows.Forms.GroupBox();
             this.txtBairrof = new System.Windows.Forms.TextBox();
             this.grbEstadof = new System.Windows.Forms.GroupBox();
@@ -123,6 +119,10 @@
             this.txtobsf = new System.Windows.Forms.TextBox();
             this.grbInfoj = new System.Windows.Forms.GroupBox();
             this.txtobsj = new System.Windows.Forms.TextBox();
+            this.mskIncr_est = new System.Windows.Forms.MaskedTextBox();
+            this.mskInsc_mun = new System.Windows.Forms.MaskedTextBox();
+            this.mskCnpj = new System.Windows.Forms.MaskedTextBox();
+            this.mskCnh = new System.Windows.Forms.MaskedTextBox();
             this.grbEmpresariais.SuspendLayout();
             this.grbEnderecoj.SuspendLayout();
             this.groupBox17.SuspendLayout();
@@ -154,7 +154,7 @@
             this.grbCliente.SuspendLayout();
             this.grbJuridica.SuspendLayout();
             this.grbFisica.SuspendLayout();
-            this.grbEnderecof.SuspendLayout();
+            this.grbEnderecoF.SuspendLayout();
             this.grbBairrof.SuspendLayout();
             this.grbEstadof.SuspendLayout();
             this.grbCidadef.SuspendLayout();
@@ -467,7 +467,7 @@
             // 
             // grbCnpj
             // 
-            this.grbCnpj.Controls.Add(this.txtCnpj);
+            this.grbCnpj.Controls.Add(this.mskCnpj);
             this.grbCnpj.Location = new System.Drawing.Point(498, 29);
             this.grbCnpj.Name = "grbCnpj";
             this.grbCnpj.Size = new System.Drawing.Size(207, 58);
@@ -475,31 +475,15 @@
             this.grbCnpj.TabStop = false;
             this.grbCnpj.Text = "CNPJ";
             // 
-            // txtCnpj
-            // 
-            this.txtCnpj.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCnpj.Location = new System.Drawing.Point(6, 17);
-            this.txtCnpj.Name = "txtCnpj";
-            this.txtCnpj.Size = new System.Drawing.Size(195, 24);
-            this.txtCnpj.TabIndex = 3;
-            // 
             // grbInsc_mun
             // 
-            this.grbInsc_mun.Controls.Add(this.txtInsc_municipal);
+            this.grbInsc_mun.Controls.Add(this.mskInsc_mun);
             this.grbInsc_mun.Location = new System.Drawing.Point(498, 162);
             this.grbInsc_mun.Name = "grbInsc_mun";
             this.grbInsc_mun.Size = new System.Drawing.Size(207, 53);
             this.grbInsc_mun.TabIndex = 11;
             this.grbInsc_mun.TabStop = false;
             this.grbInsc_mun.Text = "Inscricao municipal";
-            // 
-            // txtInsc_municipal
-            // 
-            this.txtInsc_municipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtInsc_municipal.Location = new System.Drawing.Point(6, 19);
-            this.txtInsc_municipal.Name = "txtInsc_municipal";
-            this.txtInsc_municipal.Size = new System.Drawing.Size(195, 24);
-            this.txtInsc_municipal.TabIndex = 9;
             // 
             // grbTelefonej
             // 
@@ -521,21 +505,13 @@
             // 
             // grbIns_est
             // 
-            this.grbIns_est.Controls.Add(this.txtInsc_estadual);
+            this.grbIns_est.Controls.Add(this.mskIncr_est);
             this.grbIns_est.Location = new System.Drawing.Point(498, 93);
             this.grbIns_est.Name = "grbIns_est";
             this.grbIns_est.Size = new System.Drawing.Size(207, 62);
             this.grbIns_est.TabIndex = 8;
             this.grbIns_est.TabStop = false;
             this.grbIns_est.Text = "Inscricao estadual";
-            // 
-            // txtInsc_estadual
-            // 
-            this.txtInsc_estadual.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtInsc_estadual.Location = new System.Drawing.Point(6, 21);
-            this.txtInsc_estadual.Name = "txtInsc_estadual";
-            this.txtInsc_estadual.Size = new System.Drawing.Size(195, 24);
-            this.txtInsc_estadual.TabIndex = 6;
             // 
             // grbNomefantasia
             // 
@@ -644,21 +620,13 @@
             // 
             // grbCnh
             // 
-            this.grbCnh.Controls.Add(this.txtCnh);
+            this.grbCnh.Controls.Add(this.mskCnh);
             this.grbCnh.Location = new System.Drawing.Point(676, 25);
             this.grbCnh.Name = "grbCnh";
             this.grbCnh.Size = new System.Drawing.Size(147, 55);
             this.grbCnh.TabIndex = 6;
             this.grbCnh.TabStop = false;
             this.grbCnh.Text = "CNH";
-            // 
-            // txtCnh
-            // 
-            this.txtCnh.Location = new System.Drawing.Point(6, 19);
-            this.txtCnh.MaxLength = 12;
-            this.txtCnh.Name = "txtCnh";
-            this.txtCnh.Size = new System.Drawing.Size(135, 23);
-            this.txtCnh.TabIndex = 2;
             // 
             // grbSexof
             // 
@@ -849,22 +817,22 @@
             this.rbtPessoafis.UseVisualStyleBackColor = true;
             this.rbtPessoafis.CheckedChanged += new System.EventHandler(this.rbtPessoaf_CheckedChanged);
             // 
-            // grbEnderecof
+            // grbEnderecoF
             // 
-            this.grbEnderecof.Controls.Add(this.grbBairrof);
-            this.grbEnderecof.Controls.Add(this.grbEstadof);
-            this.grbEnderecof.Controls.Add(this.grbCidadef);
-            this.grbEnderecof.Controls.Add(this.grbRuaf);
-            this.grbEnderecof.Controls.Add(this.grbNumf);
-            this.grbEnderecof.Controls.Add(this.grbCepf);
-            this.grbEnderecof.Controls.Add(this.grbComplementof);
-            this.grbEnderecof.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbEnderecof.Location = new System.Drawing.Point(25, 367);
-            this.grbEnderecof.Name = "grbEnderecof";
-            this.grbEnderecof.Size = new System.Drawing.Size(851, 150);
-            this.grbEnderecof.TabIndex = 5;
-            this.grbEnderecof.TabStop = false;
-            this.grbEnderecof.Text = "Endereçof";
+            this.grbEnderecoF.Controls.Add(this.grbBairrof);
+            this.grbEnderecoF.Controls.Add(this.grbEstadof);
+            this.grbEnderecoF.Controls.Add(this.grbCidadef);
+            this.grbEnderecoF.Controls.Add(this.grbRuaf);
+            this.grbEnderecoF.Controls.Add(this.grbNumf);
+            this.grbEnderecoF.Controls.Add(this.grbCepf);
+            this.grbEnderecoF.Controls.Add(this.grbComplementof);
+            this.grbEnderecoF.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbEnderecoF.Location = new System.Drawing.Point(25, 367);
+            this.grbEnderecoF.Name = "grbEnderecoF";
+            this.grbEnderecoF.Size = new System.Drawing.Size(851, 150);
+            this.grbEnderecoF.TabIndex = 5;
+            this.grbEnderecoF.TabStop = false;
+            this.grbEnderecoF.Text = "Endereço";
             // 
             // grbBairrof
             // 
@@ -1067,7 +1035,7 @@
             this.grbEndj.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbEndj.Location = new System.Drawing.Point(25, 367);
             this.grbEndj.Name = "grbEndj";
-            this.grbEndj.Size = new System.Drawing.Size(851, 150);
+            this.grbEndj.Size = new System.Drawing.Size(887, 150);
             this.grbEndj.TabIndex = 5;
             this.grbEndj.TabStop = false;
             this.grbEndj.Text = "Endereço";
@@ -1291,7 +1259,7 @@
             this.grbInfoj.Size = new System.Drawing.Size(447, 124);
             this.grbInfoj.TabIndex = 6;
             this.grbInfoj.TabStop = false;
-            this.grbInfoj.Text = "Informações extrasj";
+            this.grbInfoj.Text = "Informações extras";
             this.grbInfoj.Visible = false;
             // 
             // txtobsj
@@ -1303,16 +1271,48 @@
             this.txtobsj.Size = new System.Drawing.Size(406, 99);
             this.txtobsj.TabIndex = 17;
             // 
+            // mskIncr_est
+            // 
+            this.mskIncr_est.Location = new System.Drawing.Point(6, 24);
+            this.mskIncr_est.Mask = "000.000.000.000";
+            this.mskIncr_est.Name = "mskIncr_est";
+            this.mskIncr_est.Size = new System.Drawing.Size(195, 23);
+            this.mskIncr_est.TabIndex = 6;
+            // 
+            // mskInsc_mun
+            // 
+            this.mskInsc_mun.Location = new System.Drawing.Point(6, 24);
+            this.mskInsc_mun.Mask = "00000000";
+            this.mskInsc_mun.Name = "mskInsc_mun";
+            this.mskInsc_mun.Size = new System.Drawing.Size(195, 23);
+            this.mskInsc_mun.TabIndex = 9;
+            // 
+            // mskCnpj
+            // 
+            this.mskCnpj.Location = new System.Drawing.Point(6, 19);
+            this.mskCnpj.Mask = "00.000.000/0000-00";
+            this.mskCnpj.Name = "mskCnpj";
+            this.mskCnpj.Size = new System.Drawing.Size(195, 23);
+            this.mskCnpj.TabIndex = 3;
+            // 
+            // mskCnh
+            // 
+            this.mskCnh.Location = new System.Drawing.Point(6, 20);
+            this.mskCnh.Mask = "00000000000";
+            this.mskCnh.Name = "mskCnh";
+            this.mskCnh.Size = new System.Drawing.Size(131, 23);
+            this.mskCnh.TabIndex = 2;
+            // 
             // CadastroCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1198, 733);
+            this.ClientSize = new System.Drawing.Size(1198, 665);
             this.Controls.Add(this.grbDadospessoais);
             this.Controls.Add(this.grbInfoj);
             this.Controls.Add(this.grbInfof);
             this.Controls.Add(this.grbEndj);
-            this.Controls.Add(this.grbEnderecof);
+            this.Controls.Add(this.grbEnderecoF);
             this.Controls.Add(this.grbCliente);
             this.Controls.Add(this.grbEmpresariais);
             this.Controls.Add(this.btnLimpar);
@@ -1375,7 +1375,7 @@
             this.grbJuridica.PerformLayout();
             this.grbFisica.ResumeLayout(false);
             this.grbFisica.PerformLayout();
-            this.grbEnderecof.ResumeLayout(false);
+            this.grbEnderecoF.ResumeLayout(false);
             this.grbBairrof.ResumeLayout(false);
             this.grbBairrof.PerformLayout();
             this.grbEstadof.ResumeLayout(false);
@@ -1437,13 +1437,10 @@
         private System.Windows.Forms.GroupBox grbCelularj;
         private System.Windows.Forms.MaskedTextBox mskCelularj;
         private System.Windows.Forms.GroupBox grbCnpj;
-        private System.Windows.Forms.TextBox txtCnpj;
         private System.Windows.Forms.GroupBox grbInsc_mun;
-        private System.Windows.Forms.TextBox txtInsc_municipal;
         private System.Windows.Forms.GroupBox grbTelefonej;
         private System.Windows.Forms.MaskedTextBox msktelefonej;
         private System.Windows.Forms.GroupBox grbIns_est;
-        private System.Windows.Forms.TextBox txtInsc_estadual;
         private System.Windows.Forms.GroupBox grbNomefantasia;
         private System.Windows.Forms.TextBox txtNomefantasia;
         private System.Windows.Forms.GroupBox grbRazaosocial;
@@ -1459,7 +1456,6 @@
         private System.Windows.Forms.GroupBox grbEst_civilf;
         private System.Windows.Forms.ComboBox cmbEst_civilf;
         private System.Windows.Forms.GroupBox grbCnh;
-        private System.Windows.Forms.TextBox txtCnh;
         private System.Windows.Forms.GroupBox grbSexof;
         private System.Windows.Forms.ComboBox cmbSexof;
         private System.Windows.Forms.GroupBox grbRne;
@@ -1474,7 +1470,7 @@
         private System.Windows.Forms.MaskedTextBox mskCelularf;
         private System.Windows.Forms.GroupBox grbTelefonef;
         private System.Windows.Forms.MaskedTextBox mskTelefonef;
-        private System.Windows.Forms.GroupBox grbEnderecof;
+        private System.Windows.Forms.GroupBox grbEnderecoF;
         private System.Windows.Forms.GroupBox grbBairrof;
         private System.Windows.Forms.TextBox txtBairrof;
         private System.Windows.Forms.GroupBox grbEstadof;
@@ -1508,5 +1504,9 @@
         private System.Windows.Forms.TextBox txtobsf;
         private System.Windows.Forms.GroupBox grbInfoj;
         private System.Windows.Forms.TextBox txtobsj;
+        private System.Windows.Forms.MaskedTextBox mskIncr_est;
+        private System.Windows.Forms.MaskedTextBox mskCnpj;
+        private System.Windows.Forms.MaskedTextBox mskInsc_mun;
+        private System.Windows.Forms.MaskedTextBox mskCnh;
     }
 }
