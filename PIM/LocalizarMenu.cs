@@ -23,5 +23,10 @@ namespace PIM
             localizarcliente.StartPosition = FormStartPosition.CenterScreen;
             localizarcliente.Show();
         }
+
+        private void btnSairLocalizacao_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

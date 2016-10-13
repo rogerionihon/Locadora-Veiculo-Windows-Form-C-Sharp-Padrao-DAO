@@ -44,7 +44,7 @@
   <ItemGroup>
     <Compile Include="ConnectionDataBase\Dao.cs" />
     <Compile Include="ModelCliente\Cliente.cs" />
-    <Compile Include="ModelVeiculo\Veiculo.cs" />
+    <Compile Include="ModelCliente\Veiculo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

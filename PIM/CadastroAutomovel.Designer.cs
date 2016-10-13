@@ -32,7 +32,7 @@
             this.BtnCancelaAutomovel = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.cbModelo = new System.Windows.Forms.ComboBox();
+            this.cbAnoModelo = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.mskPlaca = new System.Windows.Forms.MaskedTextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -45,7 +45,7 @@
             this.txtCidade = new System.Windows.Forms.TextBox();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
             this.txtKM = new System.Windows.Forms.TextBox();
-            this.groupBox19 = new System.Windows.Forms.GroupBox();
+            this.gbInformacoes = new System.Windows.Forms.GroupBox();
             this.groupBox25 = new System.Windows.Forms.GroupBox();
             this.cbUF = new System.Windows.Forms.ComboBox();
             this.groupBox24 = new System.Windows.Forms.GroupBox();
@@ -57,11 +57,13 @@
             this.groupBox21 = new System.Windows.Forms.GroupBox();
             this.cbCor = new System.Windows.Forms.ComboBox();
             this.groupBox20 = new System.Windows.Forms.GroupBox();
+            this.cmbModelo = new System.Windows.Forms.ComboBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.mskRenavam = new System.Windows.Forms.MaskedTextBox();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
-            this.cmbModelo = new System.Windows.Forms.ComboBox();
+            this.gbObservacao = new System.Windows.Forms.GroupBox();
+            this.txtObs = new System.Windows.Forms.TextBox();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -69,7 +71,7 @@
             this.groupBox4.SuspendLayout();
             this.groupBox13.SuspendLayout();
             this.groupBox15.SuspendLayout();
-            this.groupBox19.SuspendLayout();
+            this.gbInformacoes.SuspendLayout();
             this.groupBox25.SuspendLayout();
             this.groupBox24.SuspendLayout();
             this.groupBox23.SuspendLayout();
@@ -77,6 +79,7 @@
             this.groupBox21.SuspendLayout();
             this.groupBox20.SuspendLayout();
             this.groupBox7.SuspendLayout();
+            this.gbObservacao.SuspendLayout();
             this.SuspendLayout();
             // 
             // BtnCancelaAutomovel
@@ -96,7 +99,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.cbModelo);
+            this.groupBox3.Controls.Add(this.cbAnoModelo);
             this.groupBox3.Location = new System.Drawing.Point(569, 33);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(107, 55);
@@ -104,12 +107,12 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Ano modelo";
             // 
-            // cbModelo
+            // cbAnoModelo
             // 
-            this.cbModelo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cbModelo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbModelo.FormattingEnabled = true;
-            this.cbModelo.Items.AddRange(new object[] {
+            this.cbAnoModelo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbAnoModelo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbAnoModelo.FormattingEnabled = true;
+            this.cbAnoModelo.Items.AddRange(new object[] {
             "1990",
             "1991",
             "1992",
@@ -138,10 +141,10 @@
             "2015",
             "2016",
             "2017"});
-            this.cbModelo.Location = new System.Drawing.Point(11, 19);
-            this.cbModelo.Name = "cbModelo";
-            this.cbModelo.Size = new System.Drawing.Size(80, 26);
-            this.cbModelo.TabIndex = 4;
+            this.cbAnoModelo.Location = new System.Drawing.Point(11, 19);
+            this.cbAnoModelo.Name = "cbAnoModelo";
+            this.cbAnoModelo.Size = new System.Drawing.Size(80, 26);
+            this.cbAnoModelo.TabIndex = 4;
             // 
             // groupBox1
             // 
@@ -300,29 +303,29 @@
             this.txtKM.Size = new System.Drawing.Size(82, 24);
             this.txtKM.TabIndex = 11;
             // 
-            // groupBox19
+            // gbInformacoes
             // 
-            this.groupBox19.Controls.Add(this.groupBox25);
-            this.groupBox19.Controls.Add(this.groupBox24);
-            this.groupBox19.Controls.Add(this.groupBox23);
-            this.groupBox19.Controls.Add(this.groupBox22);
-            this.groupBox19.Controls.Add(this.groupBox21);
-            this.groupBox19.Controls.Add(this.groupBox20);
-            this.groupBox19.Controls.Add(this.groupBox7);
-            this.groupBox19.Controls.Add(this.groupBox1);
-            this.groupBox19.Controls.Add(this.groupBox6);
-            this.groupBox19.Controls.Add(this.groupBox13);
-            this.groupBox19.Controls.Add(this.groupBox2);
-            this.groupBox19.Controls.Add(this.groupBox3);
-            this.groupBox19.Controls.Add(this.groupBox15);
-            this.groupBox19.Controls.Add(this.groupBox4);
-            this.groupBox19.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox19.Location = new System.Drawing.Point(12, 81);
-            this.groupBox19.Name = "groupBox19";
-            this.groupBox19.Size = new System.Drawing.Size(760, 322);
-            this.groupBox19.TabIndex = 0;
-            this.groupBox19.TabStop = false;
-            this.groupBox19.Text = "Informacoes gerais";
+            this.gbInformacoes.Controls.Add(this.groupBox25);
+            this.gbInformacoes.Controls.Add(this.groupBox24);
+            this.gbInformacoes.Controls.Add(this.groupBox23);
+            this.gbInformacoes.Controls.Add(this.groupBox22);
+            this.gbInformacoes.Controls.Add(this.groupBox21);
+            this.gbInformacoes.Controls.Add(this.groupBox20);
+            this.gbInformacoes.Controls.Add(this.groupBox7);
+            this.gbInformacoes.Controls.Add(this.groupBox1);
+            this.gbInformacoes.Controls.Add(this.groupBox6);
+            this.gbInformacoes.Controls.Add(this.groupBox13);
+            this.gbInformacoes.Controls.Add(this.groupBox2);
+            this.gbInformacoes.Controls.Add(this.groupBox3);
+            this.gbInformacoes.Controls.Add(this.groupBox15);
+            this.gbInformacoes.Controls.Add(this.groupBox4);
+            this.gbInformacoes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbInformacoes.Location = new System.Drawing.Point(12, 81);
+            this.gbInformacoes.Name = "gbInformacoes";
+            this.gbInformacoes.Size = new System.Drawing.Size(760, 322);
+            this.gbInformacoes.TabIndex = 0;
+            this.gbInformacoes.TabStop = false;
+            this.gbInformacoes.Text = "Informacoes gerais";
             // 
             // groupBox25
             // 
@@ -495,6 +498,14 @@
             this.groupBox20.TabStop = false;
             this.groupBox20.Text = "Modelo";
             // 
+            // cmbModelo
+            // 
+            this.cmbModelo.FormattingEnabled = true;
+            this.cmbModelo.Location = new System.Drawing.Point(8, 18);
+            this.cmbModelo.Name = "cmbModelo";
+            this.cmbModelo.Size = new System.Drawing.Size(402, 26);
+            this.cmbModelo.TabIndex = 5;
+            // 
             // groupBox7
             // 
             this.groupBox7.Controls.Add(this.mskRenavam);
@@ -521,6 +532,7 @@
             this.btnSalvar.TabIndex = 15;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnLimpar
             // 
@@ -530,23 +542,34 @@
             this.btnLimpar.TabIndex = 16;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
-            // cmbModelo
+            // gbObservacao
             // 
-            this.cmbModelo.FormattingEnabled = true;
-            this.cmbModelo.Location = new System.Drawing.Point(8, 18);
-            this.cmbModelo.Name = "cmbModelo";
-            this.cmbModelo.Size = new System.Drawing.Size(402, 26);
-            this.cmbModelo.TabIndex = 5;
+            this.gbObservacao.Controls.Add(this.txtObs);
+            this.gbObservacao.Location = new System.Drawing.Point(22, 421);
+            this.gbObservacao.Name = "gbObservacao";
+            this.gbObservacao.Size = new System.Drawing.Size(218, 58);
+            this.gbObservacao.TabIndex = 18;
+            this.gbObservacao.TabStop = false;
+            this.gbObservacao.Text = "Observacao";
+            // 
+            // txtObs
+            // 
+            this.txtObs.Location = new System.Drawing.Point(22, 20);
+            this.txtObs.Name = "txtObs";
+            this.txtObs.Size = new System.Drawing.Size(177, 20);
+            this.txtObs.TabIndex = 0;
             // 
             // CadastroAutomovel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 448);
+            this.ClientSize = new System.Drawing.Size(790, 514);
+            this.Controls.Add(this.gbObservacao);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnSalvar);
-            this.Controls.Add(this.groupBox19);
+            this.Controls.Add(this.gbInformacoes);
             this.Controls.Add(this.BtnCancelaAutomovel);
             this.Name = "CadastroAutomovel";
             this.Text = "Cadastro de Automovel";
@@ -562,7 +585,7 @@
             this.groupBox13.PerformLayout();
             this.groupBox15.ResumeLayout(false);
             this.groupBox15.PerformLayout();
-            this.groupBox19.ResumeLayout(false);
+            this.gbInformacoes.ResumeLayout(false);
             this.groupBox25.ResumeLayout(false);
             this.groupBox24.ResumeLayout(false);
             this.groupBox23.ResumeLayout(false);
@@ -571,6 +594,8 @@
             this.groupBox20.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
+            this.gbObservacao.ResumeLayout(false);
+            this.gbObservacao.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -589,9 +614,9 @@
         private System.Windows.Forms.GroupBox groupBox15;
         private System.Windows.Forms.TextBox txtKM;
         private System.Windows.Forms.MaskedTextBox mskPlaca;
-        private System.Windows.Forms.GroupBox groupBox19;
+        private System.Windows.Forms.GroupBox gbInformacoes;
         private System.Windows.Forms.ComboBox cmbFabric;
-        private System.Windows.Forms.ComboBox cbModelo;
+        private System.Windows.Forms.ComboBox cbAnoModelo;
         private System.Windows.Forms.MaskedTextBox mskChassi;
         private System.Windows.Forms.ComboBox cbMarca;
         private System.Windows.Forms.GroupBox groupBox25;
@@ -610,5 +635,7 @@
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.ComboBox cmbModelo;
+        private System.Windows.Forms.GroupBox gbObservacao;
+        private System.Windows.Forms.TextBox txtObs;
     }
 }

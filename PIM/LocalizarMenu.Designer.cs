@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnClientes = new System.Windows.Forms.Button();
-            this.btnVeiculos = new System.Windows.Forms.Button();
             this.btnFuncionarios = new System.Windows.Forms.Button();
+            this.btnVeiculos = new System.Windows.Forms.Button();
+            this.btnClientes = new System.Windows.Forms.Button();
             this.btnSairLocalizacao = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -47,15 +47,14 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
-            // btnClientes
+            // btnFuncionarios
             // 
-            this.btnClientes.Location = new System.Drawing.Point(62, 19);
-            this.btnClientes.Name = "btnClientes";
-            this.btnClientes.Size = new System.Drawing.Size(124, 92);
-            this.btnClientes.TabIndex = 0;
-            this.btnClientes.Text = "Clientes";
-            this.btnClientes.UseVisualStyleBackColor = true;
-            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
+            this.btnFuncionarios.Location = new System.Drawing.Point(62, 428);
+            this.btnFuncionarios.Name = "btnFuncionarios";
+            this.btnFuncionarios.Size = new System.Drawing.Size(124, 92);
+            this.btnFuncionarios.TabIndex = 2;
+            this.btnFuncionarios.Text = "Funcionarios";
+            this.btnFuncionarios.UseVisualStyleBackColor = true;
             // 
             // btnVeiculos
             // 
@@ -66,14 +65,15 @@
             this.btnVeiculos.Text = "Veiculos";
             this.btnVeiculos.UseVisualStyleBackColor = true;
             // 
-            // btnFuncionarios
+            // btnClientes
             // 
-            this.btnFuncionarios.Location = new System.Drawing.Point(62, 428);
-            this.btnFuncionarios.Name = "btnFuncionarios";
-            this.btnFuncionarios.Size = new System.Drawing.Size(124, 92);
-            this.btnFuncionarios.TabIndex = 2;
-            this.btnFuncionarios.Text = "Funcionarios";
-            this.btnFuncionarios.UseVisualStyleBackColor = true;
+            this.btnClientes.Location = new System.Drawing.Point(62, 19);
+            this.btnClientes.Name = "btnClientes";
+            this.btnClientes.Size = new System.Drawing.Size(124, 92);
+            this.btnClientes.TabIndex = 0;
+            this.btnClientes.Text = "Clientes";
+            this.btnClientes.UseVisualStyleBackColor = true;
+            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
             // 
             // btnSairLocalizacao
             // 
@@ -84,6 +84,7 @@
             this.btnSairLocalizacao.TabIndex = 1;
             this.btnSairLocalizacao.Text = "Sair";
             this.btnSairLocalizacao.UseVisualStyleBackColor = true;
+            this.btnSairLocalizacao.Click += new System.EventHandler(this.btnSairLocalizacao_Click);
             // 
             // LocalizarMenu
             // 
