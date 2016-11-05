@@ -43,9 +43,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConnectionDataBase\Dao.cs" />
+    <Compile Include="ModelCliente\CheckinCheckout.cs" />
     <Compile Include="ModelCliente\Cliente.cs" />
+    <Compile Include="ModelCliente\Funcionario.cs" />
+    <Compile Include="ModelCliente\Locacao.cs" />
     <Compile Include="ModelCliente\Veiculo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\Validacao.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -29,35 +29,36 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroAutomovel));
             this.BtnCancelaAutomovel = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.cbAnoModelo = new System.Windows.Forms.ComboBox();
+            this.cmbAnoModelo = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.mskPlaca = new System.Windows.Forms.MaskedTextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.cmbFabric = new System.Windows.Forms.ComboBox();
+            this.cmbAnoFabric = new System.Windows.Forms.ComboBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.mskChassi = new System.Windows.Forms.MaskedTextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.cbMarca = new System.Windows.Forms.ComboBox();
+            this.cmbMarca = new System.Windows.Forms.ComboBox();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.txtCidade = new System.Windows.Forms.TextBox();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
             this.txtKM = new System.Windows.Forms.TextBox();
             this.gbInformacoes = new System.Windows.Forms.GroupBox();
             this.groupBox25 = new System.Windows.Forms.GroupBox();
-            this.cbUF = new System.Windows.Forms.ComboBox();
+            this.cmbEstado = new System.Windows.Forms.ComboBox();
             this.groupBox24 = new System.Windows.Forms.GroupBox();
-            this.cbTipo = new System.Windows.Forms.ComboBox();
+            this.cmbTipo = new System.Windows.Forms.ComboBox();
             this.groupBox23 = new System.Windows.Forms.GroupBox();
-            this.cbPortas = new System.Windows.Forms.ComboBox();
+            this.cmbPortas = new System.Windows.Forms.ComboBox();
             this.groupBox22 = new System.Windows.Forms.GroupBox();
-            this.cbCombustivel = new System.Windows.Forms.ComboBox();
+            this.cmbCombustivel = new System.Windows.Forms.ComboBox();
             this.groupBox21 = new System.Windows.Forms.GroupBox();
-            this.cbCor = new System.Windows.Forms.ComboBox();
+            this.cmbCor = new System.Windows.Forms.ComboBox();
             this.groupBox20 = new System.Windows.Forms.GroupBox();
-            this.cmbModelo = new System.Windows.Forms.ComboBox();
+            this.txtModelo = new System.Windows.Forms.TextBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.mskRenavam = new System.Windows.Forms.MaskedTextBox();
             this.btnSalvar = new System.Windows.Forms.Button();
@@ -84,12 +85,18 @@
             // 
             // BtnCancelaAutomovel
             // 
+            this.BtnCancelaAutomovel.BackColor = System.Drawing.Color.White;
+            this.BtnCancelaAutomovel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnCancelaAutomovel.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCancelaAutomovel.Image = ((System.Drawing.Image)(resources.GetObject("BtnCancelaAutomovel.Image")));
+            this.BtnCancelaAutomovel.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BtnCancelaAutomovel.Location = new System.Drawing.Point(201, 12);
             this.BtnCancelaAutomovel.Name = "BtnCancelaAutomovel";
-            this.BtnCancelaAutomovel.Size = new System.Drawing.Size(83, 49);
+            this.BtnCancelaAutomovel.Size = new System.Drawing.Size(81, 53);
             this.BtnCancelaAutomovel.TabIndex = 17;
             this.BtnCancelaAutomovel.Text = "Cancelar";
-            this.BtnCancelaAutomovel.UseVisualStyleBackColor = true;
+            this.BtnCancelaAutomovel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnCancelaAutomovel.UseVisualStyleBackColor = false;
             this.BtnCancelaAutomovel.Click += new System.EventHandler(this.BtnCancelaAutomovel_Click);
             // 
             // contextMenuStrip1
@@ -99,7 +106,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.cbAnoModelo);
+            this.groupBox3.Controls.Add(this.cmbAnoModelo);
             this.groupBox3.Location = new System.Drawing.Point(569, 33);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(107, 55);
@@ -107,12 +114,13 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Ano modelo";
             // 
-            // cbAnoModelo
+            // cmbAnoModelo
             // 
-            this.cbAnoModelo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cbAnoModelo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbAnoModelo.FormattingEnabled = true;
-            this.cbAnoModelo.Items.AddRange(new object[] {
+            this.cmbAnoModelo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbAnoModelo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbAnoModelo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbAnoModelo.FormattingEnabled = true;
+            this.cmbAnoModelo.Items.AddRange(new object[] {
             "1990",
             "1991",
             "1992",
@@ -141,10 +149,10 @@
             "2015",
             "2016",
             "2017"});
-            this.cbAnoModelo.Location = new System.Drawing.Point(11, 19);
-            this.cbAnoModelo.Name = "cbAnoModelo";
-            this.cbAnoModelo.Size = new System.Drawing.Size(80, 26);
-            this.cbAnoModelo.TabIndex = 4;
+            this.cmbAnoModelo.Location = new System.Drawing.Point(11, 19);
+            this.cmbAnoModelo.Name = "cmbAnoModelo";
+            this.cmbAnoModelo.Size = new System.Drawing.Size(80, 26);
+            this.cmbAnoModelo.TabIndex = 4;
             // 
             // groupBox1
             // 
@@ -159,14 +167,14 @@
             // mskPlaca
             // 
             this.mskPlaca.Location = new System.Drawing.Point(8, 19);
-            this.mskPlaca.Mask = "000-0000";
+            this.mskPlaca.Mask = "AAA-0000";
             this.mskPlaca.Name = "mskPlaca";
             this.mskPlaca.Size = new System.Drawing.Size(94, 24);
             this.mskPlaca.TabIndex = 0;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.cmbFabric);
+            this.groupBox2.Controls.Add(this.cmbAnoFabric);
             this.groupBox2.Location = new System.Drawing.Point(454, 33);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(100, 55);
@@ -174,12 +182,13 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Ano fabric.";
             // 
-            // cmbFabric
+            // cmbAnoFabric
             // 
-            this.cmbFabric.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cmbFabric.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cmbFabric.FormattingEnabled = true;
-            this.cmbFabric.Items.AddRange(new object[] {
+            this.cmbAnoFabric.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbAnoFabric.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbAnoFabric.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbAnoFabric.FormattingEnabled = true;
+            this.cmbAnoFabric.Items.AddRange(new object[] {
             "1990",
             "1991",
             "1992",
@@ -208,10 +217,10 @@
             "2015",
             "2016",
             "2017"});
-            this.cmbFabric.Location = new System.Drawing.Point(9, 19);
-            this.cmbFabric.Name = "cmbFabric";
-            this.cmbFabric.Size = new System.Drawing.Size(79, 26);
-            this.cmbFabric.TabIndex = 3;
+            this.cmbAnoFabric.Location = new System.Drawing.Point(9, 19);
+            this.cmbAnoFabric.Name = "cmbAnoFabric";
+            this.cmbAnoFabric.Size = new System.Drawing.Size(79, 26);
+            this.cmbAnoFabric.TabIndex = 3;
             // 
             // groupBox6
             // 
@@ -233,7 +242,7 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.cbMarca);
+            this.groupBox4.Controls.Add(this.cmbMarca);
             this.groupBox4.Location = new System.Drawing.Point(454, 103);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(222, 55);
@@ -241,12 +250,13 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Marca";
             // 
-            // cbMarca
+            // cmbMarca
             // 
-            this.cbMarca.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cbMarca.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbMarca.FormattingEnabled = true;
-            this.cbMarca.Items.AddRange(new object[] {
+            this.cmbMarca.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbMarca.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbMarca.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbMarca.FormattingEnabled = true;
+            this.cmbMarca.Items.AddRange(new object[] {
             "Audi",
             "BMW",
             "Chevrolet",
@@ -262,10 +272,10 @@
             "Volkswagen",
             "Chery",
             "Jac Motors"});
-            this.cbMarca.Location = new System.Drawing.Point(9, 18);
-            this.cbMarca.Name = "cbMarca";
-            this.cbMarca.Size = new System.Drawing.Size(197, 26);
-            this.cbMarca.TabIndex = 6;
+            this.cmbMarca.Location = new System.Drawing.Point(9, 18);
+            this.cmbMarca.Name = "cmbMarca";
+            this.cmbMarca.Size = new System.Drawing.Size(197, 26);
+            this.cmbMarca.TabIndex = 6;
             // 
             // groupBox13
             // 
@@ -329,55 +339,56 @@
             // 
             // groupBox25
             // 
-            this.groupBox25.Controls.Add(this.cbUF);
+            this.groupBox25.Controls.Add(this.cmbEstado);
             this.groupBox25.Location = new System.Drawing.Point(454, 240);
             this.groupBox25.Name = "groupBox25";
-            this.groupBox25.Size = new System.Drawing.Size(100, 55);
+            this.groupBox25.Size = new System.Drawing.Size(136, 55);
             this.groupBox25.TabIndex = 14;
             this.groupBox25.TabStop = false;
-            this.groupBox25.Text = "UF";
+            this.groupBox25.Text = "Estado";
             // 
-            // cbUF
+            // cmbEstado
             // 
-            this.cbUF.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cbUF.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbUF.FormattingEnabled = true;
-            this.cbUF.Items.AddRange(new object[] {
-            "AC",
-            "AL ",
-            "AP",
-            "AM ",
-            "BA",
-            "CE ",
-            "DF",
-            "ES ",
-            "GO",
-            "MA ",
-            "MT",
-            "MS",
-            "MG",
-            "PA",
-            "PB",
-            "PR",
-            "PE",
-            "PI",
-            "RJ",
-            "RN",
-            "RS",
-            "RO",
-            "RR ",
-            "SC",
-            "SP",
-            "SE",
-            "TO"});
-            this.cbUF.Location = new System.Drawing.Point(9, 18);
-            this.cbUF.Name = "cbUF";
-            this.cbUF.Size = new System.Drawing.Size(79, 26);
-            this.cbUF.TabIndex = 13;
+            this.cmbEstado.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbEstado.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbEstado.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbEstado.FormattingEnabled = true;
+            this.cmbEstado.Items.AddRange(new object[] {
+            "Acre",
+            "Alagoas",
+            "Amapá ",
+            "Amazonas",
+            "Bahia",
+            "Ceará",
+            "Distrito Federal",
+            "Espírito Santo",
+            "Goiás",
+            "Maranhão",
+            "Mato Grosso ",
+            "Mato Grosso do Sul",
+            "Minas Gerais",
+            "Pará",
+            "Paraíba",
+            "Paraná",
+            "Pernambuco ",
+            "Piauí",
+            "Rio de Janeiro",
+            "Rio Grande do Norte",
+            "Rio Grande do Sul",
+            "Rondônia",
+            "Roraima",
+            "Santa Catarina",
+            "São Paulo ",
+            "Sergipe",
+            "Tocantins"});
+            this.cmbEstado.Location = new System.Drawing.Point(9, 18);
+            this.cmbEstado.Name = "cmbEstado";
+            this.cmbEstado.Size = new System.Drawing.Size(121, 26);
+            this.cmbEstado.TabIndex = 13;
             // 
             // groupBox24
             // 
-            this.groupBox24.Controls.Add(this.cbTipo);
+            this.groupBox24.Controls.Add(this.cmbTipo);
             this.groupBox24.Location = new System.Drawing.Point(454, 171);
             this.groupBox24.Name = "groupBox24";
             this.groupBox24.Size = new System.Drawing.Size(100, 56);
@@ -385,12 +396,13 @@
             this.groupBox24.TabStop = false;
             this.groupBox24.Text = "Tipo";
             // 
-            // cbTipo
+            // cmbTipo
             // 
-            this.cbTipo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cbTipo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbTipo.FormattingEnabled = true;
-            this.cbTipo.Items.AddRange(new object[] {
+            this.cmbTipo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbTipo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbTipo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbTipo.FormattingEnabled = true;
+            this.cmbTipo.Items.AddRange(new object[] {
             "1.0",
             "1.4",
             "1.6",
@@ -401,14 +413,14 @@
             "2.5",
             "3.0",
             "3.5"});
-            this.cbTipo.Location = new System.Drawing.Point(9, 18);
-            this.cbTipo.Name = "cbTipo";
-            this.cbTipo.Size = new System.Drawing.Size(79, 26);
-            this.cbTipo.TabIndex = 10;
+            this.cmbTipo.Location = new System.Drawing.Point(9, 18);
+            this.cmbTipo.Name = "cmbTipo";
+            this.cmbTipo.Size = new System.Drawing.Size(79, 26);
+            this.cmbTipo.TabIndex = 10;
             // 
             // groupBox23
             // 
-            this.groupBox23.Controls.Add(this.cbPortas);
+            this.groupBox23.Controls.Add(this.cmbPortas);
             this.groupBox23.Location = new System.Drawing.Point(347, 171);
             this.groupBox23.Name = "groupBox23";
             this.groupBox23.Size = new System.Drawing.Size(91, 56);
@@ -416,24 +428,25 @@
             this.groupBox23.TabStop = false;
             this.groupBox23.Text = "Portas";
             // 
-            // cbPortas
+            // cmbPortas
             // 
-            this.cbPortas.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cbPortas.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbPortas.FormattingEnabled = true;
-            this.cbPortas.Items.AddRange(new object[] {
+            this.cmbPortas.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbPortas.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbPortas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbPortas.FormattingEnabled = true;
+            this.cmbPortas.Items.AddRange(new object[] {
             "1",
             "2",
             "4",
             "5"});
-            this.cbPortas.Location = new System.Drawing.Point(8, 19);
-            this.cbPortas.Name = "cbPortas";
-            this.cbPortas.Size = new System.Drawing.Size(72, 26);
-            this.cbPortas.TabIndex = 9;
+            this.cmbPortas.Location = new System.Drawing.Point(8, 19);
+            this.cmbPortas.Name = "cmbPortas";
+            this.cmbPortas.Size = new System.Drawing.Size(72, 26);
+            this.cmbPortas.TabIndex = 9;
             // 
             // groupBox22
             // 
-            this.groupBox22.Controls.Add(this.cbCombustivel);
+            this.groupBox22.Controls.Add(this.cmbCombustivel);
             this.groupBox22.Location = new System.Drawing.Point(17, 171);
             this.groupBox22.Name = "groupBox22";
             this.groupBox22.Size = new System.Drawing.Size(159, 56);
@@ -441,25 +454,26 @@
             this.groupBox22.TabStop = false;
             this.groupBox22.Text = "Combustivel";
             // 
-            // cbCombustivel
+            // cmbCombustivel
             // 
-            this.cbCombustivel.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cbCombustivel.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbCombustivel.FormattingEnabled = true;
-            this.cbCombustivel.Items.AddRange(new object[] {
+            this.cmbCombustivel.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbCombustivel.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbCombustivel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbCombustivel.FormattingEnabled = true;
+            this.cmbCombustivel.Items.AddRange(new object[] {
             "Diesel",
             "Etanol",
             "Flex",
             "Gaz",
             "Gasolina"});
-            this.cbCombustivel.Location = new System.Drawing.Point(8, 18);
-            this.cbCombustivel.Name = "cbCombustivel";
-            this.cbCombustivel.Size = new System.Drawing.Size(147, 26);
-            this.cbCombustivel.TabIndex = 7;
+            this.cmbCombustivel.Location = new System.Drawing.Point(8, 18);
+            this.cmbCombustivel.Name = "cmbCombustivel";
+            this.cmbCombustivel.Size = new System.Drawing.Size(147, 26);
+            this.cmbCombustivel.TabIndex = 7;
             // 
             // groupBox21
             // 
-            this.groupBox21.Controls.Add(this.cbCor);
+            this.groupBox21.Controls.Add(this.cmbCor);
             this.groupBox21.Location = new System.Drawing.Point(190, 172);
             this.groupBox21.Name = "groupBox21";
             this.groupBox21.Size = new System.Drawing.Size(138, 55);
@@ -467,12 +481,13 @@
             this.groupBox21.TabStop = false;
             this.groupBox21.Text = "Cor";
             // 
-            // cbCor
+            // cmbCor
             // 
-            this.cbCor.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cbCor.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbCor.FormattingEnabled = true;
-            this.cbCor.Items.AddRange(new object[] {
+            this.cmbCor.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbCor.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbCor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbCor.FormattingEnabled = true;
+            this.cmbCor.Items.AddRange(new object[] {
             "Amarelo/Dourado",
             "Azul",
             "Branco",
@@ -483,14 +498,14 @@
             "Verde",
             "Vermelho",
             "Laranja"});
-            this.cbCor.Location = new System.Drawing.Point(8, 18);
-            this.cbCor.Name = "cbCor";
-            this.cbCor.Size = new System.Drawing.Size(114, 26);
-            this.cbCor.TabIndex = 8;
+            this.cmbCor.Location = new System.Drawing.Point(8, 18);
+            this.cmbCor.Name = "cmbCor";
+            this.cmbCor.Size = new System.Drawing.Size(114, 26);
+            this.cmbCor.TabIndex = 8;
             // 
             // groupBox20
             // 
-            this.groupBox20.Controls.Add(this.cmbModelo);
+            this.groupBox20.Controls.Add(this.txtModelo);
             this.groupBox20.Location = new System.Drawing.Point(17, 103);
             this.groupBox20.Name = "groupBox20";
             this.groupBox20.Size = new System.Drawing.Size(421, 55);
@@ -498,13 +513,12 @@
             this.groupBox20.TabStop = false;
             this.groupBox20.Text = "Modelo";
             // 
-            // cmbModelo
+            // txtModelo
             // 
-            this.cmbModelo.FormattingEnabled = true;
-            this.cmbModelo.Location = new System.Drawing.Point(8, 18);
-            this.cmbModelo.Name = "cmbModelo";
-            this.cmbModelo.Size = new System.Drawing.Size(402, 26);
-            this.cmbModelo.TabIndex = 5;
+            this.txtModelo.Location = new System.Drawing.Point(8, 22);
+            this.txtModelo.Name = "txtModelo";
+            this.txtModelo.Size = new System.Drawing.Size(401, 24);
+            this.txtModelo.TabIndex = 6;
             // 
             // groupBox7
             // 
@@ -526,30 +540,43 @@
             // 
             // btnSalvar
             // 
+            this.btnSalvar.BackColor = System.Drawing.Color.White;
+            this.btnSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalvar.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.Image")));
+            this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnSalvar.Location = new System.Drawing.Point(12, 12);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(77, 49);
+            this.btnSalvar.Size = new System.Drawing.Size(81, 53);
             this.btnSalvar.TabIndex = 15;
             this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnLimpar
             // 
+            this.btnLimpar.BackColor = System.Drawing.Color.White;
+            this.btnLimpar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLimpar.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpar.Image = ((System.Drawing.Image)(resources.GetObject("btnLimpar.Image")));
+            this.btnLimpar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnLimpar.Location = new System.Drawing.Point(107, 12);
             this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(80, 49);
+            this.btnLimpar.Size = new System.Drawing.Size(81, 53);
             this.btnLimpar.TabIndex = 16;
             this.btnLimpar.Text = "Limpar";
-            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnLimpar.UseVisualStyleBackColor = false;
             this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // gbObservacao
             // 
             this.gbObservacao.Controls.Add(this.txtObs);
-            this.gbObservacao.Location = new System.Drawing.Point(22, 421);
+            this.gbObservacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbObservacao.Location = new System.Drawing.Point(12, 409);
             this.gbObservacao.Name = "gbObservacao";
-            this.gbObservacao.Size = new System.Drawing.Size(218, 58);
+            this.gbObservacao.Size = new System.Drawing.Size(456, 112);
             this.gbObservacao.TabIndex = 18;
             this.gbObservacao.TabStop = false;
             this.gbObservacao.Text = "Observacao";
@@ -557,8 +584,9 @@
             // txtObs
             // 
             this.txtObs.Location = new System.Drawing.Point(22, 20);
+            this.txtObs.Multiline = true;
             this.txtObs.Name = "txtObs";
-            this.txtObs.Size = new System.Drawing.Size(177, 20);
+            this.txtObs.Size = new System.Drawing.Size(405, 73);
             this.txtObs.TabIndex = 0;
             // 
             // CadastroAutomovel
@@ -573,7 +601,6 @@
             this.Controls.Add(this.BtnCancelaAutomovel);
             this.Name = "CadastroAutomovel";
             this.Text = "Cadastro de Automovel";
-            this.Load += new System.EventHandler(this.CadastroAutomovel_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -592,6 +619,7 @@
             this.groupBox22.ResumeLayout(false);
             this.groupBox21.ResumeLayout(false);
             this.groupBox20.ResumeLayout(false);
+            this.groupBox20.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
             this.gbObservacao.ResumeLayout(false);
@@ -615,27 +643,27 @@
         private System.Windows.Forms.TextBox txtKM;
         private System.Windows.Forms.MaskedTextBox mskPlaca;
         private System.Windows.Forms.GroupBox gbInformacoes;
-        private System.Windows.Forms.ComboBox cmbFabric;
-        private System.Windows.Forms.ComboBox cbAnoModelo;
+        private System.Windows.Forms.ComboBox cmbAnoFabric;
+        private System.Windows.Forms.ComboBox cmbAnoModelo;
         private System.Windows.Forms.MaskedTextBox mskChassi;
-        private System.Windows.Forms.ComboBox cbMarca;
+        private System.Windows.Forms.ComboBox cmbMarca;
         private System.Windows.Forms.GroupBox groupBox25;
-        private System.Windows.Forms.ComboBox cbUF;
+        private System.Windows.Forms.ComboBox cmbEstado;
         private System.Windows.Forms.GroupBox groupBox24;
-        private System.Windows.Forms.ComboBox cbTipo;
+        private System.Windows.Forms.ComboBox cmbTipo;
         private System.Windows.Forms.GroupBox groupBox23;
-        private System.Windows.Forms.ComboBox cbPortas;
+        private System.Windows.Forms.ComboBox cmbPortas;
         private System.Windows.Forms.GroupBox groupBox22;
-        private System.Windows.Forms.ComboBox cbCombustivel;
+        private System.Windows.Forms.ComboBox cmbCombustivel;
         private System.Windows.Forms.GroupBox groupBox21;
-        private System.Windows.Forms.ComboBox cbCor;
+        private System.Windows.Forms.ComboBox cmbCor;
         private System.Windows.Forms.GroupBox groupBox20;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.MaskedTextBox mskRenavam;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnLimpar;
-        private System.Windows.Forms.ComboBox cmbModelo;
         private System.Windows.Forms.GroupBox gbObservacao;
         private System.Windows.Forms.TextBox txtObs;
+        private System.Windows.Forms.TextBox txtModelo;
     }
 }

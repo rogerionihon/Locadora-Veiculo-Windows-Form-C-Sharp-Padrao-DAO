@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LocalizarCliente));
             this.datagrid = new System.Windows.Forms.DataGridView();
             this.btnAtualizar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
@@ -43,6 +44,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtPesqNome = new System.Windows.Forms.TextBox();
             this.grbPessoaF = new System.Windows.Forms.GroupBox();
+            this.mskCnh = new System.Windows.Forms.MaskedTextBox();
             this.cmbSexo = new System.Windows.Forms.ComboBox();
             this.txtObsFis = new System.Windows.Forms.TextBox();
             this.lblObs = new System.Windows.Forms.Label();
@@ -54,7 +56,6 @@
             this.lblEstado = new System.Windows.Forms.Label();
             this.lblMail = new System.Windows.Forms.Label();
             this.lblCivil = new System.Windows.Forms.Label();
-            this.txtCnh = new System.Windows.Forms.TextBox();
             this.lblCnh = new System.Windows.Forms.Label();
             this.mskCelFis = new System.Windows.Forms.MaskedTextBox();
             this.mskTelFis = new System.Windows.Forms.MaskedTextBox();
@@ -128,30 +129,47 @@
             // 
             // datagrid
             // 
+            this.datagrid.AllowUserToAddRows = false;
+            this.datagrid.AllowUserToDeleteRows = false;
             this.datagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.datagrid.Location = new System.Drawing.Point(12, 145);
+            this.datagrid.Location = new System.Drawing.Point(12, 161);
             this.datagrid.Name = "datagrid";
+            this.datagrid.ReadOnly = true;
+            this.datagrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.datagrid.Size = new System.Drawing.Size(800, 177);
             this.datagrid.TabIndex = 0;
             this.datagrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagrid_CellClick);
             // 
             // btnAtualizar
             // 
+            this.btnAtualizar.BackColor = System.Drawing.Color.White;
+            this.btnAtualizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAtualizar.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnAtualizar.Image")));
+            this.btnAtualizar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnAtualizar.Location = new System.Drawing.Point(12, 12);
             this.btnAtualizar.Name = "btnAtualizar";
-            this.btnAtualizar.Size = new System.Drawing.Size(79, 30);
+            this.btnAtualizar.Size = new System.Drawing.Size(81, 53);
             this.btnAtualizar.TabIndex = 22;
             this.btnAtualizar.Text = "Atualizar";
-            this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAtualizar.UseVisualStyleBackColor = false;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
             // btnSair
             // 
-            this.btnSair.Location = new System.Drawing.Point(186, 12);
+            this.btnSair.BackColor = System.Drawing.Color.White;
+            this.btnSair.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSair.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSair.Image = ((System.Drawing.Image)(resources.GetObject("btnSair.Image")));
+            this.btnSair.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnSair.Location = new System.Drawing.Point(130, 12);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(79, 30);
+            this.btnSair.Size = new System.Drawing.Size(81, 53);
             this.btnSair.TabIndex = 23;
             this.btnSair.Text = "Sair";
-            this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSair.UseVisualStyleBackColor = false;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // gbCliente
@@ -160,7 +178,7 @@
             this.gbCliente.Controls.Add(this.rbtPessoaFisica);
             this.gbCliente.Location = new System.Drawing.Point(271, 12);
             this.gbCliente.Name = "gbCliente";
-            this.gbCliente.Size = new System.Drawing.Size(219, 51);
+            this.gbCliente.Size = new System.Drawing.Size(219, 42);
             this.gbCliente.TabIndex = 55;
             this.gbCliente.TabStop = false;
             this.gbCliente.Text = "Cliente";
@@ -168,6 +186,7 @@
             // rbtPessoaJuridica
             // 
             this.rbtPessoaJuridica.AutoSize = true;
+            this.rbtPessoaJuridica.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtPessoaJuridica.Location = new System.Drawing.Point(117, 19);
             this.rbtPessoaJuridica.Name = "rbtPessoaJuridica";
             this.rbtPessoaJuridica.Size = new System.Drawing.Size(99, 17);
@@ -180,6 +199,7 @@
             // 
             this.rbtPessoaFisica.AutoSize = true;
             this.rbtPessoaFisica.Checked = true;
+            this.rbtPessoaFisica.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtPessoaFisica.Location = new System.Drawing.Point(21, 19);
             this.rbtPessoaFisica.Name = "rbtPessoaFisica";
             this.rbtPessoaFisica.Size = new System.Drawing.Size(90, 17);
@@ -194,27 +214,27 @@
             this.gbPesquisa.Controls.Add(this.groupBox3);
             this.gbPesquisa.Controls.Add(this.groupBox2);
             this.gbPesquisa.Controls.Add(this.groupBox1);
-            this.gbPesquisa.Location = new System.Drawing.Point(12, 54);
+            this.gbPesquisa.Location = new System.Drawing.Point(12, 69);
             this.gbPesquisa.Name = "gbPesquisa";
             this.gbPesquisa.Size = new System.Drawing.Size(800, 85);
             this.gbPesquisa.TabIndex = 1;
             this.gbPesquisa.TabStop = false;
             this.gbPesquisa.Tag = "";
-            this.gbPesquisa.Text = "Pesquisa";
+            this.gbPesquisa.Text = "Busca por";
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.txtPesqCnpj);
-            this.groupBox3.Location = new System.Drawing.Point(579, 28);
+            this.groupBox3.Location = new System.Drawing.Point(457, 28);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(204, 48);
+            this.groupBox3.Size = new System.Drawing.Size(177, 48);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "CNPJ";
             // 
             // txtPesqCnpj
             // 
-            this.txtPesqCnpj.Location = new System.Drawing.Point(27, 15);
+            this.txtPesqCnpj.Location = new System.Drawing.Point(22, 15);
             this.txtPesqCnpj.Name = "txtPesqCnpj";
             this.txtPesqCnpj.Size = new System.Drawing.Size(141, 20);
             this.txtPesqCnpj.TabIndex = 2;
@@ -223,18 +243,18 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.txtPesqCpf);
-            this.groupBox2.Location = new System.Drawing.Point(298, 28);
+            this.groupBox2.Location = new System.Drawing.Point(259, 28);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(245, 48);
+            this.groupBox2.Size = new System.Drawing.Size(177, 48);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "CPF";
             // 
             // txtPesqCpf
             // 
-            this.txtPesqCpf.Location = new System.Drawing.Point(27, 15);
+            this.txtPesqCpf.Location = new System.Drawing.Point(21, 15);
             this.txtPesqCpf.Name = "txtPesqCpf";
-            this.txtPesqCpf.Size = new System.Drawing.Size(176, 20);
+            this.txtPesqCpf.Size = new System.Drawing.Size(141, 20);
             this.txtPesqCpf.TabIndex = 1;
             this.txtPesqCpf.TextChanged += new System.EventHandler(this.txtPesqCpf_TextChanged);
             // 
@@ -243,21 +263,22 @@
             this.groupBox1.Controls.Add(this.txtPesqNome);
             this.groupBox1.Location = new System.Drawing.Point(6, 28);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(259, 49);
+            this.groupBox1.Size = new System.Drawing.Size(232, 49);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nome";
             // 
             // txtPesqNome
             // 
-            this.txtPesqNome.Location = new System.Drawing.Point(6, 19);
+            this.txtPesqNome.Location = new System.Drawing.Point(10, 19);
             this.txtPesqNome.Name = "txtPesqNome";
-            this.txtPesqNome.Size = new System.Drawing.Size(184, 20);
+            this.txtPesqNome.Size = new System.Drawing.Size(208, 20);
             this.txtPesqNome.TabIndex = 0;
             this.txtPesqNome.TextChanged += new System.EventHandler(this.txtPesqNome_TextChanged);
             // 
             // grbPessoaF
             // 
+            this.grbPessoaF.Controls.Add(this.mskCnh);
             this.grbPessoaF.Controls.Add(this.cmbSexo);
             this.grbPessoaF.Controls.Add(this.txtObsFis);
             this.grbPessoaF.Controls.Add(this.lblObs);
@@ -269,7 +290,6 @@
             this.grbPessoaF.Controls.Add(this.lblEstado);
             this.grbPessoaF.Controls.Add(this.lblMail);
             this.grbPessoaF.Controls.Add(this.lblCivil);
-            this.grbPessoaF.Controls.Add(this.txtCnh);
             this.grbPessoaF.Controls.Add(this.lblCnh);
             this.grbPessoaF.Controls.Add(this.mskCelFis);
             this.grbPessoaF.Controls.Add(this.mskTelFis);
@@ -296,15 +316,25 @@
             this.grbPessoaF.Controls.Add(this.lblEnd);
             this.grbPessoaF.Controls.Add(this.lblNome);
             this.grbPessoaF.Controls.Add(this.lblCodigo);
-            this.grbPessoaF.Location = new System.Drawing.Point(13, 335);
+            this.grbPessoaF.Location = new System.Drawing.Point(13, 351);
             this.grbPessoaF.Name = "grbPessoaF";
             this.grbPessoaF.Size = new System.Drawing.Size(798, 368);
             this.grbPessoaF.TabIndex = 9;
             this.grbPessoaF.TabStop = false;
             this.grbPessoaF.Text = "Dados Cadastrais:";
             // 
+            // mskCnh
+            // 
+            this.mskCnh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskCnh.Location = new System.Drawing.Point(615, 108);
+            this.mskCnh.Mask = "00000000000";
+            this.mskCnh.Name = "mskCnh";
+            this.mskCnh.Size = new System.Drawing.Size(125, 23);
+            this.mskCnh.TabIndex = 12;
+            // 
             // cmbSexo
             // 
+            this.cmbSexo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbSexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSexo.FormattingEnabled = true;
             this.cmbSexo.Items.AddRange(new object[] {
@@ -317,6 +347,7 @@
             // 
             // txtObsFis
             // 
+            this.txtObsFis.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtObsFis.Location = new System.Drawing.Point(96, 255);
             this.txtObsFis.Multiline = true;
             this.txtObsFis.Name = "txtObsFis";
@@ -351,6 +382,7 @@
             // 
             // cmbCivil
             // 
+            this.cmbCivil.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbCivil.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCivil.FormattingEnabled = true;
             this.cmbCivil.Items.AddRange(new object[] {
@@ -365,6 +397,7 @@
             // 
             // cmbEstFis
             // 
+            this.cmbEstFis.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbEstFis.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbEstFis.FormattingEnabled = true;
             this.cmbEstFis.Items.AddRange(new object[] {
@@ -440,14 +473,6 @@
             this.lblCivil.TabIndex = 32;
             this.lblCivil.Text = "Estado civil:";
             // 
-            // txtCnh
-            // 
-            this.txtCnh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCnh.Location = new System.Drawing.Point(615, 105);
-            this.txtCnh.Name = "txtCnh";
-            this.txtCnh.Size = new System.Drawing.Size(125, 23);
-            this.txtCnh.TabIndex = 12;
-            // 
             // lblCnh
             // 
             this.lblCnh.AutoSize = true;
@@ -462,7 +487,7 @@
             // 
             this.mskCelFis.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskCelFis.Location = new System.Drawing.Point(415, 108);
-            this.mskCelFis.Mask = "(00) 00000-0000";
+            this.mskCelFis.Mask = "(00)00000-0000";
             this.mskCelFis.Name = "mskCelFis";
             this.mskCelFis.Size = new System.Drawing.Size(105, 23);
             this.mskCelFis.TabIndex = 11;
@@ -471,9 +496,9 @@
             // 
             this.mskTelFis.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskTelFis.Location = new System.Drawing.Point(251, 108);
-            this.mskTelFis.Mask = "(00) 0000-9999";
+            this.mskTelFis.Mask = "(00)0000-0000";
             this.mskTelFis.Name = "mskTelFis";
-            this.mskTelFis.Size = new System.Drawing.Size(92, 23);
+            this.mskTelFis.Size = new System.Drawing.Size(101, 23);
             this.mskTelFis.TabIndex = 10;
             // 
             // mskDtaNasc
@@ -725,7 +750,7 @@
             this.grbPessoaJ.Controls.Add(this.lblCnpj);
             this.grbPessoaJ.Controls.Add(this.lblNomeFantJ);
             this.grbPessoaJ.Controls.Add(this.lblCodigoJ);
-            this.grbPessoaJ.Location = new System.Drawing.Point(13, 335);
+            this.grbPessoaJ.Location = new System.Drawing.Point(13, 351);
             this.grbPessoaJ.Name = "grbPessoaJ";
             this.grbPessoaJ.Size = new System.Drawing.Size(799, 368);
             this.grbPessoaJ.TabIndex = 10;
@@ -754,8 +779,37 @@
             // 
             // cmbEstJur
             // 
+            this.cmbEstJur.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbEstJur.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbEstJur.FormattingEnabled = true;
+            this.cmbEstJur.Items.AddRange(new object[] {
+            "Acre",
+            "Alagoas",
+            "Amapá ",
+            "Amazonas",
+            "Bahia",
+            "Ceará",
+            "Distrito Federal",
+            "Espírito Santo",
+            "Goiás",
+            "Maranhão",
+            "Mato Grosso ",
+            "Mato Grosso do Sul",
+            "Minas Gerais",
+            "Pará",
+            "Paraíba",
+            "Paraná",
+            "Pernambuco ",
+            "Piauí",
+            "Rio de Janeiro",
+            "Rio Grande do Norte",
+            "Rio Grande do Sul",
+            "Rondônia",
+            "Roraima",
+            "Santa Catarina",
+            "São Paulo ",
+            "Sergipe",
+            "Tocantins"});
             this.cmbEstJur.Location = new System.Drawing.Point(600, 222);
             this.cmbEstJur.Name = "cmbEstJur";
             this.cmbEstJur.Size = new System.Drawing.Size(125, 24);
@@ -940,7 +994,7 @@
             // 
             this.mskInsEst.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskInsEst.Location = new System.Drawing.Point(684, 57);
-            this.mskInsEst.Mask = "000.000.000.000";
+            this.mskInsEst.Mask = "000000000000";
             this.mskInsEst.Name = "mskInsEst";
             this.mskInsEst.Size = new System.Drawing.Size(107, 23);
             this.mskInsEst.TabIndex = 8;
@@ -957,7 +1011,7 @@
             // mskCnpj
             // 
             this.mskCnpj.Location = new System.Drawing.Point(108, 112);
-            this.mskCnpj.Mask = "00.000.000/0000-00";
+            this.mskCnpj.Mask = "00,000,000/0000-00";
             this.mskCnpj.Name = "mskCnpj";
             this.mskCnpj.Size = new System.Drawing.Size(111, 20);
             this.mskCnpj.TabIndex = 11;
@@ -1030,7 +1084,7 @@
             // 
             this.lblNomeFantJ.AutoSize = true;
             this.lblNomeFantJ.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomeFantJ.Location = new System.Drawing.Point(0, 87);
+            this.lblNomeFantJ.Location = new System.Drawing.Point(2, 89);
             this.lblNomeFantJ.Name = "lblNomeFantJ";
             this.lblNomeFantJ.Size = new System.Drawing.Size(107, 17);
             this.lblNomeFantJ.TabIndex = 1;
@@ -1048,7 +1102,7 @@
             // 
             // LocalizarCliente
             // 
-            this.ClientSize = new System.Drawing.Size(1170, 741);
+            this.ClientSize = new System.Drawing.Size(849, 733);
             this.Controls.Add(this.grbPessoaJ);
             this.Controls.Add(this.grbPessoaF);
             this.Controls.Add(this.gbPesquisa);
@@ -1117,7 +1171,6 @@
         private System.Windows.Forms.MaskedTextBox mskCepFis;
         private System.Windows.Forms.TextBox txtRne;
         private System.Windows.Forms.Label lblRne;
-        private System.Windows.Forms.TextBox txtCnh;
         private System.Windows.Forms.Label lblCnh;
         private System.Windows.Forms.MaskedTextBox mskCelFis;
         private System.Windows.Forms.MaskedTextBox mskTelFis;
@@ -1171,5 +1224,6 @@
         private System.Windows.Forms.Label lblCidadeJ;
         private System.Windows.Forms.Label lblEndJ;
         private System.Windows.Forms.Label lblCepJ;
+        private System.Windows.Forms.MaskedTextBox mskCnh;
     }
 }

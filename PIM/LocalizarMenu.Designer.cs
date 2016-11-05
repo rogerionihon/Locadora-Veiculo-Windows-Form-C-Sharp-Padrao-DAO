@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LocalizarMenu));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnFuncionarios = new System.Windows.Forms.Button();
             this.btnVeiculos = new System.Windows.Forms.Button();
@@ -49,41 +50,66 @@
             // 
             // btnFuncionarios
             // 
+            this.btnFuncionarios.BackColor = System.Drawing.Color.White;
+            this.btnFuncionarios.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFuncionarios.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFuncionarios.Image = ((System.Drawing.Image)(resources.GetObject("btnFuncionarios.Image")));
+            this.btnFuncionarios.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnFuncionarios.Location = new System.Drawing.Point(62, 428);
             this.btnFuncionarios.Name = "btnFuncionarios";
             this.btnFuncionarios.Size = new System.Drawing.Size(124, 92);
             this.btnFuncionarios.TabIndex = 2;
             this.btnFuncionarios.Text = "Funcionarios";
-            this.btnFuncionarios.UseVisualStyleBackColor = true;
+            this.btnFuncionarios.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnFuncionarios.UseVisualStyleBackColor = false;
+            this.btnFuncionarios.Click += new System.EventHandler(this.btnFuncionarios_Click);
             // 
             // btnVeiculos
             // 
+            this.btnVeiculos.BackColor = System.Drawing.Color.White;
+            this.btnVeiculos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVeiculos.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVeiculos.Image = ((System.Drawing.Image)(resources.GetObject("btnVeiculos.Image")));
+            this.btnVeiculos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnVeiculos.Location = new System.Drawing.Point(62, 225);
             this.btnVeiculos.Name = "btnVeiculos";
             this.btnVeiculos.Size = new System.Drawing.Size(124, 92);
             this.btnVeiculos.TabIndex = 1;
             this.btnVeiculos.Text = "Veiculos";
-            this.btnVeiculos.UseVisualStyleBackColor = true;
+            this.btnVeiculos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnVeiculos.UseVisualStyleBackColor = false;
+            this.btnVeiculos.Click += new System.EventHandler(this.btnVeiculos_Click);
             // 
             // btnClientes
             // 
+            this.btnClientes.BackColor = System.Drawing.Color.White;
+            this.btnClientes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClientes.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClientes.Image = ((System.Drawing.Image)(resources.GetObject("btnClientes.Image")));
             this.btnClientes.Location = new System.Drawing.Point(62, 19);
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.Size = new System.Drawing.Size(124, 92);
             this.btnClientes.TabIndex = 0;
             this.btnClientes.Text = "Clientes";
-            this.btnClientes.UseVisualStyleBackColor = true;
+            this.btnClientes.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnClientes.UseVisualStyleBackColor = false;
             this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
             // 
             // btnSairLocalizacao
             // 
+            this.btnSairLocalizacao.BackColor = System.Drawing.Color.White;
+            this.btnSairLocalizacao.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSairLocalizacao.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSairLocalizacao.Image = ((System.Drawing.Image)(resources.GetObject("btnSairLocalizacao.Image")));
+            this.btnSairLocalizacao.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnSairLocalizacao.Location = new System.Drawing.Point(888, 505);
             this.btnSairLocalizacao.Name = "btnSairLocalizacao";
             this.btnSairLocalizacao.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnSairLocalizacao.Size = new System.Drawing.Size(124, 92);
             this.btnSairLocalizacao.TabIndex = 1;
             this.btnSairLocalizacao.Text = "Sair";
-            this.btnSairLocalizacao.UseVisualStyleBackColor = true;
+            this.btnSairLocalizacao.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSairLocalizacao.UseVisualStyleBackColor = false;
             this.btnSairLocalizacao.Click += new System.EventHandler(this.btnSairLocalizacao_Click);
             // 
             // LocalizarMenu

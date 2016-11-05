@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Aluguel));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnDevolução = new System.Windows.Forms.Button();
             this.btnDev = new System.Windows.Forms.Button();
@@ -47,32 +48,50 @@
             // 
             // btnDevolução
             // 
+            this.btnDevolução.BackColor = System.Drawing.Color.White;
+            this.btnDevolução.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDevolução.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDevolução.Image = ((System.Drawing.Image)(resources.GetObject("btnDevolução.Image")));
+            this.btnDevolução.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnDevolução.Location = new System.Drawing.Point(33, 293);
             this.btnDevolução.Name = "btnDevolução";
             this.btnDevolução.Size = new System.Drawing.Size(124, 92);
             this.btnDevolução.TabIndex = 2;
             this.btnDevolução.Text = "Devolução";
-            this.btnDevolução.UseVisualStyleBackColor = true;
+            this.btnDevolução.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnDevolução.UseVisualStyleBackColor = false;
             this.btnDevolução.Click += new System.EventHandler(this.btnDevolução_Click);
             // 
             // btnDev
             // 
+            this.btnDev.BackColor = System.Drawing.Color.White;
+            this.btnDev.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDev.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDev.Image = ((System.Drawing.Image)(resources.GetObject("btnDev.Image")));
+            this.btnDev.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnDev.Location = new System.Drawing.Point(33, 31);
             this.btnDev.Name = "btnDev";
             this.btnDev.Size = new System.Drawing.Size(124, 92);
             this.btnDev.TabIndex = 1;
             this.btnDev.Text = "Aluguel";
-            this.btnDev.UseVisualStyleBackColor = true;
+            this.btnDev.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnDev.UseVisualStyleBackColor = false;
             this.btnDev.Click += new System.EventHandler(this.btnDev_Click);
             // 
             // BtnSairAluguel
             // 
+            this.BtnSairAluguel.BackColor = System.Drawing.Color.White;
+            this.BtnSairAluguel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnSairAluguel.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSairAluguel.Image = ((System.Drawing.Image)(resources.GetObject("BtnSairAluguel.Image")));
+            this.BtnSairAluguel.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BtnSairAluguel.Location = new System.Drawing.Point(494, 391);
             this.BtnSairAluguel.Name = "BtnSairAluguel";
             this.BtnSairAluguel.Size = new System.Drawing.Size(124, 92);
             this.BtnSairAluguel.TabIndex = 4;
             this.BtnSairAluguel.Text = "Sair";
-            this.BtnSairAluguel.UseVisualStyleBackColor = true;
+            this.BtnSairAluguel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnSairAluguel.UseVisualStyleBackColor = false;
             this.BtnSairAluguel.Click += new System.EventHandler(this.BtnSairAluguel_Click);
             // 
             // Aluguel

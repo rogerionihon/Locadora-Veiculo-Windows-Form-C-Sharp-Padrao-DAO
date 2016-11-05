@@ -33,6 +33,7 @@
             // 
             // BtnCancelaDevolucaoAutomovel
             // 
+            this.BtnCancelaDevolucaoAutomovel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnCancelaDevolucaoAutomovel.Location = new System.Drawing.Point(542, 437);
             this.BtnCancelaDevolucaoAutomovel.Name = "BtnCancelaDevolucaoAutomovel";
             this.BtnCancelaDevolucaoAutomovel.Size = new System.Drawing.Size(124, 92);

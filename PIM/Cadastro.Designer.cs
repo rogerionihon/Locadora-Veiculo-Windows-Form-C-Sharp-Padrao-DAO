@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cadastro));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnFuncionario = new System.Windows.Forms.Button();
             this.BtnCliente = new System.Windows.Forms.Button();
@@ -49,42 +50,65 @@
             // 
             // btnFuncionario
             // 
+            this.btnFuncionario.BackColor = System.Drawing.Color.White;
+            this.btnFuncionario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFuncionario.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFuncionario.Image = ((System.Drawing.Image)(resources.GetObject("btnFuncionario.Image")));
+            this.btnFuncionario.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnFuncionario.Location = new System.Drawing.Point(62, 428);
             this.btnFuncionario.Name = "btnFuncionario";
             this.btnFuncionario.Size = new System.Drawing.Size(124, 92);
             this.btnFuncionario.TabIndex = 2;
             this.btnFuncionario.Text = "Funcionario";
-            this.btnFuncionario.UseVisualStyleBackColor = true;
+            this.btnFuncionario.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnFuncionario.UseVisualStyleBackColor = false;
             this.btnFuncionario.Click += new System.EventHandler(this.btnFuncionario_Click);
             // 
             // BtnCliente
             // 
+            this.BtnCliente.BackColor = System.Drawing.Color.White;
+            this.BtnCliente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnCliente.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCliente.Image = ((System.Drawing.Image)(resources.GetObject("BtnCliente.Image")));
             this.BtnCliente.Location = new System.Drawing.Point(62, 19);
             this.BtnCliente.Name = "BtnCliente";
             this.BtnCliente.Size = new System.Drawing.Size(124, 92);
             this.BtnCliente.TabIndex = 0;
             this.BtnCliente.Text = "Cliente";
-            this.BtnCliente.UseVisualStyleBackColor = true;
+            this.BtnCliente.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnCliente.UseVisualStyleBackColor = false;
             this.BtnCliente.Click += new System.EventHandler(this.BtnCliente_Click);
             // 
             // btnAutomovel
             // 
+            this.btnAutomovel.BackColor = System.Drawing.Color.White;
+            this.btnAutomovel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAutomovel.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAutomovel.Image = ((System.Drawing.Image)(resources.GetObject("btnAutomovel.Image")));
+            this.btnAutomovel.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnAutomovel.Location = new System.Drawing.Point(62, 225);
             this.btnAutomovel.Name = "btnAutomovel";
             this.btnAutomovel.Size = new System.Drawing.Size(124, 92);
             this.btnAutomovel.TabIndex = 1;
             this.btnAutomovel.Text = "Automovel";
-            this.btnAutomovel.UseVisualStyleBackColor = true;
+            this.btnAutomovel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAutomovel.UseVisualStyleBackColor = false;
             this.btnAutomovel.Click += new System.EventHandler(this.btnAutomovel_Click);
             // 
             // BtnSairCadastro
             // 
+            this.BtnSairCadastro.BackColor = System.Drawing.Color.White;
+            this.BtnSairCadastro.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnSairCadastro.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSairCadastro.Image = ((System.Drawing.Image)(resources.GetObject("BtnSairCadastro.Image")));
+            this.BtnSairCadastro.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BtnSairCadastro.Location = new System.Drawing.Point(888, 505);
             this.BtnSairCadastro.Name = "BtnSairCadastro";
             this.BtnSairCadastro.Size = new System.Drawing.Size(124, 92);
             this.BtnSairCadastro.TabIndex = 3;
             this.BtnSairCadastro.Text = "Sair";
-            this.BtnSairCadastro.UseVisualStyleBackColor = true;
+            this.BtnSairCadastro.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnSairCadastro.UseVisualStyleBackColor = false;
             this.BtnSairCadastro.Click += new System.EventHandler(this.BtnSairCadastro_Click);
             // 
             // Cadastro

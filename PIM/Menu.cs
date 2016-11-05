@@ -28,7 +28,10 @@ namespace PIM
         //Encerra a aplicacao
         private void BtnSair_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (MessageBox.Show("Voce deseja Sair do Sistema?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
 
         //Abre Aluguel geral
@@ -45,6 +48,14 @@ namespace PIM
             LocalizarMenu localizar = new LocalizarMenu();
             localizar.StartPosition = FormStartPosition.CenterScreen;
             localizar.Show();
+        }
+
+        //abre relatorio geral
+        private void btnRelatorio_Click(object sender, EventArgs e)
+        {
+            Relatorio relatorio = new Relatorio();
+            relatorio.StartPosition = FormStartPosition.CenterScreen;
+            relatorio.Show();
         }
     }
 }
