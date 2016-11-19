@@ -270,7 +270,7 @@
             // 
             // txtPesqNome
             // 
-            this.txtPesqNome.Location = new System.Drawing.Point(10, 19);
+            this.txtPesqNome.Location = new System.Drawing.Point(9, 15);
             this.txtPesqNome.Name = "txtPesqNome";
             this.txtPesqNome.Size = new System.Drawing.Size(208, 20);
             this.txtPesqNome.TabIndex = 0;

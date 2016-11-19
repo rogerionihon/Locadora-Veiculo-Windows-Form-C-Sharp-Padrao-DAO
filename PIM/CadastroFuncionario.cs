@@ -19,14 +19,15 @@ namespace PIM
 
         Dao Cdb = new Dao(); // criacao do objeto do tipo DAO
 
-        Funcionario funcionario = new Funcionario();
+        Funcionario funcionario = new Funcionario(); // criacao do objeto do tipo funcionario
 
-        Validacao validar = new Validacao();
+        Validacao validar = new Validacao(); // criacao do objeto do tipo validacao
         public CadastroFuncionario()
         {
             InitializeComponent();
         }
 
+        //metodo para sair do formulario
         private void BtnCancelaFuncionario_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Voce deseja sair?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -34,7 +35,8 @@ namespace PIM
                 this.Close();
             }
         }
-        
+
+        //metodo para limpar os campos preenchidos
         public void LimparCampos()
         {
             txtNome.Text = "";
@@ -47,16 +49,19 @@ namespace PIM
             mskCel.Text = "";            
         }
 
+        // metodo para limpar os campos do formulario
         private void btnLimpar_Click(object sender, EventArgs e)
         {
             LimparCampos();
         }
 
+        // metodo que se carrega ao abrir o formulario
         private void CadastroFuncionario_Load(object sender, EventArgs e)
         {
             mskDataCadastro.Text = Convert.ToString(DateTime.Now);
         }
 
+        // metodo que recebe os dados do formulario preenchido
         public void ReceberDados()
         {
             try
@@ -71,9 +76,113 @@ namespace PIM
                     funcionario.dataCadastro = DateTime.Parse(mskDataCadastro.Text.ToString());
                     funcionario.email = txtEmail.Text.ToString();
                     funcionario.telefone = mskTel.Text.ToString();
-                    funcionario.celular = mskCel.Text.ToString();
+                    funcionario.celular = mskCel.Text.ToString();        
+
+                    if (string.IsNullOrEmpty(txtNome.Text)) // valida campo nome
+                    {
+                        erro = true;
+                        MessageBox.Show("O nome deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    else if (validar.isLimitCaract(txtNome.Text, 5, 45)) { }
+                    else
+                    {
+                        erro = true;
+                        MessageBox.Show(" O nome deve conter no minimo 5 digitos! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    } // fecha a validacao nome
+
+                    if (string.IsNullOrEmpty(txtEmail.Text)) // valida campo email
+                    {
+                        erro = true;
+                        MessageBox.Show("O email deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    } 
+                    else if (validar.ValidarEmail(txtEmail.Text)) { }
+                    else
+                    {
+                        erro = true;
+                        MessageBox.Show(" O email informado é invalido! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    } // fecha a validacao de email
+
                     
-                    if (rbtAtivo.Checked == true)
+                    if (string.IsNullOrEmpty(mskTel.Text)) // valida campo telefone
+                    {
+                        erro = true;
+                        MessageBox.Show("O numero do telefone deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    else if (validar.ValidaTelefone(mskTel.Text)) { }
+                    else
+                    {
+                        erro = true;
+                        MessageBox.Show("O numero do telefone informado é invalido! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    } // fecha a validacao do telefone
+
+                    if (string.IsNullOrEmpty(mskCel.Text)) // valida campo celular
+                    {
+                        erro = true;
+                        MessageBox.Show("O numero do celular deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    else if (validar.ValidarCelular(mskCel.Text)) { }
+                    else
+                    {
+                        erro = true;
+                        MessageBox.Show("O numero do celular informado é invalido! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    } // fecha a validacao do celular
+
+                    if (string.IsNullOrEmpty(mskCpf.Text)) // valida campo cpf
+                    {
+                        erro = true;
+                        MessageBox.Show("O numero do CPF deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    else if (validar.validaCPF(mskCpf.Text)) { }
+                    else
+                    {
+                        erro = true;
+                        MessageBox.Show("O numero do CPF informado é invalido! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    } // fecha a validacao cpf
+
+                    if (string.IsNullOrEmpty(txtLogin.Text)) // valida campo login
+                    {
+                        erro = true;
+                        MessageBox.Show(" O login deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }    
+                    else if (validar.isLimitCaract(txtLogin.Text, 5, 10)) { } 
+                    else
+                    {
+                        erro = true;
+                        MessageBox.Show(" O login deve conter de 5 a 10 digitos! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    } // fecha a validacao login
+
+                    if (string.IsNullOrEmpty(txtSenha.Text)) // valida campo senha
+                    {
+                        erro = true;
+                        MessageBox.Show(" A senha deve ser informada! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    else if (validar.isLimitCaract(txtSenha.Text, 5, 10)) { }
+                    else
+                    {
+                        erro = true;
+                        MessageBox.Show(" A senha deve conter de 5 a 10 digitos! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    } // fecha a validacao SENHA 
+
+                    if (string.IsNullOrEmpty(txtConfirmaSenha.Text)) // valida campo confirmar senha
+                    {
+                        erro = true;
+                        MessageBox.Show(" A senha de confirmacao deve ser informada! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    else if (validar.isLimitCaract(txtConfirmaSenha.Text, 5, 10)) { }
+                    else
+                    {
+                        erro = true;
+                        MessageBox.Show(" A senha de confirmacao deve conter de 5 a 10 digitos! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    } // fecha a validacao confirmar senha
+
+                    if (funcionario.senha == funcionario.confirmarSenha) { } // valida campo senha e confirmar senha
+                    else
+                    {
+                        erro = true;
+                        MessageBox.Show("As senhas nao conferem!");
+                    } // fecha a validacao senha e confirmar senha
+
+                    if (rbtAtivo.Checked == true) // valida campo status
                     {
                         funcionario.status = "Ativo";
                     }
@@ -84,105 +193,26 @@ namespace PIM
                     else
                     {
                         erro = true;
-                        MessageBox.Show("O status do funcionario deve ser informado! ");
-                    }
-
-                    if (funcionario.senha == funcionario.confirmarSenha){}
-                    else
-                    {
-                        erro = true;
-                        MessageBox.Show("As senhas nao conferem!");
-                    }
-
-                    if (string.IsNullOrEmpty(txtNome.Text)) // valida campo NOME
-                    {
-                        erro = true;
-                        MessageBox.Show("O nome deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    }
-                    else if (validar.isLimitCaract(txtNome.Text, 5, 45)) { }
-                    else
-                    {
-                        erro = true;
-                        MessageBox.Show(" O nome deve conter no minimo 5 digitos! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    } // fecha validar NOME
-                    if (validar.validaCPF(mskCpf.Text)) { } // valida campo CPF
-                    else if (string.IsNullOrEmpty(mskCpf.Text))
-                    {
-                        erro = true;
-                        MessageBox.Show("O CPF deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    }
-                    else
-                    {
-                        erro = true;
-                        MessageBox.Show("O CPF informado é invalido! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    } // fecha validar CPF
-                    if (validar.isLimitCaract(txtLogin.Text, 5, 10)) { } // valida campo LOGIN
-                    else
-                    {
-                        erro = true;
-                        MessageBox.Show(" O login deve conter de 5 a 10 digitos! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    } // fecha validar LOGIN    
-                    if (validar.isLimitCaract(txtSenha.Text, 5, 10)) { }// valida campo SENHA
-                    else
-                    {
-                        erro = true;
-                        MessageBox.Show(" A senha deve conter de 5 a 10 digitos! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    } // fecha validar SENHA 
-                    if (validar.isLimitCaract(txtConfirmaSenha.Text, 5, 10)) { }// valida campo CONFIRMAR SENHA
-                    else
-                    {
-                        erro = true;
-                        MessageBox.Show(" As senhas nao conferem! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    } // fecha validar CONFIRMAR SENHA
-                    if (validar.ValidarEmail(txtEmail.Text)) { } // valida campo EMAIL
-                    else if (string.IsNullOrEmpty(txtEmail.Text))
-                    {
-                        erro = true;
-                        MessageBox.Show("O email deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    }
-                    else
-                    {
-                        erro = true;
-                        MessageBox.Show(" O email informado nao é valido! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    } // fecha validacao de EMAIL
-                    if (validar.ValidaTelefone(mskTel.Text)) { } // valida campo TELEFONE
-                    else if (string.IsNullOrEmpty(mskTel.Text))
-                    {
-                        erro = true;
-                        MessageBox.Show("O telefone deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    }
-                    else
-                    {
-                        erro = true;
-                        MessageBox.Show("O telefone informado nao é invalido! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    } // fecha a validacao do TELEFONE
-                    if (validar.ValidarCelular(mskCel.Text)) { } // valida campo CELULAR
-                    else if (string.IsNullOrEmpty(mskCel.Text))
-                    {
-                        erro = true;
-                        MessageBox.Show("O celular deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    }
-                    else
-                    {
-                        erro = true;
-                        MessageBox.Show("O celular informado nao é invalido! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    } // fecha a validacao do CELULAR
+                        MessageBox.Show(" O status do funcionario deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    } // fecha a validacao status
 
                     if (!erro)
                     {
-                        Cdb.InserirFuncionario(funcionario);
-                        LimparCampos();
+                        Cdb.InserirFuncionario(funcionario); // chama o dao de cadastro de funcionario
+                        LimparCampos(); // chama o metodo limpar campos
                     }
-            }
+            } // fecha o try
             catch (Exception)
             {
-                MessageBox.Show("Nao foi possivel Cadastrar esses funcionario");
+                MessageBox.Show("Nao foi possivel realizar o cadastro, verifique os campos e tente novamente: ", "Validação de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); // exibe a mensagem caso nao seja possivel realizar o cadastro
             }
-        }
+        } // fecha o metodo
+
+        //metodo que grava as informacoes preenchidas no formulario 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            ReceberDados();
+            ReceberDados(); // chama o metodo receberDados
         }
 
-    }
-}
+    } // fecha a classe
+} // fecha o namespace

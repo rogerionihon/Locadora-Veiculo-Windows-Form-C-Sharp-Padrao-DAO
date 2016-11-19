@@ -168,6 +168,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.groupBox3.Controls.Add(this.rbtPessoaF);
             this.groupBox3.Location = new System.Drawing.Point(8, 16);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
@@ -180,6 +181,7 @@
             // rbtPessoaF
             // 
             this.rbtPessoaF.AutoSize = true;
+            this.rbtPessoaF.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.rbtPessoaF.Checked = true;
             this.rbtPessoaF.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtPessoaF.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -190,7 +192,7 @@
             this.rbtPessoaF.TabIndex = 0;
             this.rbtPessoaF.TabStop = true;
             this.rbtPessoaF.Text = "Pessoa fisica";
-            this.rbtPessoaF.UseVisualStyleBackColor = true;
+            this.rbtPessoaF.UseVisualStyleBackColor = false;
             this.rbtPessoaF.CheckedChanged += new System.EventHandler(this.rbtPessoaF_CheckedChanged);
             // 
             // grbOpcaoLoc
@@ -522,6 +524,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1145, 716);
             this.Controls.Add(this.grbPessoaJ);
             this.Controls.Add(this.grbPessoaF);

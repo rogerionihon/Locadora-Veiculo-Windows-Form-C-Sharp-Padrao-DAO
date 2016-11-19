@@ -17,30 +17,27 @@ namespace PIM
             InitializeComponent();
         }
 
-        //Abre cadastro geral
+        //abre cadastro geral
         private void btnCadastro_Click(object sender, EventArgs e)
         {
             Cadastro cadastro = new Cadastro();
             cadastro.StartPosition = FormStartPosition.CenterScreen;
             cadastro.Show();
-        }
+        } // fecha o metodo
 
-        //Encerra a aplicacao
+        //metodo que fecha o formulario
         private void BtnSair_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Voce deseja Sair do Sistema?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                this.Close();
-            }
-        }
+            this.Close();
+        } // fecha o metodo
 
-        //Abre Aluguel geral
+        //abre aluguel geral
         private void BtnAluguel_Click(object sender, EventArgs e)
         {
             Aluguel aluguel = new Aluguel();
             aluguel.StartPosition = FormStartPosition.CenterScreen;
             aluguel.Show();
-        }
+        } // fecha o metodo
 
         //abre localizacao geral
         private void btnLocalizar_Click(object sender, EventArgs e)
@@ -48,7 +45,7 @@ namespace PIM
             LocalizarMenu localizar = new LocalizarMenu();
             localizar.StartPosition = FormStartPosition.CenterScreen;
             localizar.Show();
-        }
+        } // fecha o metodo
 
         //abre relatorio geral
         private void btnRelatorio_Click(object sender, EventArgs e)
@@ -56,6 +53,6 @@ namespace PIM
             Relatorio relatorio = new Relatorio();
             relatorio.StartPosition = FormStartPosition.CenterScreen;
             relatorio.Show();
-        }
-    }
-}
+        } // fecha metodo
+    } // fecha a classe
+} // fecha o namespace

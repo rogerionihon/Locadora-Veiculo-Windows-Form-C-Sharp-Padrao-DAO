@@ -1,6 +1,6 @@
 ﻿namespace PIM
 {
-    partial class Login
+    partial class FrmLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -28,14 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.label1 = new System.Windows.Forms.Label();
             this.txtLogin = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.btnLogar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
-            this.btnCadastrar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -75,6 +74,7 @@
             // 
             this.txtSenha.Location = new System.Drawing.Point(319, 324);
             this.txtSenha.Name = "txtSenha";
+            this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(247, 20);
             this.txtSenha.TabIndex = 3;
             // 
@@ -91,6 +91,7 @@
             this.btnLogar.TabIndex = 4;
             this.btnLogar.Text = "Logar";
             this.btnLogar.UseVisualStyleBackColor = false;
+            this.btnLogar.Click += new System.EventHandler(this.btnLogar_Click);
             // 
             // btnSair
             // 
@@ -105,20 +106,7 @@
             this.btnSair.TabIndex = 5;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = false;
-            // 
-            // btnCadastrar
-            // 
-            this.btnCadastrar.BackColor = System.Drawing.Color.White;
-            this.btnCadastrar.BackgroundImage = global::PIM.Properties.Resources._1920_communication_background_l_680x300;
-            this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCadastrar.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.ForeColor = System.Drawing.Color.Snow;
-            this.btnCadastrar.Location = new System.Drawing.Point(391, 398);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(93, 27);
-            this.btnCadastrar.TabIndex = 6;
-            this.btnCadastrar.Text = "Cadastrar";
-            this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // pictureBox1
             // 
@@ -131,14 +119,13 @@
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
-            // Login
+            // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PIM.Properties.Resources._1920_communication_background_l_680x300;
-            this.ClientSize = new System.Drawing.Size(679, 516);
+            this.ClientSize = new System.Drawing.Size(680, 546);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnLogar);
             this.Controls.Add(this.txtSenha);
@@ -146,7 +133,8 @@
             this.Controls.Add(this.txtLogin);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Login";
+            this.Name = "FrmLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -162,7 +150,6 @@
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Button btnLogar;
         private System.Windows.Forms.Button btnSair;
-        private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

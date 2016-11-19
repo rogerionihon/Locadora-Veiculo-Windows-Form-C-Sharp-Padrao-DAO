@@ -140,6 +140,12 @@
     <Compile Include="Relatorio.Designer.cs">
       <DependentUpon>Relatorio.cs</DependentUpon>
     </Compile>
+    <Compile Include="RelatorioCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RelatorioCliente.Designer.cs">
+      <DependentUpon>RelatorioCliente.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Aluguel.resx">
       <DependentUpon>Aluguel.cs</DependentUpon>
     </EmbeddedResource>
@@ -194,6 +200,9 @@
     </Compile>
     <EmbeddedResource Include="Relatorio.resx">
       <DependentUpon>Relatorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RelatorioCliente.resx">
+      <DependentUpon>RelatorioCliente.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

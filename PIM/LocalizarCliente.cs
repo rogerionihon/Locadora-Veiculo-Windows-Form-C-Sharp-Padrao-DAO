@@ -25,10 +25,7 @@ namespace PIM
 
         DataTable dt = new DataTable(); // criacao do objeto do tipo datatable
 
-        Validacao validar = new Validacao();
-        
-
-        int index;
+        Validacao validar = new Validacao(); // criacao do objeto do tipo validacao
 
         public LocalizarCliente()
         {
@@ -37,8 +34,7 @@ namespace PIM
 
         //Metodo responsavel por exibi todos os dados de pessoa fisica no datagridview
         public DataTable SelecionarPessoaFisica()
-        {
-           
+        {         
             try
             {
                 dt =  Cdb.returnDataTablePf();
@@ -244,7 +240,7 @@ namespace PIM
             }
         } // fecha o metodo
 
-        private void grbEmpresariais_Enter(object sender, EventArgs e)
+      /*  private void grbEmpresariais_Enter(object sender, EventArgs e)
         {
 
         } // fecha o metodo
@@ -252,7 +248,7 @@ namespace PIM
         private void grbCidadej_Enter(object sender, EventArgs e)
         {
             
-        } // fecha o metodo
+        } */
 
         //metodo responsavel por preencher o formulario de acordo com a linha selecionada no datagridview
         private void datagrid_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -312,7 +308,7 @@ namespace PIM
             }
         }//fecha o metodo cellclick
 
-        //metodo responsavel por realizar a busca pelo NOME
+        //metodo responsavel por realizar a busca pelo nome
         private void txtPesqNome_TextChanged(object sender, EventArgs e)
         {
             
@@ -328,7 +324,7 @@ namespace PIM
             }// fecha o else
         } // fecha o metodo
 
-        //metodo responsavel por realizar a busca pelo CPF
+        //metodo responsavel por realizar a busca pelo cpf
         private void txtPesqCpf_TextChanged(object sender, EventArgs e)
         {
             
@@ -386,298 +382,314 @@ namespace PIM
         //metodo responsavel por gerenciar a atualizacao dos campos de acordo com o campo selecionado de pessoa fisica
         public void AtualizarPessoaFisica()
         {
-            bool erro = false;
-
-            novocliente.Id = Int16.Parse(txtCodFis.Text);
-            novocliente.nome = txtNome.Text.ToString();
-            novocliente.cpf = mskCpf.Text.ToString();
-            novocliente.rne = txtRne.Text.ToString();
-            novocliente.cnh = mskCnh.Text.ToString();
-            novocliente.data_nascimento = mskDtaNasc.Text.ToString();
-            novocliente.email = txtMailFis.Text.ToString();
-            novocliente.telefone = mskTelFis.Text.ToString();
-            novocliente.celular = mskCelFis.Text.ToString();
-            novocliente.sexo = cmbSexo.Text.ToString();
-            novocliente.Estado_civil = cmbCivil.Text.ToString();
-            novocliente.endereco = txtEndFis.Text.ToString();
-            novocliente.numero_casa = txtNumFis.Text.ToString();
-            novocliente.complemento = txtComFis.Text.ToString();
-            novocliente.cep = mskCepFis.Text.ToString();
-            novocliente.cidade = txtCidFis.Text.ToString();
-            novocliente.bairro = txtBairFis.Text.ToString();
-            novocliente.estado = cmbEstFis.Text.ToString();
-            novocliente.observacoes = txtObsFis.Text.ToString();
-            //fazer o idf ativo quando necessario
-
-            if (string.IsNullOrEmpty(txtNome.Text))// valida campo NOME
+            try
             {
-                erro = true;
-                MessageBox.Show("O nome deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                bool erro = false;
+
+                novocliente.Id = Int16.Parse(txtCodFis.Text);
+                novocliente.nome = txtNome.Text.ToString();
+                novocliente.cpf = mskCpf.Text.ToString();
+                novocliente.rne = txtRne.Text.ToString();
+                novocliente.cnh = mskCnh.Text.ToString();
+                novocliente.data_nascimento = mskDtaNasc.Text.ToString();
+                novocliente.email = txtMailFis.Text.ToString();
+                novocliente.telefone = mskTelFis.Text.ToString();
+                novocliente.celular = mskCelFis.Text.ToString();
+                novocliente.sexo = cmbSexo.Text.ToString();
+                novocliente.Estado_civil = cmbCivil.Text.ToString();
+                novocliente.endereco = txtEndFis.Text.ToString();
+                novocliente.numero_casa = txtNumFis.Text.ToString();
+                novocliente.complemento = txtComFis.Text.ToString();
+                novocliente.cep = mskCepFis.Text.ToString();
+                novocliente.cidade = txtCidFis.Text.ToString();
+                novocliente.bairro = txtBairFis.Text.ToString();
+                novocliente.estado = cmbEstFis.Text.ToString();
+                novocliente.observacoes = txtObsFis.Text.ToString();
+
+                if (string.IsNullOrEmpty(txtNome.Text)) // valida campo nome
+                {
+                    erro = true;
+                    MessageBox.Show("O nome deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else if (validar.isLimitCaract(txtNome.Text, 5, 45)) { }
+                else
+                {
+                    erro = true;
+                    MessageBox.Show(" O nome deve conter no minimo 5 digitos! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }// fecha a validacao nome
+
+                if (string.IsNullOrEmpty(cmbSexo.Text)) // valida campo sexo
+                {
+                    erro = true;
+                    MessageBox.Show("O sexo deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                } // fecha a validacao sexo
+
+                if (string.IsNullOrEmpty(mskCpf.Text)) // valida campo cpf
+                {
+                    erro = true;
+                    MessageBox.Show(" O numero do CPF deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else if (validar.validaCPF(mskCpf.Text)) { } 
+                else
+                {
+                    erro = true;
+                    MessageBox.Show("O numero do CPF informado é invalido! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }// fecha a validacao cpf
+
+                if (string.IsNullOrEmpty(cmbCivil.Text)) // valida campo estado civil
+                {
+                    erro = true;
+                    MessageBox.Show("O estado civil deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                } // fecha a validacao estado civil
+
+                if (string.IsNullOrEmpty(mskDtaNasc.Text)) // valida campo data nascimento
+                {
+                    erro = true;
+                    MessageBox.Show(" A data de nascimento deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                } // fecha a validacao data de nascimento
+
+                if (string.IsNullOrEmpty(mskTelFis.Text)) // valida campo telefon
+                {
+                    erro = true;
+                    MessageBox.Show("O numero do telefone deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else if (validar.ValidaTelefone(mskTelFis.Text)) { }
+                else
+                {
+                    erro = true;
+                    MessageBox.Show("O numero do telefone informado é invalido! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                } // fecha a validacao telefone
+
+                if (string.IsNullOrEmpty(mskCelFis.Text)) // valida campo celular
+                {
+                    erro = true;
+                    MessageBox.Show("O numero do celular deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else if (validar.ValidarCelular(mskCelFis.Text)) { }
+                else
+                {
+                    erro = true;
+                    MessageBox.Show("O numero do celular informado é invalido! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                } // fecha a validacao celular
+
+                if (string.IsNullOrEmpty(mskCnh.Text)) // valida o campo cnh
+                {
+                    erro = true;
+                    MessageBox.Show(" O numero da cnh deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else if (validar.isLimitCaract(mskCnh.Text, 11, 12)) { } 
+                else
+                {
+                    erro = true;
+                    MessageBox.Show("A CNH informada deve conter 11 digitos! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                } // fecha a validacao cnh
+
+                if (validar.ValidarEmail(txtMailFis.Text)) { } // valida campo email
+                else
+                {
+                    erro = true;
+                    MessageBox.Show("O Email informado é invalido! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }// fecha a validacao email
+            
+                if (string.IsNullOrEmpty(mskCepFis.Text)) // valida campo cep
+                {
+                    erro = true;
+                    MessageBox.Show("O numero do CEP deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else if (validar.ValidaCEP(mskCepFis.Text)) { } 
+                else
+                {
+                    erro = true;
+                    MessageBox.Show("O numero do CEP informado é invalido! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                } // fecha a validacao cep
+
+                if (string.IsNullOrEmpty(txtBairFis.Text)) // valida campo bairro
+                {
+                    erro = true;
+                    MessageBox.Show("O nome do bairro deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                } // fecha a validacao bairro
+
+                if (string.IsNullOrEmpty(txtNumFis.Text)) // valida campo numero
+                {
+                    erro = true;
+                    MessageBox.Show("O numero do imovel deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                } // fecha a validacao numero 
+
+                if (string.IsNullOrEmpty(txtEndFis.Text)) // valida campo endereco
+                {
+                    erro = true;
+                    MessageBox.Show("O endereco deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }// fecha a validacao endereco
+
+                if (string.IsNullOrEmpty(txtCidFis.Text)) // valida campo cidade
+                {
+                    erro = true;
+                    MessageBox.Show("O nome da cidade deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                } // fecha a validacao cidade
+
+                if (string.IsNullOrEmpty(cmbEstFis.Text)) // valida campo estado
+                {
+                    erro = true;
+                    MessageBox.Show("O nome do estado deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                } // fecha a validacao estado
+
+                if(!erro)
+                {
+                    Cdb.UpdatePessoaFisica(novocliente); // chama o metodo DAO atualizar pessoa fisica 
+                }
+            } // fecha o try
+            catch (Exception)
+            {
+                MessageBox.Show("Não foi possivel realizar a atualizacao, verifique e tente novamamente!", "Validação de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); // exibe a mensagem caso nao seja realizado a atualizacao
             }
-            else if (validar.isLimitCaract(txtNome.Text, 5, 45)) { }
-            else
-            {
-                erro = true;
-                MessageBox.Show(" O nome deve conter no minimo 5 digitos! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }// fecha a validacao do nome
-
-
-            if (string.IsNullOrEmpty(mskCpf.Text)) // valida campo CPF
-            {
-                erro = true;
-                MessageBox.Show(" O numero do CPF deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-            else if (validar.validaCPF(mskCpf.Text)) { } 
-            else
-            {
-                erro = true;
-                MessageBox.Show("O CPF informado é invalido! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }// fecha a validacao do CPF  
-
-
-            if (string.IsNullOrEmpty(mskCnh.Text)) // valida o campo CNH
-            {
-                erro = true;
-                MessageBox.Show(" A CNH deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-            else if (validar.isLimitCaract(mskCnh.Text, 11, 12)) { } 
-            else
-            {
-                erro = true;
-                MessageBox.Show("A CNH informada deve conter 11 digitos! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            } // fecha a validacao da CNH 
-
-            if (validar.ValidarEmail(txtMailFis.Text)) { } // valida campo EMAIL
-            else
-            {
-                erro = true;
-                MessageBox.Show("O Email informado nao é invalido! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }// fecha a validacao do  EMAIL
-
-            if (string.IsNullOrEmpty(mskTelFis.Text)) // valida campo TELEFONE
-            {
-                erro = true;
-                MessageBox.Show("O numero do telefone deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-            else if (validar.ValidaTelefone(mskTelFis.Text)) { } 
-            else
-            {
-                erro = true;
-                MessageBox.Show("O telefone informado nao é invalido! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            } // fecha a validacao do TELEFONE
-
-            if (string.IsNullOrEmpty(mskCelFis.Text)) // valida campo CELULAR
-            {
-                erro = true;
-                MessageBox.Show("O numero do celular deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-            else if (validar.ValidarCelular(mskCelFis.Text)) { } 
-            else
-            {
-                erro = true;
-                MessageBox.Show("O celular informado nao é invalido! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            } // fecha a validacao do CELULAR
-
-            if (string.IsNullOrEmpty(cmbSexo.Text)) // valida campo SEXO
-            {
-                erro = true;
-                MessageBox.Show("O sexo deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            } // fecha a validacao do SEXO
-
-            if (string.IsNullOrEmpty(cmbCivil.Text)) // valida campo ESTADO CIVIL
-            {
-                erro = true;
-                MessageBox.Show("O estado civil deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            } // fecha a validacao do ESTADO CIVIL
-
-            if (string.IsNullOrEmpty(mskCepFis.Text)) // valida campo CEP
-            {
-                erro = true;
-                MessageBox.Show("O numero do CEP deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-            else if (validar.ValidaCEP(mskCepFis.Text)) { } 
-            else
-            {
-                erro = true;
-                MessageBox.Show("O CEP informado nao existe! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            } // fecha a validacao do CEP
-
-            if (string.IsNullOrEmpty(txtEndFis.Text)) // valida campo ENDERECO
-            {
-                erro = true;
-                MessageBox.Show("O endereco deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }// fecha a validacao do ENDERECO
-
-            if (string.IsNullOrEmpty(txtNumFis.Text)) // valida campo NUMERO
-            {
-                erro = true;
-                MessageBox.Show("O numero do imovel deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            } // fecha a validacao do NUMERO   
-
-            if (string.IsNullOrEmpty(txtCidFis.Text)) // valida campo CIDADE
-            {
-                erro = true;
-                MessageBox.Show("O nome da cidade deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            } // fecha a validacao da CIDADE
-
-            if (string.IsNullOrEmpty(txtBairFis.Text)) // valida campo BAIRRO
-            {
-                erro = true;
-                MessageBox.Show("O nome do bairro deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            } // fecha a validacao do BAIRRO
-
-            if (string.IsNullOrEmpty(cmbEstFis.Text)) // valida campo ESTADO
-            {
-                erro = true;
-                MessageBox.Show("O nome do estado deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            } // fecha a validacao do ESTADO
-            if(!erro)
-            {
-                Cdb.UpdatePessoaFisica(novocliente); // chama o metodo DAO atualizar pessoa fisica 
-            }
-        
         } // fecha o metodo
 
         //metodo responsavel por gerenciar a atualizacao dos campos de acordo com o campo selecionado de pessoa juridica
         public void AtualizarPessoaJuridica()
         {
-            bool erro = false;
+            try
+            {
+                bool erro = false;
 
-            novocliente.Id = Int16.Parse(txtCodJur.Text);
-            novocliente.razao_social = txtRazSoc.Text.ToString();
-            novocliente.cnpj = mskCnpj.Text.ToString();
-            novocliente.nome_fantasia = txtNomFan.Text.ToString();
-            novocliente.insc_estadual = mskInsEst.Text.ToString();
-            novocliente.insc_municipal = mskInsMun.Text.ToString();
-            novocliente.email = txtMailJur.Text.ToString();
-            novocliente.telefone = mskTelJur.Text.ToString();
-            novocliente.celular = mskCelJur.Text.ToString();
-            novocliente.endereco = txtEndJur.Text.ToString();
-            novocliente.numero_casa = txtNumJur.Text.ToString();
-            novocliente.complemento = txtComJur.Text.ToString();
-            novocliente.cep = mskCepJur.Text.ToString();
-            novocliente.cidade = txtCidJur.Text.ToString();
-            novocliente.bairro = txtBaiJur.Text.ToString();
-            novocliente.estado = cmbEstJur.Text.ToString();
-            novocliente.observacoes = txtObsJur.Text.ToString();
-            //fazer o idf ativo quando necessario
+                novocliente.Id = Int16.Parse(txtCodJur.Text);
+                novocliente.razao_social = txtRazSoc.Text.ToString();
+                novocliente.cnpj = mskCnpj.Text.ToString();
+                novocliente.nome_fantasia = txtNomFan.Text.ToString();
+                novocliente.insc_estadual = mskInsEst.Text.ToString();
+                novocliente.insc_municipal = mskInsMun.Text.ToString();
+                novocliente.email = txtMailJur.Text.ToString();
+                novocliente.telefone = mskTelJur.Text.ToString();
+                novocliente.celular = mskCelJur.Text.ToString();
+                novocliente.endereco = txtEndJur.Text.ToString();
+                novocliente.numero_casa = txtNumJur.Text.ToString();
+                novocliente.complemento = txtComJur.Text.ToString();
+                novocliente.cep = mskCepJur.Text.ToString();
+                novocliente.cidade = txtCidJur.Text.ToString();
+                novocliente.bairro = txtBaiJur.Text.ToString();
+                novocliente.estado = cmbEstJur.Text.ToString();
+                novocliente.observacoes = txtObsJur.Text.ToString();
 
-            if (string.IsNullOrEmpty(txtRazSoc.Text)) // valida campo RAZAO SOCIAL
-            {
-                erro = true;
-                MessageBox.Show("A razao social deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            } // fecha a validacao da RAZAO SOCIAL
+                if (string.IsNullOrEmpty(txtRazSoc.Text)) // valida campo razao social
+                {
+                    erro = true;
+                    MessageBox.Show("A razao social deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                } // fecha a validacao da razao social
 
-            if (string.IsNullOrEmpty(mskCnpj.Text)) // valida campo CNPJ
-            {
-                erro = true;
-                MessageBox.Show("O numero do CNPJ deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-            else if (validar.ValidaCNPJ(mskCnpj.Text)) { }
-            else
-            {
-                erro = true;
-                MessageBox.Show("O CNPJ informado é invalido! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            } // fecha a validacao do CNPJ
+                if (validar.isLimitCaract(mskInsEst.Text, 12, 13)) { } // valida campo inscricao estadual
+                else
+                {
+                    erro = true;
+                    MessageBox.Show("A inscricao estadual informada deve conter 12 digitos! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                } // fecha a validacao da inscricao estadual
 
-            if (string.IsNullOrEmpty(txtNomFan.Text)) // valida campo NOME FANTASIA
-            {
-                erro = true;
-                MessageBox.Show("O nome fantasia deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            } // fecha a validacao do NOME FANTASIA
+                if (string.IsNullOrEmpty(txtNomFan.Text)) // valida campo nome fantasia
+                {
+                    erro = true;
+                    MessageBox.Show("O nome fantasia deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                } // fecha a validacao do nome fantasia
 
-            if (validar.isLimitCaract(mskInsEst.Text, 12, 13)) { } // valida campo INSCRICAO ESTADUAL
-            else
-            {
-                erro = true;
-                MessageBox.Show("A inscricao estadual informada deve conter 12 digitos! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            } // fecha a validacao da INSCRICAO ESTADUAL
+                if (validar.isLimitCaract(mskInsMun.Text, 8, 9)) { } // valida campo inscricao municipal
+                else
+                {
+                    erro = true;
+                    MessageBox.Show("A inscricao municipal informada deve conter 8 digitos! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                } // fecha a validacao da inscricao municipal
 
-            if (validar.isLimitCaract(mskInsMun.Text, 8, 9)) { } // valida campo INSCRICAO MUNICIPAL
-            else
-            {
-                erro = true;
-                MessageBox.Show("A inscricao municipal informada deve conter 8 digitos! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            } // fecha a validacao da INSCRICAO MUNICIPAL
+                if (string.IsNullOrEmpty(mskCnpj.Text)) // valida campo cnpj
+                {
+                    erro = true;
+                    MessageBox.Show("O numero do CNPJ deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else if (validar.ValidaCNPJ(mskCnpj.Text)) { }
+                else
+                {
+                    erro = true;
+                    MessageBox.Show("O numero do CNPJ informado é invalido! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                } // fecha a validacao do cnpj
 
-            if (validar.ValidarEmail(txtMailJur.Text)) { } // valida campo EMAIL
-            else
-            {
-                erro = true;
-                MessageBox.Show("O Email informado nao é invalido! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }// fecha a validacao do  EMAIL
+                if (string.IsNullOrEmpty(mskTelJur.Text)) // valida campo telefone
+                {
+                    erro = true;
+                    MessageBox.Show("O numero do telefone deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else if (validar.ValidaTelefone(mskTelJur.Text)) { }
+                else
+                {
+                    erro = true;
+                    MessageBox.Show("O numero do telefone informado é invalido! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                } // fecha a validacao do telefone
 
-            if (string.IsNullOrEmpty(mskTelJur.Text)) // valida campo TELEFONE
-            {
-                erro = true;
-                MessageBox.Show("O numero do telefone deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-            else if (validar.ValidaTelefone(mskTelJur.Text)) { } 
-            else
-            {
-                erro = true;
-                MessageBox.Show("O numero do telefone informado nao é invalido! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            } // fecha a validacao do TELEFONE
+                if (string.IsNullOrEmpty(mskCelJur.Text)) // valida campo celular
+                {
+                    erro = true;
+                    MessageBox.Show("O numero do celular deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else if (validar.ValidarCelular(mskCelJur.Text)) { }
+                else
+                {
+                    erro = true;
+                    MessageBox.Show("O numero do celular informado é invalido! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                } // fecha a validacao do celular
 
-            if (string.IsNullOrEmpty(mskCelJur.Text)) // valida campo CELULAR
-            {
-                erro = true;
-                MessageBox.Show("O numero do celular deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-            else if (validar.ValidarCelular(mskCelJur.Text)) { } 
-            else
-            {
-                erro = true;
-                MessageBox.Show("O celular informado nao é invalido! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            } // fecha a validacao do CELULAR
+                if (validar.ValidarEmail(txtMailJur.Text)) { } // valida campo email
+                else
+                {
+                    erro = true;
+                    MessageBox.Show("O Email informado é invalido! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }// fecha a validacao do  email
 
-            if (string.IsNullOrEmpty(mskCepJur.Text)) // valida campo CEP
-            {
-                erro = true;
-                MessageBox.Show("O numero do CEP deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-            else if (validar.ValidaCEP(mskCepJur.Text)) { } 
-            else
-            {
-                erro = true;
-                MessageBox.Show("O CEP informado nao existe! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            } // fecha a validacao do CEP
+                if (string.IsNullOrEmpty(mskCepJur.Text)) // valida campo cep
+                {
+                    erro = true;
+                    MessageBox.Show("O numero do CEP deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else if (validar.ValidaCEP(mskCepJur.Text)) { }
+                else
+                {
+                    erro = true;
+                    MessageBox.Show("O numero do CEP informado é invalido! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                } // fecha a validacao do cep
 
-            if (string.IsNullOrEmpty(txtEndJur.Text)) // valida campo ENDERECO
-            {
-                erro = true;
-                MessageBox.Show("O endereco deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }// fecha a validacao do ENDERECO
+                if (string.IsNullOrEmpty(txtBaiJur.Text)) // valida campo bairro
+                {
+                    erro = true;
+                    MessageBox.Show("O nome do bairro deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                } // fecha a validacao do bairro
 
-            if (string.IsNullOrEmpty(txtNumJur.Text)) // valida campo NUMERO
-            {
-                erro = true;
-                MessageBox.Show("O numero do imovel deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            } // fecha a validacao do NUMERO 
+                if (string.IsNullOrEmpty(txtNumJur.Text)) // valida campo numero
+                {
+                    erro = true;
+                    MessageBox.Show("O numero do imovel deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                } // fecha a validacao do numero
 
-            if (string.IsNullOrEmpty(txtCidJur.Text)) // valida campo CIDADE
-            {
-                erro = true;
-                MessageBox.Show("O nome da cidade deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            } // fecha a validacao da CIDADE
+                if (string.IsNullOrEmpty(txtEndJur.Text)) // valida campo endereco
+                {
+                    erro = true;
+                    MessageBox.Show("O endereco deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }// fecha a validacao do endereco
 
-            if (string.IsNullOrEmpty(txtBaiJur.Text)) // valida campo BAIRRO
-            {
-                erro = true;
-                MessageBox.Show("O nome do bairro deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            } // fecha a validacao do BAIRRO
+                if (string.IsNullOrEmpty(txtCidJur.Text)) // valida campo cidade
+                {
+                    erro = true;
+                    MessageBox.Show("O nome da cidade deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                } // fecha a validacao da cidade
 
-            if (string.IsNullOrEmpty(cmbEstJur.Text)) // valida campo ESTADO
+                if (string.IsNullOrEmpty(cmbEstJur.Text)) // valida campo estado
+                {
+                    erro = true;
+                    MessageBox.Show("O nome do estado deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                } // fecha a validacao do ESTADO
+
+                if (!erro)
+                {
+                    Cdb.UpdatePessoaJuridica(novocliente);//chama o metodo DAO atualizar pessoa juridica
+                }
+            } // fecha o try
+            catch (Exception)
             {
-                erro = true;
-                MessageBox.Show("O nome do estado deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            } // fecha a validacao do ESTADO
-            
-            if(!erro)
-            {
-                Cdb.UpdatePessoaJuridica(novocliente);//chama o metodo DAO atualizar pessoa juridica
-            }
-           
+                MessageBox.Show("Não foi possivel realizar a atualizacao, verifique e tente novamamente!", "Validação de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); // exibe a mensagem caso nao seja realizado a atualizacao
+            }   
         } // fecha o metodo
     } // final da clase
 } // final do namespace

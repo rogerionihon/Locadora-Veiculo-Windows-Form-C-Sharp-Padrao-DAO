@@ -9,7 +9,6 @@ namespace CdbDao.ModelCliente
     public class Veiculo
     {
         public int id { get; set; }
-        public string nome { get; set; }
         public string placa { get; set; }
         public string ano_fabricacao { get; set; }
         public string ano_modelo { get; set; }

@@ -30,10 +30,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -49,9 +53,47 @@
     <Compile Include="ModelCliente\Locacao.cs" />
     <Compile Include="ModelCliente\Veiculo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Relatorio\RelatorioPessoaFisica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorio\RelatorioPessoaFisica.Designer.cs">
+      <DependentUpon>RelatorioPessoaFisica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorio\RelatorioPessoaJuridica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorio\RelatorioPessoaJuridica.Designer.cs">
+      <DependentUpon>RelatorioPessoaJuridica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorio\RelatorioVeiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorio\RelatorioVeiculo.Designer.cs">
+      <DependentUpon>RelatorioVeiculo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Service\Validacao.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Relatorio\RelatorioPessoaFisica.rdlc" />
+    <EmbeddedResource Include="Relatorio\RelatorioPessoaFisica.resx">
+      <DependentUpon>RelatorioPessoaFisica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorio\RelatorioPessoaJuridica.rdlc" />
+    <EmbeddedResource Include="Relatorio\RelatorioPessoaJuridica.resx">
+      <DependentUpon>RelatorioPessoaJuridica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorio\RelatorioVeiculo.rdlc" />
+    <EmbeddedResource Include="Relatorio\RelatorioVeiculo.resx">
+      <DependentUpon>RelatorioVeiculo.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\CdbDao.ModelCliente.CheckinCheckout.datasource" />
+    <None Include="Properties\DataSources\CdbDao.ModelCliente.Cliente.datasource" />
+    <None Include="Properties\DataSources\CdbDao.ModelCliente.Funcionario.datasource" />
+    <None Include="Properties\DataSources\CdbDao.ModelCliente.Locacao.datasource" />
+    <None Include="Properties\DataSources\CdbDao.ModelCliente.Veiculo.datasource" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

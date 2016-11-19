@@ -24,6 +24,8 @@ namespace PIM
 
         DataTable dt = new DataTable(); // criacao do objeto do tipo datatable
 
+        Locacao alugar = new Locacao();
+
         public AluguelAutomovel()
         {
             InitializeComponent();
@@ -65,30 +67,29 @@ namespace PIM
         public void ChamaVeiculo()
         {
             cmbVeiculo.DisplayMember = "car_modelo";
+           // cmbVeiculo.SelectedValue = "car_id";
             cmbVeiculo.SelectedValue = "car_id";
-            cmbVeiculo.DataSource = ListarCar();
+            cmbVeiculo.DataSource = ListarCar(); 
         }
 
-        public void ChamarPessoaF()
-        {
-            //cmbClientes.DisplayMember = "pf_nome";
-            //cmbClientes.ValueMember = "pf_id";
-            //cmbClientes.SelectedValue = "pf_id";
-            //cmbClientes.DataSource = ListarPessoaF();
-        }
+        //public DataTable ListarCar()
+        //{
+        //    try
+        //    {
+        //        dt = Cdb.listarVeiculo();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show("Erro ao tentar listar todos os veiculos: " + ex.Message); // exibe a mensagem caso a operacao nao seja realizada com sucesso
+        //    }
+        //    return dt; // retorno do datatable
+        //}
 
-        public void ChamarPessoaJ()
-        {
-            //cmbCliJur.DisplayMember = "pj_raz_soc";
-            //cmbCliJur.ValueMember = "pj_id";
-            //cmbCliJur.SelectedValue = "pj_id";
-            //cmbCliJur.DataSource = ListarPessoaJ();
-        }
         public DataTable ListarCar()
         {
             try
             {
-                dt = Cdb.listarVeiculo();
+                dt = Cdb.ChamaCarroCheckin();
             }
             catch (Exception ex)
             {
@@ -217,58 +218,160 @@ namespace PIM
             gridView.Columns[15].Width = 90;
             gridView.Columns[16].Width = 300;
             gridView.Columns[17].Width = 50;
+           
         } // fecha o metodo
         private void rbtPessoaF_CheckedChanged(object sender, EventArgs e)
         {
-            rbtPessoaJ.Checked = false;
+            if (rbtPessoaF.Checked == true)
+            {
+                rbtPessoaJ.Checked = false;
 
-            //torna os campos invisiveis
-            grbPessoaJ.Visible = false;
-            txtCodJur.Visible = false;
-            txtRazSoc.Visible = false;
-            txtCnpj.Visible = false;
+                //torna os campos invisiveis
+                grbPessoaJ.Visible = false;
+                txtCodJur.Visible = false;
+                txtRazSoc.Visible = false;
+                txtCnpj.Visible = false;
 
-            //torna os campos visiveis
-            grbPessoaF.Visible = true;
-            txtCodFis.Visible = true;
-            txtNome.Visible = true;
-            txtCpf.Visible = true;
+                //torna os campos visiveis
+                grbPessoaF.Visible = true;
+                txtCodFis.Visible = true;
+                txtNome.Visible = true;
+                txtCpf.Visible = true;
 
-            CarregarGridPessoaF();
+                CarregarGridPessoaF();
+            }           
         }
 
         private void rbtPessoaJ_CheckedChanged(object sender, EventArgs e)
         {
-            rbtPessoaF.Checked = false;
+            if (rbtPessoaJ.Checked == true)
+            {
+                rbtPessoaF.Checked = false;
 
-            //torna os campos invisiveis
-            grbPessoaF.Visible = false;
-            txtCodFis.Visible = false;
-            txtNome.Visible = false;
-            txtCpf.Visible = false;
+                //torna os campos invisiveis
+                grbPessoaF.Visible = false;
+                txtCodFis.Visible = false;
+                txtNome.Visible = false;
+                txtCpf.Visible = false;
 
-            //torna os campos visiveis
-            grbPessoaJ.Visible = true;
-            txtCodJur.Visible = true;
-            txtRazSoc.Visible = true;
-            txtCnpj.Visible = true;
+                //torna os campos visiveis
+                grbPessoaJ.Visible = true;
+                txtCodJur.Visible = true;
+                txtRazSoc.Visible = true;
+                txtCnpj.Visible = true;
 
-            CarregarGridPessoaJ();
+                CarregarGridPessoaJ();
+            }    
         }
 
         private void AluguelAutomovel_Load(object sender, EventArgs e)
         {
             ChamaVeiculo();
             CarregarGridPessoaF();
+          
             txtCodFis.Enabled = false;
             txtCodJur.Enabled = false;
-           // ChamarPessoaF();
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                bool erro = false;
+                if (rbtPessoaF.Checked == true)
+                {
+                    
+                    alugar.data_locacao = DateTime.Parse(dtpLocacao.Text.ToString());
+                    alugar.data_devolucao = DateTime.Parse(dtpDevolucao.Text.ToString());
+                    alugar.tipo_locacao = cmbFormLoc.Text.ToString();
+                    alugar.forma_pagamento = cmbFormPag.Text.ToString();
+                    alugar.valor_locacao = txtValorServ.Text.ToString();
+                    alugar.car_id = cmbVeiculo.SelectedIndex.ToString();
+                    alugar.ckn_id = cmbVeiculo.SelectedIndex.ToString();
+                    alugar.pf_id = txtCodFis.Text.ToString();
 
-        }
+                    if (string.IsNullOrEmpty(cmbFormLoc.Text))
+                    {
+                        erro = true;
+                        MessageBox.Show("A forma de locacao deve ser informada! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    if (string.IsNullOrEmpty(cmbFormPag.Text))
+                    {
+                        erro = true;
+                        MessageBox.Show("A forma de pagamento deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    if (string.IsNullOrEmpty(txtValorServ.Text))
+                    {
+                        erro = true;
+                        MessageBox.Show("O valor da locacao deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    if (string.IsNullOrEmpty(txtCodFis.Text))
+                    {
+                        erro = true;
+                        MessageBox.Show("Escolha um cliente para realizar a locacao! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    if (cmbVeiculo.SelectedIndex == 0)
+                    {
+                        erro = true;
+                        MessageBox.Show("Realize o checkin, e depois escolha o veiculo! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    else if (cmbVeiculo.SelectedIndex == -1)
+                    {
+                        erro = true;
+                        MessageBox.Show("Escolha o veiculo! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    if (!erro)
+                    {
+                        Cdb.RealizarLocacao(alugar);
+                        LimparCampos();
+                    }
+                }
+                else if (rbtPessoaJ.Checked == true)
+                {
+                    alugar.data_locacao = DateTime.Parse(dtpLocacao.Text.ToString());
+                    alugar.data_devolucao = DateTime.Parse(dtpDevolucao.Text.ToString());
+                    alugar.tipo_locacao = cmbFormLoc.Text.ToString();
+                    alugar.forma_pagamento = cmbFormPag.Text.ToString();
+                    alugar.valor_locacao = txtValorServ.Text.ToString();
+                   // alugar.car_id = cmbVeiculo.SelectedValue.ToString();
+                    alugar.ckn_id = cmbVeiculo.SelectedValue.ToString();
+                    alugar.pj_id = txtCodJur.Text.ToString();
+
+                    if (string.IsNullOrEmpty(cmbFormLoc.Text))
+                    {
+                        erro = true;
+                        MessageBox.Show("A forma de locacao deve ser informada! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    if (string.IsNullOrEmpty(cmbFormPag.Text))
+                    {
+                        erro = true;
+                        MessageBox.Show("A forma de pagamento deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    if (string.IsNullOrEmpty(txtValorServ.Text))
+                    {
+                        erro = true;
+                        MessageBox.Show("O valor da locacao deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    if (string.IsNullOrEmpty(txtCodJur.Text))
+                    {
+                        erro = true;
+                        MessageBox.Show("Escolha um cliente para realizar a locacao! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+
+                    if (!erro)
+                    {
+                        Cdb.RealizarLocacao(alugar);
+                        LimparCampos();
+                    }
+                    
+                }
+            } // fecha o try
+            catch (Exception)
+            {
+                MessageBox.Show("Nao foi possivel realizar a locacao, verifique e tente novamente!", MessageBoxButtons.OK.ToString());
+            }
+
+        } // fecha o metodo
 
         // metodo responsavel por calcular o valor da locacao
         public long CalculoValor(System.DateTime DataInicial, System.DateTime DataFinal)
@@ -282,44 +385,117 @@ namespace PIM
         // acao do botao calcular,
         private void Calcular_Click(object sender, EventArgs e)
         {
+            
             DateTime dataInicioL = dtpLocacao.Value;
             DateTime dataFinalL = dtpDevolucao.Value;
-
+            
             txtValorServ.Text = CalculoValor(dataInicioL, dataFinalL).ToString();
 
-            if (txtValorServ.Text == "1")
+            try
             {
-                txtValorServ.Text = "R$ 30,00";
+                if (txtValorServ.Text == "1" && cmbFormLoc.Text == "KM Livre")
+                {
+                    txtValorServ.Text = "R$ 50,00";
+                }
+                else if (txtValorServ.Text == "1" && cmbFormLoc.Text == "KM Determinada")
+                {
+                    txtValorServ.Text = "R$ 30,00";               
+                }
+
+
+                else if (txtValorServ.Text == "2" && cmbFormLoc.Text == "KM Livre")
+                {
+                    txtValorServ.Text = "R$ 80,00";
+                }
+                else if (txtValorServ.Text == "2" && cmbFormLoc.Text == "KM Determinada")
+                {
+                    txtValorServ.Text = "R$ 60,00";
+                }
+
+                else if (txtValorServ.Text == "3" && cmbFormLoc.Text == "KM Livre")
+                {
+                    txtValorServ.Text = "R$ 110,00";
+                }
+                else if (txtValorServ.Text == "3" && cmbFormLoc.Text == "KM Determinada")
+                {
+                    txtValorServ.Text = "R$ 90,00";
+                }
+
+
+                else if (txtValorServ.Text == "4" && cmbFormLoc.Text == "KM Livre")
+                {
+                    txtValorServ.Text = "R$ 140,00";
+                }
+                else if (txtValorServ.Text == "4" && cmbFormLoc.Text == "KM Determinada")
+                {
+                    txtValorServ.Text = "R$ 120,00";
+                }
+
+                else if (txtValorServ.Text == "5" && cmbFormLoc.Text == "KM Livre")
+                {
+                    txtValorServ.Text = "R$ 170,00";
+                }
+                else if (txtValorServ.Text == "5" && cmbFormLoc.Text == "KM Determinada")
+                {
+                    txtValorServ.Text = "R$ 150,00";
+                }
+
+                else if (txtValorServ.Text == "6" && cmbFormLoc.Text == "KM Livre")
+                {
+                    txtValorServ.Text = "R$ 200,00";
+                }
+                else if (txtValorServ.Text == "6" && cmbFormLoc.Text == "KM Determinada")
+                {
+                    txtValorServ.Text = "R$ 180,00";
+                }
+
+                else if (txtValorServ.Text == "7" && cmbFormLoc.Text == "KM Livre")
+                {
+                    txtValorServ.Text = "R$ 230,00";
+                }
+                else if (txtValorServ.Text == "7" && cmbFormLoc.Text == "KM Determinada")
+                {
+                    txtValorServ.Text = "R$ 210,00";
+                }
+                //else if (txtValorServ.Text == "0")
+                //{
+                //    MessageBox.Show("escola loc");
+                //}
+                else
+                {
+                    txtValorServ.Text = "0";
+                    MessageBox.Show("A locacao so pode ser realizado no maximo 7 dias");
+                }
+               
             }
-            else if (txtValorServ.Text == "2")
+            catch (Exception)
             {
-                txtValorServ.Text = "R$ 60,00";
+                throw;
+            
             }
-            else if (txtValorServ.Text == "3")
-            {
-                txtValorServ.Text = "R$ 90,00";
-            }
-            else if (txtValorServ.Text == "4")
-            {
-                txtValorServ.Text = "R$ 120,00";
-            }
-            else if (txtValorServ.Text == "5")
-            {
-                txtValorServ.Text = "R$ 150,00";
-            }
-            else if (txtValorServ.Text == "6")
-            {
-                txtValorServ.Text = "R$ 180,00";
-            }
-            else if (txtValorServ.Text == "7")
-            {
-                txtValorServ.Text = "R$ 210,00";
-            }
-            else
-            {
-                txtValorServ.Text = "";
-                MessageBox.Show("A locacao so pode ser realizada no prazo de 7 dias");
-            }
+          
+            //else if (txtValorServ.Text == "3")
+            //{
+            //    txtValorServ.Text = "R$ 90,00";
+            //}
+            //else if (txtValorServ.Text == "4")
+            //{
+            //    txtValorServ.Text = "R$ 120,00";
+            //}
+            //else if (txtValorServ.Text == "5")
+            //{
+            //    txtValorServ.Text = "R$ 150,00";
+            //}
+            //else if (txtValorServ.Text == "6")
+            //{
+            //    txtValorServ.Text = "R$ 180,00";
+            //}
+            //else if (txtValorServ.Text == "7")
+            //{
+            //    txtValorServ.Text = "R$ 210,00";
+            //} 
+            
+           
         }
 
         private void gridView_CellClick(object sender, DataGridViewCellEventArgs e)

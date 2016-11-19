@@ -23,8 +23,7 @@ namespace PIM
 
         DataTable dt = new DataTable(); // criacao do objeto do tipo datatable
 
-        Validacao validar = new Validacao(); // criacao do objeto do tipo validacao
-        int index;
+        Validacao validar = new Validacao(); // criacao do objeto do tipo validacao     
        
         public LocalizarVeiculo()
         {
@@ -196,27 +195,38 @@ namespace PIM
                 novoveiculo.cidade = txtCidade.Text.ToString();
                 novoveiculo.uf = cmbEstado.Text.ToString();
                 novoveiculo.observacao = txtObs.Text.ToString();
-                //fazer o idf ativo quando necessario
 
-                if (string.IsNullOrEmpty(mskPlaca.Text)) // valida campo PLACA
+                if (string.IsNullOrEmpty(txtModelo.Text)) // valida campo modelo
+                {
+                    erro = true;
+                    MessageBox.Show("O modelo do veiculo deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                } // fecha a validacao modelo
+
+                if (string.IsNullOrEmpty(cmbAnoF.Text)) // valida campo ano fabricacao
+                {
+                    erro = true;
+                    MessageBox.Show("O ano de fabricacao deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                } // fecha a validacao ano fabricacao
+
+                if (string.IsNullOrEmpty(cmbMarca.Text)) // valida campo marca
+                {
+                    erro = true;
+                    MessageBox.Show("A marca do veiculo deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                } // fecha a validacao marca
+
+                if (string.IsNullOrEmpty(cmbAnoM.Text)) // valida campo ano modelo
+                {
+                    erro = true;
+                    MessageBox.Show("O ano do modelo deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                } // fecha a validacao ano modelo
+
+                if (string.IsNullOrEmpty(mskPlaca.Text)) // valida campo placa
                 {
                     erro = true;
                     MessageBox.Show("A placa do veiculo deve ser informada! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                } // fecha validacao PLACA
+                } // fecha validacao placa
 
-                if (string.IsNullOrEmpty(mskRenavam.Text)) // valida campo RENAVAM
-                {
-                    erro = true;
-                    MessageBox.Show("O numero do renavam deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
-                else if (validar.isLimitCaract(mskRenavam.Text, 11, 12)) { }
-                else
-                {
-                    erro = true;
-                    MessageBox.Show("O renavam informado nao possui 11 digitos! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                } // fecha validacao RENAVAM
-
-                if (string.IsNullOrEmpty(mskChassi.Text)) // valida campo CHASSI
+                if (string.IsNullOrEmpty(mskChassi.Text)) // valida campo chassi
                 {
                     erro = true;
                     MessageBox.Show("O numero do chassi deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -225,74 +235,62 @@ namespace PIM
                 else
                 {
                     erro = true;
-                    MessageBox.Show("O chassi informado nao possui 17 digitos! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                } // fecha a validacao CHASSI
+                    MessageBox.Show("O numero do chassi informado deve conter 17 digitos! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                } // fecha a validacao chassi
 
-                if (string.IsNullOrEmpty(cmbAnoF.Text)) // valida campo ANO FABRICACAO
-                {
-                    erro = true;
-                    MessageBox.Show("O ano de fabricacao deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                } // fecha a validacao ANO FABRICACAO
-
-                if (string.IsNullOrEmpty(cmbAnoM.Text)) // valida campo ANO MODELO
-                {
-                    erro = true;
-                    MessageBox.Show("O ano do modelo deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                } // fecha a validacao ANO MODELO
-
-                if (string.IsNullOrEmpty(txtModelo.Text)) // valida campo MODELO
-                {
-                    erro = true;
-                    MessageBox.Show("O modelo do veiculo deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                } // fecha a validacao MODELO
-
-                if (string.IsNullOrEmpty(cmbMarca.Text)) // valida campo MARCA
-                {
-                    erro = true;
-                    MessageBox.Show("A marca do veiculo deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                } // fecha a validacao MARCA
-
-                if (string.IsNullOrEmpty(cmbCombustivel.Text)) // valida campo COMBUSTIVEL
-                {
-                    erro = true;
-                    MessageBox.Show("O tipo do combustivel do veiculo deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                } // fecha a validacao COMBUSTIVEL
-
-                if (string.IsNullOrEmpty(cmbCor.Text)) // valida campo COR
-                {
-                    erro = true;
-                    MessageBox.Show("A cor do veiculo deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                } // fecha a validacao COR
-
-                if (string.IsNullOrEmpty(cmbPortas.Text)) // valida campo PORTAS
+                if (string.IsNullOrEmpty(cmbPortas.Text)) // valida campo numero de portas
                 {
                     erro = true;
                     MessageBox.Show("O numero de portas do veiculo deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                } // fecha a validacao NUMERO DE PORTAS
+                } // fecha a validacao numero de portas
 
-                if (string.IsNullOrEmpty(cmbTipo.Text)) // valida campo TIPO
+                if (string.IsNullOrEmpty(cmbCombustivel.Text)) // valida campo combustivel
                 {
                     erro = true;
-                    MessageBox.Show("O tipo do veiculo deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                } // fecha a validacao TIPO
+                    MessageBox.Show("O tipo do combustivel do veiculo deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                } // fecha a validacao combustivel
 
-                if (string.IsNullOrEmpty(txtKm.Text)) // valida campo KM
+                if (string.IsNullOrEmpty(txtKm.Text)) // valida campo km
                 {
                     erro = true;
                     MessageBox.Show("A  kilometragem do veiculo deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                } // fecha a validacao KM
+                } // fecha a validacao km
 
-                if (string.IsNullOrEmpty(txtCidade.Text)) // valida campo CIDADE
+                if (string.IsNullOrEmpty(cmbTipo.Text)) // valida campo tipo
                 {
                     erro = true;
-                    MessageBox.Show("O nome da cidade do veiculo deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                } // fecha a validacao CIDADE
+                    MessageBox.Show("O tipo do veiculo deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                } // fecha a validacao tipo
 
-                if (string.IsNullOrEmpty(cmbEstado.Text)) // valida campo ESTADO
+                if (string.IsNullOrEmpty(cmbCor.Text)) // valida campo cor
                 {
                     erro = true;
-                    MessageBox.Show("O nome do estado do veiculo deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                } // fecha a validacao ESTADO
+                    MessageBox.Show("A cor do veiculo deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                } // fecha a validacao cor
+
+                if (string.IsNullOrEmpty(mskRenavam.Text)) // valida campo renavam
+                {
+                    erro = true;
+                    MessageBox.Show("O numero do renavam deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else if (validar.isLimitCaract(mskRenavam.Text, 11, 12)) { }
+                else
+                {
+                    erro = true;
+                    MessageBox.Show("O numero do renavam deve conter 11 digitos! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                } // fecha validacao renavam
+
+                if (string.IsNullOrEmpty(txtCidade.Text)) // valida campo cidade
+                {
+                    erro = true;
+                    MessageBox.Show("O nome da cidade deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                } // fecha a validacao cidade
+
+                if (string.IsNullOrEmpty(cmbEstado.Text)) // valida campo estado
+                {
+                    erro = true;
+                    MessageBox.Show("O nome do estado deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                } // fecha a validacao estado
                
                 if (!erro)
                 {

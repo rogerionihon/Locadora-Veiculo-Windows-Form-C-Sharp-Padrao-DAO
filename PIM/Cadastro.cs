@@ -17,21 +17,21 @@ namespace PIM
             InitializeComponent();
         }
 
-        //Abre cadastro de cliente
+        //abre cadastro de cliente
         private void BtnCliente_Click(object sender, EventArgs e)
         {
             CadastroCliente cadastrocliente = new CadastroCliente();
             cadastrocliente.StartPosition = FormStartPosition.CenterScreen;
             cadastrocliente.Show();
-        }
+        } // fecha o metodo
 
-        //Abre cadastro de carro
+        //abre cadastro de carro
         private void btnAutomovel_Click(object sender, EventArgs e)
         {
             CadastroAutomovel cadastroautomovel = new CadastroAutomovel();
             cadastroautomovel.StartPosition = FormStartPosition.CenterScreen;
             cadastroautomovel.Show();
-        }
+        } // fecha o metodo
 
         //Abre cadastro de funcionario
         private void btnFuncionario_Click(object sender, EventArgs e)
@@ -39,13 +39,12 @@ namespace PIM
             CadastroFuncionario cadastrofuncionario = new CadastroFuncionario();
             cadastrofuncionario.StartPosition = FormStartPosition.CenterScreen;
             cadastrofuncionario.Show();
-        }
+        } // fecha o metodo
 
-        //sair do cadastro
+        //metodo que fecha o formulario
         private void BtnSairCadastro_Click(object sender, EventArgs e)
         {
             this.Close();
-
-        }
-    }
-}
+        } // fecha o metodo
+    } // fecha a classe
+} // fecha o namespace

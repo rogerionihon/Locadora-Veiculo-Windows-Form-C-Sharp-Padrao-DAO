@@ -167,7 +167,7 @@
             // mskPlaca
             // 
             this.mskPlaca.Location = new System.Drawing.Point(8, 19);
-            this.mskPlaca.Mask = "AAA-0000";
+            this.mskPlaca.Mask = "AAA0000";
             this.mskPlaca.Name = "mskPlaca";
             this.mskPlaca.Size = new System.Drawing.Size(94, 24);
             this.mskPlaca.TabIndex = 0;
@@ -587,7 +587,7 @@
             this.txtObs.Multiline = true;
             this.txtObs.Name = "txtObs";
             this.txtObs.Size = new System.Drawing.Size(405, 73);
-            this.txtObs.TabIndex = 0;
+            this.txtObs.TabIndex = 14;
             // 
             // CadastroAutomovel
             // 

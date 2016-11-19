@@ -453,16 +453,16 @@
             // grbEmailJ
             // 
             this.grbEmailJ.Controls.Add(this.txtemailj);
-            this.grbEmailJ.Location = new System.Drawing.Point(17, 161);
+            this.grbEmailJ.Location = new System.Drawing.Point(14, 161);
             this.grbEmailJ.Name = "grbEmailJ";
-            this.grbEmailJ.Size = new System.Drawing.Size(380, 54);
+            this.grbEmailJ.Size = new System.Drawing.Size(383, 54);
             this.grbEmailJ.TabIndex = 10;
             this.grbEmailJ.TabStop = false;
             this.grbEmailJ.Text = "E-mail";
             // 
             // txtemailj
             // 
-            this.txtemailj.Location = new System.Drawing.Point(3, 25);
+            this.txtemailj.Location = new System.Drawing.Point(6, 20);
             this.txtemailj.Name = "txtemailj";
             this.txtemailj.Size = new System.Drawing.Size(363, 23);
             this.txtemailj.TabIndex = 8;
@@ -488,7 +488,7 @@
             // grbCnpj
             // 
             this.grbCnpj.Controls.Add(this.mskCnpj);
-            this.grbCnpj.Location = new System.Drawing.Point(498, 29);
+            this.grbCnpj.Location = new System.Drawing.Point(498, 27);
             this.grbCnpj.Name = "grbCnpj";
             this.grbCnpj.Size = new System.Drawing.Size(207, 58);
             this.grbCnpj.TabIndex = 5;
@@ -506,7 +506,7 @@
             // grbInsc_mun
             // 
             this.grbInsc_mun.Controls.Add(this.mskInsc_mun);
-            this.grbInsc_mun.Location = new System.Drawing.Point(498, 162);
+            this.grbInsc_mun.Location = new System.Drawing.Point(498, 161);
             this.grbInsc_mun.Name = "grbInsc_mun";
             this.grbInsc_mun.Size = new System.Drawing.Size(207, 53);
             this.grbInsc_mun.TabIndex = 11;
@@ -515,7 +515,7 @@
             // 
             // mskInsc_mun
             // 
-            this.mskInsc_mun.Location = new System.Drawing.Point(6, 24);
+            this.mskInsc_mun.Location = new System.Drawing.Point(6, 20);
             this.mskInsc_mun.Mask = "00000000";
             this.mskInsc_mun.Name = "mskInsc_mun";
             this.mskInsc_mun.Size = new System.Drawing.Size(195, 23);
@@ -551,7 +551,7 @@
             // 
             // mskIncr_est
             // 
-            this.mskIncr_est.Location = new System.Drawing.Point(6, 24);
+            this.mskIncr_est.Location = new System.Drawing.Point(6, 20);
             this.mskIncr_est.Mask = "000000000000";
             this.mskIncr_est.Name = "mskIncr_est";
             this.mskIncr_est.Size = new System.Drawing.Size(195, 23);
@@ -569,10 +569,10 @@
             // 
             // txtNomefantasia
             // 
-            this.txtNomefantasia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNomefantasia.Location = new System.Drawing.Point(6, 22);
+            this.txtNomefantasia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomefantasia.Location = new System.Drawing.Point(6, 20);
             this.txtNomefantasia.Name = "txtNomefantasia";
-            this.txtNomefantasia.Size = new System.Drawing.Size(451, 24);
+            this.txtNomefantasia.Size = new System.Drawing.Size(451, 23);
             this.txtNomefantasia.TabIndex = 5;
             // 
             // grbRazaosocial
@@ -587,10 +587,10 @@
             // 
             // txtRazaosocial
             // 
-            this.txtRazaosocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRazaosocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRazaosocial.Location = new System.Drawing.Point(6, 19);
             this.txtRazaosocial.Name = "txtRazaosocial";
-            this.txtRazaosocial.Size = new System.Drawing.Size(452, 24);
+            this.txtRazaosocial.Size = new System.Drawing.Size(452, 23);
             this.txtRazaosocial.TabIndex = 2;
             // 
             // grbDadospessoais
@@ -617,7 +617,7 @@
             // grbDta_nasci
             // 
             this.grbDta_nasci.Controls.Add(this.mskDta_nascf);
-            this.grbDta_nasci.Location = new System.Drawing.Point(676, 86);
+            this.grbDta_nasci.Location = new System.Drawing.Point(676, 93);
             this.grbDta_nasci.Name = "grbDta_nasci";
             this.grbDta_nasci.Size = new System.Drawing.Size(147, 62);
             this.grbDta_nasci.TabIndex = 9;
@@ -626,7 +626,7 @@
             // 
             // mskDta_nascf
             // 
-            this.mskDta_nascf.Location = new System.Drawing.Point(6, 19);
+            this.mskDta_nascf.Location = new System.Drawing.Point(6, 20);
             this.mskDta_nascf.Mask = "00/00/0000";
             this.mskDta_nascf.Name = "mskDta_nascf";
             this.mskDta_nascf.Size = new System.Drawing.Size(135, 23);
@@ -636,7 +636,7 @@
             // grbEst_civilf
             // 
             this.grbEst_civilf.Controls.Add(this.cmbEst_civilf);
-            this.grbEst_civilf.Location = new System.Drawing.Point(504, 155);
+            this.grbEst_civilf.Location = new System.Drawing.Point(498, 161);
             this.grbEst_civilf.Name = "grbEst_civilf";
             this.grbEst_civilf.Size = new System.Drawing.Size(144, 54);
             this.grbEst_civilf.TabIndex = 13;
@@ -659,15 +659,15 @@
             "Divorciado(a)",
             "Solteiro(a)",
             "Viuvo(a)"});
-            this.cmbEst_civilf.Location = new System.Drawing.Point(6, 19);
+            this.cmbEst_civilf.Location = new System.Drawing.Point(6, 20);
             this.cmbEst_civilf.Name = "cmbEst_civilf";
-            this.cmbEst_civilf.Size = new System.Drawing.Size(133, 24);
+            this.cmbEst_civilf.Size = new System.Drawing.Size(127, 24);
             this.cmbEst_civilf.TabIndex = 9;
             // 
             // grbCnh
             // 
             this.grbCnh.Controls.Add(this.mskCnh);
-            this.grbCnh.Location = new System.Drawing.Point(676, 25);
+            this.grbCnh.Location = new System.Drawing.Point(676, 27);
             this.grbCnh.Name = "grbCnh";
             this.grbCnh.Size = new System.Drawing.Size(147, 55);
             this.grbCnh.TabIndex = 6;
@@ -676,7 +676,7 @@
             // 
             // mskCnh
             // 
-            this.mskCnh.Location = new System.Drawing.Point(6, 20);
+            this.mskCnh.Location = new System.Drawing.Point(6, 19);
             this.mskCnh.Mask = "00000000000";
             this.mskCnh.Name = "mskCnh";
             this.mskCnh.Size = new System.Drawing.Size(131, 23);
@@ -685,7 +685,7 @@
             // grbSexof
             // 
             this.grbSexof.Controls.Add(this.cmbSexof);
-            this.grbSexof.Location = new System.Drawing.Point(336, 155);
+            this.grbSexof.Location = new System.Drawing.Point(336, 161);
             this.grbSexof.Name = "grbSexof";
             this.grbSexof.Size = new System.Drawing.Size(142, 54);
             this.grbSexof.TabIndex = 12;
@@ -704,7 +704,7 @@
             this.cmbSexof.Items.AddRange(new object[] {
             "Masculino",
             "Feminino"});
-            this.cmbSexof.Location = new System.Drawing.Point(13, 19);
+            this.cmbSexof.Location = new System.Drawing.Point(12, 20);
             this.cmbSexof.Name = "cmbSexof";
             this.cmbSexof.Size = new System.Drawing.Size(123, 24);
             this.cmbSexof.TabIndex = 8;
@@ -712,7 +712,7 @@
             // grbRne
             // 
             this.grbRne.Controls.Add(this.txtRne);
-            this.grbRne.Location = new System.Drawing.Point(504, 86);
+            this.grbRne.Location = new System.Drawing.Point(498, 93);
             this.grbRne.Name = "grbRne";
             this.grbRne.Size = new System.Drawing.Size(144, 62);
             this.grbRne.TabIndex = 8;
@@ -721,7 +721,7 @@
             // 
             // txtRne
             // 
-            this.txtRne.Location = new System.Drawing.Point(6, 19);
+            this.txtRne.Location = new System.Drawing.Point(6, 20);
             this.txtRne.MaxLength = 15;
             this.txtRne.Name = "txtRne";
             this.txtRne.Size = new System.Drawing.Size(127, 23);
@@ -730,7 +730,7 @@
             // grbCpf
             // 
             this.grbCpf.Controls.Add(this.mskCpf);
-            this.grbCpf.Location = new System.Drawing.Point(504, 25);
+            this.grbCpf.Location = new System.Drawing.Point(498, 27);
             this.grbCpf.Name = "grbCpf";
             this.grbCpf.Size = new System.Drawing.Size(144, 55);
             this.grbCpf.TabIndex = 5;
@@ -739,7 +739,7 @@
             // 
             // mskCpf
             // 
-            this.mskCpf.Location = new System.Drawing.Point(6, 20);
+            this.mskCpf.Location = new System.Drawing.Point(6, 19);
             this.mskCpf.Mask = "000-000-000-00";
             this.mskCpf.Name = "mskCpf";
             this.mskCpf.Size = new System.Drawing.Size(127, 23);
@@ -748,7 +748,7 @@
             // grbEmailf
             // 
             this.grbEmailf.Controls.Add(this.txtEmailf);
-            this.grbEmailf.Location = new System.Drawing.Point(14, 86);
+            this.grbEmailf.Location = new System.Drawing.Point(14, 93);
             this.grbEmailf.Name = "grbEmailf";
             this.grbEmailf.Size = new System.Drawing.Size(464, 62);
             this.grbEmailf.TabIndex = 7;
@@ -757,7 +757,7 @@
             // 
             // txtEmailf
             // 
-            this.txtEmailf.Location = new System.Drawing.Point(6, 19);
+            this.txtEmailf.Location = new System.Drawing.Point(6, 20);
             this.txtEmailf.Name = "txtEmailf";
             this.txtEmailf.Size = new System.Drawing.Size(452, 23);
             this.txtEmailf.TabIndex = 3;
@@ -765,7 +765,7 @@
             // grbNome
             // 
             this.grbNome.Controls.Add(this.txtNome);
-            this.grbNome.Location = new System.Drawing.Point(14, 25);
+            this.grbNome.Location = new System.Drawing.Point(14, 27);
             this.grbNome.Name = "grbNome";
             this.grbNome.Size = new System.Drawing.Size(464, 55);
             this.grbNome.TabIndex = 4;
@@ -774,16 +774,16 @@
             // 
             // txtNome
             // 
-            this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNome.Location = new System.Drawing.Point(6, 19);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(451, 26);
+            this.txtNome.Size = new System.Drawing.Size(451, 23);
             this.txtNome.TabIndex = 0;
             // 
             // grbCelularf
             // 
             this.grbCelularf.Controls.Add(this.mskCelularf);
-            this.grbCelularf.Location = new System.Drawing.Point(174, 155);
+            this.grbCelularf.Location = new System.Drawing.Point(174, 161);
             this.grbCelularf.Name = "grbCelularf";
             this.grbCelularf.Size = new System.Drawing.Size(144, 54);
             this.grbCelularf.TabIndex = 11;
@@ -792,7 +792,7 @@
             // 
             // mskCelularf
             // 
-            this.mskCelularf.Location = new System.Drawing.Point(6, 19);
+            this.mskCelularf.Location = new System.Drawing.Point(6, 20);
             this.mskCelularf.Mask = "(00)0000-00000";
             this.mskCelularf.Name = "mskCelularf";
             this.mskCelularf.Size = new System.Drawing.Size(121, 23);
@@ -801,7 +801,7 @@
             // grbTelefonef
             // 
             this.grbTelefonef.Controls.Add(this.mskTelefonef);
-            this.grbTelefonef.Location = new System.Drawing.Point(14, 155);
+            this.grbTelefonef.Location = new System.Drawing.Point(17, 161);
             this.grbTelefonef.Name = "grbTelefonef";
             this.grbTelefonef.Size = new System.Drawing.Size(144, 54);
             this.grbTelefonef.TabIndex = 10;
@@ -810,7 +810,7 @@
             // 
             // mskTelefonef
             // 
-            this.mskTelefonef.Location = new System.Drawing.Point(6, 19);
+            this.mskTelefonef.Location = new System.Drawing.Point(6, 20);
             this.mskTelefonef.Mask = "(00)0000-0000";
             this.mskTelefonef.Name = "mskTelefonef";
             this.mskTelefonef.Size = new System.Drawing.Size(121, 23);
@@ -895,9 +895,9 @@
             // grbBairrof
             // 
             this.grbBairrof.Controls.Add(this.txtBairrof);
-            this.grbBairrof.Location = new System.Drawing.Point(504, 81);
+            this.grbBairrof.Location = new System.Drawing.Point(503, 82);
             this.grbBairrof.Name = "grbBairrof";
-            this.grbBairrof.Size = new System.Drawing.Size(145, 55);
+            this.grbBairrof.Size = new System.Drawing.Size(145, 54);
             this.grbBairrof.TabIndex = 16;
             this.grbBairrof.TabStop = false;
             this.grbBairrof.Text = "Bairro";
@@ -913,9 +913,9 @@
             // grbEstadof
             // 
             this.grbEstadof.Controls.Add(this.cmbEstadof);
-            this.grbEstadof.Location = new System.Drawing.Point(676, 81);
+            this.grbEstadof.Location = new System.Drawing.Point(676, 82);
             this.grbEstadof.Name = "grbEstadof";
-            this.grbEstadof.Size = new System.Drawing.Size(147, 55);
+            this.grbEstadof.Size = new System.Drawing.Size(147, 54);
             this.grbEstadof.TabIndex = 17;
             this.grbEstadof.TabStop = false;
             this.grbEstadof.Text = "Estado";
@@ -995,7 +995,7 @@
             // grbCidadef
             // 
             this.grbCidadef.Controls.Add(this.txtCidadef);
-            this.grbCidadef.Location = new System.Drawing.Point(126, 81);
+            this.grbCidadef.Location = new System.Drawing.Point(126, 82);
             this.grbCidadef.Name = "grbCidadef";
             this.grbCidadef.Size = new System.Drawing.Size(352, 55);
             this.grbCidadef.TabIndex = 15;
@@ -1013,7 +1013,7 @@
             // grbRuaf
             // 
             this.grbRuaf.Controls.Add(this.txtEndf);
-            this.grbRuaf.Location = new System.Drawing.Point(14, 22);
+            this.grbRuaf.Location = new System.Drawing.Point(14, 23);
             this.grbRuaf.Name = "grbRuaf";
             this.grbRuaf.Size = new System.Drawing.Size(464, 53);
             this.grbRuaf.TabIndex = 11;
@@ -1031,7 +1031,7 @@
             // grbNumf
             // 
             this.grbNumf.Controls.Add(this.txtNumf);
-            this.grbNumf.Location = new System.Drawing.Point(504, 20);
+            this.grbNumf.Location = new System.Drawing.Point(504, 23);
             this.grbNumf.Name = "grbNumf";
             this.grbNumf.Size = new System.Drawing.Size(144, 53);
             this.grbNumf.TabIndex = 12;
@@ -1049,7 +1049,7 @@
             // grbCepf
             // 
             this.grbCepf.Controls.Add(this.mskCepf);
-            this.grbCepf.Location = new System.Drawing.Point(14, 81);
+            this.grbCepf.Location = new System.Drawing.Point(14, 82);
             this.grbCepf.Name = "grbCepf";
             this.grbCepf.Size = new System.Drawing.Size(106, 54);
             this.grbCepf.TabIndex = 14;
@@ -1067,7 +1067,7 @@
             // grbComplementof
             // 
             this.grbComplementof.Controls.Add(this.txtComplemf);
-            this.grbComplementof.Location = new System.Drawing.Point(676, 22);
+            this.grbComplementof.Location = new System.Drawing.Point(676, 23);
             this.grbComplementof.Name = "grbComplementof";
             this.grbComplementof.Size = new System.Drawing.Size(147, 53);
             this.grbComplementof.TabIndex = 13;
@@ -1076,7 +1076,7 @@
             // 
             // txtComplemf
             // 
-            this.txtComplemf.Location = new System.Drawing.Point(6, 17);
+            this.txtComplemf.Location = new System.Drawing.Point(6, 19);
             this.txtComplemf.MaxLength = 50;
             this.txtComplemf.Name = "txtComplemf";
             this.txtComplemf.Size = new System.Drawing.Size(135, 23);
@@ -1106,7 +1106,7 @@
             this.grbBairroj.Controls.Add(this.txtBairrojur);
             this.grbBairroj.Location = new System.Drawing.Point(503, 82);
             this.grbBairroj.Name = "grbBairroj";
-            this.grbBairroj.Size = new System.Drawing.Size(145, 55);
+            this.grbBairroj.Size = new System.Drawing.Size(145, 54);
             this.grbBairroj.TabIndex = 17;
             this.grbBairroj.TabStop = false;
             this.grbBairroj.Text = "Bairro";
@@ -1123,7 +1123,7 @@
             this.grbEstadoj.Controls.Add(this.cmbEstadojur);
             this.grbEstadoj.Location = new System.Drawing.Point(676, 82);
             this.grbEstadoj.Name = "grbEstadoj";
-            this.grbEstadoj.Size = new System.Drawing.Size(147, 55);
+            this.grbEstadoj.Size = new System.Drawing.Size(147, 54);
             this.grbEstadoj.TabIndex = 18;
             this.grbEstadoj.TabStop = false;
             this.grbEstadoj.Text = "Estado";
@@ -1205,7 +1205,7 @@
             this.grbCidadej.Controls.Add(this.txtCidadejur);
             this.grbCidadej.Location = new System.Drawing.Point(126, 82);
             this.grbCidadej.Name = "grbCidadej";
-            this.grbCidadej.Size = new System.Drawing.Size(352, 55);
+            this.grbCidadej.Size = new System.Drawing.Size(352, 54);
             this.grbCidadej.TabIndex = 16;
             this.grbCidadej.TabStop = false;
             this.grbCidadej.Text = "Cidade";
@@ -1298,7 +1298,7 @@
             this.grbInfof.Size = new System.Drawing.Size(447, 124);
             this.grbInfof.TabIndex = 35;
             this.grbInfof.TabStop = false;
-            this.grbInfof.Text = "Informações extras";
+            this.grbInfof.Text = "Observações";
             // 
             // txtobsf
             // 
@@ -1319,7 +1319,7 @@
             this.grbInfoj.Size = new System.Drawing.Size(447, 124);
             this.grbInfoj.TabIndex = 6;
             this.grbInfoj.TabStop = false;
-            this.grbInfoj.Text = "Informações extras";
+            this.grbInfoj.Text = "Observações";
             this.grbInfoj.Visible = false;
             // 
             // txtobsj
@@ -1336,7 +1336,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(936, 665);
             this.Controls.Add(this.grbDadospessoais);

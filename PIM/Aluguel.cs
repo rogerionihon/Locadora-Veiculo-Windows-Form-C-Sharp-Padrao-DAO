@@ -17,25 +17,26 @@ namespace PIM
             InitializeComponent();
         }
 
+        //fecha o formulario
         private void BtnSairAluguel_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
+        } // fecha o metodo
 
+        //abre o aluguel de carro
         private void btnDev_Click(object sender, EventArgs e)
         {
-            //Abre o aluguel de carro
             AluguelAutomovel aluguelautomovel = new AluguelAutomovel();
             aluguelautomovel.StartPosition = FormStartPosition.CenterScreen;
             aluguelautomovel.Show();
-        }
+        } // fecha o metodo
 
+        //Abre a devolucao de carro
         private void btnDevolução_Click(object sender, EventArgs e)
         {
-            //Abre devolução de carro
             DevolucaoAutomovel devolucaoautomovel = new DevolucaoAutomovel();
             devolucaoautomovel.StartPosition = FormStartPosition.CenterScreen;
             devolucaoautomovel.Show();
-        }
-    }
-}
+        } // fecha o metodo
+    } // fecha a classe
+} // fecha o namespace

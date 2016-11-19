@@ -61,7 +61,7 @@
             this.btnDevolucao.Name = "btnDevolucao";
             this.btnDevolucao.Size = new System.Drawing.Size(124, 92);
             this.btnDevolucao.TabIndex = 3;
-            this.btnDevolucao.Text = "Devolucao";
+            this.btnDevolucao.Text = "Devolução";
             this.btnDevolucao.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnDevolucao.UseVisualStyleBackColor = false;
             // 
@@ -76,7 +76,7 @@
             this.btnLocacao.Name = "btnLocacao";
             this.btnLocacao.Size = new System.Drawing.Size(124, 92);
             this.btnLocacao.TabIndex = 2;
-            this.btnLocacao.Text = "Locacao";
+            this.btnLocacao.Text = "Locação";
             this.btnLocacao.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnLocacao.UseVisualStyleBackColor = false;
             // 
@@ -94,6 +94,7 @@
             this.btnVeiculo.Text = "Veiculos";
             this.btnVeiculo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnVeiculo.UseVisualStyleBackColor = false;
+            this.btnVeiculo.Click += new System.EventHandler(this.btnVeiculo_Click);
             // 
             // btnCliente
             // 
@@ -109,6 +110,7 @@
             this.btnCliente.Text = "Clientes";
             this.btnCliente.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCliente.UseVisualStyleBackColor = false;
+            this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
             // 
             // btnSair
             // 

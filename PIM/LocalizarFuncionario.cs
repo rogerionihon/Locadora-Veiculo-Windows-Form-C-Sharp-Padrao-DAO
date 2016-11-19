@@ -1,5 +1,6 @@
 ﻿using CdbDao.ConnectionDataBase;
 using CdbDao.ModelCliente;
+using CdbDao.Service;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,19 +19,24 @@ namespace PIM
 
         Dao Cdb = new Dao(); // criacao do objeto do tipo DAO
 
-        Funcionario funcionario = new Funcionario();
+        Funcionario funcionario = new Funcionario(); // criacao do objeto do tipo funcionario
+
+        Validacao validar = new Validacao(); // criacao do objeto do tipo validacao
         public LocalizarFuncionario()
         {
             InitializeComponent();
         }
 
+        // metodo para fechar o formulario
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Voce deseja sair?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 this.Close();
             }
-        }
+        } // fecha o metodo
+
+        //Metodo responsavel por exibi todos os dados dos funcionarios no datagridview
         public DataTable SelecionarFuncionario()
         {
             try
@@ -44,6 +50,7 @@ namespace PIM
             return dt; //retorno do datatable
         } // fecha o metodo
 
+        // metodo responsavel por carregar os dados no datagridview
         public void CarregarGridView()
         {
             dataGridView.DataSource = SelecionarFuncionario();
@@ -76,8 +83,9 @@ namespace PIM
             dataGridView.Columns[8].Width = 100;
             dataGridView.Columns[9].Width = 100;
             dataGridView.Columns[10].Width = 50;
-        }
+        } // fecha o metodo
 
+        // metodo para limpar os campos do formulario
         public void LimparCampos()
         {
             txtCod.Text = "";
@@ -90,22 +98,25 @@ namespace PIM
             txtEmail.Text = "";
             mskTel.Text = "";
             mskCel.Text = "";
-        }
+        } // fecha o metodo
 
+        // metodo responsavel por realizar a busca pelo nome
         private void txtPesqNome_TextChanged(object sender, EventArgs e)
         {
             DataView dv = new DataView(dt);
             dv.RowFilter = string.Format("fun_nome LIKE '%{0}%'", txtPesqNome.Text); // compara o valor digitado no campo txtPesqNome com o valor que esta na coluna fun_nome
             dataGridView.DataSource = dv;
-        }
+        } // fecha o metodo
 
+        // metodo loading
         private void LocalizarFuncionario_Load(object sender, EventArgs e)
         {
-            CarregarGridView();
-            txtCod.Enabled = false;
-            txtDtaCad.Enabled = false;
-        }
+            CarregarGridView(); // chama o metodo carregarGridView
+            txtCod.Enabled = false; // deixa o campo inativo
+            txtDtaCad.Enabled = false; // deixa o campo inativo
+        } // fecha o metodo
 
+        //metodo responsavel por preencher o formulario de acordo com a linha selecionada no datagridview
         private void dataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -123,21 +134,22 @@ namespace PIM
                 txtEmail.Text = selectedRow.Cells[7].Value.ToString();
                 mskTel.Text = selectedRow.Cells[8].Value.ToString();
                 mskCel.Text = selectedRow.Cells[9].Value.ToString();
-
-            }
+            } // fecha o try
             catch (Exception)
             {
                 MessageBox.Show("escolha um campo", MessageBoxButtons.OK.ToString());
             }
-        }
+        } // fecha o metodo
 
+        // metodo responsavel por atualizar os dados com a fonte de dados
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
-            AtualizarFuncionario();
-            CarregarGridView();
-            LimparCampos();
-        }
+            AtualizarFuncionario(); // chama o metodo para atualizar os dados
+            CarregarGridView(); // atualiza o datagridview com os novos dados
+            LimparCampos(); // limpa os campos do formulario
+        } // fecha o metodo
 
+        // metodo responsavel por atualizar os dados do formulario
         public void AtualizarFuncionario()
         {
             try
@@ -153,7 +165,112 @@ namespace PIM
                 funcionario.email = txtEmail.Text.ToString();
                 funcionario.telefone = mskTel.Text.ToString();
                 funcionario.celular = mskCel.Text.ToString();
-                if (rbtAtivo.Checked == true)
+
+                if (string.IsNullOrEmpty(txtNome.Text)) // valida campo nome
+                {
+                    erro = true;
+                    MessageBox.Show("O nome deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else if (validar.isLimitCaract(txtNome.Text, 5, 45)) { }
+                else
+                {
+                    erro = true;
+                    MessageBox.Show(" O nome deve conter no minimo 5 digitos! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                } // fecha a validacao nome
+
+
+                if (string.IsNullOrEmpty(txtEmail.Text))  // valida campo EMAIL
+                {
+                    erro = true;
+                    MessageBox.Show("O email deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else if (validar.ValidarEmail(txtEmail.Text)) { }
+                else
+                {
+                    erro = true;
+                    MessageBox.Show(" O email informado é invalido! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                } // fecha a validacao de email
+
+                if (string.IsNullOrEmpty(mskCpf.Text)) // valida campo cpf
+                {
+                    erro = true;
+                    MessageBox.Show("O numero do CPF deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else if (validar.validaCPF(mskCpf.Text)) { }
+                else
+                {
+                    erro = true;
+                    MessageBox.Show("O numero do CPF informado é invalido! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                } // fecha a validacao cpf
+
+                if (string.IsNullOrEmpty(mskTel.Text)) // valida campo telefone
+                {
+                    erro = true;
+                    MessageBox.Show("O numero do telefone deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else if (validar.ValidaTelefone(mskTel.Text)) { }
+                else
+                {
+                    erro = true;
+                    MessageBox.Show("O numero do telefone informado é invalido! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                } // fecha a validacao do telefone
+
+                if (string.IsNullOrEmpty(mskCel.Text)) // valida campo celular
+                {
+                    erro = true;
+                    MessageBox.Show("O numero do celular deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else if (validar.ValidarCelular(mskCel.Text)) { }
+                else
+                {
+                    erro = true;
+                    MessageBox.Show("O numero do celular informado é invalido! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                } // fecha a validacao do celular
+
+                if (string.IsNullOrEmpty(txtLogin.Text)) // valida campo login
+                {
+                    erro = true;
+                    MessageBox.Show(" O login deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else if (validar.isLimitCaract(txtLogin.Text, 5, 10)) { } 
+                else
+                {
+                    erro = true;
+                    MessageBox.Show(" O login deve conter de 5 a 10 digitos! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                } // fecha a validacao login
+
+                if (string.IsNullOrEmpty(txtSenha.Text)) // valida campo senha
+                {
+                    erro = true;
+                    MessageBox.Show(" A senha deve ser informada! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else if (validar.isLimitCaract(txtSenha.Text, 5, 10)) { } 
+                else
+                {
+                    erro = true;
+                    MessageBox.Show(" A senha deve conter de 5 a 10 digitos! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                } // fecha a validacao senha
+
+                if (string.IsNullOrEmpty(txtConfSenha.Text)) // valida campo confirmar senha
+                {
+                    erro = true;
+                    MessageBox.Show(" A confirmacao da senha deve ser informada! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else if (validar.isLimitCaract(txtConfSenha.Text, 5, 10)) { }
+                else
+                {
+                    erro = true;
+                    MessageBox.Show(" A senha de confirmacao deve conter de 5 a 10 digitos! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                } // fecha a validacao confirmar senha
+
+                if (funcionario.senha == funcionario.confirmarSenha) { } // valida campo senha e confirmar senha
+                else
+                {
+                    erro = true;
+                    MessageBox.Show("As senhas nao conferem!");
+                } // fecha a validacao senha e confirmar senha
+
+                if (rbtAtivo.Checked == true) // valida campo status
                 {
                     funcionario.status = "Ativo";
                 }
@@ -165,19 +282,18 @@ namespace PIM
                 {
                     erro = true;
                     MessageBox.Show("A opcao ativo ou inativo deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
+                } // fecha a validacao status
+
                 if (!erro)
                 {
                     Cdb.AtualizarFuncionario(funcionario);
                 }
 
-            }
+            } // fecha o try
             catch (Exception)
             {
                 MessageBox.Show("Escolha algum campo para realizar a atualizacao", MessageBoxButtons.OK.ToString()); // exibe a mensagem caso nao seja escolhido algum campo para realizar a atualizacao
             }
-        }
-        
-
-    }
-}
+        } // fecha o metodo
+    } // fecha a classe
+} // fecha o namespace
