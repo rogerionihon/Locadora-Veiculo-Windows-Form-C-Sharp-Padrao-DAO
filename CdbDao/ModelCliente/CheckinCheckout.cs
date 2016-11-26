@@ -32,5 +32,6 @@ namespace CdbDao.ModelCliente
         public Boolean pneu_tras_esq { get; set; }
         public Boolean pneu_tras_dir { get; set; }
         public string car_id { get; set; }
-    }
-}
+        public string status { get; set; }
+    } // fecha a classe
+} // fecha o namespace

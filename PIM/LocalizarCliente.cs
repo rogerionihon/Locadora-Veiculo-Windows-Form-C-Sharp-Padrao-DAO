@@ -12,6 +12,7 @@ using CdbDao.ConnectionDataBase;
 using CdbDao.ModelCliente;
 using System.Configuration;
 using CdbDao.Service;
+using System.ServiceModel;
 
 
 namespace PIM
@@ -690,6 +691,75 @@ namespace PIM
             {
                 MessageBox.Show("Não foi possivel realizar a atualizacao, verifique e tente novamamente!", "Validação de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); // exibe a mensagem caso nao seja realizado a atualizacao
             }   
+        }
+
+        // metodo responsavel por consultar o CEP de pessoa juridica
+        private void btnConsultJur_Click(object sender, EventArgs e)
+        {
+            ServiceCorreios.AtendeClienteClient consulta = new ServiceCorreios.AtendeClienteClient("AtendeClientePort");
+
+            try
+            {
+                if (rbtPessoaJuridica.Checked == true)
+                {
+                    var resultado = consulta.consultaCEP(mskCepJur.Text);
+
+                    if (resultado != null)
+                    {
+                        txtEndJur.Text = resultado.end;
+                        txtComJur.Text = resultado.complemento;
+                        txtBaiJur.Text = resultado.bairro;
+                        txtCidJur.Text = resultado.cidade;
+                        cmbEstJur.Text = resultado.uf;
+                        txtNumJur.Text = "";
+                    } // fecha o if
+                } // fecga o rbtPessoaJur    
+            } // fecha o try
+            catch (FaultException)
+            {
+                MessageBox.Show("CEP não foi encontrado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                mskCepJur.Focus();
+            }
+            catch (CommunicationException)
+            {
+                MessageBox.Show("Não foi possivel realizar a operação. Verifique sua conexão com a internet!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                mskCepJur.Focus();
+            }
+        }// fecha o metodo
+
+        // metodo responsavel por consultar o CEP de pessoa fisica
+        private void btnConsultFis_Click(object sender, EventArgs e)
+        {
+            ServiceCorreios.AtendeClienteClient consulta = new ServiceCorreios.AtendeClienteClient("AtendeClientePort");
+
+            try
+            {
+                if (rbtPessoaFisica.Checked == true)
+                {
+                    var resultado = consulta.consultaCEP(mskCepFis.Text);
+
+                    if (resultado != null)
+                    {
+                        txtEndFis.Text = resultado.end;
+                        txtComFis.Text = resultado.complemento;
+                        txtBairFis.Text = resultado.bairro;
+                        txtCidFis.Text = resultado.cidade;
+                        cmbEstFis.Text = resultado.uf;
+                        txtNumFis.Text = "";
+
+                    } // fecha o if
+                } // fecha o if rbtPessoaFis
+            } // fecha o try
+            catch (FaultException)
+            {
+                MessageBox.Show("CEP não foi encontrado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                mskCepFis.Focus();
+            }
+            catch (CommunicationException)
+            {
+                MessageBox.Show("Não foi possivel realizar a operação. Verifique sua conexão com a internet!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                mskCepFis.Focus();
+            }
         } // fecha o metodo
     } // final da clase
 } // final do namespace

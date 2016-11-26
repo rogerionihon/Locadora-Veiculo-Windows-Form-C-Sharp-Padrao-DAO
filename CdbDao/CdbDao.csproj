@@ -53,6 +53,18 @@
     <Compile Include="ModelCliente\Locacao.cs" />
     <Compile Include="ModelCliente\Veiculo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Relatorio\RelatorioLocacaoPf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorio\RelatorioLocacaoPf.Designer.cs">
+      <DependentUpon>RelatorioLocacaoPf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorio\RelatorioLocacaoPj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorio\RelatorioLocacaoPj.Designer.cs">
+      <DependentUpon>RelatorioLocacaoPj.cs</DependentUpon>
+    </Compile>
     <Compile Include="Relatorio\RelatorioPessoaFisica.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +86,14 @@
     <Compile Include="Service\Validacao.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Relatorio\RelatorioLocacaoPf.rdlc" />
+    <EmbeddedResource Include="Relatorio\RelatorioLocacaoPf.resx">
+      <DependentUpon>RelatorioLocacaoPf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorio\RelatorioLocacaoPj.rdlc" />
+    <EmbeddedResource Include="Relatorio\RelatorioLocacaoPj.resx">
+      <DependentUpon>RelatorioLocacaoPj.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Relatorio\RelatorioPessoaFisica.rdlc" />
     <EmbeddedResource Include="Relatorio\RelatorioPessoaFisica.resx">
       <DependentUpon>RelatorioPessoaFisica.cs</DependentUpon>

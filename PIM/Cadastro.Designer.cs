@@ -34,11 +34,14 @@
             this.BtnCliente = new System.Windows.Forms.Button();
             this.btnAutomovel = new System.Windows.Forms.Button();
             this.BtnSairCadastro = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.btnFuncionario);
             this.groupBox1.Controls.Add(this.BtnCliente);
             this.groupBox1.Controls.Add(this.btnAutomovel);
@@ -59,7 +62,7 @@
             this.btnFuncionario.Name = "btnFuncionario";
             this.btnFuncionario.Size = new System.Drawing.Size(124, 92);
             this.btnFuncionario.TabIndex = 2;
-            this.btnFuncionario.Text = "Funcionario";
+            this.btnFuncionario.Text = "Funcionário";
             this.btnFuncionario.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnFuncionario.UseVisualStyleBackColor = false;
             this.btnFuncionario.Click += new System.EventHandler(this.btnFuncionario_Click);
@@ -90,7 +93,7 @@
             this.btnAutomovel.Name = "btnAutomovel";
             this.btnAutomovel.Size = new System.Drawing.Size(124, 92);
             this.btnAutomovel.TabIndex = 1;
-            this.btnAutomovel.Text = "Automovel";
+            this.btnAutomovel.Text = "Automóvel";
             this.btnAutomovel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAutomovel.UseVisualStyleBackColor = false;
             this.btnAutomovel.Click += new System.EventHandler(this.btnAutomovel_Click);
@@ -102,7 +105,7 @@
             this.BtnSairCadastro.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSairCadastro.Image = ((System.Drawing.Image)(resources.GetObject("BtnSairCadastro.Image")));
             this.BtnSairCadastro.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnSairCadastro.Location = new System.Drawing.Point(888, 505);
+            this.BtnSairCadastro.Location = new System.Drawing.Point(636, 476);
             this.BtnSairCadastro.Name = "BtnSairCadastro";
             this.BtnSairCadastro.Size = new System.Drawing.Size(124, 92);
             this.BtnSairCadastro.TabIndex = 3;
@@ -111,16 +114,32 @@
             this.BtnSairCadastro.UseVisualStyleBackColor = false;
             this.BtnSairCadastro.Click += new System.EventHandler(this.BtnSairCadastro_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(330, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(392, 449);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
             // Cadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1024, 609);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(772, 580);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.BtnSairCadastro);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Cadastro";
             this.Text = "Cadastro";
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -132,5 +151,6 @@
         private System.Windows.Forms.Button BtnCliente;
         private System.Windows.Forms.Button btnAutomovel;
         private System.Windows.Forms.Button BtnSairCadastro;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

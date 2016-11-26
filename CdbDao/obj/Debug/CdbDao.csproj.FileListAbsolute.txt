@@ -30,3 +30,16 @@ C:\Users\Yoda\Desktop\PIM-2\CdbDao\obj\Debug\CdbDao.csproj.GenerateResource.Cach
 C:\Users\Yoda\Desktop\PIM-2\CdbDao\obj\Debug\RdlCompile.cache
 C:\Users\Yoda\Desktop\PIM-2\CdbDao\obj\Debug\RdlCompile.compiled
 C:\Users\Yoda\Desktop\PIM-2\CdbDao\obj\Debug\CdbDao.csprojResolveAssemblyReference.cache
+C:\Users\Yoda\Desktop\PIM-2 - cep busca\CdbDao\bin\Debug\CdbDao.dll
+C:\Users\Yoda\Desktop\PIM-2 - cep busca\CdbDao\bin\Debug\CdbDao.pdb
+C:\Users\Yoda\Desktop\PIM-2 - cep busca\CdbDao\obj\Debug\CdbDao.csprojResolveAssemblyReference.cache
+C:\Users\Yoda\Desktop\PIM-2 - cep busca\CdbDao\obj\Debug\CdbDao.Relatorio.RelatorioPessoaFisica.resources
+C:\Users\Yoda\Desktop\PIM-2 - cep busca\CdbDao\obj\Debug\CdbDao.Relatorio.RelatorioPessoaJuridica.resources
+C:\Users\Yoda\Desktop\PIM-2 - cep busca\CdbDao\obj\Debug\CdbDao.Relatorio.RelatorioVeiculo.resources
+C:\Users\Yoda\Desktop\PIM-2 - cep busca\CdbDao\obj\Debug\CdbDao.csproj.GenerateResource.Cache
+C:\Users\Yoda\Desktop\PIM-2 - cep busca\CdbDao\obj\Debug\RdlCompile.cache
+C:\Users\Yoda\Desktop\PIM-2 - cep busca\CdbDao\obj\Debug\RdlCompile.compiled
+C:\Users\Yoda\Desktop\PIM-2 - cep busca\CdbDao\obj\Debug\CdbDao.dll
+C:\Users\Yoda\Desktop\PIM-2 - cep busca\CdbDao\obj\Debug\CdbDao.pdb
+C:\Users\Yoda\Desktop\PIM-2 - cep busca\CdbDao\obj\Debug\CdbDao.Relatorio.RelatorioLocacaoPf.resources
+C:\Users\Yoda\Desktop\PIM-2 - cep busca\CdbDao\obj\Debug\CdbDao.Relatorio.RelatorioLocacaoPj.resources

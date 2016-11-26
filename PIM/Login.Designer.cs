@@ -124,7 +124,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PIM.Properties.Resources._1920_communication_background_l_680x300;
-            this.ClientSize = new System.Drawing.Size(680, 546);
+            this.ClientSize = new System.Drawing.Size(678, 546);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnLogar);

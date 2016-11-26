@@ -10,7 +10,7 @@ namespace CdbDao.Service
 {
     public class Validacao
     {
-
+        // metodo que valida o cpf
         public bool validaCPF(string cpf)
         {
             int[] multiplicador1 = new int[9] { 10, 9, 8, 7, 6, 5, 4, 3, 2 };
@@ -58,8 +58,9 @@ namespace CdbDao.Service
             digito = digito + resto.ToString();
 
             return cpf.EndsWith(digito);
-        }
+        } // fecha o metodo
 
+        // metodo que valida o cnpj
         public bool ValidaCNPJ(string cnpj)
         {
             int[] multiplicador1 = new int[12] { 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
@@ -102,8 +103,9 @@ namespace CdbDao.Service
             digito = digito + resto.ToString();
 
             return cnpj.EndsWith(digito);
-        }
+        } // fecha o metodo
 
+        // metodo que valida o telefone
         public bool ValidaTelefone(string telefone)
         {
             Regex Rgx = new Regex(@"^[(]{1}\d{2}[)]{1}\d{4}[-]{1}\d{4}$");
@@ -112,8 +114,9 @@ namespace CdbDao.Service
                 return false;
             else
                 return true;
-        }
+        } // fecha o metodo
 
+        // metodo que valida o celular
         public bool ValidarCelular(string celular)
         {
             Regex Rgx = new Regex(@"^[1-9]{2}\-[2-9][0-9]{7,8}$");
@@ -121,8 +124,9 @@ namespace CdbDao.Service
                 return false;
             else
                 return true;
-        }
-       
+        } // fecha o metodo
+
+        // metodo que valida o cep
         public bool ValidaCEP(string cep)
         {
             Regex Rgx = new Regex(@"^\d{5}-\d{3}$");
@@ -131,8 +135,9 @@ namespace CdbDao.Service
                 return false;
             else
                 return true;
-        }
+        } // fecha o metodo
 
+        // metodo que valida o email
         public bool ValidarEmail(string Email)
         {
             bool ValidEmail = false;
@@ -154,67 +159,12 @@ namespace CdbDao.Service
                 }
             }
             return ValidEmail;
-        }
+        } // fecha o metodo
 
-        public void ValidarCamposLetras(KeyPressEventArgs e)
-        {
-            if (char.IsLetter(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (char.IsControl(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (char.IsSeparator(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else
-            {
-                e.Handled = true;
-            }
-        }
-
-        public void ValidarCamposNumericos(KeyPressEventArgs e)
-        {
-            if (char.IsNumber(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (char.IsControl(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (char.IsSeparator(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else
-            {
-                e.Handled = true;
-            }
-        }
-        public int verifCharDig(char dig, string str)
-        {
-            int tam = str.Length; //pega o tamanho da string  
-
-            //inicia variável que vai armazenar a qtde de vezes em que o char aparece na string 
-            int qtde = 0;
-
-            foreach (char ch in str) //percorre a string...  
-            {
-                //se o caractere informado for igual ao caractere da posição atual da string... 
-                if (ch == dig)
-                    qtde++; //soma-se uma unidade a variável  
-            }
-            return qtde; //retorna a qtde de vezes em que o char apareceu na string  
-        }
-
+        // metodo que valida a quantidade de caracteres permitido
         public bool isLimitCaract(string text, int min, int max)
         {
             return (text.Length >= min) && (text.Length < max);
-        }
-
-    }
-}
+        } // fecha o metodo
+    } // fecha a classe
+} // fecha o namespace

@@ -33,6 +33,8 @@
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.grbCli = new System.Windows.Forms.GroupBox();
+            this.grbveiculos = new System.Windows.Forms.GroupBox();
+            this.rbtVeiculo = new System.Windows.Forms.RadioButton();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.rbtPessoaJ = new System.Windows.Forms.RadioButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -50,8 +52,6 @@
             this.dtpLocacao = new System.Windows.Forms.DateTimePicker();
             this.lblLocacao = new System.Windows.Forms.Label();
             this.btnRealizarCheckin = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cmbVeiculo = new System.Windows.Forms.ComboBox();
             this.gridView = new System.Windows.Forms.DataGridView();
             this.txtCodFis = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
@@ -67,14 +67,24 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cmbStatus = new System.Windows.Forms.ComboBox();
+            this.txtModelo = new System.Windows.Forms.TextBox();
+            this.txtPlaca = new System.Windows.Forms.TextBox();
+            this.txtCodCheckin = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.grbCli.SuspendLayout();
+            this.grbveiculos.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.grbOpcaoLoc.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
             this.grbPessoaF.SuspendLayout();
             this.grbPessoaJ.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // BtnCancelaAluguelAutomovel
@@ -130,16 +140,41 @@
             // 
             // grbCli
             // 
+            this.grbCli.BackColor = System.Drawing.Color.Transparent;
+            this.grbCli.Controls.Add(this.grbveiculos);
             this.grbCli.Controls.Add(this.groupBox4);
             this.grbCli.Controls.Add(this.groupBox3);
-            this.grbCli.Location = new System.Drawing.Point(16, 87);
+            this.grbCli.Location = new System.Drawing.Point(16, 76);
             this.grbCli.Margin = new System.Windows.Forms.Padding(4);
             this.grbCli.Name = "grbCli";
             this.grbCli.Padding = new System.Windows.Forms.Padding(4);
-            this.grbCli.Size = new System.Drawing.Size(261, 55);
+            this.grbCli.Size = new System.Drawing.Size(414, 55);
             this.grbCli.TabIndex = 9;
             this.grbCli.TabStop = false;
             this.grbCli.Text = "Cliente";
+            // 
+            // grbveiculos
+            // 
+            this.grbveiculos.Controls.Add(this.rbtVeiculo);
+            this.grbveiculos.Location = new System.Drawing.Point(269, 16);
+            this.grbveiculos.Name = "grbveiculos";
+            this.grbveiculos.Size = new System.Drawing.Size(116, 32);
+            this.grbveiculos.TabIndex = 2;
+            this.grbveiculos.TabStop = false;
+            // 
+            // rbtVeiculo
+            // 
+            this.rbtVeiculo.AutoSize = true;
+            this.rbtVeiculo.BackColor = System.Drawing.Color.Transparent;
+            this.rbtVeiculo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rbtVeiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtVeiculo.Location = new System.Drawing.Point(16, 12);
+            this.rbtVeiculo.Name = "rbtVeiculo";
+            this.rbtVeiculo.Size = new System.Drawing.Size(62, 17);
+            this.rbtVeiculo.TabIndex = 2;
+            this.rbtVeiculo.Text = "Veículo";
+            this.rbtVeiculo.UseVisualStyleBackColor = false;
+            this.rbtVeiculo.CheckedChanged += new System.EventHandler(this.rbtVeiculo_CheckedChanged_1);
             // 
             // groupBox4
             // 
@@ -155,6 +190,7 @@
             // rbtPessoaJ
             // 
             this.rbtPessoaJ.AutoSize = true;
+            this.rbtPessoaJ.BackColor = System.Drawing.Color.Transparent;
             this.rbtPessoaJ.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtPessoaJ.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtPessoaJ.Location = new System.Drawing.Point(8, 12);
@@ -163,12 +199,12 @@
             this.rbtPessoaJ.Size = new System.Drawing.Size(96, 17);
             this.rbtPessoaJ.TabIndex = 0;
             this.rbtPessoaJ.Text = "Pessoa juridica";
-            this.rbtPessoaJ.UseVisualStyleBackColor = true;
+            this.rbtPessoaJ.UseVisualStyleBackColor = false;
             this.rbtPessoaJ.CheckedChanged += new System.EventHandler(this.rbtPessoaJ_CheckedChanged);
             // 
             // groupBox3
             // 
-            this.groupBox3.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.groupBox3.BackColor = System.Drawing.Color.Transparent;
             this.groupBox3.Controls.Add(this.rbtPessoaF);
             this.groupBox3.Location = new System.Drawing.Point(8, 16);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
@@ -181,7 +217,7 @@
             // rbtPessoaF
             // 
             this.rbtPessoaF.AutoSize = true;
-            this.rbtPessoaF.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.rbtPessoaF.BackColor = System.Drawing.Color.Transparent;
             this.rbtPessoaF.Checked = true;
             this.rbtPessoaF.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtPessoaF.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -232,7 +268,7 @@
             // 
             // txtValorServ
             // 
-            this.txtValorServ.Location = new System.Drawing.Point(568, 185);
+            this.txtValorServ.Location = new System.Drawing.Point(568, 178);
             this.txtValorServ.Margin = new System.Windows.Forms.Padding(4);
             this.txtValorServ.Name = "txtValorServ";
             this.txtValorServ.Size = new System.Drawing.Size(217, 23);
@@ -241,12 +277,12 @@
             // lblValor
             // 
             this.lblValor.AutoSize = true;
-            this.lblValor.Location = new System.Drawing.Point(446, 188);
+            this.lblValor.Location = new System.Drawing.Point(446, 181);
             this.lblValor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblValor.Name = "lblValor";
             this.lblValor.Size = new System.Drawing.Size(114, 17);
             this.lblValor.TabIndex = 19;
-            this.lblValor.Text = "Valor do servico:";
+            this.lblValor.Text = "Valor do serviço:";
             // 
             // lblFormPag
             // 
@@ -266,7 +302,7 @@
             this.lblFormLoc.Name = "lblFormLoc";
             this.lblFormLoc.Size = new System.Drawing.Size(125, 17);
             this.lblFormLoc.TabIndex = 17;
-            this.lblFormLoc.Text = "Forma de locacao:";
+            this.lblFormLoc.Text = "Forma de locação:";
             // 
             // cmbFormLoc
             // 
@@ -304,7 +340,7 @@
             this.lblDevolucao.Name = "lblDevolucao";
             this.lblDevolucao.Size = new System.Drawing.Size(111, 17);
             this.lblDevolucao.TabIndex = 14;
-            this.lblDevolucao.Text = "Data devolucao:";
+            this.lblDevolucao.Text = "Data devolução:";
             // 
             // dtpDevolucao
             // 
@@ -335,7 +371,7 @@
             this.lblLocacao.Name = "lblLocacao";
             this.lblLocacao.Size = new System.Drawing.Size(95, 17);
             this.lblLocacao.TabIndex = 11;
-            this.lblLocacao.Text = "Data locacao:";
+            this.lblLocacao.Text = "Data locação:";
             // 
             // btnRealizarCheckin
             // 
@@ -344,7 +380,7 @@
             this.btnRealizarCheckin.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRealizarCheckin.Image = ((System.Drawing.Image)(resources.GetObject("btnRealizarCheckin.Image")));
             this.btnRealizarCheckin.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnRealizarCheckin.Location = new System.Drawing.Point(981, 15);
+            this.btnRealizarCheckin.Location = new System.Drawing.Point(809, 15);
             this.btnRealizarCheckin.Margin = new System.Windows.Forms.Padding(4);
             this.btnRealizarCheckin.Name = "btnRealizarCheckin";
             this.btnRealizarCheckin.Size = new System.Drawing.Size(138, 72);
@@ -354,39 +390,16 @@
             this.btnRealizarCheckin.UseVisualStyleBackColor = false;
             this.btnRealizarCheckin.Click += new System.EventHandler(this.btnRealizarCheckin_Click);
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.cmbVeiculo);
-            this.groupBox1.Location = new System.Drawing.Point(808, 125);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(311, 96);
-            this.groupBox1.TabIndex = 13;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Listar veiculos:";
-            // 
-            // cmbVeiculo
-            // 
-            this.cmbVeiculo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmbVeiculo.FormattingEnabled = true;
-            this.cmbVeiculo.Location = new System.Drawing.Point(33, 37);
-            this.cmbVeiculo.Margin = new System.Windows.Forms.Padding(4);
-            this.cmbVeiculo.Name = "cmbVeiculo";
-            this.cmbVeiculo.Size = new System.Drawing.Size(270, 24);
-            this.cmbVeiculo.TabIndex = 0;
-            this.cmbVeiculo.Text = "Clique para listar os veiculos:";
-            // 
             // gridView
             // 
             this.gridView.AllowUserToAddRows = false;
             this.gridView.AllowUserToDeleteRows = false;
             this.gridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridView.Location = new System.Drawing.Point(16, 151);
+            this.gridView.Location = new System.Drawing.Point(16, 142);
             this.gridView.Name = "gridView";
             this.gridView.ReadOnly = true;
             this.gridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridView.Size = new System.Drawing.Size(717, 201);
+            this.gridView.Size = new System.Drawing.Size(794, 201);
             this.gridView.TabIndex = 14;
             this.gridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridView_CellClick);
             // 
@@ -421,7 +434,7 @@
             // 
             // txtRazSoc
             // 
-            this.txtRazSoc.Location = new System.Drawing.Point(107, 58);
+            this.txtRazSoc.Location = new System.Drawing.Point(107, 56);
             this.txtRazSoc.Name = "txtRazSoc";
             this.txtRazSoc.Size = new System.Drawing.Size(307, 23);
             this.txtRazSoc.TabIndex = 19;
@@ -429,7 +442,7 @@
             // 
             // txtCnpj
             // 
-            this.txtCnpj.Location = new System.Drawing.Point(107, 87);
+            this.txtCnpj.Location = new System.Drawing.Point(107, 85);
             this.txtCnpj.Name = "txtCnpj";
             this.txtCnpj.Size = new System.Drawing.Size(307, 23);
             this.txtCnpj.TabIndex = 20;
@@ -470,12 +483,12 @@
             this.grbPessoaF.Controls.Add(this.label2);
             this.grbPessoaF.Controls.Add(this.txtCpf);
             this.grbPessoaF.Controls.Add(this.txtNome);
-            this.grbPessoaF.Location = new System.Drawing.Point(16, 361);
+            this.grbPessoaF.Location = new System.Drawing.Point(16, 349);
             this.grbPessoaF.Name = "grbPessoaF";
             this.grbPessoaF.Size = new System.Drawing.Size(395, 121);
             this.grbPessoaF.TabIndex = 24;
             this.grbPessoaF.TabStop = false;
-            this.grbPessoaF.Text = "Pessoa fisica";
+            this.grbPessoaF.Text = "Pessoa Física";
             // 
             // grbPessoaJ
             // 
@@ -485,18 +498,18 @@
             this.grbPessoaJ.Controls.Add(this.label4);
             this.grbPessoaJ.Controls.Add(this.txtRazSoc);
             this.grbPessoaJ.Controls.Add(this.txtCodJur);
-            this.grbPessoaJ.Location = new System.Drawing.Point(16, 361);
+            this.grbPessoaJ.Location = new System.Drawing.Point(16, 349);
             this.grbPessoaJ.Name = "grbPessoaJ";
             this.grbPessoaJ.Size = new System.Drawing.Size(431, 121);
             this.grbPessoaJ.TabIndex = 25;
             this.grbPessoaJ.TabStop = false;
-            this.grbPessoaJ.Text = "Pessoa juridica";
+            this.grbPessoaJ.Text = "Pessoa Juridica";
             this.grbPessoaJ.Visible = false;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(54, 87);
+            this.label6.Location = new System.Drawing.Point(54, 85);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(47, 17);
             this.label6.TabIndex = 2;
@@ -505,7 +518,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 61);
+            this.label5.Location = new System.Drawing.Point(6, 59);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(95, 17);
             this.label5.TabIndex = 1;
@@ -520,16 +533,102 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Código:";
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.cmbStatus);
+            this.groupBox2.Controls.Add(this.txtModelo);
+            this.groupBox2.Controls.Add(this.txtPlaca);
+            this.groupBox2.Controls.Add(this.txtCodCheckin);
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Location = new System.Drawing.Point(471, 349);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(339, 146);
+            this.groupBox2.TabIndex = 26;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Veículo";
+            // 
+            // cmbStatus
+            // 
+            this.cmbStatus.FormattingEnabled = true;
+            this.cmbStatus.Items.AddRange(new object[] {
+            "Disponivel",
+            "Indisponivel"});
+            this.cmbStatus.Location = new System.Drawing.Point(67, 114);
+            this.cmbStatus.Name = "cmbStatus";
+            this.cmbStatus.Size = new System.Drawing.Size(121, 24);
+            this.cmbStatus.TabIndex = 7;
+            // 
+            // txtModelo
+            // 
+            this.txtModelo.Location = new System.Drawing.Point(67, 85);
+            this.txtModelo.Name = "txtModelo";
+            this.txtModelo.Size = new System.Drawing.Size(266, 23);
+            this.txtModelo.TabIndex = 6;
+            // 
+            // txtPlaca
+            // 
+            this.txtPlaca.Location = new System.Drawing.Point(67, 56);
+            this.txtPlaca.Name = "txtPlaca";
+            this.txtPlaca.Size = new System.Drawing.Size(100, 23);
+            this.txtPlaca.TabIndex = 5;
+            // 
+            // txtCodCheckin
+            // 
+            this.txtCodCheckin.Location = new System.Drawing.Point(67, 27);
+            this.txtCodCheckin.Name = "txtCodCheckin";
+            this.txtCodCheckin.Size = new System.Drawing.Size(66, 23);
+            this.txtCodCheckin.TabIndex = 4;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(16, 117);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(52, 17);
+            this.label10.TabIndex = 3;
+            this.label10.Text = "Status:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(10, 88);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(58, 17);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "Modelo:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(21, 59);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(47, 17);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "Placa:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(12, 30);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(56, 17);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Código:";
+            // 
             // AluguelAutomovel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1145, 716);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(968, 716);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.grbPessoaJ);
             this.Controls.Add(this.grbPessoaF);
             this.Controls.Add(this.gridView);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnRealizarCheckin);
             this.Controls.Add(this.grbOpcaoLoc);
             this.Controls.Add(this.grbCli);
@@ -537,23 +636,27 @@
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.BtnCancelaAluguelAutomovel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AluguelAutomovel";
-            this.Text = "AluguelAutomovel";
+            this.Text = "Aluguel de Automoveis";
             this.Load += new System.EventHandler(this.AluguelAutomovel_Load);
             this.grbCli.ResumeLayout(false);
+            this.grbveiculos.ResumeLayout(false);
+            this.grbveiculos.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.grbOpcaoLoc.ResumeLayout(false);
             this.grbOpcaoLoc.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
             this.grbPessoaF.ResumeLayout(false);
             this.grbPessoaF.PerformLayout();
             this.grbPessoaJ.ResumeLayout(false);
             this.grbPessoaJ.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -580,8 +683,6 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.RadioButton rbtPessoaF;
         private System.Windows.Forms.RadioButton rbtPessoaJ;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox cmbVeiculo;
         private System.Windows.Forms.Button Calcular;
         private System.Windows.Forms.DataGridView gridView;
         private System.Windows.Forms.TextBox txtCodFis;
@@ -598,5 +699,16 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.RadioButton rbtVeiculo;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.ComboBox cmbStatus;
+        private System.Windows.Forms.TextBox txtModelo;
+        private System.Windows.Forms.TextBox txtPlaca;
+        private System.Windows.Forms.TextBox txtCodCheckin;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.GroupBox grbveiculos;
     }
 }

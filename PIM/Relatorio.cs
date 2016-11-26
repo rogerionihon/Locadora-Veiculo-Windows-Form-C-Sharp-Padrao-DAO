@@ -39,5 +39,13 @@ namespace PIM
             relatorio.StartPosition = FormStartPosition.CenterScreen;
             relatorio.Show();
         } // fecha o metodo
+        
+        //abre o relatorio Locacao
+        private void btnLocacao_Click(object sender, EventArgs e)
+        {
+            RelatorioLocacao relatorio = new RelatorioLocacao();
+            relatorio.StartPosition = FormStartPosition.CenterScreen;
+            relatorio.Show();
+        } // fecha o metodo
     } // fecha a classe
 } // fecha o namespace

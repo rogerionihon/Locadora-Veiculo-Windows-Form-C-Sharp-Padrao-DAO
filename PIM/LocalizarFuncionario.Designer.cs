@@ -147,7 +147,7 @@
             // 
             this.lbDtaCad.AutoSize = true;
             this.lbDtaCad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDtaCad.Location = new System.Drawing.Point(388, 35);
+            this.lbDtaCad.Location = new System.Drawing.Point(398, 35);
             this.lbDtaCad.Name = "lbDtaCad";
             this.lbDtaCad.Size = new System.Drawing.Size(117, 16);
             this.lbDtaCad.TabIndex = 6;
@@ -213,10 +213,10 @@
             // txtDtaCad
             // 
             this.txtDtaCad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDtaCad.Location = new System.Drawing.Point(511, 31);
+            this.txtDtaCad.Location = new System.Drawing.Point(516, 31);
             this.txtDtaCad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDtaCad.Name = "txtDtaCad";
-            this.txtDtaCad.Size = new System.Drawing.Size(81, 22);
+            this.txtDtaCad.Size = new System.Drawing.Size(76, 22);
             this.txtDtaCad.TabIndex = 13;
             // 
             // txtEmail
@@ -303,7 +303,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(372, 156);
+            this.label1.Location = new System.Drawing.Point(378, 156);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(108, 16);
             this.label1.TabIndex = 21;
@@ -407,6 +407,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(804, 687);
             this.Controls.Add(this.grbStatus);
             this.Controls.Add(this.grbFunc);
@@ -415,9 +416,10 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAtualizar);
             this.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "LocalizarFuncionario";
-            this.Text = "LocalizarFuncionario";
+            this.Text = "Localizar Funcionários";
             this.Load += new System.EventHandler(this.LocalizarFuncionario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.grbPesqNome.ResumeLayout(false);

@@ -19,7 +19,7 @@ namespace CdbDao.ModelCliente
         public string telefone { get; set; }
         public string celular { get; set; }
         public string status { get; set; }
-    }
-}
+    } // fecha a classe
+} // fecha o namespace
 
       

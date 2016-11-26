@@ -13,17 +13,18 @@ namespace CdbDao.Relatorio
 {
     public partial class RelatorioPessoaJuridica : Form
     {
-        Dao cdb = new Dao();
+        Dao cdb = new Dao(); // cria objeto de conexao
 
         public RelatorioPessoaJuridica()
         {
             InitializeComponent();
         }
 
+        // metodo que gera o relatorio
         private void RelatorioPessoaJuridica_Load(object sender, EventArgs e)
         {
             ClienteBindingSource.DataSource = cdb.ExibiRelatorioClienteJuridico();
             this.reportViewer1.RefreshReport();
-        }
-    }
-}
+        } // fecha o metodo
+    } // fecha a classe
+} // fecha o namespace

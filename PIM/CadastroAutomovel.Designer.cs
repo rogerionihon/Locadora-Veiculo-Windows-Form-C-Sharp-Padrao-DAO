@@ -335,7 +335,7 @@
             this.gbInformacoes.Size = new System.Drawing.Size(760, 322);
             this.gbInformacoes.TabIndex = 0;
             this.gbInformacoes.TabStop = false;
-            this.gbInformacoes.Text = "Informacoes gerais";
+            this.gbInformacoes.Text = "Informações gerais";
             // 
             // groupBox25
             // 
@@ -452,7 +452,7 @@
             this.groupBox22.Size = new System.Drawing.Size(159, 56);
             this.groupBox22.TabIndex = 8;
             this.groupBox22.TabStop = false;
-            this.groupBox22.Text = "Combustivel";
+            this.groupBox22.Text = "Combustível";
             // 
             // cmbCombustivel
             // 
@@ -579,7 +579,7 @@
             this.gbObservacao.Size = new System.Drawing.Size(456, 112);
             this.gbObservacao.TabIndex = 18;
             this.gbObservacao.TabStop = false;
-            this.gbObservacao.Text = "Observacao";
+            this.gbObservacao.Text = "Observação";
             // 
             // txtObs
             // 
@@ -593,14 +593,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(790, 514);
             this.Controls.Add(this.gbObservacao);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.gbInformacoes);
             this.Controls.Add(this.BtnCancelaAutomovel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CadastroAutomovel";
-            this.Text = "Cadastro de Automovel";
+            this.Text = "Cadastro de Automóveis";
             this.groupBox3.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

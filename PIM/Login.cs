@@ -75,6 +75,7 @@ namespace PIM
                 {
                     if (Cdb.Login(funcionario)) // verifica se os dados sao persistente na base de dados
                     {
+                        this.Hide();
                         menu.Show(); // abre a aplicacao
                     }
                     else

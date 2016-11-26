@@ -483,7 +483,7 @@
             this.lblObs.Name = "lblObs";
             this.lblObs.Size = new System.Drawing.Size(89, 17);
             this.lblObs.TabIndex = 20;
-            this.lblObs.Text = "Observacao:";
+            this.lblObs.Text = "Observação:";
             // 
             // lblCidade
             // 
@@ -553,7 +553,7 @@
             this.lblCombustivel.Name = "lblCombustivel";
             this.lblCombustivel.Size = new System.Drawing.Size(88, 17);
             this.lblCombustivel.TabIndex = 13;
-            this.lblCombustivel.Text = "Combustivel:";
+            this.lblCombustivel.Text = "Combustível:";
             // 
             // lblAnom
             // 
@@ -674,7 +674,7 @@
             this.lblCod.Name = "lblCod";
             this.lblCod.Size = new System.Drawing.Size(56, 17);
             this.lblCod.TabIndex = 0;
-            this.lblCod.Text = "Codigo:";
+            this.lblCod.Text = "Código:";
             // 
             // rbtVeiculo
             // 
@@ -694,6 +694,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(861, 733);
             this.Controls.Add(this.rbtVeiculo);
             this.Controls.Add(this.grbVeiculos);
@@ -701,8 +702,9 @@
             this.Controls.Add(this.grbPesquisa);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnAtualizar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LocalizarVeiculo";
-            this.Text = "LocalizarVeiculo";
+            this.Text = "Localizar Veículos";
             this.Load += new System.EventHandler(this.LocalizarVeiculo_Load);
             this.grbPesquisa.ResumeLayout(false);
             this.grbRenavam.ResumeLayout(false);

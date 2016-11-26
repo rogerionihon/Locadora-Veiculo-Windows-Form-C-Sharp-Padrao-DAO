@@ -25,5 +25,5 @@ namespace CdbDao.ModelCliente
         public string km { get; set; }
         public string observacao { get; set; }
         public string idf_ativo { get; set; }
-    }
-}
+    } // fecha a classe
+} // fecha o namespace

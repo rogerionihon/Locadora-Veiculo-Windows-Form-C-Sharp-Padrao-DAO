@@ -12,6 +12,7 @@ using CdbDao.ConnectionDataBase;
 using CdbDao.ModelCliente;
 using System.Configuration;
 using CdbDao.Service;
+using System.ServiceModel;
 
 
 
@@ -439,6 +440,7 @@ namespace PIM
                 grbDadospessoais.Visible = true;
                 grbEnderecoF.Visible = true;
                 grbInfof.Visible = true;
+                btnConsultFis.Visible = true;
 
                 //campos invisiveis de pessoa juridica
                 txtRazaosocial.Visible = false;
@@ -461,6 +463,7 @@ namespace PIM
                 rbtPessoajur.Checked = false;
                 grbEndj.Visible = false;
                 grbInfoj.Visible = false;
+                btnConsultarCep.Visible = false;
             } // fecha o if
         } // fecha o metodo
 
@@ -492,6 +495,7 @@ namespace PIM
                 grbEmpresariais.Visible = true;
                 grbEndj.Visible = true;
                 grbInfoj.Visible = true;
+                btnConsultarCep.Visible = true;
 
                 //campos invisiveis de pessoa fisica
                 txtNome.Visible = false;
@@ -517,7 +521,74 @@ namespace PIM
                 grbDadospessoais.Visible = false;
                 grbEnderecoF.Visible = false;
                 grbInfof.Visible = false;
+                btnConsultFis.Visible = false;
             } // fecha o if          
+        }
+
+        // metodo responsavel por consultar o CEP de pessoa juridica
+        private void btnConsultarCep_Click(object sender, EventArgs e)
+        {
+            ServiceCorreios.AtendeClienteClient consulta = new ServiceCorreios.AtendeClienteClient("AtendeClientePort");
+
+            try
+            { 
+                if (rbtPessoajur.Checked == true)
+                {
+                    var resultado = consulta.consultaCEP(mskCepjur.Text);
+
+                    if (resultado != null)
+                    {
+                        txtEndjur.Text = resultado.end;
+                        txtBairrojur.Text = resultado.bairro;
+                        txtComplemjur.Text = resultado.complemento;
+                        txtCidadejur.Text = resultado.cidade;
+                        cmbEstadojur.Text = resultado.uf;
+                    } // fecha o if resultado
+                } //fecha o if rbtPessoaJur
+            } // fecha o try
+            catch (FaultException)
+            {
+                MessageBox.Show("CEP não encontrado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                mskCepjur.Focus();
+            } 
+            catch (CommunicationException)
+            {
+                MessageBox.Show("Não foi possivel realizar a operação. Verifique sua conexão com a internet!  ", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                mskCepjur.Focus();
+            }
+        } // fecha o metodo
+
+        // metodo responsavel por consultar o CEP de pessoa juridica
+        private void btnConsultFis_Click(object sender, EventArgs e)
+        {
+            ServiceCorreios.AtendeClienteClient consulta = new ServiceCorreios.AtendeClienteClient("AtendeClientePort");
+
+            try
+            {
+                if (rbtPessoafis.Checked == true)
+                {
+                    var resultado = consulta.consultaCEP(mskCepf.Text);
+
+                    if (resultado != null)
+                    {
+                        txtEndf.Text = resultado.end;
+                        txtBairrof.Text = resultado.bairro;
+                        txtComplemf.Text = resultado.complemento;
+                        txtCidadef.Text = resultado.cidade;
+                        cmbEstadof.Text = resultado.uf;
+                    } // fecha o if resultado
+                } // fecha o if rbtPessoaFis
+            } // fecha o try
+            catch (FaultException)
+            {
+                MessageBox.Show("CEP não encontrado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                mskCepf.Focus();
+            }
+            catch (CommunicationException)
+            {
+                MessageBox.Show("Não foi possivel realizar a operação. Verifique sua conexão com a internet!  ", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                mskCepf.Focus();
+            }
         } // fecha o metodo
 
     } // final da classe

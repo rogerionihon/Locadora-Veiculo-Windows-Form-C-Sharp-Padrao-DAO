@@ -33,11 +33,14 @@
             this.btnDevolução = new System.Windows.Forms.Button();
             this.btnDev = new System.Windows.Forms.Button();
             this.BtnSairAluguel = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.btnDevolução);
             this.groupBox1.Controls.Add(this.btnDev);
             this.groupBox1.Location = new System.Drawing.Point(23, 23);
@@ -94,16 +97,33 @@
             this.BtnSairAluguel.UseVisualStyleBackColor = false;
             this.BtnSairAluguel.Click += new System.EventHandler(this.BtnSairAluguel_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(267, 23);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(332, 346);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
             // Aluguel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(630, 495);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.BtnSairAluguel);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Aluguel";
             this.Text = "Aluguel";
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -114,5 +134,6 @@
         private System.Windows.Forms.Button btnDevolução;
         private System.Windows.Forms.Button btnDev;
         private System.Windows.Forms.Button BtnSairAluguel;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

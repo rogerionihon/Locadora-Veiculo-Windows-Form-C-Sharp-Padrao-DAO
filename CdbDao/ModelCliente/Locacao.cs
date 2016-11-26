@@ -17,7 +17,7 @@ namespace CdbDao.ModelCliente
         public string pf_id { get; set; }
         public string pj_id { get; set; }
         public string ckn_id { get; set; }
-        public string car_id { get; set; }
-
-    }
-}
+        public string status { get; set; }
+       
+    } // fecha a classe
+} // fecha o namespace

@@ -60,8 +60,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cmbVeiculo = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rbtIndisponivel = new System.Windows.Forms.RadioButton();
+            this.rbtDisponivel = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.ptbtraseiro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbFrente)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // ptbtraseiro
@@ -378,7 +382,7 @@
             this.cmbVeiculo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbVeiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbVeiculo.FormattingEnabled = true;
-            this.cmbVeiculo.Location = new System.Drawing.Point(399, 42);
+            this.cmbVeiculo.Location = new System.Drawing.Point(312, 42);
             this.cmbVeiculo.Name = "cmbVeiculo";
             this.cmbVeiculo.Size = new System.Drawing.Size(201, 24);
             this.cmbVeiculo.TabIndex = 29;
@@ -387,17 +391,53 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(435, 20);
+            this.label3.Location = new System.Drawing.Point(363, 21);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(138, 18);
             this.label3.TabIndex = 30;
-            this.label3.Text = "Escolha o veiculo:";
+            this.label3.Text = "Escolha o veículo:";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rbtIndisponivel);
+            this.groupBox1.Controls.Add(this.rbtDisponivel);
+            this.groupBox1.Location = new System.Drawing.Point(549, 10);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(242, 43);
+            this.groupBox1.TabIndex = 31;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "status";
+            // 
+            // rbtIndisponivel
+            // 
+            this.rbtIndisponivel.AutoSize = true;
+            this.rbtIndisponivel.Location = new System.Drawing.Point(110, 19);
+            this.rbtIndisponivel.Name = "rbtIndisponivel";
+            this.rbtIndisponivel.Size = new System.Drawing.Size(81, 17);
+            this.rbtIndisponivel.TabIndex = 1;
+            this.rbtIndisponivel.TabStop = true;
+            this.rbtIndisponivel.Text = "Indisponivel";
+            this.rbtIndisponivel.UseVisualStyleBackColor = true;
+            // 
+            // rbtDisponivel
+            // 
+            this.rbtDisponivel.AutoSize = true;
+            this.rbtDisponivel.Checked = true;
+            this.rbtDisponivel.Location = new System.Drawing.Point(6, 19);
+            this.rbtDisponivel.Name = "rbtDisponivel";
+            this.rbtDisponivel.Size = new System.Drawing.Size(74, 17);
+            this.rbtDisponivel.TabIndex = 0;
+            this.rbtDisponivel.TabStop = true;
+            this.rbtDisponivel.Text = "Disponivel";
+            this.rbtDisponivel.UseVisualStyleBackColor = true;
             // 
             // Checkin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(875, 733);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cmbVeiculo);
             this.Controls.Add(this.label2);
@@ -429,11 +469,15 @@
             this.Controls.Add(this.ckbParabrisaDiant);
             this.Controls.Add(this.ptbtraseiro);
             this.Controls.Add(this.ptbFrente);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Checkin";
             this.Text = "Checkin";
             this.Load += new System.EventHandler(this.Checkin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ptbtraseiro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbFrente)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -472,5 +516,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmbVeiculo;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton rbtIndisponivel;
+        private System.Windows.Forms.RadioButton rbtDisponivel;
     }
 }

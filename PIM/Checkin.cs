@@ -96,6 +96,15 @@ namespace PIM
                 checkin.pneu_tras_dir = ckbPneuTrasDir.Checked;
                 checkin.car_id = cmbVeiculo.SelectedIndex.ToString();
 
+                if (rbtDisponivel.Checked == true)
+                {
+                    checkin.status = "Disponivel";
+                }
+                else if (rbtIndisponivel.Checked == true)
+                {
+                    checkin.status = "Indisponivel";
+                }
+
                 cdb.RealizarCheckin(checkin);
                 limparCampos();
                 this.Close();  

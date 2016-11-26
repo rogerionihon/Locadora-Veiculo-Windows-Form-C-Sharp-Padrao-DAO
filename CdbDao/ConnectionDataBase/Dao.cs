@@ -183,12 +183,12 @@ namespace CdbDao.ConnectionDataBase
             string connectionString = ConfigurationManager.ConnectionStrings["Locadoraveiculos"].ConnectionString; // string de connexao configurada no app.config
             string queryExibirVeiculo = "SELECT car_id, car_placa, car_modelo, car_marca, car_renavam, car_chassi, car_ano_fab, car_ano_mod, car_tipo, car_cor, car_num_portas, car_combustivel, car_km, car_cidade, car_uf, car_obs, car_idf_ativo FROM carro ORDER BY car_modelo ASC";
 
-            MySqlConnection connectionExibirVeiculios = new MySqlConnection(connectionString); // cria objeto de connexao que recebe como parametro a string de connexao
+            MySqlConnection connectionExibirVeiculos = new MySqlConnection(connectionString); // cria objeto de connexao que recebe como parametro a string de connexao
             data = new DataTable();
             try
             {
-                connectionExibirVeiculios.Open(); // abre a connexao
-                da = new MySqlDataAdapter(queryExibirVeiculo, connectionExibirVeiculios);
+                connectionExibirVeiculos.Open(); // abre a connexao
+                da = new MySqlDataAdapter(queryExibirVeiculo, connectionExibirVeiculos);
                 cb = new MySqlCommandBuilder(da);
                 da.Fill(data);
                 return data; // retorno do datatable
@@ -200,18 +200,9 @@ namespace CdbDao.ConnectionDataBase
             }
             finally
             {
-                connectionExibirVeiculios.Close(); //fecha a connexao
+                connectionExibirVeiculos.Close(); //fecha a connexao
             }
         }// Fecha o metodo
-
-        public MySqlDataReader returnDataReader()
-        {
-            string connectionString = ConfigurationManager.ConnectionStrings["Locadoraveiculos"].ConnectionString;
-
-            MySqlCommand comando = new MySqlCommand();// passar a query e a conneccao do banco aqui entre os parentes depois
-            MySqlDataReader dr = comando.ExecuteReader();
-            return dr;
-        } // fecha o metodo
 
         //Metodo responsavel pela insercao dos dados da pessoa juridica no banco de dados
         public void InserirPessoaJuridica(Cliente cliente)
@@ -401,7 +392,7 @@ namespace CdbDao.ConnectionDataBase
         public void RealizarCheckin(CheckinCheckout checkin)
         {
             string connectionString = ConfigurationManager.ConnectionStrings["locadoraveiculos"].ConnectionString; // string de conexao configurada no app.config
-            string queryRealizarCheckin = "INSERT INTO checkin(ckn_parabrisa_diant, ckn_parabrisa_tras, ckn_vidro_dianteiro, ckn_vidro_traseiro, ckn_vidro_diant_esq, ckn_vidro_diant_dir, ckn_vidro_tras_esq, ckn_vidro_tras_dir, ckn_port_diant_esq, ckn_port_diant_dir, ckn_port_tras_esq, ckn_port_tras_dir, ckn_parachoque_diant, ckn_parachoque_tras, ckn_roda_diant_esq, ckn_roda_diant_dir, ckn_roda_tras_esq, ckn_roda_tras_dir, ckn_pneu_diant_esq, ckn_pneu_diant_dir, ckn_pneu_tras_esq, ckn_pneu_tras_dir, car_id)values(@ckn_parabrisa_diant, @ckn_parabrisa_tras, @ckn_vidro_dianteiro, @ckn_vidro_traseiro, @ckn_vidro_diant_esq, @ckn_vidro_diant_dir, @ckn_vidro_tras_esq, @ckn_vidro_tras_dir, @ckn_port_diant_esq, @ckn_port_diant_dir, @ckn_port_tras_esq, @ckn_port_tras_dir, @ckn_parachoque_diant, @ckn_parachoque_tras, @ckn_roda_diant_esq, @ckn_roda_diant_dir, @ckn_roda_tras_esq, @ckn_roda_tras_dir, @ckn_pneu_diant_esq, @ckn_pneu_diant_dir, @ckn_pneu_tras_esq, @ckn_pneu_tras_dir, @car_id)";
+            string queryRealizarCheckin = "INSERT INTO checkin(ckn_parabrisa_diant, ckn_parabrisa_tras, ckn_vidro_dianteiro, ckn_vidro_traseiro, ckn_vidro_diant_esq, ckn_vidro_diant_dir, ckn_vidro_tras_esq, ckn_vidro_tras_dir, ckn_port_diant_esq, ckn_port_diant_dir, ckn_port_tras_esq, ckn_port_tras_dir, ckn_parachoque_diant, ckn_parachoque_tras, ckn_roda_diant_esq, ckn_roda_diant_dir, ckn_roda_tras_esq, ckn_roda_tras_dir, ckn_pneu_diant_esq, ckn_pneu_diant_dir, ckn_pneu_tras_esq, ckn_pneu_tras_dir, ckn_status, car_id )values(@ckn_parabrisa_diant, @ckn_parabrisa_tras, @ckn_vidro_dianteiro, @ckn_vidro_traseiro, @ckn_vidro_diant_esq, @ckn_vidro_diant_dir, @ckn_vidro_tras_esq, @ckn_vidro_tras_dir, @ckn_port_diant_esq, @ckn_port_diant_dir, @ckn_port_tras_esq, @ckn_port_tras_dir, @ckn_parachoque_diant, @ckn_parachoque_tras, @ckn_roda_diant_esq, @ckn_roda_diant_dir, @ckn_roda_tras_esq, @ckn_roda_tras_dir, @ckn_pneu_diant_esq, @ckn_pneu_diant_dir, @ckn_pneu_tras_esq, @ckn_pneu_tras_dir, @ckn_status, @car_id )";
 
             MySqlConnection connectionRealizarCheckin = new MySqlConnection(connectionString); // cria objeto de connexao que recebe como parametro a string de connexao
 
@@ -433,9 +424,10 @@ namespace CdbDao.ConnectionDataBase
                 commandCkeckin.Parameters.Add(new MySqlParameter("ckn_pneu_diant_dir", checkin.pneu_diant_dir));
                 commandCkeckin.Parameters.Add(new MySqlParameter("ckn_pneu_tras_esq", checkin.pneu_tras_esq));
                 commandCkeckin.Parameters.Add(new MySqlParameter("ckn_pneu_tras_dir", checkin.pneu_tras_dir));
+                commandCkeckin.Parameters.Add(new MySqlParameter("ckn_status", checkin.status));
                 commandCkeckin.Parameters.Add(new MySqlParameter("car_id", checkin.car_id));
-
                 commandCkeckin.ExecuteNonQuery();
+
                 MessageBox.Show("Checkin realizado com sucesso: "); // exibe a mensagem quando a operacao de checkin é realizado com sucesso
             }
             catch (Exception)
@@ -448,62 +440,65 @@ namespace CdbDao.ConnectionDataBase
             }
         }// final do metodo
 
-
-        // test lista carro+ checkin
-        public DataTable ChamaCarroCheckin()
+        // metodo responsavel pelo update do checkin
+        public void UpdateCheckin(CheckinCheckout checkin)
         {
             string connectionString = ConfigurationManager.ConnectionStrings["locadoraveiculos"].ConnectionString; // string de conexao configurada no app.config
-            string queryExibirVeiculo = "select carro.car_placa, carro.car_modelo, checkin.ckn_id from carro join checkin on checkin.car_id = carro.car_id order by checkin.ckn_id";
-            
+            string queryAtualizarCheckin = "UPDATE checkin set ckn_status = @ckn_status WHERE ckn_id = @ckn_id";
 
-            MySqlConnection connectionExibirVeiculo = new MySqlConnection(connectionString);
+            MySqlConnection connectionAtualizarCheckin = new MySqlConnection(connectionString); // cria objeto de connexao que recebe como parametro a string de connexao
 
             try
             {
-                connectionExibirVeiculo.Open();
-                MySqlCommand commandList = new MySqlCommand(queryExibirVeiculo, connectionExibirVeiculo);
-                MySqlDataReader leitor = commandList.ExecuteReader();
-                data = new DataTable();
-                data.Load(leitor);
+                connectionAtualizarCheckin.Open(); // abre a conexao
+                MySqlCommand commandCkeckin = new MySqlCommand(queryAtualizarCheckin, connectionAtualizarCheckin); //  cria o comando , aonde recebe como parametro a query e o objeto de connexao
+                commandCkeckin.Prepare();
 
-                DataRow row = data.NewRow();
-                //row["car_id"] = "";
-                row["car_placa"] = "";
-                row["car_modelo"] = "";
-             //   row["car_marca"] = "";
-             //   row["car_renavam"] = "";
-             //   row["car_chassi"] = "";
-              //  row["car_ano_fab"] = "";
-             //   row["car_ano_mod"] = "";
-             //   row["car_tipo"] = "";
-              //  row["car_cor"] = "";
-              //  row["car_num_portas"] = "";
-              //  row["car_combustivel"] = "";
-             //   row["car_km"] = "";
-             //   row["car_cidade"] = "";
-              //  row["car_uf"] = "";
-              //  row["car_obs"] = "";
-                // row["car_idf_ativo"] = "";
-                data.Rows.InsertAt(row, 0);
+                commandCkeckin.Parameters.Add(new MySqlParameter("ckn_id", checkin.id));
+                commandCkeckin.Parameters.Add(new MySqlParameter("ckn_status", checkin.status));
+                
+                commandCkeckin.ExecuteNonQuery();
 
-
-                leitor.Close();
-                leitor.Dispose();
-                return data;
-
-
+                MessageBox.Show("Dados atualizado com sucesso: "); // exibe a mensagem quando a operacao de checkin é realizado com sucesso
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show("Nao foi possivel carregar os dados: " + ex.ToString(), MessageBoxButtons.OK.ToString());
-                return data;
+                MessageBox.Show("Nao foi possivel atualizar o status, tente novamente", MessageBoxButtons.OK.ToString()); // exibe a mensagem quando a operacao de checkin nao é realizada com sucesso
             }
             finally
             {
-                connectionExibirVeiculo.Close();
+                connectionAtualizarCheckin.Close();// fecha a conexao
             }
-        } // fecha o metodo datatable listarVeiculo
+        }// final do metodo
 
+        // metodo responsavel pelo retorno do veiculo que foram realizados o checkin
+        public DataTable returnDatatableCheckin()
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["Locadoraveiculos"].ConnectionString; // string de connexao configurada no app.config
+            string queryExibirVeiculo = "select checkin.ckn_id, carro.car_placa, carro.car_modelo, checkin.ckn_status from carro join checkin on checkin.car_id = carro.car_id order by checkin.ckn_id";
+
+            MySqlConnection connectionExibirVeiculos = new MySqlConnection(connectionString); // cria objeto de connexao que recebe como parametro a string de connexao
+            data = new DataTable();
+            try
+            {
+                connectionExibirVeiculos.Open(); // abre a connexao
+                da = new MySqlDataAdapter(queryExibirVeiculo, connectionExibirVeiculos);
+                cb = new MySqlCommandBuilder(da);
+                da.Fill(data);
+                return data; // retorno do datatable
+            }// fecha o try
+            catch (Exception ex)
+            {
+                MessageBox.Show("Nao foi possivel se conectar a base de dados: " + ex.ToString()); // exibe a mensagem quando a operacao de busca nao é realizada com sucesso
+                return data; // returno do datatable
+            }
+            finally
+            {
+                connectionExibirVeiculos.Close(); //fecha a connexao
+            }
+        }// Fecha o metodo
+
+        // metodo responsavel por listar veiculo em combo box
         public DataTable listarVeiculo()
         {
             string connectionString = ConfigurationManager.ConnectionStrings["locadoraveiculos"].ConnectionString; // string de conexao configurada no app.config
@@ -557,6 +552,7 @@ namespace CdbDao.ConnectionDataBase
             }
         } // fecha o metodo datatable listarVeiculo
 
+        // metodo responsavel por inserir os dados de funcionario
         public void InserirFuncionario(Funcionario funcionario)
         {
             string connectionString = ConfigurationManager.ConnectionStrings["locadoraveiculos"].ConnectionString; // string de conexao configurada no app.config
@@ -580,8 +576,8 @@ namespace CdbDao.ConnectionDataBase
                 commandInserir.Parameters.Add(new MySqlParameter("fun_celular", funcionario.celular));
                 commandInserir.Parameters.Add(new MySqlParameter("fun_status", funcionario.status));
 
-
                 commandInserir.ExecuteNonQuery();
+
                 MessageBox.Show("Cadastro realizado com sucesso: "); // exibe a mensagem quando a operacao de cadastro é realizado com sucesso
             }
             catch (Exception)
@@ -592,9 +588,9 @@ namespace CdbDao.ConnectionDataBase
             {
                 connectionInsert.Close(); // fecha a conexao
             }
-        }
+        } // fecha o metodo
 
-
+        // metodo responsavel por listar todos os funcionarios
         public DataTable returnDataTableFuncionario()
         {
             string connectionString = ConfigurationManager.ConnectionStrings["Locadoraveiculos"].ConnectionString; // string de connexao configurada no app.config
@@ -634,12 +630,11 @@ namespace CdbDao.ConnectionDataBase
 
             try
             {
-               // List<Funcionario> funcionario = new List<Funcionario>();
 
                 using (MySqlCommand command = new MySqlCommand(queryLogin, connection)) //  cria o comando update, aonde recebe como parametro a query e o objeto de connexao)
                 {
                     connection.Open(); // abre a conexao
-                  //  command.Prepare();
+                  
                     command.Parameters.Add(new MySqlParameter("@fun_login", funcionario.login));
                     command.Parameters.Add(new MySqlParameter("@fun_senha", funcionario.senha));
 
@@ -661,8 +656,7 @@ namespace CdbDao.ConnectionDataBase
                         return true;
                     }
                     return false;                  
-                }
-                //return true;
+                } // fecha o using
             } // fecha o try
             catch (MySqlException)
             {
@@ -674,6 +668,7 @@ namespace CdbDao.ConnectionDataBase
             }
         } // fecha o metodo
 
+        // metodo responsavel por atualizar os dados de funcionario
         public void AtualizarFuncionario(Funcionario funcionario)
         {
             string connectionString = ConfigurationManager.ConnectionStrings["locadoraveiculos"].ConnectionString; // string de conexao configurada no app.config
@@ -684,6 +679,7 @@ namespace CdbDao.ConnectionDataBase
             {
                 connectionUpdate.Open(); // abre a conexao
                 MySqlCommand commandAtualizar = new MySqlCommand(queryAtualizar, connectionUpdate);
+
                 commandAtualizar.Prepare();
                 commandAtualizar.Parameters.Add(new MySqlParameter("fun_id", funcionario.id));
                 commandAtualizar.Parameters.Add(new MySqlParameter("fun_nome", funcionario.nome));
@@ -698,6 +694,7 @@ namespace CdbDao.ConnectionDataBase
                 commandAtualizar.Parameters.Add(new MySqlParameter("fun_status", funcionario.status));
 
                 commandAtualizar.ExecuteNonQuery();
+
                 MessageBox.Show("Atualizacao realizada com sucesso: "); // exibe a mensagem quando a operacao de atualizacao é realizado com sucesso
             }
             catch (Exception)
@@ -708,44 +705,7 @@ namespace CdbDao.ConnectionDataBase
             {
                 connectionUpdate.Close(); // fecha a conexao
             }
-        }
-
-        public void ExcluirFuncionario(Funcionario funcionario)
-        {
-            string connectionString = ConfigurationManager.ConnectionStrings["locadoraveiculos"].ConnectionString; // string de conexao configurada no app.config
-
-            String queryExluir = "DELETE FROM funcionario WHERE fun_id = @fun_id";
-
-            MySqlConnection connectionExluir = new MySqlConnection(connectionString);
-
-            try
-            {
-                connectionExluir.Open();
-                MySqlCommand commandExluir = new MySqlCommand(queryExluir, connectionExluir);
-                commandExluir.Prepare();
-
-                commandExluir.Parameters.Add(new MySqlParameter("fun_id", funcionario.id));
-                commandExluir.Parameters.Add(new MySqlParameter("fun_dta_cadastro", funcionario.dataCadastro));
-                commandExluir.Parameters.Add(new MySqlParameter("fun_nome", funcionario.nome));
-                commandExluir.Parameters.Add(new MySqlParameter("fun_login", funcionario.login));
-                commandExluir.Parameters.Add(new MySqlParameter("fun_senha", funcionario.senha));
-                commandExluir.Parameters.Add(new MySqlParameter("fun_email", funcionario.email));
-                commandExluir.Parameters.Add(new MySqlParameter("fun_cpf", funcionario.cpf));
-                commandExluir.Parameters.Add(new MySqlParameter("fun_status", funcionario.status));
-                commandExluir.ExecuteNonQuery();
-
-                MessageBox.Show("Funcionario apagado com sucesso", MessageBoxButtons.OK.ToString());
-
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Nao foi possivel apagar o registro", MessageBoxButtons.OK.ToString());
-            }
-            finally
-            {
-                connectionExluir.Close();
-            }
-        }
+        } // fecha o metodo
 
         // metodo responsavel pela geracao do relatorio do veiculo
         public List<Veiculo> ExibiRelatorioVeiculo()
@@ -804,7 +764,7 @@ namespace CdbDao.ConnectionDataBase
         public List<Cliente> ExibiRelatorioClienteFisico()
         {
             string connectionString = ConfigurationManager.ConnectionStrings["Locadoraveiculos"].ConnectionString; // string de conexao configurada no app.config
-            string queryExibirPessoaF = "SELECT pf_id, pf_nome, pf_cpf, pf_rne, pf_cnh, pf_dta_nasc, pf_mail, pf_telefone, pf_celular, pf_sexo, pf_est_civil, pf_endereco, pf_num_casa, pf_complemento, pf_cep, pf_cidade, pf_bairro, pf_uf, pf_obs, pf_idf_ativo FROM pessoafisica ORDER BY pf_nome ASC";
+            string queryExibirPessoaF = "SELECT pf_id, pf_nome, pf_cpf, pf_rne, pf_cnh, pf_dta_nasc, pf_mail, pf_telefone, pf_celular, pf_sexo, pf_est_civil, pf_endereco, pf_num_casa, pf_complemento, pf_cep, pf_cidade, pf_bairro, pf_uf, pf_obs, pf_idf_ativo FROM pessoafisica ORDER BY pf_nome DESC";
 
             MySqlConnection connection = new MySqlConnection(connectionString); // cria objeto de connexao que recebe como parametro a string de connexao
 
@@ -812,7 +772,7 @@ namespace CdbDao.ConnectionDataBase
             {
                 List<Cliente> pessoafisica = new List<Cliente>();
 
-                using (MySqlCommand command = new MySqlCommand(queryExibirPessoaF, connection)) //  cria o comando update, aonde recebe como parametro a query e o objeto de connexao)
+                using (MySqlCommand command = new MySqlCommand(queryExibirPessoaF, connection)) //  cria o comando, aonde recebe como parametro a query e o objeto de connexao)
                 {
                     connection.Open(); // abre a conexao
                     leitor = command.ExecuteReader();
@@ -861,7 +821,7 @@ namespace CdbDao.ConnectionDataBase
         public List<Cliente> ExibiRelatorioClienteJuridico()
         {
             string connectionString = ConfigurationManager.ConnectionStrings["Locadoraveiculos"].ConnectionString; // string de conexao configurada no app.config
-            string queryExibirPessoaJ = "SELECT pj_id, pj_raz_soc, pj_cnpj, pj_nom_fan, pj_insc_est, pj_insc_mun, pj_mail, pj_telefone, pj_celular, pj_endereco, pj_num_casa, pj_complemento, pj_cep, pj_cidade, pj_bairro, pj_uf, pj_obs, pj_idf_ativo FROM pessoajuridica ORDER BY pj_raz_soc ASC";
+            string queryExibirPessoaJ = "SELECT pj_id, pj_raz_soc, pj_cnpj, pj_nom_fan, pj_insc_est, pj_insc_mun, pj_mail, pj_telefone, pj_celular, pj_endereco, pj_num_casa, pj_complemento, pj_cep, pj_cidade, pj_bairro, pj_uf, pj_obs, pj_idf_ativo FROM pessoajuridica ORDER BY pj_raz_soc DESC";
 
             MySqlConnection connection = new MySqlConnection(connectionString); // cria objeto de connexao que recebe como parametro a string de connexao
 
@@ -869,7 +829,7 @@ namespace CdbDao.ConnectionDataBase
             {
                 List<Cliente> pessoajuridica = new List<Cliente>();
 
-                using (MySqlCommand command = new MySqlCommand(queryExibirPessoaJ, connection)) //  cria o comando update, aonde recebe como parametro a query e o objeto de connexao)
+                using (MySqlCommand command = new MySqlCommand(queryExibirPessoaJ, connection)) //  cria o comando, aonde recebe como parametro a query e o objeto de connexao)
                 {
                     connection.Open(); // abre a conexao
                     leitor = command.ExecuteReader();
@@ -912,62 +872,101 @@ namespace CdbDao.ConnectionDataBase
             }
         } // fecha o metodo
 
-
-        /*/metodo responsavel pela insercao dos dados do checkout
-        public void RealizarCheckout(CheckinCheckout checkout)
+        //metodo responsavel pela geracao do relatorio de locacao
+        public List<Locacao> ExibiRelatorioLocacaoPf()
         {
-            string connectionString = ConfigurationManager.ConnectionStrings["locadoraveiculos"].ConnectionString;
-            string queryRealizarCheckout = "UPDATE ckeckin set ";
+            string connectionString = ConfigurationManager.ConnectionStrings["Locadoraveiculos"].ConnectionString; // string de conexao configurada no app.config
+            string queryExibirLocacaoPf = "SELECT loc_id, loc_dta_loc, loc_dta_dev, loc_tipo_locacao, loc_form_pagamento, loc_valor_locacao, loc_status, ckn_id, pf_id FROM locacao WHERE pf_id = pf_id ORDER BY loc_dta_loc DESC";
 
-            MySqlConnection connectionRealizarCheckout = new MySqlConnection(connectionString);
+            MySqlConnection connection = new MySqlConnection(connectionString); // cria objeto de connexao que recebe como parametro a string de connexao
 
             try
             {
-                connectionRealizarCheckout.Open();
-                MySqlCommand commandCheckout = new MySqlCommand(queryRealizarCheckout, connectionRealizarCheckout);
-                commandCheckout.Prepare();
+                List<Locacao> locacaoPessoaFisica = new List<Locacao>();
 
-                commandCheckout.Parameters.Add(new MySqlParameter("", checkout.id));
-                commandCheckout.Parameters.Add(new MySqlParameter("", checkout.id));
-                commandCheckout.Parameters.Add(new MySqlParameter("", checkout.id));
-                commandCheckout.Parameters.Add(new MySqlParameter("", checkout.id));
-                commandCheckout.Parameters.Add(new MySqlParameter("", checkout.id));
-                commandCheckout.Parameters.Add(new MySqlParameter("", checkout.id));
-                commandCheckout.Parameters.Add(new MySqlParameter("", checkout.id));
-                commandCheckout.Parameters.Add(new MySqlParameter("", checkout.id));
-                commandCheckout.Parameters.Add(new MySqlParameter("", checkout.id));
-                commandCheckout.Parameters.Add(new MySqlParameter("", checkout.id));
-                commandCheckout.Parameters.Add(new MySqlParameter("", checkout.id));
-                commandCheckout.Parameters.Add(new MySqlParameter("", checkout.id));
-                commandCheckout.Parameters.Add(new MySqlParameter("", checkout.id));
-                commandCheckout.Parameters.Add(new MySqlParameter("", checkout.id));
-                commandCheckout.Parameters.Add(new MySqlParameter("", checkout.id));
-                commandCheckout.Parameters.Add(new MySqlParameter("", checkout.id));
-                commandCheckout.Parameters.Add(new MySqlParameter("", checkout.id));
-                commandCheckout.Parameters.Add(new MySqlParameter("", checkout.id));
-                commandCheckout.Parameters.Add(new MySqlParameter("", checkout.id));
-                commandCheckout.Parameters.Add(new MySqlParameter("", checkout.id));
-                commandCheckout.Parameters.Add(new MySqlParameter("", checkout.id));
+                using (MySqlCommand command = new MySqlCommand(queryExibirLocacaoPf, connection)) //  cria o comando, aonde recebe como parametro a query e o objeto de connexao)
+                {
+                    connection.Open(); // abre a conexao
+                    leitor = command.ExecuteReader();
 
-                commandCheckout.ExecuteNonQuery();
-                MessageBox.Show("Checkout realizado com sucesso: ");
-            }
-            catch (Exception)
+                    while (leitor.Read())
+                    {
+                        Locacao locacaoPf = new Locacao();
+
+                        locacaoPf.id = Int32.Parse(leitor["loc_id"].ToString());
+                        locacaoPf.data_locacao = DateTime.Parse(leitor["loc_dta_loc"].ToString());
+                        locacaoPf.data_devolucao = DateTime.Parse(leitor["loc_dta_dev"].ToString());
+                        locacaoPf.tipo_locacao = leitor["loc_tipo_locacao"].ToString();
+                        locacaoPf.forma_pagamento = leitor["loc_form_pagamento"].ToString();
+                        locacaoPf.valor_locacao = leitor["loc_valor_locacao"].ToString();
+                        locacaoPf.status = leitor["loc_status"].ToString();
+                        locacaoPf.ckn_id = leitor["ckn_id"].ToString();
+                        locacaoPf.pf_id = leitor["pf_id"].ToString();
+                       
+                        locacaoPessoaFisica.Add(locacaoPf);
+                    }
+                    return locacaoPessoaFisica;
+                }
+            } // fecha o try
+            catch (MySqlException)
             {
-                MessageBox.Show("Nao foi possivel realizar o checkout, tente novamente", MessageBoxButtons.OK.ToString());
+                throw;
             }
             finally
             {
-                connectionRealizarCheckout.Close();
+                connection.Close(); // fecha a conexao 
             }
-            
-        }*/
+        } // fecha o metodo
+        // metodo responsavel pela geracao do relatorio de devolucao
+        public List<Locacao> ExibiRelatorioLocacaoPj()
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["Locadoraveiculos"].ConnectionString; // string de conexao configurada no app.config
+            string queryExibirLocacaoPj = "SELECT loc_id, loc_dta_loc, loc_dta_dev, loc_tipo_locacao, loc_form_pagamento, loc_valor_locacao, loc_status, ckn_id, pj_id FROM locacao WHERE pj_id = pj_id ORDER BY loc_dta_loc DESC";
 
+            MySqlConnection connection = new MySqlConnection(connectionString); // cria objeto de connexao que recebe como parametro a string de connexao
+
+            try
+            {
+                List<Locacao> locacaoPessoaJuridica = new List<Locacao>();
+
+                using (MySqlCommand command = new MySqlCommand(queryExibirLocacaoPj, connection)) //  cria o comando, aonde recebe como parametro a query e o objeto de connexao)
+                {
+                    connection.Open(); // abre a conexao
+                    leitor = command.ExecuteReader();
+
+                    while (leitor.Read())
+                    {
+                        Locacao locacaoPj = new Locacao();
+
+                        locacaoPj.id = Int32.Parse(leitor["loc_id"].ToString());
+                        locacaoPj.data_locacao = DateTime.Parse(leitor["loc_dta_loc"].ToString());
+                        locacaoPj.data_devolucao = DateTime.Parse(leitor["loc_dta_dev"].ToString());
+                        locacaoPj.tipo_locacao = leitor["loc_tipo_locacao"].ToString();
+                        locacaoPj.forma_pagamento = leitor["loc_form_pagamento"].ToString();
+                        locacaoPj.valor_locacao = leitor["loc_valor_locacao"].ToString();
+                        locacaoPj.status = leitor["loc_status"].ToString();
+                        locacaoPj.ckn_id = leitor["ckn_id"].ToString();
+                        locacaoPj.pj_id = leitor["pj_id"].ToString();
+
+                        locacaoPessoaJuridica.Add(locacaoPj);
+                    }
+                    return locacaoPessoaJuridica;
+                }
+            } // fecha o try
+            catch (MySqlException)
+            {
+                throw;
+            }
+            finally
+            {
+                connection.Close(); // fecha a conexao 
+            }
+        } // fecha o metodo
         // metodo responvavel pela insercao dos dados da locacao
         public void RealizarLocacao(Locacao locacao)
         {
             string connectionString = ConfigurationManager.ConnectionStrings["locadoraveiculos"].ConnectionString;
-            string queryRealizarLocacao = "INSERT INTO LOCACAO(loc_dta_loc, loc_dta_dev, loc_tipo_locacao, loc_form_pagamento, loc_valor_locacao, ckn_id , pj_id, pf_id)values(@loc_dta_loc, @loc_dta_dev, @loc_tipo_locacao, @loc_form_pagamento, @loc_valor_locacao, @ckn_id, @pj_id, @pf_id)";
+            string queryRealizarLocacao = "INSERT INTO LOCACAO(loc_dta_loc, loc_dta_dev, loc_tipo_locacao, loc_form_pagamento, loc_valor_locacao, loc_status, ckn_id , pj_id, pf_id)values(@loc_dta_loc, @loc_dta_dev, @loc_tipo_locacao, @loc_form_pagamento, @loc_valor_locacao, @loc_status, @ckn_id, @pj_id, @pf_id)";
 
             MySqlConnection connectionRealizarLocacao = new MySqlConnection(connectionString);
 
@@ -982,12 +981,13 @@ namespace CdbDao.ConnectionDataBase
                 commandLocacao.Parameters.Add(new MySqlParameter("loc_tipo_locacao", locacao.tipo_locacao));
                 commandLocacao.Parameters.Add(new MySqlParameter("loc_form_pagamento", locacao.forma_pagamento));
                 commandLocacao.Parameters.Add(new MySqlParameter("loc_valor_locacao", locacao.valor_locacao));
+                commandLocacao.Parameters.Add(new MySqlParameter("loc_status", locacao.status));
                 commandLocacao.Parameters.Add(new MySqlParameter("ckn_id", locacao.ckn_id));
-               
                 commandLocacao.Parameters.Add(new MySqlParameter("pj_id", locacao.pj_id));
                 commandLocacao.Parameters.Add(new MySqlParameter("pf_id",locacao.pf_id));
 
                 commandLocacao.ExecuteNonQuery();
+
                 MessageBox.Show("Locacao realizada com sucesso: ");
             }
             catch (Exception)
@@ -998,14 +998,14 @@ namespace CdbDao.ConnectionDataBase
             {
                 connectionRealizarLocacao.Close();
             }
-        }
+        } // fecha o metodo
 
-        // metodo responsavel por exibir itens da locacao
-        public DataTable ListarLocacao()
+        // metodo responsavel por exibir itens da locacao de pessoa fisica
+        public DataTable ListarLocacaoPessoaFisica()
         {
             string connectionString = ConfigurationManager.ConnectionStrings["Locadoraveiculos"].ConnectionString; // string de connexao configurada no app.config
 
-            string queryExibirTodos = "SELECT loc_id, loc_dta_loc, loc_dta_dev, loc_tipo_locacao, loc_form_pagamento, loc_valor_locacao, ckn_id , pj_id, pf_id FROM locacao ORDER BY loc_dta_loc ASC";
+            string queryExibirTodos = "SELECT loc_id, loc_dta_loc, loc_dta_dev, loc_tipo_locacao, loc_form_pagamento, loc_valor_locacao, loc_status, ckn_id, pf_id FROM locacao WHERE pf_id = pf_id ORDER BY loc_dta_loc ASC";
             MySqlConnection connectionExibirTodos = new MySqlConnection(connectionString); // cria objeto de connexao que recebe como parametro a string de connexao
             data = new DataTable(); // cria um objeto do tipo datatable
 
@@ -1029,11 +1029,41 @@ namespace CdbDao.ConnectionDataBase
                 connectionExibirTodos.Close(); // fecha a conexao 
             }
         } // fecha o metodo
-        /*/metodo responsavel pela atualizacao dos dados da locacao
+
+        public DataTable ListarLocacaoPessoaJuridica()
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["Locadoraveiculos"].ConnectionString; // string de connexao configurada no app.config
+
+            string queryExibirTodos = "SELECT loc_id, loc_dta_loc, loc_dta_dev, loc_tipo_locacao, loc_form_pagamento, loc_valor_locacao, loc_status, ckn_id, pj_id FROM locacao WHERE pj_id = pj_id ORDER BY loc_dta_loc ASC";
+            MySqlConnection connectionExibirTodos = new MySqlConnection(connectionString); // cria objeto de connexao que recebe como parametro a string de connexao
+            data = new DataTable(); // cria um objeto do tipo datatable
+
+            try
+            {
+                connectionExibirTodos.Open(); // abre a conexao
+
+                da = new MySqlDataAdapter(queryExibirTodos, connectionExibirTodos); // cria objeto do tipo dataAdapter que recebe como parametros a query e o objeto de connexao                
+                cb = new MySqlCommandBuilder(da);
+                da.Fill(data);
+
+                return data; // returno do datatable
+            } // fecha o try
+            catch (Exception ex)
+            {
+                MessageBox.Show("Nao foi possivel se conectar a base de dados: " + ex.ToString()); // exibe a mensagem quando a operacao de busca nao é realizada com sucesso
+                return data; // returno do datatable
+            }
+            finally
+            {
+                connectionExibirTodos.Close(); // fecha a conexao 
+            }
+        } // fecha o metodo
+
+        // metodo responsavel pela atualizacao dos dados da locacao
         public void RealizarDevolucao(Locacao devolucao)
         {
             string connectionString = ConfigurationManager.ConnectionStrings["locadoraveiculos"].ConnectionString;
-            string queryRealizarDevolucao = "UPDATE locacao set";
+            string queryRealizarDevolucao = "UPDATE locacao set loc_status = @loc_status, loc_dta_dev = @loc_dta_dev, loc_valor_locacao = @loc_valor_locacao WHERE loc_id = @loc_id";
 
             MySqlConnection connectionRealizarDevolucao = new MySqlConnection(connectionString);
 
@@ -1043,15 +1073,10 @@ namespace CdbDao.ConnectionDataBase
                 MySqlCommand commandRealizarDevolucao = new MySqlCommand(queryRealizarDevolucao, connectionRealizarDevolucao);
                 commandRealizarDevolucao.Prepare();
 
-                commandRealizarDevolucao.Parameters.Add(new MySqlParameter("",devolucao.id));
-                commandRealizarDevolucao.Parameters.Add(new MySqlParameter("", devolucao.id));
-                commandRealizarDevolucao.Parameters.Add(new MySqlParameter("", devolucao.id));
-                commandRealizarDevolucao.Parameters.Add(new MySqlParameter("", devolucao.id));
-                commandRealizarDevolucao.Parameters.Add(new MySqlParameter("", devolucao.id));
-                commandRealizarDevolucao.Parameters.Add(new MySqlParameter("", devolucao.id));
-                commandRealizarDevolucao.Parameters.Add(new MySqlParameter("", devolucao.id));
-                commandRealizarDevolucao.Parameters.Add(new MySqlParameter("", devolucao.id));
-                commandRealizarDevolucao.Parameters.Add(new MySqlParameter("", devolucao.id));
+                commandRealizarDevolucao.Parameters.Add(new MySqlParameter("loc_id",devolucao.id));
+                commandRealizarDevolucao.Parameters.Add(new MySqlParameter("loc_status", devolucao.status));
+                commandRealizarDevolucao.Parameters.Add(new MySqlParameter("loc_dta_dev", devolucao.data_devolucao));
+                commandRealizarDevolucao.Parameters.Add(new MySqlParameter("loc_valor_locacao", devolucao.valor_locacao));         
 
                 commandRealizarDevolucao.ExecuteNonQuery();
                 MessageBox.Show("Devolucao efetuada com sucesso: ");
@@ -1064,7 +1089,7 @@ namespace CdbDao.ConnectionDataBase
             {
                 connectionRealizarDevolucao.Close();
             }
-        }*/
+        }
 
     } // final da classe Dao
 } // final do namespace

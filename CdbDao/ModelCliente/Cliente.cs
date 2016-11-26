@@ -33,6 +33,5 @@ namespace CdbDao.ModelCliente
         public string Estado_civil { get; set; }
         public string complemento { get; set; }
         public Boolean idf_ativo { get; set; }
-       
-    }
-}
+    } // fecha a classe
+} // fecha o namespace

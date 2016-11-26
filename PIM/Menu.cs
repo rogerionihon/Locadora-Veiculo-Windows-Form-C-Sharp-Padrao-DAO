@@ -28,7 +28,10 @@ namespace PIM
         //metodo que fecha o formulario
         private void BtnSair_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (MessageBox.Show("Voce deseja sair?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         } // fecha o metodo
 
         //abre aluguel geral
