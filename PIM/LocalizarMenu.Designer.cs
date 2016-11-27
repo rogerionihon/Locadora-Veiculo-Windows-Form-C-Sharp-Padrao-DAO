@@ -137,6 +137,7 @@
             this.Controls.Add(this.btnSairLocalizacao);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "LocalizarMenu";
             this.Text = "Localizar Menu";
             this.groupBox1.ResumeLayout(false);

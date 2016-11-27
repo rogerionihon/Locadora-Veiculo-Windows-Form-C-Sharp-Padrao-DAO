@@ -131,7 +131,7 @@
             this.BtnSair.Location = new System.Drawing.Point(702, 482);
             this.BtnSair.Name = "BtnSair";
             this.BtnSair.Size = new System.Drawing.Size(124, 92);
-            this.BtnSair.TabIndex = 1;
+            this.BtnSair.TabIndex = 4;
             this.BtnSair.Text = "Sair";
             this.BtnSair.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BtnSair.UseVisualStyleBackColor = false;

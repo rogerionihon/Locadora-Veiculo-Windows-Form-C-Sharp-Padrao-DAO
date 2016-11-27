@@ -136,6 +136,7 @@
             this.Controls.Add(this.BtnSairCadastro);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Cadastro";
             this.Text = "Cadastro";
             this.groupBox1.ResumeLayout(false);

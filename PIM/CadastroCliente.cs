@@ -57,7 +57,7 @@ namespace PIM
             txtNumf.Text = "";
             txtComplemf.Text = "";
             txtCidadef.Text = "";
-            cmbEstadof.Text = "";
+            txtEstadoF.Text = "";
             txtBairrof.Text = "";
             txtobsf.Text = "";
             mskCepf.Text = "";
@@ -74,7 +74,7 @@ namespace PIM
             mskCepjur.Text = "";
             txtComplemjur.Text = "";
             txtCidadejur.Text = "";
-            cmbEstadojur.Text = "";
+            txtEstadojur.Text = "";
             txtobsj.Text = "";
             txtBairrojur.Text = "";
             txtEndjur.Text = "";
@@ -112,7 +112,7 @@ namespace PIM
                     novocliente.cep = (mskCepf.Text).ToString();
                     novocliente.cidade = (txtCidadef.Text).ToString();
                     novocliente.bairro = (txtBairrof.Text).ToString();
-                    novocliente.estado = (cmbEstadof.Text).ToString();
+                    novocliente.estado = (txtEstadoF.Text).ToString();
                     novocliente.observacoes = (txtobsf.Text).ToString();
 
                     if (string.IsNullOrEmpty(txtNome.Text))// valida campo nome
@@ -237,7 +237,7 @@ namespace PIM
                         MessageBox.Show("O nome do bairro deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     } // fecha a validacao do bairro
 
-                    if (string.IsNullOrEmpty(cmbEstadof.Text)) // valida campo estado
+                    if (string.IsNullOrEmpty(txtEstadoF.Text)) // valida campo estado
                     {
                         erro = true;
                         MessageBox.Show("O nome do estado deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -266,7 +266,7 @@ namespace PIM
                     novocliente.cep = (mskCepjur.Text).ToString();
                     novocliente.cidade = (txtCidadejur.Text).ToString();
                     novocliente.bairro = (txtBairrojur.Text).ToString();
-                    novocliente.estado = (cmbEstadojur.Text).ToString();
+                    novocliente.estado = (txtEstadojur.Text).ToString();
                     novocliente.observacoes = (txtobsj.Text).ToString();
 
                     if (string.IsNullOrEmpty(txtRazaosocial.Text)) // valida campo razao social
@@ -377,7 +377,7 @@ namespace PIM
                         MessageBox.Show("O nome do bairro deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     } // fecha a validacao do bairro
 
-                    if (string.IsNullOrEmpty(cmbEstadojur.Text)) // valida campo estado
+                    if (string.IsNullOrEmpty(txtEstadojur.Text)) // valida campo estado
                     {
                         erro = true;
                         MessageBox.Show("O nome do estado deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -434,7 +434,7 @@ namespace PIM
                 txtNumf.Visible = true;
                 txtComplemf.Visible = true;
                 txtCidadef.Visible = true;
-                cmbEstadof.Visible = true;
+                txtEstadoF.Visible = true;
                 txtobsf.Visible = true;
                 txtBairrof.Visible = true;
                 grbDadospessoais.Visible = true;
@@ -457,7 +457,7 @@ namespace PIM
                 mskCepjur.Visible = false;
                 txtCidadejur.Visible = false;
                 txtBairrojur.Visible = false;
-                cmbEstadojur.Visible = false;
+                txtEstadojur.Visible = false;
                 txtobsj.Visible = false;
                 grbEmpresariais.Visible = false;
                 rbtPessoajur.Checked = false;
@@ -490,7 +490,7 @@ namespace PIM
                 mskCepjur.Visible = true;
                 txtCidadejur.Visible = true;
                 txtBairrojur.Visible = true;
-                cmbEstadojur.Visible = true;
+                txtEstadojur.Visible = true;
                 txtobsj.Visible = true;
                 grbEmpresariais.Visible = true;
                 grbEndj.Visible = true;
@@ -513,7 +513,7 @@ namespace PIM
                 txtNumf.Visible = false;
                 txtComplemf.Visible = false;
                 txtCidadef.Visible = false;
-                cmbEstadof.Visible = false;
+                txtEstadoF.Visible = false;
                 txtobsf.Visible = false;
                 txtBairrof.Visible = false;
                 grbDadospessoais.Visible = false;
@@ -542,7 +542,7 @@ namespace PIM
                         txtBairrojur.Text = resultado.bairro;
                         txtComplemjur.Text = resultado.complemento;
                         txtCidadejur.Text = resultado.cidade;
-                        cmbEstadojur.Text = resultado.uf;
+                        txtEstadojur.Text = resultado.uf;
                     } // fecha o if resultado
                 } //fecha o if rbtPessoaJur
             } // fecha o try
@@ -575,7 +575,7 @@ namespace PIM
                         txtBairrof.Text = resultado.bairro;
                         txtComplemf.Text = resultado.complemento;
                         txtCidadef.Text = resultado.cidade;
-                        cmbEstadof.Text = resultado.uf;
+                        txtEstadoF.Text = resultado.uf;
                     } // fecha o if resultado
                 } // fecha o if rbtPessoaFis
             } // fecha o try

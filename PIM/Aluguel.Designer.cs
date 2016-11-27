@@ -59,7 +59,7 @@
             this.btnDevolução.Location = new System.Drawing.Point(33, 293);
             this.btnDevolução.Name = "btnDevolução";
             this.btnDevolução.Size = new System.Drawing.Size(124, 92);
-            this.btnDevolução.TabIndex = 2;
+            this.btnDevolução.TabIndex = 1;
             this.btnDevolução.Text = "Devolução";
             this.btnDevolução.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnDevolução.UseVisualStyleBackColor = false;
@@ -75,7 +75,7 @@
             this.btnDev.Location = new System.Drawing.Point(33, 31);
             this.btnDev.Name = "btnDev";
             this.btnDev.Size = new System.Drawing.Size(124, 92);
-            this.btnDev.TabIndex = 1;
+            this.btnDev.TabIndex = 0;
             this.btnDev.Text = "Aluguel";
             this.btnDev.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnDev.UseVisualStyleBackColor = false;
@@ -91,7 +91,7 @@
             this.BtnSairAluguel.Location = new System.Drawing.Point(494, 391);
             this.BtnSairAluguel.Name = "BtnSairAluguel";
             this.BtnSairAluguel.Size = new System.Drawing.Size(124, 92);
-            this.BtnSairAluguel.TabIndex = 4;
+            this.BtnSairAluguel.TabIndex = 2;
             this.BtnSairAluguel.Text = "Sair";
             this.BtnSairAluguel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BtnSairAluguel.UseVisualStyleBackColor = false;
@@ -120,6 +120,7 @@
             this.Controls.Add(this.BtnSairAluguel);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Aluguel";
             this.Text = "Aluguel";
             this.groupBox1.ResumeLayout(false);

@@ -91,7 +91,7 @@
             this.btnSair.Location = new System.Drawing.Point(574, 438);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(124, 92);
-            this.btnSair.TabIndex = 1;
+            this.btnSair.TabIndex = 2;
             this.btnSair.Text = "Sair";
             this.btnSair.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSair.UseVisualStyleBackColor = false;
@@ -119,6 +119,7 @@
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "RelatorioCliente";
             this.Text = "Relatório de Clientes";
             this.groupBox1.ResumeLayout(false);

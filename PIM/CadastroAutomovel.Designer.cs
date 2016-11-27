@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroAutomovel));
-            this.BtnCancelaAutomovel = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.cmbAnoModelo = new System.Windows.Forms.ComboBox();
@@ -61,10 +60,11 @@
             this.txtModelo = new System.Windows.Forms.TextBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.mskRenavam = new System.Windows.Forms.MaskedTextBox();
-            this.btnSalvar = new System.Windows.Forms.Button();
-            this.btnLimpar = new System.Windows.Forms.Button();
             this.gbObservacao = new System.Windows.Forms.GroupBox();
             this.txtObs = new System.Windows.Forms.TextBox();
+            this.btnLimpar = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
+            this.BtnCancelaAutomovel = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -82,22 +82,6 @@
             this.groupBox7.SuspendLayout();
             this.gbObservacao.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // BtnCancelaAutomovel
-            // 
-            this.BtnCancelaAutomovel.BackColor = System.Drawing.Color.White;
-            this.BtnCancelaAutomovel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnCancelaAutomovel.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCancelaAutomovel.Image = ((System.Drawing.Image)(resources.GetObject("BtnCancelaAutomovel.Image")));
-            this.BtnCancelaAutomovel.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnCancelaAutomovel.Location = new System.Drawing.Point(201, 12);
-            this.BtnCancelaAutomovel.Name = "BtnCancelaAutomovel";
-            this.BtnCancelaAutomovel.Size = new System.Drawing.Size(81, 53);
-            this.BtnCancelaAutomovel.TabIndex = 17;
-            this.BtnCancelaAutomovel.Text = "Cancelar";
-            this.BtnCancelaAutomovel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.BtnCancelaAutomovel.UseVisualStyleBackColor = false;
-            this.BtnCancelaAutomovel.Click += new System.EventHandler(this.BtnCancelaAutomovel_Click);
             // 
             // contextMenuStrip1
             // 
@@ -166,10 +150,11 @@
             // 
             // mskPlaca
             // 
+            this.mskPlaca.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskPlaca.Location = new System.Drawing.Point(8, 19);
             this.mskPlaca.Mask = "AAA0000";
             this.mskPlaca.Name = "mskPlaca";
-            this.mskPlaca.Size = new System.Drawing.Size(94, 24);
+            this.mskPlaca.Size = new System.Drawing.Size(94, 25);
             this.mskPlaca.TabIndex = 0;
             // 
             // groupBox2
@@ -234,10 +219,11 @@
             // 
             // mskChassi
             // 
+            this.mskChassi.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskChassi.Location = new System.Drawing.Point(8, 19);
             this.mskChassi.Mask = "00000000000000000";
             this.mskChassi.Name = "mskChassi";
-            this.mskChassi.Size = new System.Drawing.Size(146, 24);
+            this.mskChassi.Size = new System.Drawing.Size(146, 25);
             this.mskChassi.TabIndex = 2;
             // 
             // groupBox4
@@ -292,7 +278,7 @@
             this.txtCidade.Location = new System.Drawing.Point(8, 19);
             this.txtCidade.MaxLength = 25;
             this.txtCidade.Name = "txtCidade";
-            this.txtCidade.Size = new System.Drawing.Size(402, 24);
+            this.txtCidade.Size = new System.Drawing.Size(402, 25);
             this.txtCidade.TabIndex = 12;
             // 
             // groupBox15
@@ -310,7 +296,7 @@
             this.txtKM.Location = new System.Drawing.Point(9, 19);
             this.txtKM.MaxLength = 10;
             this.txtKM.Name = "txtKM";
-            this.txtKM.Size = new System.Drawing.Size(82, 24);
+            this.txtKM.Size = new System.Drawing.Size(82, 25);
             this.txtKM.TabIndex = 11;
             // 
             // gbInformacoes
@@ -329,7 +315,7 @@
             this.gbInformacoes.Controls.Add(this.groupBox3);
             this.gbInformacoes.Controls.Add(this.groupBox15);
             this.gbInformacoes.Controls.Add(this.groupBox4);
-            this.gbInformacoes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbInformacoes.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbInformacoes.Location = new System.Drawing.Point(12, 81);
             this.gbInformacoes.Name = "gbInformacoes";
             this.gbInformacoes.Size = new System.Drawing.Size(760, 322);
@@ -517,7 +503,7 @@
             // 
             this.txtModelo.Location = new System.Drawing.Point(8, 22);
             this.txtModelo.Name = "txtModelo";
-            this.txtModelo.Size = new System.Drawing.Size(401, 24);
+            this.txtModelo.Size = new System.Drawing.Size(401, 25);
             this.txtModelo.TabIndex = 6;
             // 
             // groupBox7
@@ -532,27 +518,31 @@
             // 
             // mskRenavam
             // 
+            this.mskRenavam.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskRenavam.Location = new System.Drawing.Point(8, 19);
             this.mskRenavam.Mask = "00000000000";
             this.mskRenavam.Name = "mskRenavam";
-            this.mskRenavam.Size = new System.Drawing.Size(94, 24);
+            this.mskRenavam.Size = new System.Drawing.Size(94, 25);
             this.mskRenavam.TabIndex = 1;
             // 
-            // btnSalvar
+            // gbObservacao
             // 
-            this.btnSalvar.BackColor = System.Drawing.Color.White;
-            this.btnSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSalvar.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.Image")));
-            this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSalvar.Location = new System.Drawing.Point(12, 12);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(81, 53);
-            this.btnSalvar.TabIndex = 15;
-            this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnSalvar.UseVisualStyleBackColor = false;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            this.gbObservacao.Controls.Add(this.txtObs);
+            this.gbObservacao.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbObservacao.Location = new System.Drawing.Point(12, 409);
+            this.gbObservacao.Name = "gbObservacao";
+            this.gbObservacao.Size = new System.Drawing.Size(456, 112);
+            this.gbObservacao.TabIndex = 15;
+            this.gbObservacao.TabStop = false;
+            this.gbObservacao.Text = "Observação";
+            // 
+            // txtObs
+            // 
+            this.txtObs.Location = new System.Drawing.Point(22, 20);
+            this.txtObs.Multiline = true;
+            this.txtObs.Name = "txtObs";
+            this.txtObs.Size = new System.Drawing.Size(405, 73);
+            this.txtObs.TabIndex = 14;
             // 
             // btnLimpar
             // 
@@ -564,30 +554,43 @@
             this.btnLimpar.Location = new System.Drawing.Point(107, 12);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(81, 53);
-            this.btnLimpar.TabIndex = 16;
+            this.btnLimpar.TabIndex = 17;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnLimpar.UseVisualStyleBackColor = false;
             this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
-            // gbObservacao
+            // btnSalvar
             // 
-            this.gbObservacao.Controls.Add(this.txtObs);
-            this.gbObservacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbObservacao.Location = new System.Drawing.Point(12, 409);
-            this.gbObservacao.Name = "gbObservacao";
-            this.gbObservacao.Size = new System.Drawing.Size(456, 112);
-            this.gbObservacao.TabIndex = 18;
-            this.gbObservacao.TabStop = false;
-            this.gbObservacao.Text = "Observação";
+            this.btnSalvar.BackColor = System.Drawing.Color.White;
+            this.btnSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalvar.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.Image")));
+            this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnSalvar.Location = new System.Drawing.Point(12, 12);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(81, 53);
+            this.btnSalvar.TabIndex = 16;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
-            // txtObs
+            // BtnCancelaAutomovel
             // 
-            this.txtObs.Location = new System.Drawing.Point(22, 20);
-            this.txtObs.Multiline = true;
-            this.txtObs.Name = "txtObs";
-            this.txtObs.Size = new System.Drawing.Size(405, 73);
-            this.txtObs.TabIndex = 14;
+            this.BtnCancelaAutomovel.BackColor = System.Drawing.Color.White;
+            this.BtnCancelaAutomovel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnCancelaAutomovel.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCancelaAutomovel.Image = ((System.Drawing.Image)(resources.GetObject("BtnCancelaAutomovel.Image")));
+            this.BtnCancelaAutomovel.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.BtnCancelaAutomovel.Location = new System.Drawing.Point(201, 12);
+            this.BtnCancelaAutomovel.Name = "BtnCancelaAutomovel";
+            this.BtnCancelaAutomovel.Size = new System.Drawing.Size(81, 53);
+            this.BtnCancelaAutomovel.TabIndex = 18;
+            this.BtnCancelaAutomovel.Text = "Cancelar";
+            this.BtnCancelaAutomovel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnCancelaAutomovel.UseVisualStyleBackColor = false;
+            this.BtnCancelaAutomovel.Click += new System.EventHandler(this.BtnCancelaAutomovel_Click);
             // 
             // CadastroAutomovel
             // 
@@ -601,6 +604,7 @@
             this.Controls.Add(this.gbInformacoes);
             this.Controls.Add(this.BtnCancelaAutomovel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "CadastroAutomovel";
             this.Text = "Cadastro de Automóveis";
             this.groupBox3.ResumeLayout(false);

@@ -118,6 +118,7 @@
             this.grbPesquisa.Controls.Add(this.grbRenavam);
             this.grbPesquisa.Controls.Add(this.grbPlaca);
             this.grbPesquisa.Controls.Add(this.grbModel);
+            this.grbPesquisa.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbPesquisa.Location = new System.Drawing.Point(12, 82);
             this.grbPesquisa.Name = "grbPesquisa";
             this.grbPesquisa.Size = new System.Drawing.Size(800, 85);
@@ -139,7 +140,7 @@
             // 
             this.txtPesqRenavam.Location = new System.Drawing.Point(6, 16);
             this.txtPesqRenavam.Name = "txtPesqRenavam";
-            this.txtPesqRenavam.Size = new System.Drawing.Size(145, 20);
+            this.txtPesqRenavam.Size = new System.Drawing.Size(145, 22);
             this.txtPesqRenavam.TabIndex = 18;
             this.txtPesqRenavam.TextChanged += new System.EventHandler(this.txtPesqRenavam_TextChanged);
             // 
@@ -157,7 +158,7 @@
             // 
             this.txtPesqPlaca.Location = new System.Drawing.Point(6, 16);
             this.txtPesqPlaca.Name = "txtPesqPlaca";
-            this.txtPesqPlaca.Size = new System.Drawing.Size(145, 20);
+            this.txtPesqPlaca.Size = new System.Drawing.Size(145, 22);
             this.txtPesqPlaca.TabIndex = 17;
             this.txtPesqPlaca.TextChanged += new System.EventHandler(this.txtPesqPlaca_TextChanged);
             // 
@@ -175,7 +176,7 @@
             // 
             this.txtPesqModel.Location = new System.Drawing.Point(6, 16);
             this.txtPesqModel.Name = "txtPesqModel";
-            this.txtPesqModel.Size = new System.Drawing.Size(184, 20);
+            this.txtPesqModel.Size = new System.Drawing.Size(184, 22);
             this.txtPesqModel.TabIndex = 16;
             this.txtPesqModel.TextChanged += new System.EventHandler(this.txtPesqModel_TextChanged);
             // 
@@ -226,12 +227,13 @@
             this.grbVeiculos.Controls.Add(this.lblRenavam);
             this.grbVeiculos.Controls.Add(this.lblPlaca);
             this.grbVeiculos.Controls.Add(this.lblCod);
+            this.grbVeiculos.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbVeiculos.Location = new System.Drawing.Point(15, 368);
             this.grbVeiculos.Name = "grbVeiculos";
             this.grbVeiculos.Size = new System.Drawing.Size(796, 360);
             this.grbVeiculos.TabIndex = 4;
             this.grbVeiculos.TabStop = false;
-            this.grbVeiculos.Text = "Dados do veiculo";
+            this.grbVeiculos.Text = "Dados do veículo";
             // 
             // cmbEstado
             // 
@@ -478,110 +480,110 @@
             // lblObs
             // 
             this.lblObs.AutoSize = true;
-            this.lblObs.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblObs.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblObs.Location = new System.Drawing.Point(1, 229);
             this.lblObs.Name = "lblObs";
-            this.lblObs.Size = new System.Drawing.Size(89, 17);
+            this.lblObs.Size = new System.Drawing.Size(87, 16);
             this.lblObs.TabIndex = 20;
             this.lblObs.Text = "Observação:";
             // 
             // lblCidade
             // 
             this.lblCidade.AutoSize = true;
-            this.lblCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCidade.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCidade.Location = new System.Drawing.Point(33, 205);
             this.lblCidade.Name = "lblCidade";
-            this.lblCidade.Size = new System.Drawing.Size(56, 17);
+            this.lblCidade.Size = new System.Drawing.Size(57, 16);
             this.lblCidade.TabIndex = 19;
             this.lblCidade.Text = "Cidade:";
             // 
             // lblEstado
             // 
             this.lblEstado.AutoSize = true;
-            this.lblEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstado.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstado.Location = new System.Drawing.Point(510, 206);
             this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(56, 17);
+            this.lblEstado.Size = new System.Drawing.Size(54, 16);
             this.lblEstado.TabIndex = 18;
             this.lblEstado.Text = "Estado:";
             // 
             // lblKm
             // 
             this.lblKm.AutoSize = true;
-            this.lblKm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblKm.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblKm.Location = new System.Drawing.Point(305, 146);
             this.lblKm.Name = "lblKm";
-            this.lblKm.Size = new System.Drawing.Size(32, 17);
+            this.lblKm.Size = new System.Drawing.Size(32, 16);
             this.lblKm.TabIndex = 17;
             this.lblKm.Text = "KM:";
             // 
             // lblTipo
             // 
             this.lblTipo.AutoSize = true;
-            this.lblTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipo.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTipo.Location = new System.Drawing.Point(557, 145);
             this.lblTipo.Name = "lblTipo";
-            this.lblTipo.Size = new System.Drawing.Size(40, 17);
+            this.lblTipo.Size = new System.Drawing.Size(40, 16);
             this.lblTipo.TabIndex = 16;
             this.lblTipo.Text = "Tipo:";
             // 
             // lblPortas
             // 
             this.lblPortas.AutoSize = true;
-            this.lblPortas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPortas.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPortas.Location = new System.Drawing.Point(544, 117);
             this.lblPortas.Name = "lblPortas";
-            this.lblPortas.Size = new System.Drawing.Size(53, 17);
+            this.lblPortas.Size = new System.Drawing.Size(52, 16);
             this.lblPortas.TabIndex = 15;
             this.lblPortas.Text = "Portas:";
             // 
             // lblCor
             // 
             this.lblCor.AutoSize = true;
-            this.lblCor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCor.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCor.Location = new System.Drawing.Point(55, 174);
             this.lblCor.Name = "lblCor";
-            this.lblCor.Size = new System.Drawing.Size(34, 17);
+            this.lblCor.Size = new System.Drawing.Size(34, 16);
             this.lblCor.TabIndex = 14;
             this.lblCor.Text = "Cor:";
             // 
             // lblCombustivel
             // 
             this.lblCombustivel.AutoSize = true;
-            this.lblCombustivel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCombustivel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCombustivel.Location = new System.Drawing.Point(1, 145);
             this.lblCombustivel.Name = "lblCombustivel";
-            this.lblCombustivel.Size = new System.Drawing.Size(88, 17);
+            this.lblCombustivel.Size = new System.Drawing.Size(90, 16);
             this.lblCombustivel.TabIndex = 13;
             this.lblCombustivel.Text = "Combustível:";
             // 
             // lblAnom
             // 
             this.lblAnom.AutoSize = true;
-            this.lblAnom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAnom.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAnom.Location = new System.Drawing.Point(510, 86);
             this.lblAnom.Name = "lblAnom";
-            this.lblAnom.Size = new System.Drawing.Size(87, 17);
+            this.lblAnom.Size = new System.Drawing.Size(89, 16);
             this.lblAnom.TabIndex = 12;
             this.lblAnom.Text = "Ano modelo:";
             // 
             // lblAnof
             // 
             this.lblAnof.AutoSize = true;
-            this.lblAnof.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAnof.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAnof.Location = new System.Drawing.Point(521, 56);
             this.lblAnof.Name = "lblAnof";
-            this.lblAnof.Size = new System.Drawing.Size(76, 17);
+            this.lblAnof.Size = new System.Drawing.Size(77, 16);
             this.lblAnof.TabIndex = 11;
             this.lblAnof.Text = "Ano fabric:";
             // 
             // lblMarca
             // 
             this.lblMarca.AutoSize = true;
-            this.lblMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMarca.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMarca.Location = new System.Drawing.Point(38, 86);
             this.lblMarca.Name = "lblMarca";
-            this.lblMarca.Size = new System.Drawing.Size(51, 17);
+            this.lblMarca.Size = new System.Drawing.Size(51, 16);
             this.lblMarca.TabIndex = 10;
             this.lblMarca.Text = "Marca:";
             // 
@@ -629,50 +631,50 @@
             // lblModelo
             // 
             this.lblModelo.AutoSize = true;
-            this.lblModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblModelo.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblModelo.Location = new System.Drawing.Point(31, 56);
             this.lblModelo.Name = "lblModelo";
-            this.lblModelo.Size = new System.Drawing.Size(58, 17);
+            this.lblModelo.Size = new System.Drawing.Size(59, 16);
             this.lblModelo.TabIndex = 4;
             this.lblModelo.Text = "Modelo:";
             // 
             // lblChassi
             // 
             this.lblChassi.AutoSize = true;
-            this.lblChassi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChassi.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblChassi.Location = new System.Drawing.Point(255, 117);
             this.lblChassi.Name = "lblChassi";
-            this.lblChassi.Size = new System.Drawing.Size(54, 17);
+            this.lblChassi.Size = new System.Drawing.Size(53, 16);
             this.lblChassi.TabIndex = 3;
             this.lblChassi.Text = "Chassi:";
             // 
             // lblRenavam
             // 
             this.lblRenavam.AutoSize = true;
-            this.lblRenavam.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRenavam.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRenavam.Location = new System.Drawing.Point(265, 179);
             this.lblRenavam.Name = "lblRenavam";
-            this.lblRenavam.Size = new System.Drawing.Size(72, 17);
+            this.lblRenavam.Size = new System.Drawing.Size(72, 16);
             this.lblRenavam.TabIndex = 2;
             this.lblRenavam.Text = "Renavam:";
             // 
             // lblPlaca
             // 
             this.lblPlaca.AutoSize = true;
-            this.lblPlaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlaca.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlaca.Location = new System.Drawing.Point(42, 117);
             this.lblPlaca.Name = "lblPlaca";
-            this.lblPlaca.Size = new System.Drawing.Size(47, 17);
+            this.lblPlaca.Size = new System.Drawing.Size(48, 16);
             this.lblPlaca.TabIndex = 1;
             this.lblPlaca.Text = "Placa:";
             // 
             // lblCod
             // 
             this.lblCod.AutoSize = true;
-            this.lblCod.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCod.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCod.Location = new System.Drawing.Point(33, 28);
             this.lblCod.Name = "lblCod";
-            this.lblCod.Size = new System.Drawing.Size(56, 17);
+            this.lblCod.Size = new System.Drawing.Size(57, 16);
             this.lblCod.TabIndex = 0;
             this.lblCod.Text = "Código:";
             // 
@@ -680,9 +682,10 @@
             // 
             this.rbtVeiculo.AutoSize = true;
             this.rbtVeiculo.Checked = true;
+            this.rbtVeiculo.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtVeiculo.Location = new System.Drawing.Point(247, 18);
             this.rbtVeiculo.Name = "rbtVeiculo";
-            this.rbtVeiculo.Size = new System.Drawing.Size(60, 17);
+            this.rbtVeiculo.Size = new System.Drawing.Size(73, 20);
             this.rbtVeiculo.TabIndex = 21;
             this.rbtVeiculo.TabStop = true;
             this.rbtVeiculo.Text = "Veiculo";
@@ -703,6 +706,7 @@
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnAtualizar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "LocalizarVeiculo";
             this.Text = "Localizar Veículos";
             this.Load += new System.EventHandler(this.LocalizarVeiculo_Load);

@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LocalizarFuncionario));
-            this.btnAtualizar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
@@ -59,45 +57,13 @@
             this.grbStatus = new System.Windows.Forms.GroupBox();
             this.rbtInativo = new System.Windows.Forms.RadioButton();
             this.rbtAtivo = new System.Windows.Forms.RadioButton();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnAtualizar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.grbPesqNome.SuspendLayout();
             this.grbFunc.SuspendLayout();
             this.grbStatus.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnAtualizar
-            // 
-            this.btnAtualizar.BackColor = System.Drawing.Color.White;
-            this.btnAtualizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAtualizar.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnAtualizar.Image")));
-            this.btnAtualizar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnAtualizar.Location = new System.Drawing.Point(24, 13);
-            this.btnAtualizar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnAtualizar.Name = "btnAtualizar";
-            this.btnAtualizar.Size = new System.Drawing.Size(81, 53);
-            this.btnAtualizar.TabIndex = 0;
-            this.btnAtualizar.Text = "Atualizar";
-            this.btnAtualizar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnAtualizar.UseVisualStyleBackColor = false;
-            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.Color.White;
-            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancelar.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
-            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCancelar.Location = new System.Drawing.Point(140, 13);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(81, 53);
-            this.btnCancelar.TabIndex = 1;
-            this.btnCancelar.Text = "Sair";
-            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // dataGridView
             // 
@@ -116,70 +82,70 @@
             // lblCodigo
             // 
             this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigo.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodigo.Location = new System.Drawing.Point(31, 35);
             this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(55, 16);
+            this.lblCodigo.Size = new System.Drawing.Size(57, 16);
             this.lblCodigo.TabIndex = 3;
             this.lblCodigo.Text = "Código:";
             // 
             // lblNome
             // 
             this.lblNome.AutoSize = true;
-            this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNome.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNome.Location = new System.Drawing.Point(38, 65);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(48, 16);
+            this.lblNome.Size = new System.Drawing.Size(49, 16);
             this.lblNome.TabIndex = 4;
             this.lblNome.Text = "Nome:";
             // 
             // lblLogin
             // 
             this.lblLogin.AutoSize = true;
-            this.lblLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogin.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLogin.Location = new System.Drawing.Point(40, 156);
             this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(44, 16);
+            this.lblLogin.Size = new System.Drawing.Size(48, 16);
             this.lblLogin.TabIndex = 5;
             this.lblLogin.Text = "Login:";
             // 
             // lbDtaCad
             // 
             this.lbDtaCad.AutoSize = true;
-            this.lbDtaCad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDtaCad.Location = new System.Drawing.Point(398, 35);
+            this.lbDtaCad.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDtaCad.Location = new System.Drawing.Point(395, 34);
             this.lbDtaCad.Name = "lbDtaCad";
-            this.lbDtaCad.Size = new System.Drawing.Size(117, 16);
+            this.lbDtaCad.Size = new System.Drawing.Size(121, 16);
             this.lbDtaCad.TabIndex = 6;
             this.lbDtaCad.Text = "Data do Cadastro:";
             // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.Location = new System.Drawing.Point(38, 96);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(49, 16);
+            this.lblEmail.Size = new System.Drawing.Size(52, 16);
             this.lblEmail.TabIndex = 7;
             this.lblEmail.Text = "E-mail:";
             // 
             // lblCpf
             // 
             this.lblCpf.AutoSize = true;
-            this.lblCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCpf.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCpf.Location = new System.Drawing.Point(49, 126);
             this.lblCpf.Name = "lblCpf";
-            this.lblCpf.Size = new System.Drawing.Size(37, 16);
+            this.lblCpf.Size = new System.Drawing.Size(38, 16);
             this.lblCpf.TabIndex = 8;
             this.lblCpf.Text = "CPF:";
             // 
             // lblSenha
             // 
             this.lblSenha.AutoSize = true;
-            this.lblSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSenha.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSenha.Location = new System.Drawing.Point(215, 156);
             this.lblSenha.Name = "lblSenha";
-            this.lblSenha.Size = new System.Drawing.Size(50, 16);
+            this.lblSenha.Size = new System.Drawing.Size(53, 16);
             this.lblSenha.TabIndex = 9;
             this.lblSenha.Text = "Senha:";
             // 
@@ -213,10 +179,10 @@
             // txtDtaCad
             // 
             this.txtDtaCad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDtaCad.Location = new System.Drawing.Point(516, 31);
+            this.txtDtaCad.Location = new System.Drawing.Point(522, 31);
             this.txtDtaCad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDtaCad.Name = "txtDtaCad";
-            this.txtDtaCad.Size = new System.Drawing.Size(76, 22);
+            this.txtDtaCad.Size = new System.Drawing.Size(70, 22);
             this.txtDtaCad.TabIndex = 13;
             // 
             // txtEmail
@@ -261,10 +227,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(200, 126);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 16);
+            this.label2.Size = new System.Drawing.Size(67, 16);
             this.label2.TabIndex = 19;
             this.label2.Text = "Telefone:";
             // 
@@ -272,13 +238,13 @@
             // 
             this.grbPesqNome.Controls.Add(this.txtPesqNome);
             this.grbPesqNome.Controls.Add(this.label3);
-            this.grbPesqNome.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbPesqNome.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbPesqNome.Location = new System.Drawing.Point(24, 79);
             this.grbPesqNome.Name = "grbPesqNome";
             this.grbPesqNome.Size = new System.Drawing.Size(287, 62);
             this.grbPesqNome.TabIndex = 20;
             this.grbPesqNome.TabStop = false;
-            this.grbPesqNome.Text = "buscar por";
+            this.grbPesqNome.Text = "Buscar por";
             // 
             // txtPesqNome
             // 
@@ -292,30 +258,30 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(6, 29);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 17);
+            this.label3.Size = new System.Drawing.Size(49, 16);
             this.label3.TabIndex = 0;
             this.label3.Text = "Nome:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(378, 156);
+            this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(373, 156);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 16);
+            this.label1.Size = new System.Drawing.Size(117, 16);
             this.label1.TabIndex = 21;
             this.label1.Text = "Confirmar senha:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(432, 126);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 16);
+            this.label4.Size = new System.Drawing.Size(58, 16);
             this.label4.TabIndex = 22;
             this.label4.Text = "Celular:";
             // 
@@ -359,7 +325,7 @@
             this.grbFunc.Controls.Add(this.txtLogin);
             this.grbFunc.Controls.Add(this.txtEmail);
             this.grbFunc.Controls.Add(this.txtDtaCad);
-            this.grbFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbFunc.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbFunc.Location = new System.Drawing.Point(24, 425);
             this.grbFunc.Name = "grbFunc";
             this.grbFunc.Size = new System.Drawing.Size(745, 211);
@@ -371,7 +337,7 @@
             // 
             this.grbStatus.Controls.Add(this.rbtInativo);
             this.grbStatus.Controls.Add(this.rbtAtivo);
-            this.grbStatus.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbStatus.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbStatus.Location = new System.Drawing.Point(459, 88);
             this.grbStatus.Name = "grbStatus";
             this.grbStatus.Size = new System.Drawing.Size(197, 53);
@@ -385,7 +351,7 @@
             this.rbtInativo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtInativo.Location = new System.Drawing.Point(103, 21);
             this.rbtInativo.Name = "rbtInativo";
-            this.rbtInativo.Size = new System.Drawing.Size(72, 20);
+            this.rbtInativo.Size = new System.Drawing.Size(69, 20);
             this.rbtInativo.TabIndex = 1;
             this.rbtInativo.TabStop = true;
             this.rbtInativo.Text = "Inativo";
@@ -397,11 +363,45 @@
             this.rbtAtivo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtAtivo.Location = new System.Drawing.Point(18, 21);
             this.rbtAtivo.Name = "rbtAtivo";
-            this.rbtAtivo.Size = new System.Drawing.Size(60, 20);
+            this.rbtAtivo.Size = new System.Drawing.Size(58, 20);
             this.rbtAtivo.TabIndex = 0;
             this.rbtAtivo.TabStop = true;
             this.rbtAtivo.Text = "Ativo";
             this.rbtAtivo.UseVisualStyleBackColor = true;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.White;
+            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancelar.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnCancelar.Location = new System.Drawing.Point(140, 13);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(81, 53);
+            this.btnCancelar.TabIndex = 1;
+            this.btnCancelar.Text = "Sair";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnAtualizar
+            // 
+            this.btnAtualizar.BackColor = System.Drawing.Color.White;
+            this.btnAtualizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAtualizar.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnAtualizar.Image")));
+            this.btnAtualizar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnAtualizar.Location = new System.Drawing.Point(24, 13);
+            this.btnAtualizar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Size = new System.Drawing.Size(81, 53);
+            this.btnAtualizar.TabIndex = 0;
+            this.btnAtualizar.Text = "Atualizar";
+            this.btnAtualizar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAtualizar.UseVisualStyleBackColor = false;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
             // LocalizarFuncionario
             // 
@@ -418,6 +418,7 @@
             this.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaximizeBox = false;
             this.Name = "LocalizarFuncionario";
             this.Text = "Localizar Funcionários";
             this.Load += new System.EventHandler(this.LocalizarFuncionario_Load);

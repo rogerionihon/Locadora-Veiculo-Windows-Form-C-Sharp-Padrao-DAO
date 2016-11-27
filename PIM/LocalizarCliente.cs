@@ -180,7 +180,7 @@ namespace PIM
             mskCepFis.Text = ""; 
             txtCidFis.Text = ""; 
             txtBairFis.Text = ""; 
-            cmbEstFis.Text = ""; 
+            txtEstFis.Text = ""; 
             txtObsFis.Text = "";
             txtPesqNome.Text = "";
             txtPesqCpf.Text = "";
@@ -201,7 +201,7 @@ namespace PIM
             mskCepJur.Text = ""; 
             txtCidJur.Text = ""; 
             txtBaiJur.Text = ""; 
-            cmbEstJur.Text = "";
+            txtEstJur.Text = "";
             txtObsJur.Text = "";
             txtPesqCnpj.Text = "";
         } // fecha o metodo
@@ -278,7 +278,7 @@ namespace PIM
                     mskCepFis.Text = selectedRow.Cells[14].Value.ToString();
                     txtCidFis.Text = selectedRow.Cells[15].Value.ToString();
                     txtBairFis.Text = selectedRow.Cells[16].Value.ToString();
-                    cmbEstFis.Text = selectedRow.Cells[17].Value.ToString();
+                    txtEstFis.Text = selectedRow.Cells[17].Value.ToString();
                     txtObsFis.Text = selectedRow.Cells[18].Value.ToString();
                 }// fecha o if rbtpessoafisica
                     else if (rbtPessoaJuridica.Checked == true) // caso a pessoa jurica esteja em check
@@ -299,7 +299,7 @@ namespace PIM
                         mskCepJur.Text = selectedRow.Cells[12].Value.ToString();
                         txtCidJur.Text = selectedRow.Cells[13].Value.ToString();
                         txtBaiJur.Text = selectedRow.Cells[14].Value.ToString();
-                        cmbEstJur.Text = selectedRow.Cells[15].Value.ToString();
+                        txtEstJur.Text = selectedRow.Cells[15].Value.ToString();
                         txtObsJur.Text = selectedRow.Cells[16].Value.ToString();                      
 	                }// fecha o if rbtpessoajuridica              
             }
@@ -405,7 +405,7 @@ namespace PIM
                 novocliente.cep = mskCepFis.Text.ToString();
                 novocliente.cidade = txtCidFis.Text.ToString();
                 novocliente.bairro = txtBairFis.Text.ToString();
-                novocliente.estado = cmbEstFis.Text.ToString();
+                novocliente.estado = txtEstFis.Text.ToString();
                 novocliente.observacoes = txtObsFis.Text.ToString();
 
                 if (string.IsNullOrEmpty(txtNome.Text)) // valida campo nome
@@ -529,7 +529,7 @@ namespace PIM
                     MessageBox.Show("O nome da cidade deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 } // fecha a validacao cidade
 
-                if (string.IsNullOrEmpty(cmbEstFis.Text)) // valida campo estado
+                if (string.IsNullOrEmpty(txtEstFis.Text)) // valida campo estado
                 {
                     erro = true;
                     MessageBox.Show("O nome do estado deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -568,7 +568,7 @@ namespace PIM
                 novocliente.cep = mskCepJur.Text.ToString();
                 novocliente.cidade = txtCidJur.Text.ToString();
                 novocliente.bairro = txtBaiJur.Text.ToString();
-                novocliente.estado = cmbEstJur.Text.ToString();
+                novocliente.estado = txtEstJur.Text.ToString();
                 novocliente.observacoes = txtObsJur.Text.ToString();
 
                 if (string.IsNullOrEmpty(txtRazSoc.Text)) // valida campo razao social
@@ -676,7 +676,7 @@ namespace PIM
                     MessageBox.Show("O nome da cidade deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 } // fecha a validacao da cidade
 
-                if (string.IsNullOrEmpty(cmbEstJur.Text)) // valida campo estado
+                if (string.IsNullOrEmpty(txtEstJur.Text)) // valida campo estado
                 {
                     erro = true;
                     MessageBox.Show("O nome do estado deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -710,7 +710,7 @@ namespace PIM
                         txtComJur.Text = resultado.complemento;
                         txtBaiJur.Text = resultado.bairro;
                         txtCidJur.Text = resultado.cidade;
-                        cmbEstJur.Text = resultado.uf;
+                        txtEstJur.Text = resultado.uf;
                         txtNumJur.Text = "";
                     } // fecha o if
                 } // fecga o rbtPessoaJur    
@@ -744,7 +744,7 @@ namespace PIM
                         txtComFis.Text = resultado.complemento;
                         txtBairFis.Text = resultado.bairro;
                         txtCidFis.Text = resultado.cidade;
-                        cmbEstFis.Text = resultado.uf;
+                        txtEstFis.Text = resultado.uf;
                         txtNumFis.Text = "";
 
                     } // fecha o if

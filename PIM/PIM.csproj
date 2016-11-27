@@ -407,6 +407,24 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1480276287_calculator.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calculadora certa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lupa OK.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo Correto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Azul02.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\issoooo.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

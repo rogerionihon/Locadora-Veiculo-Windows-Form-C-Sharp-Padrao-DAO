@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroCliente));
-            this.BtnCancelaCliente = new System.Windows.Forms.Button();
-            this.btnLimpar = new System.Windows.Forms.Button();
-            this.btnSalvar = new System.Windows.Forms.Button();
             this.grbEmpresariais = new System.Windows.Forms.GroupBox();
             this.grbEnderecoj = new System.Windows.Forms.GroupBox();
             this.groupBox17 = new System.Windows.Forms.GroupBox();
@@ -91,13 +88,12 @@
             this.grbFisica = new System.Windows.Forms.GroupBox();
             this.rbtPessoafis = new System.Windows.Forms.RadioButton();
             this.grbEnderecoF = new System.Windows.Forms.GroupBox();
-            this.btnConsultFis = new System.Windows.Forms.Button();
+            this.grbCepFis = new System.Windows.Forms.GroupBox();
             this.grbBairrof = new System.Windows.Forms.GroupBox();
             this.txtBairrof = new System.Windows.Forms.TextBox();
             this.grbRuaf = new System.Windows.Forms.GroupBox();
             this.txtEndf = new System.Windows.Forms.TextBox();
             this.grbEstadof = new System.Windows.Forms.GroupBox();
-            this.cmbEstadof = new System.Windows.Forms.ComboBox();
             this.grbCidadef = new System.Windows.Forms.GroupBox();
             this.txtCidadef = new System.Windows.Forms.TextBox();
             this.grbNumf = new System.Windows.Forms.GroupBox();
@@ -107,13 +103,13 @@
             this.grbComplementof = new System.Windows.Forms.GroupBox();
             this.txtComplemf = new System.Windows.Forms.TextBox();
             this.grbEndj = new System.Windows.Forms.GroupBox();
+            this.grbCepJur = new System.Windows.Forms.GroupBox();
+            this.btnConsultarCep = new System.Windows.Forms.Button();
             this.grbRuaj = new System.Windows.Forms.GroupBox();
             this.txtEndjur = new System.Windows.Forms.TextBox();
             this.grbBairroj = new System.Windows.Forms.GroupBox();
             this.txtBairrojur = new System.Windows.Forms.TextBox();
-            this.btnConsultarCep = new System.Windows.Forms.Button();
             this.grbEstadoj = new System.Windows.Forms.GroupBox();
-            this.cmbEstadojur = new System.Windows.Forms.ComboBox();
             this.grbCidadej = new System.Windows.Forms.GroupBox();
             this.txtCidadejur = new System.Windows.Forms.TextBox();
             this.grbNumj = new System.Windows.Forms.GroupBox();
@@ -126,8 +122,12 @@
             this.txtobsf = new System.Windows.Forms.TextBox();
             this.grbInfoj = new System.Windows.Forms.GroupBox();
             this.txtobsj = new System.Windows.Forms.TextBox();
-            this.grbCepJur = new System.Windows.Forms.GroupBox();
-            this.grbCepFis = new System.Windows.Forms.GroupBox();
+            this.btnConsultFis = new System.Windows.Forms.Button();
+            this.btnLimpar = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
+            this.BtnCancelaCliente = new System.Windows.Forms.Button();
+            this.txtEstadoF = new System.Windows.Forms.TextBox();
+            this.txtEstadojur = new System.Windows.Forms.TextBox();
             this.grbEmpresariais.SuspendLayout();
             this.grbEnderecoj.SuspendLayout();
             this.groupBox17.SuspendLayout();
@@ -160,6 +160,7 @@
             this.grbJuridica.SuspendLayout();
             this.grbFisica.SuspendLayout();
             this.grbEnderecoF.SuspendLayout();
+            this.grbCepFis.SuspendLayout();
             this.grbBairrof.SuspendLayout();
             this.grbRuaf.SuspendLayout();
             this.grbEstadof.SuspendLayout();
@@ -168,6 +169,7 @@
             this.grbCepf.SuspendLayout();
             this.grbComplementof.SuspendLayout();
             this.grbEndj.SuspendLayout();
+            this.grbCepJur.SuspendLayout();
             this.grbRuaj.SuspendLayout();
             this.grbBairroj.SuspendLayout();
             this.grbEstadoj.SuspendLayout();
@@ -177,57 +179,7 @@
             this.grbComplementoj.SuspendLayout();
             this.grbInfof.SuspendLayout();
             this.grbInfoj.SuspendLayout();
-            this.grbCepJur.SuspendLayout();
-            this.grbCepFis.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // BtnCancelaCliente
-            // 
-            this.BtnCancelaCliente.BackColor = System.Drawing.Color.White;
-            this.BtnCancelaCliente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnCancelaCliente.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCancelaCliente.Image = ((System.Drawing.Image)(resources.GetObject("BtnCancelaCliente.Image")));
-            this.BtnCancelaCliente.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnCancelaCliente.Location = new System.Drawing.Point(230, 3);
-            this.BtnCancelaCliente.Name = "BtnCancelaCliente";
-            this.BtnCancelaCliente.Size = new System.Drawing.Size(81, 53);
-            this.BtnCancelaCliente.TabIndex = 2;
-            this.BtnCancelaCliente.Text = "Cancelar";
-            this.BtnCancelaCliente.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.BtnCancelaCliente.UseVisualStyleBackColor = false;
-            this.BtnCancelaCliente.Click += new System.EventHandler(this.BtnCancelaCliente_Click);
-            // 
-            // btnLimpar
-            // 
-            this.btnLimpar.BackColor = System.Drawing.Color.White;
-            this.btnLimpar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLimpar.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpar.Image = ((System.Drawing.Image)(resources.GetObject("btnLimpar.Image")));
-            this.btnLimpar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnLimpar.Location = new System.Drawing.Point(127, 3);
-            this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(81, 53);
-            this.btnLimpar.TabIndex = 1;
-            this.btnLimpar.Text = "Limpar";
-            this.btnLimpar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnLimpar.UseVisualStyleBackColor = false;
-            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
-            // 
-            // btnSalvar
-            // 
-            this.btnSalvar.BackColor = System.Drawing.Color.White;
-            this.btnSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSalvar.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.Image")));
-            this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSalvar.Location = new System.Drawing.Point(25, 3);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(81, 53);
-            this.btnSalvar.TabIndex = 0;
-            this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnSalvar.UseVisualStyleBackColor = false;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // grbEmpresariais
             // 
@@ -241,7 +193,7 @@
             this.grbEmpresariais.Controls.Add(this.grbIns_est);
             this.grbEmpresariais.Controls.Add(this.grbNomefantasia);
             this.grbEmpresariais.Controls.Add(this.grbRazaosocial);
-            this.grbEmpresariais.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbEmpresariais.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbEmpresariais.Location = new System.Drawing.Point(25, 136);
             this.grbEmpresariais.Name = "grbEmpresariais";
             this.grbEmpresariais.Size = new System.Drawing.Size(887, 225);
@@ -470,7 +422,7 @@
             // 
             this.txtemailj.Location = new System.Drawing.Point(6, 20);
             this.txtemailj.Name = "txtemailj";
-            this.txtemailj.Size = new System.Drawing.Size(363, 23);
+            this.txtemailj.Size = new System.Drawing.Size(363, 22);
             this.txtemailj.TabIndex = 8;
             // 
             // grbCelularj
@@ -488,7 +440,7 @@
             this.mskCelularj.Location = new System.Drawing.Point(6, 20);
             this.mskCelularj.Mask = "(00)00000-0000";
             this.mskCelularj.Name = "mskCelularj";
-            this.mskCelularj.Size = new System.Drawing.Size(118, 23);
+            this.mskCelularj.Size = new System.Drawing.Size(118, 22);
             this.mskCelularj.TabIndex = 7;
             // 
             // grbCnpj
@@ -506,7 +458,7 @@
             this.mskCnpj.Location = new System.Drawing.Point(6, 19);
             this.mskCnpj.Mask = "00,000,000/0000-00";
             this.mskCnpj.Name = "mskCnpj";
-            this.mskCnpj.Size = new System.Drawing.Size(195, 23);
+            this.mskCnpj.Size = new System.Drawing.Size(195, 22);
             this.mskCnpj.TabIndex = 3;
             // 
             // grbInsc_mun
@@ -524,7 +476,7 @@
             this.mskInsc_mun.Location = new System.Drawing.Point(6, 20);
             this.mskInsc_mun.Mask = "00000000";
             this.mskInsc_mun.Name = "mskInsc_mun";
-            this.mskInsc_mun.Size = new System.Drawing.Size(195, 23);
+            this.mskInsc_mun.Size = new System.Drawing.Size(195, 22);
             this.mskInsc_mun.TabIndex = 9;
             // 
             // grbTelefonej
@@ -542,7 +494,7 @@
             this.msktelefonej.Location = new System.Drawing.Point(6, 19);
             this.msktelefonej.Mask = "(00)0000-0000";
             this.msktelefonej.Name = "msktelefonej";
-            this.msktelefonej.Size = new System.Drawing.Size(118, 23);
+            this.msktelefonej.Size = new System.Drawing.Size(118, 22);
             this.msktelefonej.TabIndex = 4;
             // 
             // grbIns_est
@@ -560,7 +512,7 @@
             this.mskIncr_est.Location = new System.Drawing.Point(6, 20);
             this.mskIncr_est.Mask = "000000000000";
             this.mskIncr_est.Name = "mskIncr_est";
-            this.mskIncr_est.Size = new System.Drawing.Size(195, 23);
+            this.mskIncr_est.Size = new System.Drawing.Size(195, 22);
             this.mskIncr_est.TabIndex = 6;
             // 
             // grbNomefantasia
@@ -612,7 +564,7 @@
             this.grbDadospessoais.Controls.Add(this.grbNome);
             this.grbDadospessoais.Controls.Add(this.grbCelularf);
             this.grbDadospessoais.Controls.Add(this.grbTelefonef);
-            this.grbDadospessoais.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbDadospessoais.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbDadospessoais.Location = new System.Drawing.Point(25, 136);
             this.grbDadospessoais.Name = "grbDadospessoais";
             this.grbDadospessoais.Size = new System.Drawing.Size(851, 225);
@@ -635,7 +587,7 @@
             this.mskDta_nascf.Location = new System.Drawing.Point(6, 20);
             this.mskDta_nascf.Mask = "00/00/0000";
             this.mskDta_nascf.Name = "mskDta_nascf";
-            this.mskDta_nascf.Size = new System.Drawing.Size(135, 23);
+            this.mskDta_nascf.Size = new System.Drawing.Size(135, 22);
             this.mskDta_nascf.TabIndex = 5;
             this.mskDta_nascf.ValidatingType = typeof(System.DateTime);
             // 
@@ -685,7 +637,7 @@
             this.mskCnh.Location = new System.Drawing.Point(6, 19);
             this.mskCnh.Mask = "00000000000";
             this.mskCnh.Name = "mskCnh";
-            this.mskCnh.Size = new System.Drawing.Size(131, 23);
+            this.mskCnh.Size = new System.Drawing.Size(131, 22);
             this.mskCnh.TabIndex = 2;
             // 
             // grbSexof
@@ -730,7 +682,7 @@
             this.txtRne.Location = new System.Drawing.Point(6, 20);
             this.txtRne.MaxLength = 15;
             this.txtRne.Name = "txtRne";
-            this.txtRne.Size = new System.Drawing.Size(127, 23);
+            this.txtRne.Size = new System.Drawing.Size(127, 22);
             this.txtRne.TabIndex = 4;
             // 
             // grbCpf
@@ -748,7 +700,7 @@
             this.mskCpf.Location = new System.Drawing.Point(6, 19);
             this.mskCpf.Mask = "000-000-000-00";
             this.mskCpf.Name = "mskCpf";
-            this.mskCpf.Size = new System.Drawing.Size(127, 23);
+            this.mskCpf.Size = new System.Drawing.Size(127, 22);
             this.mskCpf.TabIndex = 1;
             // 
             // grbEmailf
@@ -765,7 +717,7 @@
             // 
             this.txtEmailf.Location = new System.Drawing.Point(6, 20);
             this.txtEmailf.Name = "txtEmailf";
-            this.txtEmailf.Size = new System.Drawing.Size(452, 23);
+            this.txtEmailf.Size = new System.Drawing.Size(452, 22);
             this.txtEmailf.TabIndex = 3;
             // 
             // grbNome
@@ -801,7 +753,7 @@
             this.mskCelularf.Location = new System.Drawing.Point(6, 20);
             this.mskCelularf.Mask = "(00)0000-00000";
             this.mskCelularf.Name = "mskCelularf";
-            this.mskCelularf.Size = new System.Drawing.Size(121, 23);
+            this.mskCelularf.Size = new System.Drawing.Size(121, 22);
             this.mskCelularf.TabIndex = 7;
             // 
             // grbTelefonef
@@ -819,7 +771,7 @@
             this.mskTelefonef.Location = new System.Drawing.Point(6, 20);
             this.mskTelefonef.Mask = "(00)0000-0000";
             this.mskTelefonef.Name = "mskTelefonef";
-            this.mskTelefonef.Size = new System.Drawing.Size(121, 23);
+            this.mskTelefonef.Size = new System.Drawing.Size(121, 22);
             this.mskTelefonef.TabIndex = 6;
             // 
             // grbCliente
@@ -827,7 +779,7 @@
             this.grbCliente.BackColor = System.Drawing.Color.Transparent;
             this.grbCliente.Controls.Add(this.grbJuridica);
             this.grbCliente.Controls.Add(this.grbFisica);
-            this.grbCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbCliente.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbCliente.Location = new System.Drawing.Point(25, 62);
             this.grbCliente.Name = "grbCliente";
             this.grbCliente.Size = new System.Drawing.Size(335, 68);
@@ -850,7 +802,7 @@
             this.rbtPessoajur.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtPessoajur.Location = new System.Drawing.Point(6, 14);
             this.rbtPessoajur.Name = "rbtPessoajur";
-            this.rbtPessoajur.Size = new System.Drawing.Size(126, 21);
+            this.rbtPessoajur.Size = new System.Drawing.Size(126, 20);
             this.rbtPessoajur.TabIndex = 5;
             this.rbtPessoajur.TabStop = true;
             this.rbtPessoajur.Text = "Pessoa Juridica";
@@ -873,7 +825,7 @@
             this.rbtPessoafis.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtPessoafis.Location = new System.Drawing.Point(16, 14);
             this.rbtPessoafis.Name = "rbtPessoafis";
-            this.rbtPessoafis.Size = new System.Drawing.Size(113, 21);
+            this.rbtPessoafis.Size = new System.Drawing.Size(112, 20);
             this.rbtPessoafis.TabIndex = 4;
             this.rbtPessoafis.TabStop = true;
             this.rbtPessoafis.Text = "Pessoa Física";
@@ -891,42 +843,41 @@
             this.grbEnderecoF.Controls.Add(this.grbNumf);
             this.grbEnderecoF.Controls.Add(this.grbCepf);
             this.grbEnderecoF.Controls.Add(this.grbComplementof);
-            this.grbEnderecoF.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbEnderecoF.Location = new System.Drawing.Point(25, 367);
+            this.grbEnderecoF.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbEnderecoF.Location = new System.Drawing.Point(25, 364);
             this.grbEnderecoF.Name = "grbEnderecoF";
-            this.grbEnderecoF.Size = new System.Drawing.Size(887, 150);
+            this.grbEnderecoF.Size = new System.Drawing.Size(887, 167);
             this.grbEnderecoF.TabIndex = 5;
             this.grbEnderecoF.TabStop = false;
             this.grbEnderecoF.Text = "Endereço";
             // 
-            // btnConsultFis
+            // grbCepFis
             // 
-            this.btnConsultFis.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultFis.Location = new System.Drawing.Point(6, 19);
-            this.btnConsultFis.Name = "btnConsultFis";
-            this.btnConsultFis.Size = new System.Drawing.Size(89, 23);
-            this.btnConsultFis.TabIndex = 18;
-            this.btnConsultFis.Text = "Consulta";
-            this.btnConsultFis.UseVisualStyleBackColor = true;
-            this.btnConsultFis.Click += new System.EventHandler(this.btnConsultFis_Click);
+            this.grbCepFis.Controls.Add(this.btnConsultFis);
+            this.grbCepFis.Location = new System.Drawing.Point(14, 82);
+            this.grbCepFis.Name = "grbCepFis";
+            this.grbCepFis.Size = new System.Drawing.Size(100, 77);
+            this.grbCepFis.TabIndex = 18;
+            this.grbCepFis.TabStop = false;
+            this.grbCepFis.Text = "Digite o cep";
             // 
             // grbBairrof
             // 
             this.grbBairrof.Controls.Add(this.txtBairrof);
-            this.grbBairrof.Location = new System.Drawing.Point(503, 82);
+            this.grbBairrof.Location = new System.Drawing.Point(504, 101);
             this.grbBairrof.Name = "grbBairrof";
             this.grbBairrof.Size = new System.Drawing.Size(196, 54);
-            this.grbBairrof.TabIndex = 16;
+            this.grbBairrof.TabIndex = 20;
             this.grbBairrof.TabStop = false;
             this.grbBairrof.Text = "Bairro";
             // 
             // txtBairrof
             // 
-            this.txtBairrof.Location = new System.Drawing.Point(7, 19);
+            this.txtBairrof.Location = new System.Drawing.Point(6, 17);
             this.txtBairrof.MaxLength = 25;
             this.txtBairrof.Name = "txtBairrof";
-            this.txtBairrof.Size = new System.Drawing.Size(174, 23);
-            this.txtBairrof.TabIndex = 17;
+            this.txtBairrof.Size = new System.Drawing.Size(174, 22);
+            this.txtBairrof.TabIndex = 16;
             // 
             // grbRuaf
             // 
@@ -934,7 +885,7 @@
             this.grbRuaf.Location = new System.Drawing.Point(132, 23);
             this.grbRuaf.Name = "grbRuaf";
             this.grbRuaf.Size = new System.Drawing.Size(349, 53);
-            this.grbRuaf.TabIndex = 11;
+            this.grbRuaf.TabIndex = 15;
             this.grbRuaf.TabStop = false;
             this.grbRuaf.Text = "Rua / Av";
             // 
@@ -943,98 +894,26 @@
             this.txtEndf.Location = new System.Drawing.Point(12, 19);
             this.txtEndf.MaxLength = 30;
             this.txtEndf.Name = "txtEndf";
-            this.txtEndf.Size = new System.Drawing.Size(328, 23);
-            this.txtEndf.TabIndex = 12;
+            this.txtEndf.Size = new System.Drawing.Size(328, 22);
+            this.txtEndf.TabIndex = 11;
             // 
             // grbEstadof
             // 
-            this.grbEstadof.Controls.Add(this.cmbEstadof);
-            this.grbEstadof.Location = new System.Drawing.Point(724, 81);
+            this.grbEstadof.Controls.Add(this.txtEstadoF);
+            this.grbEstadof.Location = new System.Drawing.Point(724, 101);
             this.grbEstadof.Name = "grbEstadof";
             this.grbEstadof.Size = new System.Drawing.Size(147, 54);
-            this.grbEstadof.TabIndex = 17;
+            this.grbEstadof.TabIndex = 21;
             this.grbEstadof.TabStop = false;
             this.grbEstadof.Text = "Estado";
-            // 
-            // cmbEstadof
-            // 
-            this.cmbEstadof.AutoCompleteCustomSource.AddRange(new string[] {
-            "Acre",
-            "Alagoas",
-            "Amapá ",
-            "Amazonas",
-            "Bahia",
-            "Ceará",
-            "Distrito Federal",
-            "Espírito Santo",
-            "Goiás",
-            "Maranhão",
-            "Mato Grosso ",
-            "Mato Grosso do Sul",
-            "Minas Gerais",
-            "Pará",
-            "Paraíba",
-            "Paraná",
-            "Pernambuco ",
-            "Piauí",
-            "Rio de Janeiro",
-            "Rio Grande do Norte",
-            "Rio Grande do Sul",
-            "Rondônia",
-            "Roraima",
-            "Santa Catarina",
-            "São Paulo ",
-            "Sergipe",
-            "Tocantins"});
-            this.cmbEstadof.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.cmbEstadof.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.cmbEstadof.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmbEstadof.DropDownHeight = 200;
-            this.cmbEstadof.DropDownWidth = 121;
-            this.cmbEstadof.FormattingEnabled = true;
-            this.cmbEstadof.IntegralHeight = false;
-            this.cmbEstadof.ItemHeight = 16;
-            this.cmbEstadof.Items.AddRange(new object[] {
-            "Acre",
-            "Alagoas",
-            "Amapá ",
-            "Amazonas",
-            "Bahia",
-            "Ceará",
-            "Distrito Federal",
-            "Espírito Santo",
-            "Goiás",
-            "Maranhão",
-            "Mato Grosso ",
-            "Mato Grosso do Sul",
-            "Minas Gerais",
-            "Pará",
-            "Paraíba",
-            "Paraná",
-            "Pernambuco ",
-            "Piauí",
-            "Rio de Janeiro",
-            "Rio Grande do Norte",
-            "Rio Grande do Sul",
-            "Rondônia",
-            "Roraima",
-            "Santa Catarina",
-            "São Paulo ",
-            "Sergipe",
-            "Tocantins"});
-            this.cmbEstadof.Location = new System.Drawing.Point(6, 19);
-            this.cmbEstadof.MaxDropDownItems = 5;
-            this.cmbEstadof.Name = "cmbEstadof";
-            this.cmbEstadof.Size = new System.Drawing.Size(135, 24);
-            this.cmbEstadof.TabIndex = 18;
             // 
             // grbCidadef
             // 
             this.grbCidadef.Controls.Add(this.txtCidadef);
-            this.grbCidadef.Location = new System.Drawing.Point(132, 82);
+            this.grbCidadef.Location = new System.Drawing.Point(132, 101);
             this.grbCidadef.Name = "grbCidadef";
             this.grbCidadef.Size = new System.Drawing.Size(349, 55);
-            this.grbCidadef.TabIndex = 15;
+            this.grbCidadef.TabIndex = 19;
             this.grbCidadef.TabStop = false;
             this.grbCidadef.Text = "Cidade";
             // 
@@ -1043,8 +922,8 @@
             this.txtCidadef.Location = new System.Drawing.Point(12, 19);
             this.txtCidadef.MaxLength = 30;
             this.txtCidadef.Name = "txtCidadef";
-            this.txtCidadef.Size = new System.Drawing.Size(328, 23);
-            this.txtCidadef.TabIndex = 16;
+            this.txtCidadef.Size = new System.Drawing.Size(328, 22);
+            this.txtCidadef.TabIndex = 15;
             // 
             // grbNumf
             // 
@@ -1052,7 +931,7 @@
             this.grbNumf.Location = new System.Drawing.Point(504, 23);
             this.grbNumf.Name = "grbNumf";
             this.grbNumf.Size = new System.Drawing.Size(144, 53);
-            this.grbNumf.TabIndex = 12;
+            this.grbNumf.TabIndex = 16;
             this.grbNumf.TabStop = false;
             this.grbNumf.Text = "Numero";
             // 
@@ -1061,8 +940,8 @@
             this.txtNumf.Location = new System.Drawing.Point(6, 19);
             this.txtNumf.MaxLength = 10;
             this.txtNumf.Name = "txtNumf";
-            this.txtNumf.Size = new System.Drawing.Size(132, 23);
-            this.txtNumf.TabIndex = 13;
+            this.txtNumf.Size = new System.Drawing.Size(132, 22);
+            this.txtNumf.TabIndex = 12;
             // 
             // grbCepf
             // 
@@ -1079,8 +958,8 @@
             this.mskCepf.Location = new System.Drawing.Point(6, 19);
             this.mskCepf.Mask = "00000-000";
             this.mskCepf.Name = "mskCepf";
-            this.mskCepf.Size = new System.Drawing.Size(86, 23);
-            this.mskCepf.TabIndex = 15;
+            this.mskCepf.Size = new System.Drawing.Size(86, 22);
+            this.mskCepf.TabIndex = 10;
             // 
             // grbComplementof
             // 
@@ -1088,7 +967,7 @@
             this.grbComplementof.Location = new System.Drawing.Point(724, 22);
             this.grbComplementof.Name = "grbComplementof";
             this.grbComplementof.Size = new System.Drawing.Size(147, 53);
-            this.grbComplementof.TabIndex = 13;
+            this.grbComplementof.TabIndex = 17;
             this.grbComplementof.TabStop = false;
             this.grbComplementof.Text = "Complemento";
             // 
@@ -1097,8 +976,8 @@
             this.txtComplemf.Location = new System.Drawing.Point(6, 19);
             this.txtComplemf.MaxLength = 50;
             this.txtComplemf.Name = "txtComplemf";
-            this.txtComplemf.Size = new System.Drawing.Size(135, 23);
-            this.txtComplemf.TabIndex = 14;
+            this.txtComplemf.Size = new System.Drawing.Size(135, 22);
+            this.txtComplemf.TabIndex = 13;
             // 
             // grbEndj
             // 
@@ -1111,22 +990,48 @@
             this.grbEndj.Controls.Add(this.grbNumj);
             this.grbEndj.Controls.Add(this.grbCepj);
             this.grbEndj.Controls.Add(this.grbComplementoj);
-            this.grbEndj.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbEndj.Location = new System.Drawing.Point(25, 367);
+            this.grbEndj.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbEndj.Location = new System.Drawing.Point(25, 364);
             this.grbEndj.Name = "grbEndj";
-            this.grbEndj.Size = new System.Drawing.Size(887, 150);
+            this.grbEndj.Size = new System.Drawing.Size(887, 167);
             this.grbEndj.TabIndex = 5;
             this.grbEndj.TabStop = false;
             this.grbEndj.Text = "Endereço";
             this.grbEndj.Visible = false;
             // 
+            // grbCepJur
+            // 
+            this.grbCepJur.Controls.Add(this.btnConsultarCep);
+            this.grbCepJur.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbCepJur.Location = new System.Drawing.Point(14, 82);
+            this.grbCepJur.Name = "grbCepJur";
+            this.grbCepJur.Size = new System.Drawing.Size(100, 77);
+            this.grbCepJur.TabIndex = 16;
+            this.grbCepJur.TabStop = false;
+            this.grbCepJur.Text = "Digite o cep";
+            // 
+            // btnConsultarCep
+            // 
+            this.btnConsultarCep.BackColor = System.Drawing.Color.White;
+            this.btnConsultarCep.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarCep.Image = global::PIM.Properties.Resources.Lupa_OK;
+            this.btnConsultarCep.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnConsultarCep.Location = new System.Drawing.Point(6, 19);
+            this.btnConsultarCep.Name = "btnConsultarCep";
+            this.btnConsultarCep.Size = new System.Drawing.Size(81, 53);
+            this.btnConsultarCep.TabIndex = 14;
+            this.btnConsultarCep.Text = "Consultar";
+            this.btnConsultarCep.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnConsultarCep.UseVisualStyleBackColor = false;
+            this.btnConsultarCep.Click += new System.EventHandler(this.btnConsultarCep_Click);
+            // 
             // grbRuaj
             // 
             this.grbRuaj.Controls.Add(this.txtEndjur);
-            this.grbRuaj.Location = new System.Drawing.Point(126, 23);
+            this.grbRuaj.Location = new System.Drawing.Point(132, 23);
             this.grbRuaj.Name = "grbRuaj";
             this.grbRuaj.Size = new System.Drawing.Size(352, 53);
-            this.grbRuaj.TabIndex = 12;
+            this.grbRuaj.TabIndex = 13;
             this.grbRuaj.TabStop = false;
             this.grbRuaj.Text = "Rua / Av";
             // 
@@ -1134,16 +1039,16 @@
             // 
             this.txtEndjur.Location = new System.Drawing.Point(6, 19);
             this.txtEndjur.Name = "txtEndjur";
-            this.txtEndjur.Size = new System.Drawing.Size(339, 23);
-            this.txtEndjur.TabIndex = 10;
+            this.txtEndjur.Size = new System.Drawing.Size(339, 22);
+            this.txtEndjur.TabIndex = 11;
             // 
             // grbBairroj
             // 
             this.grbBairroj.Controls.Add(this.txtBairrojur);
-            this.grbBairroj.Location = new System.Drawing.Point(503, 82);
+            this.grbBairroj.Location = new System.Drawing.Point(504, 101);
             this.grbBairroj.Name = "grbBairroj";
             this.grbBairroj.Size = new System.Drawing.Size(196, 54);
-            this.grbBairroj.TabIndex = 17;
+            this.grbBairroj.TabIndex = 18;
             this.grbBairroj.TabStop = false;
             this.grbBairroj.Text = "Bairro";
             // 
@@ -1151,109 +1056,26 @@
             // 
             this.txtBairrojur.Location = new System.Drawing.Point(7, 19);
             this.txtBairrojur.Name = "txtBairrojur";
-            this.txtBairrojur.Size = new System.Drawing.Size(174, 23);
-            this.txtBairrojur.TabIndex = 15;
-            // 
-            // btnConsultarCep
-            // 
-            this.btnConsultarCep.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultarCep.Location = new System.Drawing.Point(4, 19);
-            this.btnConsultarCep.Name = "btnConsultarCep";
-            this.btnConsultarCep.Size = new System.Drawing.Size(89, 23);
-            this.btnConsultarCep.TabIndex = 36;
-            this.btnConsultarCep.Text = "Consultar";
-            this.btnConsultarCep.UseVisualStyleBackColor = true;
-            this.btnConsultarCep.Click += new System.EventHandler(this.btnConsultarCep_Click);
+            this.txtBairrojur.Size = new System.Drawing.Size(174, 22);
+            this.txtBairrojur.TabIndex = 16;
             // 
             // grbEstadoj
             // 
-            this.grbEstadoj.Controls.Add(this.cmbEstadojur);
-            this.grbEstadoj.Location = new System.Drawing.Point(714, 82);
+            this.grbEstadoj.Controls.Add(this.txtEstadojur);
+            this.grbEstadoj.Location = new System.Drawing.Point(724, 101);
             this.grbEstadoj.Name = "grbEstadoj";
             this.grbEstadoj.Size = new System.Drawing.Size(147, 54);
-            this.grbEstadoj.TabIndex = 18;
+            this.grbEstadoj.TabIndex = 19;
             this.grbEstadoj.TabStop = false;
             this.grbEstadoj.Text = "Estado";
-            // 
-            // cmbEstadojur
-            // 
-            this.cmbEstadojur.AutoCompleteCustomSource.AddRange(new string[] {
-            "Acre",
-            "Alagoas",
-            "Amapá ",
-            "Amazonas",
-            "Bahia",
-            "Ceará",
-            "Distrito Federal",
-            "Espírito Santo",
-            "Goiás",
-            "Maranhão",
-            "Mato Grosso ",
-            "Mato Grosso do Sul",
-            "Minas Gerais",
-            "Pará",
-            "Paraíba",
-            "Paraná",
-            "Pernambuco ",
-            "Piauí",
-            "Rio de Janeiro",
-            "Rio Grande do Norte",
-            "Rio Grande do Sul",
-            "Rondônia",
-            "Roraima",
-            "Santa Catarina",
-            "São Paulo ",
-            "Sergipe",
-            "Tocantins"});
-            this.cmbEstadojur.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.cmbEstadojur.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cmbEstadojur.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmbEstadojur.DropDownHeight = 200;
-            this.cmbEstadojur.DropDownWidth = 121;
-            this.cmbEstadojur.FormattingEnabled = true;
-            this.cmbEstadojur.IntegralHeight = false;
-            this.cmbEstadojur.ItemHeight = 16;
-            this.cmbEstadojur.Items.AddRange(new object[] {
-            "Acre",
-            "Alagoas",
-            "Amapá ",
-            "Amazonas",
-            "Bahia",
-            "Ceará",
-            "Distrito Federal",
-            "Espírito Santo",
-            "Goiás",
-            "Maranhão",
-            "Mato Grosso ",
-            "Mato Grosso do Sul",
-            "Minas Gerais",
-            "Pará",
-            "Paraíba",
-            "Paraná",
-            "Pernambuco ",
-            "Piauí",
-            "Rio de Janeiro",
-            "Rio Grande do Norte",
-            "Rio Grande do Sul",
-            "Rondônia",
-            "Roraima",
-            "Santa Catarina",
-            "São Paulo ",
-            "Sergipe",
-            "Tocantins"});
-            this.cmbEstadojur.Location = new System.Drawing.Point(6, 19);
-            this.cmbEstadojur.MaxDropDownItems = 5;
-            this.cmbEstadojur.Name = "cmbEstadojur";
-            this.cmbEstadojur.Size = new System.Drawing.Size(135, 24);
-            this.cmbEstadojur.TabIndex = 16;
             // 
             // grbCidadej
             // 
             this.grbCidadej.Controls.Add(this.txtCidadejur);
-            this.grbCidadej.Location = new System.Drawing.Point(126, 82);
+            this.grbCidadej.Location = new System.Drawing.Point(132, 101);
             this.grbCidadej.Name = "grbCidadej";
             this.grbCidadej.Size = new System.Drawing.Size(352, 54);
-            this.grbCidadej.TabIndex = 16;
+            this.grbCidadej.TabIndex = 17;
             this.grbCidadej.TabStop = false;
             this.grbCidadej.Text = "Cidade";
             // 
@@ -1261,8 +1083,8 @@
             // 
             this.txtCidadejur.Location = new System.Drawing.Point(6, 19);
             this.txtCidadejur.Name = "txtCidadejur";
-            this.txtCidadejur.Size = new System.Drawing.Size(340, 23);
-            this.txtCidadejur.TabIndex = 14;
+            this.txtCidadejur.Size = new System.Drawing.Size(340, 22);
+            this.txtCidadejur.TabIndex = 15;
             // 
             // grbNumj
             // 
@@ -1270,7 +1092,7 @@
             this.grbNumj.Location = new System.Drawing.Point(504, 23);
             this.grbNumj.Name = "grbNumj";
             this.grbNumj.Size = new System.Drawing.Size(144, 53);
-            this.grbNumj.TabIndex = 13;
+            this.grbNumj.TabIndex = 14;
             this.grbNumj.TabStop = false;
             this.grbNumj.Text = "Numero";
             // 
@@ -1279,16 +1101,16 @@
             this.txtNumjur.Location = new System.Drawing.Point(6, 19);
             this.txtNumjur.MaxLength = 10;
             this.txtNumjur.Name = "txtNumjur";
-            this.txtNumjur.Size = new System.Drawing.Size(132, 23);
-            this.txtNumjur.TabIndex = 11;
+            this.txtNumjur.Size = new System.Drawing.Size(132, 22);
+            this.txtNumjur.TabIndex = 12;
             // 
             // grbCepj
             // 
             this.grbCepj.Controls.Add(this.mskCepjur);
-            this.grbCepj.Location = new System.Drawing.Point(6, 22);
+            this.grbCepj.Location = new System.Drawing.Point(14, 22);
             this.grbCepj.Name = "grbCepj";
             this.grbCepj.Size = new System.Drawing.Size(101, 54);
-            this.grbCepj.TabIndex = 15;
+            this.grbCepj.TabIndex = 12;
             this.grbCepj.TabStop = false;
             this.grbCepj.Text = "CEP";
             // 
@@ -1297,16 +1119,16 @@
             this.mskCepjur.Location = new System.Drawing.Point(6, 19);
             this.mskCepjur.Mask = "00000-000";
             this.mskCepjur.Name = "mskCepjur";
-            this.mskCepjur.Size = new System.Drawing.Size(86, 23);
-            this.mskCepjur.TabIndex = 13;
+            this.mskCepjur.Size = new System.Drawing.Size(86, 22);
+            this.mskCepjur.TabIndex = 10;
             // 
             // grbComplementoj
             // 
             this.grbComplementoj.Controls.Add(this.txtComplemjur);
-            this.grbComplementoj.Location = new System.Drawing.Point(714, 23);
+            this.grbComplementoj.Location = new System.Drawing.Point(724, 23);
             this.grbComplementoj.Name = "grbComplementoj";
             this.grbComplementoj.Size = new System.Drawing.Size(147, 53);
-            this.grbComplementoj.TabIndex = 14;
+            this.grbComplementoj.TabIndex = 15;
             this.grbComplementoj.TabStop = false;
             this.grbComplementoj.Text = "Complemento";
             // 
@@ -1315,18 +1137,18 @@
             this.txtComplemjur.Location = new System.Drawing.Point(6, 19);
             this.txtComplemjur.MaxLength = 50;
             this.txtComplemjur.Name = "txtComplemjur";
-            this.txtComplemjur.Size = new System.Drawing.Size(135, 23);
-            this.txtComplemjur.TabIndex = 12;
+            this.txtComplemjur.Size = new System.Drawing.Size(135, 22);
+            this.txtComplemjur.TabIndex = 13;
             // 
             // grbInfof
             // 
             this.grbInfof.BackColor = System.Drawing.Color.Transparent;
             this.grbInfof.Controls.Add(this.txtobsf);
-            this.grbInfof.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbInfof.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbInfof.Location = new System.Drawing.Point(25, 532);
             this.grbInfof.Name = "grbInfof";
             this.grbInfof.Size = new System.Drawing.Size(421, 124);
-            this.grbInfof.TabIndex = 35;
+            this.grbInfof.TabIndex = 22;
             this.grbInfof.TabStop = false;
             this.grbInfof.Text = "Observações";
             // 
@@ -1337,17 +1159,17 @@
             this.txtobsf.Multiline = true;
             this.txtobsf.Name = "txtobsf";
             this.txtobsf.Size = new System.Drawing.Size(406, 99);
-            this.txtobsf.TabIndex = 19;
+            this.txtobsf.TabIndex = 18;
             // 
             // grbInfoj
             // 
             this.grbInfoj.BackColor = System.Drawing.Color.Transparent;
             this.grbInfoj.Controls.Add(this.txtobsj);
-            this.grbInfoj.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbInfoj.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbInfoj.Location = new System.Drawing.Point(25, 532);
             this.grbInfoj.Name = "grbInfoj";
             this.grbInfoj.Size = new System.Drawing.Size(421, 124);
-            this.grbInfoj.TabIndex = 6;
+            this.grbInfoj.TabIndex = 20;
             this.grbInfoj.TabStop = false;
             this.grbInfoj.Text = "Observações";
             this.grbInfoj.Visible = false;
@@ -1359,28 +1181,84 @@
             this.txtobsj.Multiline = true;
             this.txtobsj.Name = "txtobsj";
             this.txtobsj.Size = new System.Drawing.Size(406, 99);
-            this.txtobsj.TabIndex = 17;
+            this.txtobsj.TabIndex = 18;
             // 
-            // grbCepJur
+            // btnConsultFis
             // 
-            this.grbCepJur.Controls.Add(this.btnConsultarCep);
-            this.grbCepJur.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbCepJur.Location = new System.Drawing.Point(6, 82);
-            this.grbCepJur.Name = "grbCepJur";
-            this.grbCepJur.Size = new System.Drawing.Size(101, 53);
-            this.grbCepJur.TabIndex = 19;
-            this.grbCepJur.TabStop = false;
-            this.grbCepJur.Text = "Digite o cep";
+            this.btnConsultFis.BackColor = System.Drawing.Color.White;
+            this.btnConsultFis.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultFis.Image = global::PIM.Properties.Resources.Lupa_OK;
+            this.btnConsultFis.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnConsultFis.Location = new System.Drawing.Point(6, 19);
+            this.btnConsultFis.Name = "btnConsultFis";
+            this.btnConsultFis.Size = new System.Drawing.Size(81, 53);
+            this.btnConsultFis.TabIndex = 14;
+            this.btnConsultFis.Text = "Consulta";
+            this.btnConsultFis.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnConsultFis.UseVisualStyleBackColor = false;
+            this.btnConsultFis.Click += new System.EventHandler(this.btnConsultFis_Click);
             // 
-            // grbCepFis
+            // btnLimpar
             // 
-            this.grbCepFis.Controls.Add(this.btnConsultFis);
-            this.grbCepFis.Location = new System.Drawing.Point(14, 82);
-            this.grbCepFis.Name = "grbCepFis";
-            this.grbCepFis.Size = new System.Drawing.Size(100, 54);
-            this.grbCepFis.TabIndex = 18;
-            this.grbCepFis.TabStop = false;
-            this.grbCepFis.Text = "Digite o cep";
+            this.btnLimpar.BackColor = System.Drawing.Color.White;
+            this.btnLimpar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLimpar.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpar.Image = ((System.Drawing.Image)(resources.GetObject("btnLimpar.Image")));
+            this.btnLimpar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnLimpar.Location = new System.Drawing.Point(127, 3);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(81, 53);
+            this.btnLimpar.TabIndex = 1;
+            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.BackColor = System.Drawing.Color.White;
+            this.btnSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalvar.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.Image")));
+            this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnSalvar.Location = new System.Drawing.Point(25, 3);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(81, 53);
+            this.btnSalvar.TabIndex = 0;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
+            // BtnCancelaCliente
+            // 
+            this.BtnCancelaCliente.BackColor = System.Drawing.Color.White;
+            this.BtnCancelaCliente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnCancelaCliente.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCancelaCliente.Image = ((System.Drawing.Image)(resources.GetObject("BtnCancelaCliente.Image")));
+            this.BtnCancelaCliente.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.BtnCancelaCliente.Location = new System.Drawing.Point(230, 3);
+            this.BtnCancelaCliente.Name = "BtnCancelaCliente";
+            this.BtnCancelaCliente.Size = new System.Drawing.Size(81, 53);
+            this.BtnCancelaCliente.TabIndex = 2;
+            this.BtnCancelaCliente.Text = "Cancelar";
+            this.BtnCancelaCliente.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnCancelaCliente.UseVisualStyleBackColor = false;
+            this.BtnCancelaCliente.Click += new System.EventHandler(this.BtnCancelaCliente_Click);
+            // 
+            // txtEstadoF
+            // 
+            this.txtEstadoF.Location = new System.Drawing.Point(6, 17);
+            this.txtEstadoF.Name = "txtEstadoF";
+            this.txtEstadoF.Size = new System.Drawing.Size(135, 22);
+            this.txtEstadoF.TabIndex = 17;
+            // 
+            // txtEstadojur
+            // 
+            this.txtEstadojur.Location = new System.Drawing.Point(6, 19);
+            this.txtEstadojur.Name = "txtEstadojur";
+            this.txtEstadojur.Size = new System.Drawing.Size(135, 22);
+            this.txtEstadojur.TabIndex = 17;
             // 
             // CadastroCliente
             // 
@@ -1401,6 +1279,7 @@
             this.Controls.Add(this.BtnCancelaCliente);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "CadastroCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Clientes";
@@ -1460,11 +1339,13 @@
             this.grbFisica.ResumeLayout(false);
             this.grbFisica.PerformLayout();
             this.grbEnderecoF.ResumeLayout(false);
+            this.grbCepFis.ResumeLayout(false);
             this.grbBairrof.ResumeLayout(false);
             this.grbBairrof.PerformLayout();
             this.grbRuaf.ResumeLayout(false);
             this.grbRuaf.PerformLayout();
             this.grbEstadof.ResumeLayout(false);
+            this.grbEstadof.PerformLayout();
             this.grbCidadef.ResumeLayout(false);
             this.grbCidadef.PerformLayout();
             this.grbNumf.ResumeLayout(false);
@@ -1474,11 +1355,13 @@
             this.grbComplementof.ResumeLayout(false);
             this.grbComplementof.PerformLayout();
             this.grbEndj.ResumeLayout(false);
+            this.grbCepJur.ResumeLayout(false);
             this.grbRuaj.ResumeLayout(false);
             this.grbRuaj.PerformLayout();
             this.grbBairroj.ResumeLayout(false);
             this.grbBairroj.PerformLayout();
             this.grbEstadoj.ResumeLayout(false);
+            this.grbEstadoj.PerformLayout();
             this.grbCidadej.ResumeLayout(false);
             this.grbCidadej.PerformLayout();
             this.grbNumj.ResumeLayout(false);
@@ -1491,8 +1374,6 @@
             this.grbInfof.PerformLayout();
             this.grbInfoj.ResumeLayout(false);
             this.grbInfoj.PerformLayout();
-            this.grbCepJur.ResumeLayout(false);
-            this.grbCepFis.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1560,7 +1441,6 @@
         private System.Windows.Forms.GroupBox grbBairrof;
         private System.Windows.Forms.TextBox txtBairrof;
         private System.Windows.Forms.GroupBox grbEstadof;
-        private System.Windows.Forms.ComboBox cmbEstadof;
         private System.Windows.Forms.GroupBox grbCidadef;
         private System.Windows.Forms.TextBox txtCidadef;
         private System.Windows.Forms.GroupBox grbRuaf;
@@ -1575,7 +1455,6 @@
         private System.Windows.Forms.GroupBox grbBairroj;
         private System.Windows.Forms.TextBox txtBairrojur;
         private System.Windows.Forms.GroupBox grbEstadoj;
-        private System.Windows.Forms.ComboBox cmbEstadojur;
         private System.Windows.Forms.GroupBox grbCidadej;
         private System.Windows.Forms.TextBox txtCidadejur;
         private System.Windows.Forms.GroupBox grbRuaj;
@@ -1598,5 +1477,7 @@
         private System.Windows.Forms.Button btnConsultFis;
         private System.Windows.Forms.GroupBox grbCepFis;
         private System.Windows.Forms.GroupBox grbCepJur;
+        private System.Windows.Forms.TextBox txtEstadoF;
+        private System.Windows.Forms.TextBox txtEstadojur;
     }
 }

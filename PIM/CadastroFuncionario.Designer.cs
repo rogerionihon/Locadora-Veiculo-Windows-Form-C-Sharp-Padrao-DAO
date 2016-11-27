@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroFuncionario));
             this.BtnCancelaFuncionario = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rbtInativo = new System.Windows.Forms.RadioButton();
             this.rbtAtivo = new System.Windows.Forms.RadioButton();
@@ -54,8 +53,10 @@
             this.mskTel = new System.Windows.Forms.MaskedTextBox();
             this.mskCel = new System.Windows.Forms.MaskedTextBox();
             this.grbFuncionario = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.grbFuncionario.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // BtnCancelaFuncionario
@@ -76,19 +77,6 @@
             this.BtnCancelaFuncionario.UseVisualStyleBackColor = false;
             this.BtnCancelaFuncionario.Click += new System.EventHandler(this.BtnCancelaFuncionario_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(73, 105);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(130, 16);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Data de cadastro:";
-            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
@@ -96,12 +84,12 @@
             this.groupBox1.Controls.Add(this.rbtAtivo);
             this.groupBox1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.groupBox1.Location = new System.Drawing.Point(335, 87);
+            this.groupBox1.Location = new System.Drawing.Point(278, 103);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(226, 58);
-            this.groupBox1.TabIndex = 11;
+            this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Status";
             // 
@@ -112,7 +100,7 @@
             this.rbtInativo.Location = new System.Drawing.Point(138, 28);
             this.rbtInativo.Name = "rbtInativo";
             this.rbtInativo.Size = new System.Drawing.Size(74, 20);
-            this.rbtInativo.TabIndex = 1;
+            this.rbtInativo.TabIndex = 13;
             this.rbtInativo.TabStop = true;
             this.rbtInativo.Text = "Inativo";
             this.rbtInativo.UseVisualStyleBackColor = true;
@@ -124,7 +112,7 @@
             this.rbtAtivo.Location = new System.Drawing.Point(25, 28);
             this.rbtAtivo.Name = "rbtAtivo";
             this.rbtAtivo.Size = new System.Drawing.Size(62, 20);
-            this.rbtAtivo.TabIndex = 0;
+            this.rbtAtivo.TabIndex = 12;
             this.rbtAtivo.TabStop = true;
             this.rbtAtivo.Text = "Ativo";
             this.rbtAtivo.UseVisualStyleBackColor = true;
@@ -133,11 +121,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label3.Location = new System.Drawing.Point(22, 36);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 16);
+            this.label3.Size = new System.Drawing.Size(49, 16);
             this.label3.TabIndex = 10;
             this.label3.Text = "Nome:";
             // 
@@ -154,11 +142,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label4.Location = new System.Drawing.Point(297, 138);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 16);
+            this.label4.Size = new System.Drawing.Size(48, 16);
             this.label4.TabIndex = 12;
             this.label4.Text = "Login:";
             // 
@@ -175,11 +163,11 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label5.Location = new System.Drawing.Point(34, 141);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 16);
+            this.label5.Size = new System.Drawing.Size(38, 16);
             this.label5.TabIndex = 15;
             this.label5.Text = "CPF:";
             // 
@@ -197,17 +185,17 @@
             // 
             this.mskDataCadastro.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskDataCadastro.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.mskDataCadastro.Location = new System.Drawing.Point(76, 137);
+            this.mskDataCadastro.Location = new System.Drawing.Point(16, 28);
             this.mskDataCadastro.Mask = "00/00/0000";
             this.mskDataCadastro.Name = "mskDataCadastro";
             this.mskDataCadastro.Size = new System.Drawing.Size(100, 23);
-            this.mskDataCadastro.TabIndex = 17;
+            this.mskDataCadastro.TabIndex = 11;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label6.Location = new System.Drawing.Point(18, 169);
             this.label6.Name = "label6";
@@ -229,7 +217,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label7.Location = new System.Drawing.Point(220, 169);
             this.label7.Name = "label7";
@@ -251,11 +239,11 @@
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label9.Location = new System.Drawing.Point(20, 75);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(51, 16);
+            this.label9.Size = new System.Drawing.Size(52, 16);
             this.label9.TabIndex = 24;
             this.label9.Text = "E-mail:";
             // 
@@ -304,11 +292,11 @@
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label11.Location = new System.Drawing.Point(1, 104);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(66, 16);
+            this.label11.Size = new System.Drawing.Size(67, 16);
             this.label11.TabIndex = 30;
             this.label11.Text = "Telefone:";
             // 
@@ -316,11 +304,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label1.Location = new System.Drawing.Point(286, 104);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 16);
+            this.label1.Size = new System.Drawing.Size(58, 16);
             this.label1.TabIndex = 31;
             this.label1.Text = "Celular:";
             // 
@@ -362,27 +350,37 @@
             this.grbFuncionario.Controls.Add(this.txtConfirmaSenha);
             this.grbFuncionario.Location = new System.Drawing.Point(16, 186);
             this.grbFuncionario.Name = "grbFuncionario";
-            this.grbFuncionario.Size = new System.Drawing.Size(627, 253);
-            this.grbFuncionario.TabIndex = 32;
+            this.grbFuncionario.Size = new System.Drawing.Size(488, 214);
+            this.grbFuncionario.TabIndex = 0;
             this.grbFuncionario.TabStop = false;
             this.grbFuncionario.Text = "Dados pessoais";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.mskDataCadastro);
+            this.groupBox2.Location = new System.Drawing.Point(16, 87);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(181, 74);
+            this.groupBox2.TabIndex = 11;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Data de cadastro";
             // 
             // CadastroFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(832, 570);
+            this.ClientSize = new System.Drawing.Size(533, 448);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.grbFuncionario);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnLimpar);
-            this.Controls.Add(this.mskDataCadastro);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.BtnCancelaFuncionario);
             this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "CadastroFuncionario";
             this.Text = "Cadastro de Funcionários";
             this.Load += new System.EventHandler(this.CadastroFuncionario_Load);
@@ -390,15 +388,15 @@
             this.groupBox1.PerformLayout();
             this.grbFuncionario.ResumeLayout(false);
             this.grbFuncionario.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Button BtnCancelaFuncionario;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton rbtInativo;
         private System.Windows.Forms.RadioButton rbtAtivo;
@@ -422,5 +420,6 @@
         private System.Windows.Forms.MaskedTextBox mskTel;
         private System.Windows.Forms.MaskedTextBox mskCel;
         private System.Windows.Forms.GroupBox grbFuncionario;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }

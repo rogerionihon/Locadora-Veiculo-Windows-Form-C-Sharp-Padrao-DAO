@@ -56,7 +56,7 @@
             this.txtLogin.Location = new System.Drawing.Point(319, 262);
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(247, 20);
-            this.txtLogin.TabIndex = 1;
+            this.txtLogin.TabIndex = 0;
             // 
             // label2
             // 
@@ -76,7 +76,7 @@
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(247, 20);
-            this.txtSenha.TabIndex = 3;
+            this.txtSenha.TabIndex = 1;
             // 
             // btnLogar
             // 
@@ -88,7 +88,7 @@
             this.btnLogar.Location = new System.Drawing.Point(319, 350);
             this.btnLogar.Name = "btnLogar";
             this.btnLogar.Size = new System.Drawing.Size(93, 27);
-            this.btnLogar.TabIndex = 4;
+            this.btnLogar.TabIndex = 2;
             this.btnLogar.Text = "Logar";
             this.btnLogar.UseVisualStyleBackColor = false;
             this.btnLogar.Click += new System.EventHandler(this.btnLogar_Click);
@@ -103,7 +103,7 @@
             this.btnSair.Location = new System.Drawing.Point(473, 350);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(93, 27);
-            this.btnSair.TabIndex = 5;
+            this.btnSair.TabIndex = 3;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = false;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
@@ -133,6 +133,7 @@
             this.Controls.Add(this.txtLogin);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

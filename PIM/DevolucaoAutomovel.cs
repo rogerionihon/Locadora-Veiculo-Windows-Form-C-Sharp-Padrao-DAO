@@ -388,6 +388,13 @@ namespace PIM
             {
                 MessageBox.Show("Nao foi possivel realizar a devolução, verifique e tente novamente!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        } // fecha o metodo
+
+        private void txtBuscaCod_TextChanged(object sender, EventArgs e)
+        {
+            DataView dv = new DataView(dt); 
+            dv.RowFilter = "Convert(loc_id, 'System.String') LIKE '" + txtBuscaCod.Text + "%'"; // compara o valor digitado no campo txtBuscaCod com o valor que esta na coluna loc_id
+            gridView.DataSource = dv;
         }// fecha o metodo
     } // fecha a classe
 } // fecha o namespace
