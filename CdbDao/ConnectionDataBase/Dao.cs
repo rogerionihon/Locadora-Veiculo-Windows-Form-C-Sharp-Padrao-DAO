@@ -59,9 +59,9 @@ namespace CdbDao.ConnectionDataBase
 
                 MessageBox.Show("Cadastro realizado com sucesso");// exibe a mensagem quando a operacao de cadastro é realizado com sucesso
             } // fecha o try
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show("Nao foi possivel se conectar a base de dados: " + ex.ToString());// exibe a mensagem quando a operacao de cadastro nao é realizada com sucesso
+                MessageBox.Show("Nao foi possivel se conectar a base de dados!", MessageBoxButtons.OK.ToString()); // exibe a mensagem quando ocorrer algum erro na operacao
             }
             finally
             {
@@ -107,9 +107,9 @@ namespace CdbDao.ConnectionDataBase
 
                 MessageBox.Show("Dados Atualizados com sucesso");// exibe a mensagem quando a operacao de atualizacao é realizado com sucesso
             } // fecha o try
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show("Nao foi possivel se conectar a base de dados: " + ex.ToString());// exibe a mensagem quando a operacao de atualizacao nao é realizada com sucesso
+                MessageBox.Show("Nao foi possivel se conectar a base de dados!", MessageBoxButtons.OK.ToString()); // exibe a mensagem quando ocorrer algum erro na operacao
             }
             finally
             {
@@ -136,9 +136,9 @@ namespace CdbDao.ConnectionDataBase
 
                 return data; // returno do datatable
             } // fecha o try
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show("Nao foi possivel se conectar a base de dados: " + ex.ToString()); // exibe a mensagem quando a operacao de busca nao é realizada com sucesso
+                MessageBox.Show("Nao foi possivel se conectar a base de dados!", MessageBoxButtons.OK.ToString()); // exibe a mensagem quando ocorrer algum erro na operacao
                 return data; // returno do datatable
             }
             finally
@@ -166,9 +166,9 @@ namespace CdbDao.ConnectionDataBase
 
                 return data; // returno do datatable
             } // fecha o try
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show("Nao foi possivel se conectar a base de dados: " + ex.ToString()); // exibe a mensagem quando a operacao de busca nao é realizada com sucesso
+                MessageBox.Show("Nao foi possivel se conectar a base de dados!", MessageBoxButtons.OK.ToString()); // exibe a mensagem quando ocorrer algum erro na operacao
                 return data; // returno do datatable
             }
             finally
@@ -193,9 +193,9 @@ namespace CdbDao.ConnectionDataBase
                 da.Fill(data);
                 return data; // retorno do datatable
             }// fecha o try
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show("Nao foi possivel se conectar a base de dados: " + ex.ToString()); // exibe a mensagem quando a operacao de busca nao é realizada com sucesso
+                MessageBox.Show("Nao foi possivel se conectar a base de dados!", MessageBoxButtons.OK.ToString()); // exibe a mensagem quando ocorrer algum erro na operacao
                 return data; // returno do datatable
             }
             finally
@@ -239,9 +239,9 @@ namespace CdbDao.ConnectionDataBase
 
                 MessageBox.Show("Cadastro Realizado com Sucesso!!");// exibe a mensagem quando a operacao de cadastro é realizado com sucesso
             } // fecha o try
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show("Nao foi possivel se conectar a base de dados: " + ex.ToString()); // exibe a mensagem quando a operacao de cadastro nao é realizada com sucesso
+                MessageBox.Show("Nao foi possivel se conectar a base de dados!", MessageBoxButtons.OK.ToString()); // exibe a mensagem quando ocorrer algum erro na operacao
             }
             finally
             {
@@ -285,9 +285,9 @@ namespace CdbDao.ConnectionDataBase
 
                 MessageBox.Show("Dados Atualizados com Sucesso!!");// exibe a mensagem quando a operacao de cadastro é realizado com sucesso
             } //fecha o try
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show("Nao foi possivel se conectar a base de dados: " + ex.ToString()); // exibe a mensagem quando a operacao de cadastro nao é realizada com sucesso
+                MessageBox.Show("Nao foi possivel se conectar a base de dados!", MessageBoxButtons.OK.ToString()); // exibe a mensagem quando ocorrer algum erro na operacao
             }
             finally
             {
@@ -295,7 +295,7 @@ namespace CdbDao.ConnectionDataBase
             }
         } //fecha o metodo
 
-        //Metodo responsavel pela insercao dos dados da dos veiculos no banco de dados
+        //Metodo responsavel pela insercao dos dados da dos veiculos 
         public void InsertVeiculo(Veiculo veiculo)
         {
             string connectionString = ConfigurationManager.ConnectionStrings["Locadoraveiculos"].ConnectionString; // string de conexao configurada no app.config
@@ -331,9 +331,9 @@ namespace CdbDao.ConnectionDataBase
                 MessageBox.Show("Cadastro Realizado com Sucesso!!"); // exibe a mensagem quando a operacao de cadastro é realizado com sucesso
 
             } // fecha o try
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show("Nao foi possivel se conectar a base de dados: " + ex.ToString()); // exibe a mensagem quando a operacao de cadastro nao é realizada com sucesso
+                MessageBox.Show("Nao foi possivel se conectar a base de dados!", MessageBoxButtons.OK.ToString()); // exibe a mensagem quando ocorrer algum erro na operacao
             }
             finally
             {
@@ -378,9 +378,9 @@ namespace CdbDao.ConnectionDataBase
                 MessageBox.Show("Atualizacao realizada com Sucesso!!"); // exibe a mensagem quando a operacao de atualizacao é realizado com sucesso
 
             } // fecha o try
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show("Nao foi possivel se conectar a base de dados: " + ex.ToString()); // exibe a mensagem quando a operacao de atualizacao nao é realizada com sucesso
+                MessageBox.Show("Nao foi possivel se conectar a base de dados!", MessageBoxButtons.OK.ToString()); // exibe a mensagem quando ocorrer algum erro na operacao
             }
             finally
             {
@@ -432,7 +432,7 @@ namespace CdbDao.ConnectionDataBase
             }
             catch (Exception)
             {
-                MessageBox.Show("Nao foi possivel realizar o checkin, tente novamente", MessageBoxButtons.OK.ToString()); // exibe a mensagem quando a operacao de checkin nao é realizada com sucesso
+                MessageBox.Show("Nao foi possivel se conectar a base de dados!", MessageBoxButtons.OK.ToString()); // exibe a mensagem quando ocorrer algum erro na operacao
             }
             finally
             {
@@ -463,7 +463,7 @@ namespace CdbDao.ConnectionDataBase
             }
             catch (Exception)
             {
-                MessageBox.Show("Nao foi possivel atualizar o status, tente novamente", MessageBoxButtons.OK.ToString()); // exibe a mensagem quando a operacao de checkin nao é realizada com sucesso
+                MessageBox.Show("Nao foi possivel se conectar a base de dados!", MessageBoxButtons.OK.ToString()); // exibe a mensagem quando ocorrer algum erro na operacao
             }
             finally
             {
@@ -487,9 +487,9 @@ namespace CdbDao.ConnectionDataBase
                 da.Fill(data);
                 return data; // retorno do datatable
             }// fecha o try
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show("Nao foi possivel se conectar a base de dados: " + ex.ToString()); // exibe a mensagem quando a operacao de busca nao é realizada com sucesso
+                MessageBox.Show("Nao foi possivel se conectar a base de dados!", MessageBoxButtons.OK.ToString()); // exibe a mensagem quando ocorrer algum erro na operacao
                 return data; // returno do datatable
             }
             finally
@@ -508,7 +508,7 @@ namespace CdbDao.ConnectionDataBase
 
             try
             {
-                connectionExibirVeiculo.Open();
+                connectionExibirVeiculo.Open(); // abre a conexao
                 MySqlCommand commandList = new MySqlCommand(queryExibirVeiculo, connectionExibirVeiculo);
                 MySqlDataReader leitor = commandList.ExecuteReader();
                 data = new DataTable();
@@ -531,24 +531,20 @@ namespace CdbDao.ConnectionDataBase
                 row["car_cidade"] = "";
                 row["car_uf"] = "";
                 row["car_obs"] = "";
-                // row["car_idf_ativo"] = "";
                 data.Rows.InsertAt(row, 0);
-
 
                 leitor.Close();
                 leitor.Dispose();
                 return data;
-
-
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show("Nao foi possivel carregar os dados: " + ex.ToString(), MessageBoxButtons.OK.ToString());
+                MessageBox.Show("Nao foi possivel se conectar a base de dados!", MessageBoxButtons.OK.ToString()); // exibe a mensagem quando ocorrer algum erro na operacao
                 return data;
             }
             finally
             {
-                connectionExibirVeiculo.Close();
+                connectionExibirVeiculo.Close(); // fecha a conexao
             }
         } // fecha o metodo datatable listarVeiculo
 
@@ -582,7 +578,7 @@ namespace CdbDao.ConnectionDataBase
             }
             catch (Exception)
             {
-                MessageBox.Show("Nao foi possivel realizar o cadastro, tente novamente", MessageBoxButtons.OK.ToString()); // exibe a mensagem quando a operacao de cadastro nao é realizada com sucesso
+                MessageBox.Show("Nao foi possivel se conectar a base de dados!", MessageBoxButtons.OK.ToString()); // exibe a mensagem quando ocorrer algum erro na operacao
             }
             finally
             {
@@ -609,9 +605,9 @@ namespace CdbDao.ConnectionDataBase
 
                 return data; // returno do datatable
             } // fecha o try
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show("Nao foi possivel se conectar a base de dados: " + ex.ToString()); // exibe a mensagem quando a operacao de busca nao é realizada com sucesso
+                MessageBox.Show("Nao foi possivel se conectar a base de dados!", MessageBoxButtons.OK.ToString()); // exibe a mensagem quando ocorrer algum erro na operacao
                 return data; // returno do datatable
             }
             finally
@@ -660,6 +656,7 @@ namespace CdbDao.ConnectionDataBase
             } // fecha o try
             catch (MySqlException)
             {
+                MessageBox.Show("Nao foi possivel se conectar a base de dados!", MessageBoxButtons.OK.ToString()); // exibe a mensagem quando ocorrer algum erro na operacao
                 return false;
             }
             finally
@@ -699,7 +696,7 @@ namespace CdbDao.ConnectionDataBase
             }
             catch (Exception)
             {
-                MessageBox.Show("Nao foi possivel realizar a atualizacao, tente novamente", MessageBoxButtons.OK.ToString()); // exibe a mensagem quando a operacao de cadastro nao é realizada com sucesso
+                MessageBox.Show("Nao foi possivel se conectar a base de dados!", MessageBoxButtons.OK.ToString()); // exibe a mensagem quando ocorrer algum erro na operacao
             }
             finally
             {
@@ -764,7 +761,7 @@ namespace CdbDao.ConnectionDataBase
         public List<Cliente> ExibiRelatorioClienteFisico()
         {
             string connectionString = ConfigurationManager.ConnectionStrings["Locadoraveiculos"].ConnectionString; // string de conexao configurada no app.config
-            string queryExibirPessoaF = "SELECT pf_id, pf_nome, pf_cpf, pf_rne, pf_cnh, pf_dta_nasc, pf_mail, pf_telefone, pf_celular, pf_sexo, pf_est_civil, pf_endereco, pf_num_casa, pf_complemento, pf_cep, pf_cidade, pf_bairro, pf_uf, pf_obs, pf_idf_ativo FROM pessoafisica ORDER BY pf_nome DESC";
+            string queryExibirPessoaF = "SELECT pf_id, pf_nome, pf_cpf, pf_rne, pf_cnh, pf_dta_nasc, pf_mail, pf_telefone, pf_celular, pf_sexo, pf_est_civil, pf_endereco, pf_num_casa, pf_complemento, pf_cep, pf_cidade, pf_bairro, pf_uf, pf_obs, pf_idf_ativo FROM pessoafisica ORDER BY pf_nome ASC";
 
             MySqlConnection connection = new MySqlConnection(connectionString); // cria objeto de connexao que recebe como parametro a string de connexao
 
@@ -821,7 +818,7 @@ namespace CdbDao.ConnectionDataBase
         public List<Cliente> ExibiRelatorioClienteJuridico()
         {
             string connectionString = ConfigurationManager.ConnectionStrings["Locadoraveiculos"].ConnectionString; // string de conexao configurada no app.config
-            string queryExibirPessoaJ = "SELECT pj_id, pj_raz_soc, pj_cnpj, pj_nom_fan, pj_insc_est, pj_insc_mun, pj_mail, pj_telefone, pj_celular, pj_endereco, pj_num_casa, pj_complemento, pj_cep, pj_cidade, pj_bairro, pj_uf, pj_obs, pj_idf_ativo FROM pessoajuridica ORDER BY pj_raz_soc DESC";
+            string queryExibirPessoaJ = "SELECT pj_id, pj_raz_soc, pj_cnpj, pj_nom_fan, pj_insc_est, pj_insc_mun, pj_mail, pj_telefone, pj_celular, pj_endereco, pj_num_casa, pj_complemento, pj_cep, pj_cidade, pj_bairro, pj_uf, pj_obs, pj_idf_ativo FROM pessoajuridica ORDER BY pj_raz_soc ASC";
 
             MySqlConnection connection = new MySqlConnection(connectionString); // cria objeto de connexao que recebe como parametro a string de connexao
 
@@ -872,7 +869,7 @@ namespace CdbDao.ConnectionDataBase
             }
         } // fecha o metodo
 
-        //metodo responsavel pela geracao do relatorio de locacao
+        //metodo responsavel pela geracao do relatorio de locacao pessoa fisica
         public List<Locacao> ExibiRelatorioLocacaoPf()
         {
             string connectionString = ConfigurationManager.ConnectionStrings["Locadoraveiculos"].ConnectionString; // string de conexao configurada no app.config
@@ -917,7 +914,8 @@ namespace CdbDao.ConnectionDataBase
                 connection.Close(); // fecha a conexao 
             }
         } // fecha o metodo
-        // metodo responsavel pela geracao do relatorio de devolucao
+
+        // metodo responsavel pela geracao do relatorio de devolucao pessoa juridica
         public List<Locacao> ExibiRelatorioLocacaoPj()
         {
             string connectionString = ConfigurationManager.ConnectionStrings["Locadoraveiculos"].ConnectionString; // string de conexao configurada no app.config
@@ -962,17 +960,18 @@ namespace CdbDao.ConnectionDataBase
                 connection.Close(); // fecha a conexao 
             }
         } // fecha o metodo
-        // metodo responvavel pela insercao dos dados da locacao
+
+        // metodo responvavel por realizar a locacao
         public void RealizarLocacao(Locacao locacao)
         {
-            string connectionString = ConfigurationManager.ConnectionStrings["locadoraveiculos"].ConnectionString;
+            string connectionString = ConfigurationManager.ConnectionStrings["locadoraveiculos"].ConnectionString; // string de conexao configurada no app.config
             string queryRealizarLocacao = "INSERT INTO LOCACAO(loc_dta_loc, loc_dta_dev, loc_tipo_locacao, loc_form_pagamento, loc_valor_locacao, loc_status, ckn_id , pj_id, pf_id)values(@loc_dta_loc, @loc_dta_dev, @loc_tipo_locacao, @loc_form_pagamento, @loc_valor_locacao, @loc_status, @ckn_id, @pj_id, @pf_id)";
 
             MySqlConnection connectionRealizarLocacao = new MySqlConnection(connectionString);
 
             try
             {
-                connectionRealizarLocacao.Open();
+                connectionRealizarLocacao.Open(); // abre a conexao
                 MySqlCommand commandLocacao = new MySqlCommand(queryRealizarLocacao, connectionRealizarLocacao);
                 commandLocacao.Prepare();
 
@@ -992,11 +991,11 @@ namespace CdbDao.ConnectionDataBase
             }
             catch (Exception)
             {
-                MessageBox.Show("Nao foi possivel realizar a locacao, tente novamente: ", MessageBoxButtons.OK.ToString());
+                MessageBox.Show("Nao foi possivel se conectar a base de dados!", MessageBoxButtons.OK.ToString()); // exibe a mensagem quando ocorrer algum erro na operacao
             }
             finally
             {
-                connectionRealizarLocacao.Close();
+                connectionRealizarLocacao.Close(); // fecha a conexao
             }
         } // fecha o metodo
 
@@ -1019,9 +1018,9 @@ namespace CdbDao.ConnectionDataBase
 
                 return data; // returno do datatable
             } // fecha o try
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show("Nao foi possivel se conectar a base de dados: " + ex.ToString()); // exibe a mensagem quando a operacao de busca nao é realizada com sucesso
+                MessageBox.Show("Nao foi possivel se conectar a base de dados!", MessageBoxButtons.OK.ToString()); // exibe a mensagem quando ocorrer algum erro na operacao
                 return data; // returno do datatable
             }
             finally
@@ -1030,6 +1029,7 @@ namespace CdbDao.ConnectionDataBase
             }
         } // fecha o metodo
 
+        // metodo responsavel por exibir itens da locacao de pessoa juridica
         public DataTable ListarLocacaoPessoaJuridica()
         {
             string connectionString = ConfigurationManager.ConnectionStrings["Locadoraveiculos"].ConnectionString; // string de connexao configurada no app.config
@@ -1048,9 +1048,9 @@ namespace CdbDao.ConnectionDataBase
 
                 return data; // returno do datatable
             } // fecha o try
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show("Nao foi possivel se conectar a base de dados: " + ex.ToString()); // exibe a mensagem quando a operacao de busca nao é realizada com sucesso
+                MessageBox.Show("Nao foi possivel se conectar a base de dados!", MessageBoxButtons.OK.ToString()); // exibe a mensagem quando ocorrer algum erro na operacao
                 return data; // returno do datatable
             }
             finally
@@ -1062,14 +1062,14 @@ namespace CdbDao.ConnectionDataBase
         // metodo responsavel pela atualizacao dos dados da locacao
         public void RealizarDevolucao(Locacao devolucao)
         {
-            string connectionString = ConfigurationManager.ConnectionStrings["locadoraveiculos"].ConnectionString;
+            string connectionString = ConfigurationManager.ConnectionStrings["locadoraveiculos"].ConnectionString; // string de conexao configurada no app.config
             string queryRealizarDevolucao = "UPDATE locacao set loc_status = @loc_status, loc_dta_dev = @loc_dta_dev, loc_valor_locacao = @loc_valor_locacao WHERE loc_id = @loc_id";
 
             MySqlConnection connectionRealizarDevolucao = new MySqlConnection(connectionString);
 
             try
             {
-                connectionRealizarDevolucao.Open();
+                connectionRealizarDevolucao.Open(); // abre a conexao
                 MySqlCommand commandRealizarDevolucao = new MySqlCommand(queryRealizarDevolucao, connectionRealizarDevolucao);
                 commandRealizarDevolucao.Prepare();
 
@@ -1079,17 +1079,17 @@ namespace CdbDao.ConnectionDataBase
                 commandRealizarDevolucao.Parameters.Add(new MySqlParameter("loc_valor_locacao", devolucao.valor_locacao));         
 
                 commandRealizarDevolucao.ExecuteNonQuery();
+
                 MessageBox.Show("Devolucao efetuada com sucesso: ");
             }
             catch (Exception)
             {
-                MessageBox.Show("Nao foi possivel realizar a devolucao, tenta novamente", MessageBoxButtons.OK.ToString());
+                MessageBox.Show("Nao foi possivel se conectar a base de dados!", MessageBoxButtons.OK.ToString()); // exibe a mensagem quando ocorrer algum erro na operacao
             }
             finally
             {
-                connectionRealizarDevolucao.Close();
+                connectionRealizarDevolucao.Close(); // fecha a conexao
             }
-        }
-
+        } // fecha o metodo
     } // final da classe Dao
 } // final do namespace

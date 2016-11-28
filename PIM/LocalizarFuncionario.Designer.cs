@@ -113,7 +113,7 @@
             // 
             this.lbDtaCad.AutoSize = true;
             this.lbDtaCad.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDtaCad.Location = new System.Drawing.Point(395, 34);
+            this.lbDtaCad.Location = new System.Drawing.Point(403, 34);
             this.lbDtaCad.Name = "lbDtaCad";
             this.lbDtaCad.Size = new System.Drawing.Size(121, 16);
             this.lbDtaCad.TabIndex = 6;
@@ -151,7 +151,7 @@
             // 
             // txtCod
             // 
-            this.txtCod.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCod.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCod.Location = new System.Drawing.Point(93, 31);
             this.txtCod.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCod.Name = "txtCod";
@@ -160,7 +160,7 @@
             // 
             // txtNome
             // 
-            this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNome.Location = new System.Drawing.Point(93, 62);
             this.txtNome.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNome.Name = "txtNome";
@@ -169,7 +169,7 @@
             // 
             // txtLogin
             // 
-            this.txtLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLogin.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLogin.Location = new System.Drawing.Point(93, 153);
             this.txtLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtLogin.Name = "txtLogin";
@@ -178,16 +178,16 @@
             // 
             // txtDtaCad
             // 
-            this.txtDtaCad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDtaCad.Location = new System.Drawing.Point(522, 31);
+            this.txtDtaCad.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDtaCad.Location = new System.Drawing.Point(530, 31);
             this.txtDtaCad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDtaCad.Name = "txtDtaCad";
-            this.txtDtaCad.Size = new System.Drawing.Size(70, 22);
+            this.txtDtaCad.Size = new System.Drawing.Size(62, 22);
             this.txtDtaCad.TabIndex = 13;
             // 
             // txtEmail
             // 
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(93, 93);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmail.Name = "txtEmail";
@@ -196,7 +196,7 @@
             // 
             // mskCpf
             // 
-            this.mskCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskCpf.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskCpf.Location = new System.Drawing.Point(93, 123);
             this.mskCpf.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.mskCpf.Mask = "000,000,000-00";
@@ -206,7 +206,7 @@
             // 
             // txtSenha
             // 
-            this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSenha.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSenha.Location = new System.Drawing.Point(268, 153);
             this.txtSenha.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSenha.Name = "txtSenha";
@@ -216,7 +216,7 @@
             // 
             // txtConfSenha
             // 
-            this.txtConfSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConfSenha.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConfSenha.Location = new System.Drawing.Point(492, 153);
             this.txtConfSenha.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtConfSenha.Name = "txtConfSenha";
@@ -287,7 +287,7 @@
             // 
             // mskTel
             // 
-            this.mskTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskTel.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskTel.Location = new System.Drawing.Point(268, 123);
             this.mskTel.Mask = "(00)0000-0000";
             this.mskTel.Name = "mskTel";
@@ -296,7 +296,7 @@
             // 
             // mskCel
             // 
-            this.mskCel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskCel.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskCel.Location = new System.Drawing.Point(492, 122);
             this.mskCel.Mask = "(00)00000-0000";
             this.mskCel.Name = "mskCel";

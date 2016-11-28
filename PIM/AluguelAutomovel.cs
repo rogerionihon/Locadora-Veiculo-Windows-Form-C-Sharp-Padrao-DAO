@@ -11,6 +11,7 @@ using MySql.Data.MySqlClient;
 using CdbDao.ConnectionDataBase;
 using CdbDao.ModelCliente;
 using System.Configuration;
+using CdbDao.Relatorio;
 
 namespace PIM
 {
@@ -308,7 +309,7 @@ namespace PIM
         // metodo loading
         private void AluguelAutomovel_Load(object sender, EventArgs e)
         {       
-            CarregarGridPessoaF();
+            CarregarGridCheckin();
             EnableCampos();          
         } // fecha o metodo
 
@@ -525,11 +526,6 @@ namespace PIM
                     MessageBox.Show("Escolha a forma de locação !", "Validaçào de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 } // fecha validacao forma locacao
 
-                if (dataFinalL <= dataInicioL == true) // valida a diferenca das datas
-                {
-                    MessageBox.Show("A data de entrega nao pode ser menor que a data de locacao");
-                } //fecha validacao das datas
-                
                 if (txtValorServ.Text == "1" && cmbFormLoc.Text == "KM Livre") // locacao equivalente a 1 dia
                 {
                     txtValorServ.Text = "R$ 50,00";
@@ -556,7 +552,6 @@ namespace PIM
                 {
                     txtValorServ.Text = "R$ 90,00";
                 } // fecha locacao equivalente a 3 dia
-
 
                 if (txtValorServ.Text == "4" && cmbFormLoc.Text == "KM Livre") // locacao equivalente a 4 dia
                 {
@@ -592,7 +587,12 @@ namespace PIM
                 else if (txtValorServ.Text == "7" && cmbFormLoc.Text == "KM Determinada")
                 {
                     txtValorServ.Text = "R$ 210,00";
-                } // fecha locacao equivalente a 7 dia
+                } // fecha locacao equivalente a 7 dia        
+
+                if (dataFinalL <= dataInicioL == true) // valida a diferenca das datas
+                {
+                    MessageBox.Show("A data de entrega nao pode ser menor que a data de locacao");
+                } //fecha validacao das datas
             } // fecha o try
             catch (Exception)
             {

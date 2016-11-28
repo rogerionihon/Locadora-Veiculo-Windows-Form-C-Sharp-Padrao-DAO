@@ -300,6 +300,7 @@ namespace PIM
                     {
                         erro = true;
                         MessageBox.Show("Este veículo ja foi devolvido, por favor selecione outro para realizar a operação! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        LimparCampos();
                     } // fecha validacao status ja devolvido
 
                     if (!erro)
@@ -386,13 +387,13 @@ namespace PIM
             } // fecha o try
             catch (Exception)
             {
-                MessageBox.Show("Nao foi possivel realizar a devolução, verifique e tente novamente!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Escolha uma opção para realizar a devolução!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         } // fecha o metodo
 
-        private void txtBuscaCod_TextChanged(object sender, EventArgs e)
+        private void txtBuscaCod_TextChanged_1(object sender, EventArgs e)
         {
-            DataView dv = new DataView(dt); 
+            DataView dv = new DataView(dt);
             dv.RowFilter = "Convert(loc_id, 'System.String') LIKE '" + txtBuscaCod.Text + "%'"; // compara o valor digitado no campo txtBuscaCod com o valor que esta na coluna loc_id
             gridView.DataSource = dv;
         }// fecha o metodo

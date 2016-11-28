@@ -52,7 +52,6 @@
             this.MnuBox.Size = new System.Drawing.Size(266, 547);
             this.MnuBox.TabIndex = 0;
             this.MnuBox.TabStop = false;
-            this.MnuBox.Text = "Menu";
             // 
             // btnAluguel
             // 

@@ -91,6 +91,7 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.cmbAnoModelo);
+            this.groupBox3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(569, 33);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(107, 55);
@@ -103,6 +104,7 @@
             this.cmbAnoModelo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cmbAnoModelo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbAnoModelo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbAnoModelo.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbAnoModelo.FormattingEnabled = true;
             this.cmbAnoModelo.Items.AddRange(new object[] {
             "1990",
@@ -135,12 +137,13 @@
             "2017"});
             this.cmbAnoModelo.Location = new System.Drawing.Point(11, 19);
             this.cmbAnoModelo.Name = "cmbAnoModelo";
-            this.cmbAnoModelo.Size = new System.Drawing.Size(80, 26);
+            this.cmbAnoModelo.Size = new System.Drawing.Size(80, 24);
             this.cmbAnoModelo.TabIndex = 4;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.mskPlaca);
+            this.groupBox1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(17, 33);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(114, 55);
@@ -150,16 +153,17 @@
             // 
             // mskPlaca
             // 
-            this.mskPlaca.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskPlaca.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskPlaca.Location = new System.Drawing.Point(8, 19);
             this.mskPlaca.Mask = "AAA0000";
             this.mskPlaca.Name = "mskPlaca";
-            this.mskPlaca.Size = new System.Drawing.Size(94, 25);
+            this.mskPlaca.Size = new System.Drawing.Size(94, 22);
             this.mskPlaca.TabIndex = 0;
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.cmbAnoFabric);
+            this.groupBox2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(454, 33);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(100, 55);
@@ -172,6 +176,7 @@
             this.cmbAnoFabric.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cmbAnoFabric.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbAnoFabric.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbAnoFabric.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbAnoFabric.FormattingEnabled = true;
             this.cmbAnoFabric.Items.AddRange(new object[] {
             "1990",
@@ -204,12 +209,13 @@
             "2017"});
             this.cmbAnoFabric.Location = new System.Drawing.Point(9, 19);
             this.cmbAnoFabric.Name = "cmbAnoFabric";
-            this.cmbAnoFabric.Size = new System.Drawing.Size(79, 26);
+            this.cmbAnoFabric.Size = new System.Drawing.Size(79, 24);
             this.cmbAnoFabric.TabIndex = 3;
             // 
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.mskChassi);
+            this.groupBox6.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox6.Location = new System.Drawing.Point(273, 33);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(165, 55);
@@ -219,16 +225,17 @@
             // 
             // mskChassi
             // 
-            this.mskChassi.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskChassi.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskChassi.Location = new System.Drawing.Point(8, 19);
             this.mskChassi.Mask = "00000000000000000";
             this.mskChassi.Name = "mskChassi";
-            this.mskChassi.Size = new System.Drawing.Size(146, 25);
+            this.mskChassi.Size = new System.Drawing.Size(146, 22);
             this.mskChassi.TabIndex = 2;
             // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.cmbMarca);
+            this.groupBox4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.Location = new System.Drawing.Point(454, 103);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(222, 55);
@@ -241,6 +248,7 @@
             this.cmbMarca.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cmbMarca.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbMarca.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbMarca.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbMarca.FormattingEnabled = true;
             this.cmbMarca.Items.AddRange(new object[] {
             "Audi",
@@ -258,14 +266,15 @@
             "Volkswagen",
             "Chery",
             "Jac Motors"});
-            this.cmbMarca.Location = new System.Drawing.Point(9, 18);
+            this.cmbMarca.Location = new System.Drawing.Point(9, 22);
             this.cmbMarca.Name = "cmbMarca";
-            this.cmbMarca.Size = new System.Drawing.Size(197, 26);
+            this.cmbMarca.Size = new System.Drawing.Size(197, 24);
             this.cmbMarca.TabIndex = 6;
             // 
             // groupBox13
             // 
             this.groupBox13.Controls.Add(this.txtCidade);
+            this.groupBox13.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox13.Location = new System.Drawing.Point(17, 240);
             this.groupBox13.Name = "groupBox13";
             this.groupBox13.Size = new System.Drawing.Size(421, 55);
@@ -275,28 +284,31 @@
             // 
             // txtCidade
             // 
+            this.txtCidade.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCidade.Location = new System.Drawing.Point(8, 19);
             this.txtCidade.MaxLength = 25;
             this.txtCidade.Name = "txtCidade";
-            this.txtCidade.Size = new System.Drawing.Size(402, 25);
+            this.txtCidade.Size = new System.Drawing.Size(402, 22);
             this.txtCidade.TabIndex = 12;
             // 
             // groupBox15
             // 
             this.groupBox15.Controls.Add(this.txtKM);
+            this.groupBox15.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox15.Location = new System.Drawing.Point(569, 171);
             this.groupBox15.Name = "groupBox15";
-            this.groupBox15.Size = new System.Drawing.Size(100, 56);
+            this.groupBox15.Size = new System.Drawing.Size(107, 56);
             this.groupBox15.TabIndex = 12;
             this.groupBox15.TabStop = false;
             this.groupBox15.Text = "Km";
             // 
             // txtKM
             // 
+            this.txtKM.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtKM.Location = new System.Drawing.Point(9, 19);
             this.txtKM.MaxLength = 10;
             this.txtKM.Name = "txtKM";
-            this.txtKM.Size = new System.Drawing.Size(82, 25);
+            this.txtKM.Size = new System.Drawing.Size(82, 22);
             this.txtKM.TabIndex = 11;
             // 
             // gbInformacoes
@@ -318,7 +330,7 @@
             this.gbInformacoes.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbInformacoes.Location = new System.Drawing.Point(12, 81);
             this.gbInformacoes.Name = "gbInformacoes";
-            this.gbInformacoes.Size = new System.Drawing.Size(760, 322);
+            this.gbInformacoes.Size = new System.Drawing.Size(709, 322);
             this.gbInformacoes.TabIndex = 0;
             this.gbInformacoes.TabStop = false;
             this.gbInformacoes.Text = "Informações gerais";
@@ -326,6 +338,7 @@
             // groupBox25
             // 
             this.groupBox25.Controls.Add(this.cmbEstado);
+            this.groupBox25.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox25.Location = new System.Drawing.Point(454, 240);
             this.groupBox25.Name = "groupBox25";
             this.groupBox25.Size = new System.Drawing.Size(136, 55);
@@ -338,6 +351,7 @@
             this.cmbEstado.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cmbEstado.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbEstado.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbEstado.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbEstado.FormattingEnabled = true;
             this.cmbEstado.Items.AddRange(new object[] {
             "Acre",
@@ -369,12 +383,13 @@
             "Tocantins"});
             this.cmbEstado.Location = new System.Drawing.Point(9, 18);
             this.cmbEstado.Name = "cmbEstado";
-            this.cmbEstado.Size = new System.Drawing.Size(121, 26);
+            this.cmbEstado.Size = new System.Drawing.Size(121, 24);
             this.cmbEstado.TabIndex = 13;
             // 
             // groupBox24
             // 
             this.groupBox24.Controls.Add(this.cmbTipo);
+            this.groupBox24.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox24.Location = new System.Drawing.Point(454, 171);
             this.groupBox24.Name = "groupBox24";
             this.groupBox24.Size = new System.Drawing.Size(100, 56);
@@ -387,6 +402,7 @@
             this.cmbTipo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cmbTipo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbTipo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbTipo.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTipo.FormattingEnabled = true;
             this.cmbTipo.Items.AddRange(new object[] {
             "1.0",
@@ -401,12 +417,13 @@
             "3.5"});
             this.cmbTipo.Location = new System.Drawing.Point(9, 18);
             this.cmbTipo.Name = "cmbTipo";
-            this.cmbTipo.Size = new System.Drawing.Size(79, 26);
+            this.cmbTipo.Size = new System.Drawing.Size(79, 24);
             this.cmbTipo.TabIndex = 10;
             // 
             // groupBox23
             // 
             this.groupBox23.Controls.Add(this.cmbPortas);
+            this.groupBox23.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox23.Location = new System.Drawing.Point(347, 171);
             this.groupBox23.Name = "groupBox23";
             this.groupBox23.Size = new System.Drawing.Size(91, 56);
@@ -419,6 +436,7 @@
             this.cmbPortas.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cmbPortas.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbPortas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbPortas.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbPortas.FormattingEnabled = true;
             this.cmbPortas.Items.AddRange(new object[] {
             "1",
@@ -427,12 +445,13 @@
             "5"});
             this.cmbPortas.Location = new System.Drawing.Point(8, 19);
             this.cmbPortas.Name = "cmbPortas";
-            this.cmbPortas.Size = new System.Drawing.Size(72, 26);
+            this.cmbPortas.Size = new System.Drawing.Size(72, 24);
             this.cmbPortas.TabIndex = 9;
             // 
             // groupBox22
             // 
             this.groupBox22.Controls.Add(this.cmbCombustivel);
+            this.groupBox22.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox22.Location = new System.Drawing.Point(17, 171);
             this.groupBox22.Name = "groupBox22";
             this.groupBox22.Size = new System.Drawing.Size(159, 56);
@@ -445,6 +464,7 @@
             this.cmbCombustivel.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cmbCombustivel.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbCombustivel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbCombustivel.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCombustivel.FormattingEnabled = true;
             this.cmbCombustivel.Items.AddRange(new object[] {
             "Diesel",
@@ -454,12 +474,13 @@
             "Gasolina"});
             this.cmbCombustivel.Location = new System.Drawing.Point(8, 18);
             this.cmbCombustivel.Name = "cmbCombustivel";
-            this.cmbCombustivel.Size = new System.Drawing.Size(147, 26);
+            this.cmbCombustivel.Size = new System.Drawing.Size(147, 24);
             this.cmbCombustivel.TabIndex = 7;
             // 
             // groupBox21
             // 
             this.groupBox21.Controls.Add(this.cmbCor);
+            this.groupBox21.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox21.Location = new System.Drawing.Point(190, 172);
             this.groupBox21.Name = "groupBox21";
             this.groupBox21.Size = new System.Drawing.Size(138, 55);
@@ -472,6 +493,7 @@
             this.cmbCor.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cmbCor.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbCor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbCor.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCor.FormattingEnabled = true;
             this.cmbCor.Items.AddRange(new object[] {
             "Amarelo/Dourado",
@@ -486,12 +508,13 @@
             "Laranja"});
             this.cmbCor.Location = new System.Drawing.Point(8, 18);
             this.cmbCor.Name = "cmbCor";
-            this.cmbCor.Size = new System.Drawing.Size(114, 26);
+            this.cmbCor.Size = new System.Drawing.Size(114, 24);
             this.cmbCor.TabIndex = 8;
             // 
             // groupBox20
             // 
             this.groupBox20.Controls.Add(this.txtModelo);
+            this.groupBox20.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox20.Location = new System.Drawing.Point(17, 103);
             this.groupBox20.Name = "groupBox20";
             this.groupBox20.Size = new System.Drawing.Size(421, 55);
@@ -501,14 +524,16 @@
             // 
             // txtModelo
             // 
+            this.txtModelo.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtModelo.Location = new System.Drawing.Point(8, 22);
             this.txtModelo.Name = "txtModelo";
-            this.txtModelo.Size = new System.Drawing.Size(401, 25);
+            this.txtModelo.Size = new System.Drawing.Size(401, 22);
             this.txtModelo.TabIndex = 6;
             // 
             // groupBox7
             // 
             this.groupBox7.Controls.Add(this.mskRenavam);
+            this.groupBox7.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox7.Location = new System.Drawing.Point(145, 33);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(114, 55);
@@ -518,26 +543,27 @@
             // 
             // mskRenavam
             // 
-            this.mskRenavam.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskRenavam.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskRenavam.Location = new System.Drawing.Point(8, 19);
             this.mskRenavam.Mask = "00000000000";
             this.mskRenavam.Name = "mskRenavam";
-            this.mskRenavam.Size = new System.Drawing.Size(94, 25);
+            this.mskRenavam.Size = new System.Drawing.Size(94, 22);
             this.mskRenavam.TabIndex = 1;
             // 
             // gbObservacao
             // 
             this.gbObservacao.Controls.Add(this.txtObs);
-            this.gbObservacao.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbObservacao.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbObservacao.Location = new System.Drawing.Point(12, 409);
             this.gbObservacao.Name = "gbObservacao";
-            this.gbObservacao.Size = new System.Drawing.Size(456, 112);
+            this.gbObservacao.Size = new System.Drawing.Size(438, 112);
             this.gbObservacao.TabIndex = 15;
             this.gbObservacao.TabStop = false;
             this.gbObservacao.Text = "Observação";
             // 
             // txtObs
             // 
+            this.txtObs.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtObs.Location = new System.Drawing.Point(22, 20);
             this.txtObs.Multiline = true;
             this.txtObs.Name = "txtObs";
@@ -597,7 +623,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(790, 514);
+            this.ClientSize = new System.Drawing.Size(738, 514);
             this.Controls.Add(this.gbObservacao);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnSalvar);

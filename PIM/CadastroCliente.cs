@@ -201,18 +201,6 @@ namespace PIM
                         MessageBox.Show("O estado civil deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     } // fecha a validacao do estado civil
 
-                    if (string.IsNullOrEmpty(txtEndf.Text)) // valida campo endereco
-                    {
-                        erro = true;
-                        MessageBox.Show("O endereco deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    }// fecha a validacao do endereco
-
-                    if (string.IsNullOrEmpty(txtNumf.Text)) // valida campo numero
-                    {
-                        erro = true;
-                        MessageBox.Show("O numero do imovel deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    } // fecha a validacao do numero
-
                     if (string.IsNullOrEmpty(mskCepf.Text)) // valida campo cep
                     {
                         erro = true;
@@ -224,6 +212,18 @@ namespace PIM
                         erro = true;
                         MessageBox.Show("O numero do CEP informado é invalido! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     } // fecha a validacao do cep
+
+                    if (string.IsNullOrEmpty(txtEndf.Text)) // valida campo endereco
+                    {
+                        erro = true;
+                        MessageBox.Show("O endereco deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }// fecha a validacao do endereco
+
+                    if (string.IsNullOrEmpty(txtNumf.Text)) // valida campo numero
+                    {
+                        erro = true;
+                        MessageBox.Show("O numero do imovel deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    } // fecha a validacao do numero
 
                     if (string.IsNullOrEmpty(txtCidadef.Text)) // valida campo cidade
                     {
@@ -341,18 +341,6 @@ namespace PIM
                         MessageBox.Show("A inscricao municipal informada deve conter 8 digitos! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     } // fecha a validacao da inscricao municipal
 
-                    if (string.IsNullOrEmpty(txtEndjur.Text)) // valida campo endereco
-                    {
-                        erro = true;
-                        MessageBox.Show("O endereco deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    }// fecha a validacao do endereco
-
-                    if (string.IsNullOrEmpty(txtNumjur.Text)) // valida campo numero
-                    {
-                        erro = true;
-                        MessageBox.Show("O numero do imovel deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    } // fecha a validacao do numero
-
                     if (string.IsNullOrEmpty(mskCepjur.Text)) // valida campo cep
                     {
                         erro = true;
@@ -364,6 +352,18 @@ namespace PIM
                         erro = true;
                         MessageBox.Show("O numero do CEP informado é valido! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     } // fecha a validacao do cep
+
+                    if (string.IsNullOrEmpty(txtEndjur.Text)) // valida campo endereco
+                    {
+                        erro = true;
+                        MessageBox.Show("O endereco deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }// fecha a validacao do endereco
+
+                    if (string.IsNullOrEmpty(txtNumjur.Text)) // valida campo numero
+                    {
+                        erro = true;
+                        MessageBox.Show("O numero do imovel deve ser informado! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    } // fecha a validacao do numero
 
                     if (string.IsNullOrEmpty(txtCidadejur.Text)) // valida campo cidade
                     {
@@ -395,8 +395,6 @@ namespace PIM
                 MessageBox.Show("Nao foi possivel realizar o cadastro, verifique os campos e tente novamente: ","Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); // exibe a mensagem caso nao seja possivel realizar o cadastro   
             }
         } // fecha o metodo
-
-
 
         /*    private void RbtPessoaFChanged(object sender, EventArgs e)
             {
@@ -523,7 +521,7 @@ namespace PIM
                 grbInfof.Visible = false;
                 btnConsultFis.Visible = false;
             } // fecha o if          
-        }
+        } // fecha o metodo
 
         // metodo responsavel por consultar o CEP de pessoa juridica
         private void btnConsultarCep_Click(object sender, EventArgs e)
@@ -590,6 +588,5 @@ namespace PIM
                 mskCepf.Focus();
             }
         } // fecha o metodo
-
     } // final da classe
 } // final do namespace

@@ -137,7 +137,7 @@ namespace PIM
             } // fecha o try
             catch (Exception)
             {
-                MessageBox.Show("escolha um campo", MessageBoxButtons.OK.ToString());
+                MessageBox.Show("Escolha um campo", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         } // fecha o metodo
 
@@ -292,7 +292,7 @@ namespace PIM
             } // fecha o try
             catch (Exception)
             {
-                MessageBox.Show("Escolha algum campo para realizar a atualizacao", MessageBoxButtons.OK.ToString()); // exibe a mensagem caso nao seja escolhido algum campo para realizar a atualizacao
+                MessageBox.Show("Escolha algum campo para realizar a atualizacao", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information); // exibe a mensagem caso nao seja escolhido algum campo para realizar a atualizacao
             }
         } // fecha o metodo
     } // fecha a classe

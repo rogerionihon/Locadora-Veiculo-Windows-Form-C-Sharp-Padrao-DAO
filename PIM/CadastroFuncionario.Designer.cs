@@ -131,11 +131,11 @@
             // 
             // txtNome
             // 
-            this.txtNome.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNome.ForeColor = System.Drawing.SystemColors.ControlText;
             this.txtNome.Location = new System.Drawing.Point(76, 32);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(390, 23);
+            this.txtNome.Size = new System.Drawing.Size(390, 22);
             this.txtNome.TabIndex = 0;
             // 
             // label4
@@ -144,7 +144,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label4.Location = new System.Drawing.Point(297, 138);
+            this.label4.Location = new System.Drawing.Point(301, 138);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(48, 16);
             this.label4.TabIndex = 12;
@@ -152,11 +152,11 @@
             // 
             // txtLogin
             // 
-            this.txtLogin.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLogin.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLogin.ForeColor = System.Drawing.SystemColors.ControlText;
             this.txtLogin.Location = new System.Drawing.Point(354, 135);
             this.txtLogin.Name = "txtLogin";
-            this.txtLogin.Size = new System.Drawing.Size(112, 23);
+            this.txtLogin.Size = new System.Drawing.Size(112, 22);
             this.txtLogin.TabIndex = 5;
             // 
             // label5
@@ -173,22 +173,22 @@
             // 
             // mskCpf
             // 
-            this.mskCpf.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskCpf.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskCpf.ForeColor = System.Drawing.SystemColors.ControlText;
             this.mskCpf.Location = new System.Drawing.Point(76, 135);
             this.mskCpf.Mask = "000-000-000-00";
             this.mskCpf.Name = "mskCpf";
-            this.mskCpf.Size = new System.Drawing.Size(112, 23);
+            this.mskCpf.Size = new System.Drawing.Size(112, 22);
             this.mskCpf.TabIndex = 4;
             // 
             // mskDataCadastro
             // 
-            this.mskDataCadastro.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskDataCadastro.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskDataCadastro.ForeColor = System.Drawing.SystemColors.ControlText;
             this.mskDataCadastro.Location = new System.Drawing.Point(16, 28);
             this.mskDataCadastro.Mask = "00/00/0000";
             this.mskDataCadastro.Name = "mskDataCadastro";
-            this.mskDataCadastro.Size = new System.Drawing.Size(100, 23);
+            this.mskDataCadastro.Size = new System.Drawing.Size(100, 22);
             this.mskDataCadastro.TabIndex = 11;
             // 
             // label6
@@ -205,12 +205,12 @@
             // 
             // txtSenha
             // 
-            this.txtSenha.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSenha.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSenha.ForeColor = System.Drawing.SystemColors.ControlText;
             this.txtSenha.Location = new System.Drawing.Point(76, 166);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '*';
-            this.txtSenha.Size = new System.Drawing.Size(112, 23);
+            this.txtSenha.Size = new System.Drawing.Size(112, 22);
             this.txtSenha.TabIndex = 6;
             // 
             // label7
@@ -219,7 +219,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label7.Location = new System.Drawing.Point(220, 169);
+            this.label7.Location = new System.Drawing.Point(232, 169);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(117, 16);
             this.label7.TabIndex = 20;
@@ -227,12 +227,12 @@
             // 
             // txtConfirmaSenha
             // 
-            this.txtConfirmaSenha.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConfirmaSenha.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConfirmaSenha.ForeColor = System.Drawing.SystemColors.ControlText;
             this.txtConfirmaSenha.Location = new System.Drawing.Point(354, 166);
             this.txtConfirmaSenha.Name = "txtConfirmaSenha";
             this.txtConfirmaSenha.PasswordChar = '*';
-            this.txtConfirmaSenha.Size = new System.Drawing.Size(112, 23);
+            this.txtConfirmaSenha.Size = new System.Drawing.Size(112, 22);
             this.txtConfirmaSenha.TabIndex = 7;
             // 
             // label9
@@ -249,11 +249,11 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.ForeColor = System.Drawing.SystemColors.ControlText;
             this.txtEmail.Location = new System.Drawing.Point(76, 68);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(390, 23);
+            this.txtEmail.Size = new System.Drawing.Size(390, 22);
             this.txtEmail.TabIndex = 1;
             // 
             // btnLimpar
@@ -294,7 +294,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label11.Location = new System.Drawing.Point(1, 104);
+            this.label11.Location = new System.Drawing.Point(5, 104);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(67, 16);
             this.label11.TabIndex = 30;
@@ -306,7 +306,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(286, 104);
+            this.label1.Location = new System.Drawing.Point(290, 104);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 16);
             this.label1.TabIndex = 31;
@@ -314,6 +314,7 @@
             // 
             // mskTel
             // 
+            this.mskTel.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskTel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.mskTel.Location = new System.Drawing.Point(76, 101);
             this.mskTel.Mask = "(00)0000-0000";
@@ -323,6 +324,7 @@
             // 
             // mskCel
             // 
+            this.mskCel.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskCel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.mskCel.Location = new System.Drawing.Point(354, 101);
             this.mskCel.Mask = "(00)00000-0000";

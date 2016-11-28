@@ -305,30 +305,29 @@ namespace PIM
             }
             catch (Exception)
             {
-                MessageBox.Show("escolha um campo", MessageBoxButtons.OK.ToString());
+                MessageBox.Show("Escolha um campo", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }//fecha o metodo cellclick
 
         //metodo responsavel por realizar a busca pelo nome
         private void txtPesqNome_TextChanged(object sender, EventArgs e)
         {
-            
             if (rbtPessoaFisica.Checked == true)
             {
+                
                 DataView dv = new DataView(dt);
                 dv.RowFilter = string.Format("pf_nome LIKE '%{0}%'", txtPesqNome.Text); // compara o valor digitado no campo txtPesqNome com o valor que esta na coluna pf_nome
                 datagrid.DataSource = dv;
             }// fecha o if
             else
             {
-                MessageBox.Show("Escolha a opcao pessoa fisica: ", MessageBoxButtons.OK.ToString());
+                MessageBox.Show("Escolha a opcao pessoa fisica!","Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }// fecha o else
         } // fecha o metodo
 
         //metodo responsavel por realizar a busca pelo cpf
         private void txtPesqCpf_TextChanged(object sender, EventArgs e)
         {
-            
             if (rbtPessoaFisica.Checked == true)
             {
                 DataView dv = new DataView(dt);
@@ -337,22 +336,23 @@ namespace PIM
             }// fecha o if
             else
             {
-                MessageBox.Show("Escolha a opcao pessoa fisica: ", MessageBoxButtons.OK.ToString());
+                MessageBox.Show("Escolha a opcao pessoa fisica!","Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }// fecha o else
         } // fecha o metodo
 
         //metodo responsavel por realizar a busca pelo CNPJ
         private void txtPesqCnpj_TextChanged(object sender, EventArgs e)
         {
+           
             if (rbtPessoaJuridica.Checked == true)
 	        {
-            DataView dv = new DataView(dt);
-            dv.RowFilter = string.Format("pj_cnpj LIKE '%{0}%'", txtPesqCnpj.Text); // compara o valor digitado no campo txtPesqCnpj com o valor que esta na coluna pj_cnpj
-            datagrid.DataSource = dv;
+                DataView dv = new DataView(dt);
+                dv.RowFilter = string.Format("pj_cnpj LIKE '%{0}%'", txtPesqCnpj.Text); // compara o valor digitado no campo txtPesqCnpj com o valor que esta na coluna pj_cnpj
+                datagrid.DataSource = dv;
             }// fecha o if
             else
             {
-                MessageBox.Show("Escolha a opcao pessoa juridica: ", MessageBoxButtons.OK.ToString()); 
+                MessageBox.Show("Escolha a opcao pessoa juridica!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }// fecha o else
 	    } // fecha o metodo
 
@@ -376,7 +376,7 @@ namespace PIM
             }
             catch (Exception)
             {
-                MessageBox.Show("Escolha algum campo para realizar a atualizacao",MessageBoxButtons.OK.ToString()); // exibe a mensagem caso nao seja escolhido algum campo para realizar a atualizacao
+                MessageBox.Show("Escolha algum campo para realizar a atualizacao", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information); // exibe a mensagem caso nao seja escolhido algum campo para realizar a atualizacao
             }
          } // fecha o metodo
 

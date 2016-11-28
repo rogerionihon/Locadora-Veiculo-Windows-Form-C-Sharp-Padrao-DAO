@@ -138,6 +138,7 @@
             // 
             // txtPesqRenavam
             // 
+            this.txtPesqRenavam.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPesqRenavam.Location = new System.Drawing.Point(6, 16);
             this.txtPesqRenavam.Name = "txtPesqRenavam";
             this.txtPesqRenavam.Size = new System.Drawing.Size(145, 22);
@@ -156,6 +157,7 @@
             // 
             // txtPesqPlaca
             // 
+            this.txtPesqPlaca.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPesqPlaca.Location = new System.Drawing.Point(6, 16);
             this.txtPesqPlaca.Name = "txtPesqPlaca";
             this.txtPesqPlaca.Size = new System.Drawing.Size(145, 22);
@@ -174,6 +176,7 @@
             // 
             // txtPesqModel
             // 
+            this.txtPesqModel.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPesqModel.Location = new System.Drawing.Point(6, 16);
             this.txtPesqModel.Name = "txtPesqModel";
             this.txtPesqModel.Size = new System.Drawing.Size(184, 22);
@@ -238,7 +241,7 @@
             // cmbEstado
             // 
             this.cmbEstado.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmbEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbEstado.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbEstado.FormattingEnabled = true;
             this.cmbEstado.Items.AddRange(new object[] {
             "Acre",
@@ -276,7 +279,7 @@
             // cmbPortas
             // 
             this.cmbPortas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmbPortas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbPortas.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbPortas.FormattingEnabled = true;
             this.cmbPortas.Items.AddRange(new object[] {
             "1",
@@ -291,7 +294,7 @@
             // cmbCor
             // 
             this.cmbCor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmbCor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCor.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCor.FormattingEnabled = true;
             this.cmbCor.Items.AddRange(new object[] {
             "Amarelo/Dourado",
@@ -312,7 +315,7 @@
             // cmbTipo
             // 
             this.cmbTipo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmbTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbTipo.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTipo.FormattingEnabled = true;
             this.cmbTipo.Items.AddRange(new object[] {
             "1.0",
@@ -333,7 +336,7 @@
             // cmbCombustivel
             // 
             this.cmbCombustivel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmbCombustivel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCombustivel.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCombustivel.FormattingEnabled = true;
             this.cmbCombustivel.Items.AddRange(new object[] {
             "Diesel",
@@ -349,7 +352,7 @@
             // cmbAnoM
             // 
             this.cmbAnoM.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmbAnoM.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbAnoM.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbAnoM.FormattingEnabled = true;
             this.cmbAnoM.Items.AddRange(new object[] {
             "1990",
@@ -388,7 +391,7 @@
             // cmbAnoF
             // 
             this.cmbAnoF.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmbAnoF.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbAnoF.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbAnoF.FormattingEnabled = true;
             this.cmbAnoF.Items.AddRange(new object[] {
             "1990",
@@ -427,7 +430,7 @@
             // cmbMarca
             // 
             this.cmbMarca.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmbMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbMarca.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbMarca.FormattingEnabled = true;
             this.cmbMarca.Items.AddRange(new object[] {
             "Audi",
@@ -452,36 +455,36 @@
             // 
             // mskChassi
             // 
-            this.mskChassi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskChassi.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskChassi.Location = new System.Drawing.Point(315, 114);
             this.mskChassi.Mask = "00000000000000000";
             this.mskChassi.Name = "mskChassi";
-            this.mskChassi.Size = new System.Drawing.Size(145, 23);
+            this.mskChassi.Size = new System.Drawing.Size(145, 22);
             this.mskChassi.TabIndex = 6;
             // 
             // mskRenavam
             // 
-            this.mskRenavam.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskRenavam.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskRenavam.Location = new System.Drawing.Point(360, 172);
             this.mskRenavam.Mask = "00000000000";
             this.mskRenavam.Name = "mskRenavam";
-            this.mskRenavam.Size = new System.Drawing.Size(100, 23);
+            this.mskRenavam.Size = new System.Drawing.Size(100, 22);
             this.mskRenavam.TabIndex = 12;
             // 
             // mskPlaca
             // 
-            this.mskPlaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskPlaca.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskPlaca.Location = new System.Drawing.Point(95, 114);
             this.mskPlaca.Mask = "AAA-0000";
             this.mskPlaca.Name = "mskPlaca";
-            this.mskPlaca.Size = new System.Drawing.Size(84, 23);
+            this.mskPlaca.Size = new System.Drawing.Size(84, 22);
             this.mskPlaca.TabIndex = 5;
             // 
             // lblObs
             // 
             this.lblObs.AutoSize = true;
             this.lblObs.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblObs.Location = new System.Drawing.Point(1, 229);
+            this.lblObs.Location = new System.Drawing.Point(2, 229);
             this.lblObs.Name = "lblObs";
             this.lblObs.Size = new System.Drawing.Size(87, 16);
             this.lblObs.TabIndex = 20;
@@ -589,31 +592,31 @@
             // 
             // txtModelo
             // 
-            this.txtModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtModelo.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtModelo.Location = new System.Drawing.Point(95, 54);
             this.txtModelo.Name = "txtModelo";
-            this.txtModelo.Size = new System.Drawing.Size(365, 23);
+            this.txtModelo.Size = new System.Drawing.Size(365, 22);
             this.txtModelo.TabIndex = 1;
             // 
             // txtKm
             // 
-            this.txtKm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKm.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtKm.Location = new System.Drawing.Point(343, 142);
             this.txtKm.Name = "txtKm";
-            this.txtKm.Size = new System.Drawing.Size(117, 23);
+            this.txtKm.Size = new System.Drawing.Size(117, 22);
             this.txtKm.TabIndex = 9;
             // 
             // txtCidade
             // 
-            this.txtCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCidade.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCidade.Location = new System.Drawing.Point(95, 202);
             this.txtCidade.Name = "txtCidade";
-            this.txtCidade.Size = new System.Drawing.Size(365, 23);
+            this.txtCidade.Size = new System.Drawing.Size(365, 22);
             this.txtCidade.TabIndex = 13;
             // 
             // txtObs
             // 
-            this.txtObs.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtObs.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtObs.Location = new System.Drawing.Point(95, 233);
             this.txtObs.Multiline = true;
             this.txtObs.Name = "txtObs";
@@ -622,10 +625,10 @@
             // 
             // txtCod
             // 
-            this.txtCod.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCod.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCod.Location = new System.Drawing.Point(95, 25);
             this.txtCod.Name = "txtCod";
-            this.txtCod.Size = new System.Drawing.Size(84, 23);
+            this.txtCod.Size = new System.Drawing.Size(84, 22);
             this.txtCod.TabIndex = 0;
             // 
             // lblModelo
@@ -652,7 +655,7 @@
             // 
             this.lblRenavam.AutoSize = true;
             this.lblRenavam.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRenavam.Location = new System.Drawing.Point(265, 179);
+            this.lblRenavam.Location = new System.Drawing.Point(282, 175);
             this.lblRenavam.Name = "lblRenavam";
             this.lblRenavam.Size = new System.Drawing.Size(72, 16);
             this.lblRenavam.TabIndex = 2;

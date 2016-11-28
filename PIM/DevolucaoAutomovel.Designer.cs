@@ -34,8 +34,6 @@
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.grbBusca = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtBuscaCod = new System.Windows.Forms.TextBox();
             this.lblCodFis = new System.Windows.Forms.Label();
@@ -69,7 +67,6 @@
             this.lblCodJur = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
             this.grbBusca.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.grbCliente.SuspendLayout();
             this.grbLocFisico.SuspendLayout();
@@ -137,49 +134,33 @@
             // 
             // grbBusca
             // 
-            this.grbBusca.Controls.Add(this.groupBox2);
             this.grbBusca.Controls.Add(this.groupBox1);
             this.grbBusca.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbBusca.Location = new System.Drawing.Point(13, 72);
             this.grbBusca.Name = "grbBusca";
-            this.grbBusca.Size = new System.Drawing.Size(363, 87);
+            this.grbBusca.Size = new System.Drawing.Size(186, 87);
             this.grbBusca.TabIndex = 10;
             this.grbBusca.TabStop = false;
             this.grbBusca.Text = "Buscar por";
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.textBox2);
-            this.groupBox2.Location = new System.Drawing.Point(191, 26);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(137, 45);
-            this.groupBox2.TabIndex = 5;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(18, 15);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(97, 22);
-            this.textBox2.TabIndex = 4;
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.txtBuscaCod);
-            this.groupBox1.Location = new System.Drawing.Point(16, 26);
+            this.groupBox1.Location = new System.Drawing.Point(24, 21);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(137, 45);
+            this.groupBox1.Size = new System.Drawing.Size(137, 50);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Código";
             // 
             // txtBuscaCod
             // 
-            this.txtBuscaCod.Location = new System.Drawing.Point(17, 15);
+            this.txtBuscaCod.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscaCod.Location = new System.Drawing.Point(17, 20);
             this.txtBuscaCod.Name = "txtBuscaCod";
             this.txtBuscaCod.Size = new System.Drawing.Size(100, 22);
             this.txtBuscaCod.TabIndex = 3;
+            this.txtBuscaCod.TextChanged += new System.EventHandler(this.txtBuscaCod_TextChanged_1);
             // 
             // lblCodFis
             // 
@@ -222,7 +203,7 @@
             this.grbCliente.Controls.Add(this.rbtPessoaJur);
             this.grbCliente.Controls.Add(this.rbtPessoaFis);
             this.grbCliente.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbCliente.Location = new System.Drawing.Point(498, 13);
+            this.grbCliente.Location = new System.Drawing.Point(504, 7);
             this.grbCliente.Name = "grbCliente";
             this.grbCliente.Size = new System.Drawing.Size(302, 57);
             this.grbCliente.TabIndex = 5;
@@ -270,13 +251,14 @@
             this.grbLocFisico.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbLocFisico.Location = new System.Drawing.Point(12, 378);
             this.grbLocFisico.Name = "grbLocFisico";
-            this.grbLocFisico.Size = new System.Drawing.Size(396, 316);
+            this.grbLocFisico.Size = new System.Drawing.Size(396, 244);
             this.grbLocFisico.TabIndex = 17;
             this.grbLocFisico.TabStop = false;
             this.grbLocFisico.Text = "Locação Pessoa Fisica";
             // 
             // dtpDtaLocFis
             // 
+            this.dtpDtaLocFis.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDtaLocFis.Location = new System.Drawing.Point(121, 63);
             this.dtpDtaLocFis.Name = "dtpDtaLocFis";
             this.dtpDtaLocFis.Size = new System.Drawing.Size(269, 22);
@@ -284,6 +266,7 @@
             // 
             // dtpDtaDevFis
             // 
+            this.dtpDtaDevFis.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDtaDevFis.Location = new System.Drawing.Point(121, 96);
             this.dtpDtaDevFis.Name = "dtpDtaDevFis";
             this.dtpDtaDevFis.Size = new System.Drawing.Size(269, 22);
@@ -291,6 +274,7 @@
             // 
             // txtCheckinFis
             // 
+            this.txtCheckinFis.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCheckinFis.Location = new System.Drawing.Point(121, 197);
             this.txtCheckinFis.Name = "txtCheckinFis";
             this.txtCheckinFis.Size = new System.Drawing.Size(100, 22);
@@ -316,6 +300,7 @@
             // 
             // txtValorFis
             // 
+            this.txtValorFis.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtValorFis.Location = new System.Drawing.Point(121, 129);
             this.txtValorFis.Name = "txtValorFis";
             this.txtValorFis.Size = new System.Drawing.Size(100, 22);
@@ -323,6 +308,7 @@
             // 
             // txtStatusFis
             // 
+            this.txtStatusFis.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtStatusFis.Location = new System.Drawing.Point(121, 163);
             this.txtStatusFis.Name = "txtStatusFis";
             this.txtStatusFis.Size = new System.Drawing.Size(100, 22);
@@ -330,6 +316,7 @@
             // 
             // txtCodFis
             // 
+            this.txtCodFis.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodFis.Location = new System.Drawing.Point(121, 29);
             this.txtCodFis.Name = "txtCodFis";
             this.txtCodFis.Size = new System.Drawing.Size(100, 22);
@@ -359,6 +346,7 @@
             // 
             // dtpDtaDevJur
             // 
+            this.dtpDtaDevJur.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDtaDevJur.Location = new System.Drawing.Point(121, 96);
             this.dtpDtaDevJur.Name = "dtpDtaDevJur";
             this.dtpDtaDevJur.Size = new System.Drawing.Size(269, 22);
@@ -366,6 +354,7 @@
             // 
             // dtpDtaLocJur
             // 
+            this.dtpDtaLocJur.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDtaLocJur.Location = new System.Drawing.Point(121, 63);
             this.dtpDtaLocJur.Name = "dtpDtaLocJur";
             this.dtpDtaLocJur.Size = new System.Drawing.Size(269, 22);
@@ -382,6 +371,7 @@
             // 
             // txtCheckinJur
             // 
+            this.txtCheckinJur.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCheckinJur.Location = new System.Drawing.Point(121, 197);
             this.txtCheckinJur.Name = "txtCheckinJur";
             this.txtCheckinJur.Size = new System.Drawing.Size(100, 22);
@@ -389,6 +379,7 @@
             // 
             // txtStatusJur
             // 
+            this.txtStatusJur.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtStatusJur.Location = new System.Drawing.Point(121, 163);
             this.txtStatusJur.Name = "txtStatusJur";
             this.txtStatusJur.Size = new System.Drawing.Size(100, 22);
@@ -396,6 +387,7 @@
             // 
             // txtValorJur
             // 
+            this.txtValorJur.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtValorJur.Location = new System.Drawing.Point(121, 129);
             this.txtValorJur.Name = "txtValorJur";
             this.txtValorJur.Size = new System.Drawing.Size(100, 22);
@@ -403,6 +395,7 @@
             // 
             // txtCodJur
             // 
+            this.txtCodJur.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodJur.Location = new System.Drawing.Point(121, 29);
             this.txtCodJur.Name = "txtCodJur";
             this.txtCodJur.Size = new System.Drawing.Size(100, 22);
@@ -458,7 +451,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1145, 716);
+            this.ClientSize = new System.Drawing.Size(838, 716);
             this.Controls.Add(this.grbLocJuridico);
             this.Controls.Add(this.grbLocFisico);
             this.Controls.Add(this.grbCliente);
@@ -473,8 +466,6 @@
             this.Load += new System.EventHandler(this.DevolucaoAutomovel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
             this.grbBusca.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.grbCliente.ResumeLayout(false);
@@ -495,8 +486,6 @@
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.GroupBox grbBusca;
         private System.Windows.Forms.TextBox txtBuscaCod;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lblCodFis;
         private System.Windows.Forms.Label lblDta_Loc_Fis;

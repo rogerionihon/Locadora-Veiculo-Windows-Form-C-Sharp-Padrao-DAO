@@ -89,11 +89,13 @@
             this.rbtPessoafis = new System.Windows.Forms.RadioButton();
             this.grbEnderecoF = new System.Windows.Forms.GroupBox();
             this.grbCepFis = new System.Windows.Forms.GroupBox();
+            this.btnConsultFis = new System.Windows.Forms.Button();
             this.grbBairrof = new System.Windows.Forms.GroupBox();
             this.txtBairrof = new System.Windows.Forms.TextBox();
             this.grbRuaf = new System.Windows.Forms.GroupBox();
             this.txtEndf = new System.Windows.Forms.TextBox();
             this.grbEstadof = new System.Windows.Forms.GroupBox();
+            this.txtEstadoF = new System.Windows.Forms.TextBox();
             this.grbCidadef = new System.Windows.Forms.GroupBox();
             this.txtCidadef = new System.Windows.Forms.TextBox();
             this.grbNumf = new System.Windows.Forms.GroupBox();
@@ -110,6 +112,7 @@
             this.grbBairroj = new System.Windows.Forms.GroupBox();
             this.txtBairrojur = new System.Windows.Forms.TextBox();
             this.grbEstadoj = new System.Windows.Forms.GroupBox();
+            this.txtEstadojur = new System.Windows.Forms.TextBox();
             this.grbCidadej = new System.Windows.Forms.GroupBox();
             this.txtCidadejur = new System.Windows.Forms.TextBox();
             this.grbNumj = new System.Windows.Forms.GroupBox();
@@ -122,12 +125,9 @@
             this.txtobsf = new System.Windows.Forms.TextBox();
             this.grbInfoj = new System.Windows.Forms.GroupBox();
             this.txtobsj = new System.Windows.Forms.TextBox();
-            this.btnConsultFis = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.BtnCancelaCliente = new System.Windows.Forms.Button();
-            this.txtEstadoF = new System.Windows.Forms.TextBox();
-            this.txtEstadojur = new System.Windows.Forms.TextBox();
             this.grbEmpresariais.SuspendLayout();
             this.grbEnderecoj.SuspendLayout();
             this.groupBox17.SuspendLayout();
@@ -420,6 +420,7 @@
             // 
             // txtemailj
             // 
+            this.txtemailj.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtemailj.Location = new System.Drawing.Point(6, 20);
             this.txtemailj.Name = "txtemailj";
             this.txtemailj.Size = new System.Drawing.Size(363, 22);
@@ -437,6 +438,7 @@
             // 
             // mskCelularj
             // 
+            this.mskCelularj.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskCelularj.Location = new System.Drawing.Point(6, 20);
             this.mskCelularj.Mask = "(00)00000-0000";
             this.mskCelularj.Name = "mskCelularj";
@@ -455,6 +457,7 @@
             // 
             // mskCnpj
             // 
+            this.mskCnpj.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskCnpj.Location = new System.Drawing.Point(6, 19);
             this.mskCnpj.Mask = "00,000,000/0000-00";
             this.mskCnpj.Name = "mskCnpj";
@@ -473,6 +476,7 @@
             // 
             // mskInsc_mun
             // 
+            this.mskInsc_mun.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskInsc_mun.Location = new System.Drawing.Point(6, 20);
             this.mskInsc_mun.Mask = "00000000";
             this.mskInsc_mun.Name = "mskInsc_mun";
@@ -491,6 +495,7 @@
             // 
             // msktelefonej
             // 
+            this.msktelefonej.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.msktelefonej.Location = new System.Drawing.Point(6, 19);
             this.msktelefonej.Mask = "(00)0000-0000";
             this.msktelefonej.Name = "msktelefonej";
@@ -509,6 +514,7 @@
             // 
             // mskIncr_est
             // 
+            this.mskIncr_est.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskIncr_est.Location = new System.Drawing.Point(6, 20);
             this.mskIncr_est.Mask = "000000000000";
             this.mskIncr_est.Name = "mskIncr_est";
@@ -527,10 +533,10 @@
             // 
             // txtNomefantasia
             // 
-            this.txtNomefantasia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomefantasia.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNomefantasia.Location = new System.Drawing.Point(6, 20);
             this.txtNomefantasia.Name = "txtNomefantasia";
-            this.txtNomefantasia.Size = new System.Drawing.Size(451, 23);
+            this.txtNomefantasia.Size = new System.Drawing.Size(451, 22);
             this.txtNomefantasia.TabIndex = 5;
             // 
             // grbRazaosocial
@@ -545,10 +551,10 @@
             // 
             // txtRazaosocial
             // 
-            this.txtRazaosocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRazaosocial.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRazaosocial.Location = new System.Drawing.Point(6, 19);
             this.txtRazaosocial.Name = "txtRazaosocial";
-            this.txtRazaosocial.Size = new System.Drawing.Size(452, 23);
+            this.txtRazaosocial.Size = new System.Drawing.Size(452, 22);
             this.txtRazaosocial.TabIndex = 2;
             // 
             // grbDadospessoais
@@ -584,6 +590,7 @@
             // 
             // mskDta_nascf
             // 
+            this.mskDta_nascf.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskDta_nascf.Location = new System.Drawing.Point(6, 20);
             this.mskDta_nascf.Mask = "00/00/0000";
             this.mskDta_nascf.Name = "mskDta_nascf";
@@ -611,6 +618,7 @@
             this.cmbEst_civilf.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.cmbEst_civilf.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.cmbEst_civilf.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbEst_civilf.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbEst_civilf.FormattingEnabled = true;
             this.cmbEst_civilf.Items.AddRange(new object[] {
             "Casado(a)",
@@ -634,6 +642,7 @@
             // 
             // mskCnh
             // 
+            this.mskCnh.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskCnh.Location = new System.Drawing.Point(6, 19);
             this.mskCnh.Mask = "00000000000";
             this.mskCnh.Name = "mskCnh";
@@ -658,6 +667,7 @@
             this.cmbSexof.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.cmbSexof.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.cmbSexof.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbSexof.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSexof.FormattingEnabled = true;
             this.cmbSexof.Items.AddRange(new object[] {
             "Masculino",
@@ -679,6 +689,7 @@
             // 
             // txtRne
             // 
+            this.txtRne.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRne.Location = new System.Drawing.Point(6, 20);
             this.txtRne.MaxLength = 15;
             this.txtRne.Name = "txtRne";
@@ -697,6 +708,7 @@
             // 
             // mskCpf
             // 
+            this.mskCpf.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskCpf.Location = new System.Drawing.Point(6, 19);
             this.mskCpf.Mask = "000-000-000-00";
             this.mskCpf.Name = "mskCpf";
@@ -715,6 +727,7 @@
             // 
             // txtEmailf
             // 
+            this.txtEmailf.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmailf.Location = new System.Drawing.Point(6, 20);
             this.txtEmailf.Name = "txtEmailf";
             this.txtEmailf.Size = new System.Drawing.Size(452, 22);
@@ -732,10 +745,10 @@
             // 
             // txtNome
             // 
-            this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNome.Location = new System.Drawing.Point(6, 19);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(451, 23);
+            this.txtNome.Size = new System.Drawing.Size(451, 22);
             this.txtNome.TabIndex = 0;
             // 
             // grbCelularf
@@ -750,6 +763,7 @@
             // 
             // mskCelularf
             // 
+            this.mskCelularf.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskCelularf.Location = new System.Drawing.Point(6, 20);
             this.mskCelularf.Mask = "(00)0000-00000";
             this.mskCelularf.Name = "mskCelularf";
@@ -768,6 +782,7 @@
             // 
             // mskTelefonef
             // 
+            this.mskTelefonef.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskTelefonef.Location = new System.Drawing.Point(6, 20);
             this.mskTelefonef.Mask = "(00)0000-0000";
             this.mskTelefonef.Name = "mskTelefonef";
@@ -861,6 +876,21 @@
             this.grbCepFis.TabStop = false;
             this.grbCepFis.Text = "Digite o cep";
             // 
+            // btnConsultFis
+            // 
+            this.btnConsultFis.BackColor = System.Drawing.Color.White;
+            this.btnConsultFis.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultFis.Image = global::PIM.Properties.Resources.Lupa_OK;
+            this.btnConsultFis.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnConsultFis.Location = new System.Drawing.Point(6, 19);
+            this.btnConsultFis.Name = "btnConsultFis";
+            this.btnConsultFis.Size = new System.Drawing.Size(81, 53);
+            this.btnConsultFis.TabIndex = 14;
+            this.btnConsultFis.Text = "Consulta";
+            this.btnConsultFis.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnConsultFis.UseVisualStyleBackColor = false;
+            this.btnConsultFis.Click += new System.EventHandler(this.btnConsultFis_Click);
+            // 
             // grbBairrof
             // 
             this.grbBairrof.Controls.Add(this.txtBairrof);
@@ -873,7 +903,8 @@
             // 
             // txtBairrof
             // 
-            this.txtBairrof.Location = new System.Drawing.Point(6, 17);
+            this.txtBairrof.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBairrof.Location = new System.Drawing.Point(6, 19);
             this.txtBairrof.MaxLength = 25;
             this.txtBairrof.Name = "txtBairrof";
             this.txtBairrof.Size = new System.Drawing.Size(174, 22);
@@ -884,13 +915,14 @@
             this.grbRuaf.Controls.Add(this.txtEndf);
             this.grbRuaf.Location = new System.Drawing.Point(132, 23);
             this.grbRuaf.Name = "grbRuaf";
-            this.grbRuaf.Size = new System.Drawing.Size(349, 53);
+            this.grbRuaf.Size = new System.Drawing.Size(346, 53);
             this.grbRuaf.TabIndex = 15;
             this.grbRuaf.TabStop = false;
             this.grbRuaf.Text = "Rua / Av";
             // 
             // txtEndf
             // 
+            this.txtEndf.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEndf.Location = new System.Drawing.Point(12, 19);
             this.txtEndf.MaxLength = 30;
             this.txtEndf.Name = "txtEndf";
@@ -907,18 +939,27 @@
             this.grbEstadof.TabStop = false;
             this.grbEstadof.Text = "Estado";
             // 
+            // txtEstadoF
+            // 
+            this.txtEstadoF.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEstadoF.Location = new System.Drawing.Point(6, 19);
+            this.txtEstadoF.Name = "txtEstadoF";
+            this.txtEstadoF.Size = new System.Drawing.Size(135, 22);
+            this.txtEstadoF.TabIndex = 17;
+            // 
             // grbCidadef
             // 
             this.grbCidadef.Controls.Add(this.txtCidadef);
             this.grbCidadef.Location = new System.Drawing.Point(132, 101);
             this.grbCidadef.Name = "grbCidadef";
-            this.grbCidadef.Size = new System.Drawing.Size(349, 55);
+            this.grbCidadef.Size = new System.Drawing.Size(346, 53);
             this.grbCidadef.TabIndex = 19;
             this.grbCidadef.TabStop = false;
             this.grbCidadef.Text = "Cidade";
             // 
             // txtCidadef
             // 
+            this.txtCidadef.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCidadef.Location = new System.Drawing.Point(12, 19);
             this.txtCidadef.MaxLength = 30;
             this.txtCidadef.Name = "txtCidadef";
@@ -937,6 +978,7 @@
             // 
             // txtNumf
             // 
+            this.txtNumf.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumf.Location = new System.Drawing.Point(6, 19);
             this.txtNumf.MaxLength = 10;
             this.txtNumf.Name = "txtNumf";
@@ -955,6 +997,7 @@
             // 
             // mskCepf
             // 
+            this.mskCepf.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskCepf.Location = new System.Drawing.Point(6, 19);
             this.mskCepf.Mask = "00000-000";
             this.mskCepf.Name = "mskCepf";
@@ -973,6 +1016,7 @@
             // 
             // txtComplemf
             // 
+            this.txtComplemf.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComplemf.Location = new System.Drawing.Point(6, 19);
             this.txtComplemf.MaxLength = 50;
             this.txtComplemf.Name = "txtComplemf";
@@ -1020,7 +1064,7 @@
             this.btnConsultarCep.Name = "btnConsultarCep";
             this.btnConsultarCep.Size = new System.Drawing.Size(81, 53);
             this.btnConsultarCep.TabIndex = 14;
-            this.btnConsultarCep.Text = "Consultar";
+            this.btnConsultarCep.Text = "Consulta";
             this.btnConsultarCep.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnConsultarCep.UseVisualStyleBackColor = false;
             this.btnConsultarCep.Click += new System.EventHandler(this.btnConsultarCep_Click);
@@ -1037,9 +1081,10 @@
             // 
             // txtEndjur
             // 
-            this.txtEndjur.Location = new System.Drawing.Point(6, 19);
+            this.txtEndjur.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEndjur.Location = new System.Drawing.Point(12, 19);
             this.txtEndjur.Name = "txtEndjur";
-            this.txtEndjur.Size = new System.Drawing.Size(339, 22);
+            this.txtEndjur.Size = new System.Drawing.Size(328, 22);
             this.txtEndjur.TabIndex = 11;
             // 
             // grbBairroj
@@ -1054,7 +1099,8 @@
             // 
             // txtBairrojur
             // 
-            this.txtBairrojur.Location = new System.Drawing.Point(7, 19);
+            this.txtBairrojur.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBairrojur.Location = new System.Drawing.Point(6, 19);
             this.txtBairrojur.Name = "txtBairrojur";
             this.txtBairrojur.Size = new System.Drawing.Size(174, 22);
             this.txtBairrojur.TabIndex = 16;
@@ -1069,6 +1115,14 @@
             this.grbEstadoj.TabStop = false;
             this.grbEstadoj.Text = "Estado";
             // 
+            // txtEstadojur
+            // 
+            this.txtEstadojur.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEstadojur.Location = new System.Drawing.Point(6, 19);
+            this.txtEstadojur.Name = "txtEstadojur";
+            this.txtEstadojur.Size = new System.Drawing.Size(135, 22);
+            this.txtEstadojur.TabIndex = 17;
+            // 
             // grbCidadej
             // 
             this.grbCidadej.Controls.Add(this.txtCidadejur);
@@ -1081,9 +1135,10 @@
             // 
             // txtCidadejur
             // 
-            this.txtCidadejur.Location = new System.Drawing.Point(6, 19);
+            this.txtCidadejur.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCidadejur.Location = new System.Drawing.Point(12, 19);
             this.txtCidadejur.Name = "txtCidadejur";
-            this.txtCidadejur.Size = new System.Drawing.Size(340, 22);
+            this.txtCidadejur.Size = new System.Drawing.Size(328, 22);
             this.txtCidadejur.TabIndex = 15;
             // 
             // grbNumj
@@ -1098,6 +1153,7 @@
             // 
             // txtNumjur
             // 
+            this.txtNumjur.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumjur.Location = new System.Drawing.Point(6, 19);
             this.txtNumjur.MaxLength = 10;
             this.txtNumjur.Name = "txtNumjur";
@@ -1116,6 +1172,7 @@
             // 
             // mskCepjur
             // 
+            this.mskCepjur.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskCepjur.Location = new System.Drawing.Point(6, 19);
             this.mskCepjur.Mask = "00000-000";
             this.mskCepjur.Name = "mskCepjur";
@@ -1125,7 +1182,7 @@
             // grbComplementoj
             // 
             this.grbComplementoj.Controls.Add(this.txtComplemjur);
-            this.grbComplementoj.Location = new System.Drawing.Point(724, 23);
+            this.grbComplementoj.Location = new System.Drawing.Point(724, 22);
             this.grbComplementoj.Name = "grbComplementoj";
             this.grbComplementoj.Size = new System.Drawing.Size(147, 53);
             this.grbComplementoj.TabIndex = 15;
@@ -1134,6 +1191,7 @@
             // 
             // txtComplemjur
             // 
+            this.txtComplemjur.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComplemjur.Location = new System.Drawing.Point(6, 19);
             this.txtComplemjur.MaxLength = 50;
             this.txtComplemjur.Name = "txtComplemjur";
@@ -1154,6 +1212,7 @@
             // 
             // txtobsf
             // 
+            this.txtobsf.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtobsf.Location = new System.Drawing.Point(6, 19);
             this.txtobsf.MaxLength = 500;
             this.txtobsf.Multiline = true;
@@ -1176,27 +1235,13 @@
             // 
             // txtobsj
             // 
+            this.txtobsj.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtobsj.Location = new System.Drawing.Point(6, 19);
             this.txtobsj.MaxLength = 500;
             this.txtobsj.Multiline = true;
             this.txtobsj.Name = "txtobsj";
             this.txtobsj.Size = new System.Drawing.Size(406, 99);
             this.txtobsj.TabIndex = 18;
-            // 
-            // btnConsultFis
-            // 
-            this.btnConsultFis.BackColor = System.Drawing.Color.White;
-            this.btnConsultFis.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultFis.Image = global::PIM.Properties.Resources.Lupa_OK;
-            this.btnConsultFis.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnConsultFis.Location = new System.Drawing.Point(6, 19);
-            this.btnConsultFis.Name = "btnConsultFis";
-            this.btnConsultFis.Size = new System.Drawing.Size(81, 53);
-            this.btnConsultFis.TabIndex = 14;
-            this.btnConsultFis.Text = "Consulta";
-            this.btnConsultFis.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnConsultFis.UseVisualStyleBackColor = false;
-            this.btnConsultFis.Click += new System.EventHandler(this.btnConsultFis_Click);
             // 
             // btnLimpar
             // 
@@ -1245,20 +1290,6 @@
             this.BtnCancelaCliente.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BtnCancelaCliente.UseVisualStyleBackColor = false;
             this.BtnCancelaCliente.Click += new System.EventHandler(this.BtnCancelaCliente_Click);
-            // 
-            // txtEstadoF
-            // 
-            this.txtEstadoF.Location = new System.Drawing.Point(6, 17);
-            this.txtEstadoF.Name = "txtEstadoF";
-            this.txtEstadoF.Size = new System.Drawing.Size(135, 22);
-            this.txtEstadoF.TabIndex = 17;
-            // 
-            // txtEstadojur
-            // 
-            this.txtEstadojur.Location = new System.Drawing.Point(6, 19);
-            this.txtEstadojur.Name = "txtEstadojur";
-            this.txtEstadojur.Size = new System.Drawing.Size(135, 22);
-            this.txtEstadojur.TabIndex = 17;
             // 
             // CadastroCliente
             // 

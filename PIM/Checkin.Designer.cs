@@ -97,7 +97,7 @@
             this.ckbParabrisaDiant.Location = new System.Drawing.Point(232, 185);
             this.ckbParabrisaDiant.Name = "ckbParabrisaDiant";
             this.ckbParabrisaDiant.Size = new System.Drawing.Size(15, 14);
-            this.ckbParabrisaDiant.TabIndex = 4;
+            this.ckbParabrisaDiant.TabIndex = 7;
             this.ckbParabrisaDiant.UseVisualStyleBackColor = true;
             // 
             // ckbParabrisaTras
@@ -107,7 +107,7 @@
             this.ckbParabrisaTras.Location = new System.Drawing.Point(623, 511);
             this.ckbParabrisaTras.Name = "ckbParabrisaTras";
             this.ckbParabrisaTras.Size = new System.Drawing.Size(15, 14);
-            this.ckbParabrisaTras.TabIndex = 15;
+            this.ckbParabrisaTras.TabIndex = 20;
             this.ckbParabrisaTras.UseVisualStyleBackColor = true;
             // 
             // ckbVidroDiantDir
@@ -117,7 +117,7 @@
             this.ckbVidroDiantDir.Location = new System.Drawing.Point(478, 148);
             this.ckbVidroDiantDir.Name = "ckbVidroDiantDir";
             this.ckbVidroDiantDir.Size = new System.Drawing.Size(15, 14);
-            this.ckbVidroDiantDir.TabIndex = 6;
+            this.ckbVidroDiantDir.TabIndex = 9;
             this.ckbVidroDiantDir.UseVisualStyleBackColor = true;
             // 
             // ckbVidroTrasDir
@@ -127,7 +127,7 @@
             this.ckbVidroTrasDir.Location = new System.Drawing.Point(603, 148);
             this.ckbVidroTrasDir.Name = "ckbVidroTrasDir";
             this.ckbVidroTrasDir.Size = new System.Drawing.Size(15, 14);
-            this.ckbVidroTrasDir.TabIndex = 7;
+            this.ckbVidroTrasDir.TabIndex = 10;
             this.ckbVidroTrasDir.UseVisualStyleBackColor = true;
             // 
             // ckbVidroDiantEsq
@@ -157,7 +157,7 @@
             this.ckbPortDiantDir.Location = new System.Drawing.Point(457, 262);
             this.ckbPortDiantDir.Name = "ckbPortDiantDir";
             this.ckbPortDiantDir.Size = new System.Drawing.Size(15, 14);
-            this.ckbPortDiantDir.TabIndex = 8;
+            this.ckbPortDiantDir.TabIndex = 12;
             this.ckbPortDiantDir.UseVisualStyleBackColor = true;
             // 
             // ckbPortTrasDir
@@ -167,7 +167,7 @@
             this.ckbPortTrasDir.Location = new System.Drawing.Point(603, 241);
             this.ckbPortTrasDir.Name = "ckbPortTrasDir";
             this.ckbPortTrasDir.Size = new System.Drawing.Size(15, 14);
-            this.ckbPortTrasDir.TabIndex = 9;
+            this.ckbPortTrasDir.TabIndex = 11;
             this.ckbPortTrasDir.UseVisualStyleBackColor = true;
             // 
             // ckbParachoqueTras
@@ -177,7 +177,7 @@
             this.ckbParachoqueTras.Location = new System.Drawing.Point(603, 613);
             this.ckbParachoqueTras.Name = "ckbParachoqueTras";
             this.ckbParachoqueTras.Size = new System.Drawing.Size(15, 14);
-            this.ckbParachoqueTras.TabIndex = 14;
+            this.ckbParachoqueTras.TabIndex = 23;
             this.ckbParachoqueTras.UseVisualStyleBackColor = true;
             // 
             // ckbPortDiantEsq
@@ -187,7 +187,7 @@
             this.ckbPortDiantEsq.Location = new System.Drawing.Point(213, 576);
             this.ckbPortDiantEsq.Name = "ckbPortDiantEsq";
             this.ckbPortDiantEsq.Size = new System.Drawing.Size(15, 14);
-            this.ckbPortDiantEsq.TabIndex = 19;
+            this.ckbPortDiantEsq.TabIndex = 21;
             this.ckbPortDiantEsq.UseVisualStyleBackColor = true;
             // 
             // ckbParachoqueDiant
@@ -197,7 +197,7 @@
             this.ckbParachoqueDiant.Location = new System.Drawing.Point(109, 284);
             this.ckbParachoqueDiant.Name = "ckbParachoqueDiant";
             this.ckbParachoqueDiant.Size = new System.Drawing.Size(15, 14);
-            this.ckbParachoqueDiant.TabIndex = 3;
+            this.ckbParachoqueDiant.TabIndex = 6;
             this.ckbParachoqueDiant.UseVisualStyleBackColor = true;
             // 
             // ckbPneuTrasEsq
@@ -207,7 +207,7 @@
             this.ckbPneuTrasEsq.Location = new System.Drawing.Point(487, 688);
             this.ckbPneuTrasEsq.Name = "ckbPneuTrasEsq";
             this.ckbPneuTrasEsq.Size = new System.Drawing.Size(15, 14);
-            this.ckbPneuTrasEsq.TabIndex = 24;
+            this.ckbPneuTrasEsq.TabIndex = 27;
             this.ckbPneuTrasEsq.UseVisualStyleBackColor = true;
             // 
             // ckbRodDiantDir
@@ -217,7 +217,7 @@
             this.ckbRodDiantDir.Location = new System.Drawing.Point(312, 319);
             this.ckbRodDiantDir.Name = "ckbRodDiantDir";
             this.ckbRodDiantDir.Size = new System.Drawing.Size(15, 14);
-            this.ckbRodDiantDir.TabIndex = 10;
+            this.ckbRodDiantDir.TabIndex = 13;
             this.ckbRodDiantDir.UseVisualStyleBackColor = true;
             // 
             // ckbPneuTrasDir
@@ -227,7 +227,7 @@
             this.ckbPneuTrasDir.Location = new System.Drawing.Point(669, 328);
             this.ckbPneuTrasDir.Name = "ckbPneuTrasDir";
             this.ckbPneuTrasDir.Size = new System.Drawing.Size(15, 14);
-            this.ckbPneuTrasDir.TabIndex = 13;
+            this.ckbPneuTrasDir.TabIndex = 15;
             this.ckbPneuTrasDir.UseVisualStyleBackColor = true;
             // 
             // ckbPneuDiantEsq
@@ -237,7 +237,7 @@
             this.ckbPneuDiantEsq.Location = new System.Drawing.Point(56, 674);
             this.ckbPneuDiantEsq.Name = "ckbPneuDiantEsq";
             this.ckbPneuDiantEsq.Size = new System.Drawing.Size(15, 14);
-            this.ckbPneuDiantEsq.TabIndex = 22;
+            this.ckbPneuDiantEsq.TabIndex = 24;
             this.ckbPneuDiantEsq.UseVisualStyleBackColor = true;
             // 
             // ckbPortTrasEsq
@@ -247,7 +247,7 @@
             this.ckbPortTrasEsq.Location = new System.Drawing.Point(328, 576);
             this.ckbPortTrasEsq.Name = "ckbPortTrasEsq";
             this.ckbPortTrasEsq.Size = new System.Drawing.Size(15, 14);
-            this.ckbPortTrasEsq.TabIndex = 20;
+            this.ckbPortTrasEsq.TabIndex = 22;
             this.ckbPortTrasEsq.UseVisualStyleBackColor = true;
             // 
             // ckbPneuDiantDir
@@ -257,7 +257,7 @@
             this.ckbPneuDiantDir.Location = new System.Drawing.Point(264, 352);
             this.ckbPneuDiantDir.Name = "ckbPneuDiantDir";
             this.ckbPneuDiantDir.Size = new System.Drawing.Size(15, 14);
-            this.ckbPneuDiantDir.TabIndex = 11;
+            this.ckbPneuDiantDir.TabIndex = 14;
             this.ckbPneuDiantDir.UseVisualStyleBackColor = true;
             // 
             // ckbRodTrasDir
@@ -267,7 +267,7 @@
             this.ckbRodTrasDir.Location = new System.Drawing.Point(706, 293);
             this.ckbRodTrasDir.Name = "ckbRodTrasDir";
             this.ckbRodTrasDir.Size = new System.Drawing.Size(15, 14);
-            this.ckbRodTrasDir.TabIndex = 12;
+            this.ckbRodTrasDir.TabIndex = 16;
             this.ckbRodTrasDir.UseVisualStyleBackColor = true;
             // 
             // ckbRodDiantEsq
@@ -277,7 +277,7 @@
             this.ckbRodDiantEsq.Location = new System.Drawing.Point(77, 635);
             this.ckbRodDiantEsq.Name = "ckbRodDiantEsq";
             this.ckbRodDiantEsq.Size = new System.Drawing.Size(15, 14);
-            this.ckbRodDiantEsq.TabIndex = 21;
+            this.ckbRodDiantEsq.TabIndex = 25;
             this.ckbRodDiantEsq.UseVisualStyleBackColor = true;
             // 
             // ckbRodTrasEsq
@@ -287,7 +287,7 @@
             this.ckbRodTrasEsq.Location = new System.Drawing.Point(437, 663);
             this.ckbRodTrasEsq.Name = "ckbRodTrasEsq";
             this.ckbRodTrasEsq.Size = new System.Drawing.Size(15, 14);
-            this.ckbRodTrasEsq.TabIndex = 23;
+            this.ckbRodTrasEsq.TabIndex = 26;
             this.ckbRodTrasEsq.UseVisualStyleBackColor = true;
             // 
             // ckbVidroDiant
@@ -297,7 +297,7 @@
             this.ckbVidroDiant.Location = new System.Drawing.Point(328, 148);
             this.ckbVidroDiant.Name = "ckbVidroDiant";
             this.ckbVidroDiant.Size = new System.Drawing.Size(15, 14);
-            this.ckbVidroDiant.TabIndex = 5;
+            this.ckbVidroDiant.TabIndex = 8;
             this.ckbVidroDiant.UseVisualStyleBackColor = true;
             // 
             // ckbVidroTras
@@ -307,7 +307,7 @@
             this.ckbVidroTras.Location = new System.Drawing.Point(530, 479);
             this.ckbVidroTras.Name = "ckbVidroTras";
             this.ckbVidroTras.Size = new System.Drawing.Size(15, 14);
-            this.ckbVidroTras.TabIndex = 16;
+            this.ckbVidroTras.TabIndex = 19;
             this.ckbVidroTras.UseVisualStyleBackColor = true;
             // 
             // btnSalvar
@@ -333,7 +333,7 @@
             this.btnLimpar.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpar.Image = ((System.Drawing.Image)(resources.GetObject("btnLimpar.Image")));
             this.btnLimpar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnLimpar.Location = new System.Drawing.Point(117, 12);
+            this.btnLimpar.Location = new System.Drawing.Point(109, 12);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(81, 53);
             this.btnLimpar.TabIndex = 1;
@@ -349,7 +349,7 @@
             this.btnSair.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSair.Image = ((System.Drawing.Image)(resources.GetObject("btnSair.Image")));
             this.btnSair.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSair.Location = new System.Drawing.Point(221, 12);
+            this.btnSair.Location = new System.Drawing.Point(208, 12);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(81, 53);
             this.btnSair.TabIndex = 2;
@@ -362,7 +362,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(686, 53);
+            this.label1.Location = new System.Drawing.Point(697, 53);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(111, 16);
             this.label1.TabIndex = 27;
@@ -372,7 +372,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(673, 397);
+            this.label2.Location = new System.Drawing.Point(686, 397);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(122, 16);
             this.label2.TabIndex = 28;
@@ -383,16 +383,16 @@
             this.cmbVeiculo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbVeiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbVeiculo.FormattingEnabled = true;
-            this.cmbVeiculo.Location = new System.Drawing.Point(312, 42);
+            this.cmbVeiculo.Location = new System.Drawing.Point(312, 40);
             this.cmbVeiculo.Name = "cmbVeiculo";
             this.cmbVeiculo.Size = new System.Drawing.Size(201, 24);
-            this.cmbVeiculo.TabIndex = 29;
+            this.cmbVeiculo.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(363, 21);
+            this.label3.Location = new System.Drawing.Point(352, 21);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(123, 16);
             this.label3.TabIndex = 30;
@@ -403,7 +403,7 @@
             this.groupBox1.Controls.Add(this.rbtIndisponivel);
             this.groupBox1.Controls.Add(this.rbtDisponivel);
             this.groupBox1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(549, 10);
+            this.groupBox1.Location = new System.Drawing.Point(532, 10);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(242, 43);
             this.groupBox1.TabIndex = 31;
@@ -416,7 +416,7 @@
             this.rbtIndisponivel.Location = new System.Drawing.Point(110, 19);
             this.rbtIndisponivel.Name = "rbtIndisponivel";
             this.rbtIndisponivel.Size = new System.Drawing.Size(103, 20);
-            this.rbtIndisponivel.TabIndex = 1;
+            this.rbtIndisponivel.TabIndex = 5;
             this.rbtIndisponivel.TabStop = true;
             this.rbtIndisponivel.Text = "Indisponivel";
             this.rbtIndisponivel.UseVisualStyleBackColor = true;
@@ -428,7 +428,7 @@
             this.rbtDisponivel.Location = new System.Drawing.Point(6, 19);
             this.rbtDisponivel.Name = "rbtDisponivel";
             this.rbtDisponivel.Size = new System.Drawing.Size(92, 20);
-            this.rbtDisponivel.TabIndex = 0;
+            this.rbtDisponivel.TabIndex = 4;
             this.rbtDisponivel.TabStop = true;
             this.rbtDisponivel.Text = "Disponivel";
             this.rbtDisponivel.UseVisualStyleBackColor = true;

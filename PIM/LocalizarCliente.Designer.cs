@@ -42,6 +42,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtPesqNome = new System.Windows.Forms.TextBox();
             this.grbPessoaF = new System.Windows.Forms.GroupBox();
+            this.txtEstFis = new System.Windows.Forms.TextBox();
             this.btnConsultFis = new System.Windows.Forms.Button();
             this.mskCnh = new System.Windows.Forms.MaskedTextBox();
             this.cmbSexo = new System.Windows.Forms.ComboBox();
@@ -81,6 +82,7 @@
             this.lblNome = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.grbPessoaJ = new System.Windows.Forms.GroupBox();
+            this.txtEstJur = new System.Windows.Forms.TextBox();
             this.btnConsultJur = new System.Windows.Forms.Button();
             this.txtObsJur = new System.Windows.Forms.TextBox();
             this.lblObsJ = new System.Windows.Forms.Label();
@@ -117,8 +119,6 @@
             this.lblCodigoJ = new System.Windows.Forms.Label();
             this.btnSair = new System.Windows.Forms.Button();
             this.btnAtualizar = new System.Windows.Forms.Button();
-            this.txtEstJur = new System.Windows.Forms.TextBox();
-            this.txtEstFis = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.datagrid)).BeginInit();
             this.gbCliente.SuspendLayout();
             this.gbPesquisa.SuspendLayout();
@@ -206,6 +206,7 @@
             // 
             // txtPesqCnpj
             // 
+            this.txtPesqCnpj.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPesqCnpj.Location = new System.Drawing.Point(22, 15);
             this.txtPesqCnpj.Name = "txtPesqCnpj";
             this.txtPesqCnpj.Size = new System.Drawing.Size(141, 22);
@@ -224,6 +225,7 @@
             // 
             // txtPesqCpf
             // 
+            this.txtPesqCpf.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPesqCpf.Location = new System.Drawing.Point(21, 15);
             this.txtPesqCpf.Name = "txtPesqCpf";
             this.txtPesqCpf.Size = new System.Drawing.Size(141, 22);
@@ -242,6 +244,7 @@
             // 
             // txtPesqNome
             // 
+            this.txtPesqNome.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPesqNome.Location = new System.Drawing.Point(9, 15);
             this.txtPesqNome.Name = "txtPesqNome";
             this.txtPesqNome.Size = new System.Drawing.Size(208, 22);
@@ -296,6 +299,14 @@
             this.grbPessoaF.TabIndex = 9;
             this.grbPessoaF.TabStop = false;
             this.grbPessoaF.Text = "Dados Cadastrais:";
+            // 
+            // txtEstFis
+            // 
+            this.txtEstFis.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEstFis.Location = new System.Drawing.Point(615, 283);
+            this.txtEstFis.Name = "txtEstFis";
+            this.txtEstFis.Size = new System.Drawing.Size(125, 23);
+            this.txtEstFis.TabIndex = 21;
             // 
             // btnConsultFis
             // 
@@ -556,7 +567,7 @@
             // 
             this.lblBairro.AutoSize = true;
             this.lblBairro.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBairro.Location = new System.Drawing.Point(37, 255);
+            this.lblBairro.Location = new System.Drawing.Point(41, 255);
             this.lblBairro.Name = "lblBairro";
             this.lblBairro.Size = new System.Drawing.Size(51, 16);
             this.lblBairro.TabIndex = 13;
@@ -618,7 +629,7 @@
             // 
             this.lblCep.AutoSize = true;
             this.lblCep.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCep.Location = new System.Drawing.Point(51, 183);
+            this.lblCep.Location = new System.Drawing.Point(55, 183);
             this.lblCep.Name = "lblCep";
             this.lblCep.Size = new System.Drawing.Size(38, 16);
             this.lblCep.TabIndex = 4;
@@ -709,6 +720,14 @@
             this.grbPessoaJ.TabStop = false;
             this.grbPessoaJ.Text = "Dados Cadastrais:";
             this.grbPessoaJ.Visible = false;
+            // 
+            // txtEstJur
+            // 
+            this.txtEstJur.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEstJur.Location = new System.Drawing.Point(600, 278);
+            this.txtEstJur.Name = "txtEstJur";
+            this.txtEstJur.Size = new System.Drawing.Size(125, 23);
+            this.txtEstJur.TabIndex = 22;
             // 
             // btnConsultJur
             // 
@@ -856,7 +875,7 @@
             // 
             this.lblCepJ.AutoSize = true;
             this.lblCepJ.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCepJ.Location = new System.Drawing.Point(66, 185);
+            this.lblCepJ.Location = new System.Drawing.Point(68, 183);
             this.lblCepJ.Name = "lblCepJ";
             this.lblCepJ.Size = new System.Drawing.Size(38, 16);
             this.lblCepJ.TabIndex = 18;
@@ -1060,22 +1079,6 @@
             this.btnAtualizar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAtualizar.UseVisualStyleBackColor = false;
             this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
-            // 
-            // txtEstJur
-            // 
-            this.txtEstJur.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEstJur.Location = new System.Drawing.Point(600, 278);
-            this.txtEstJur.Name = "txtEstJur";
-            this.txtEstJur.Size = new System.Drawing.Size(125, 23);
-            this.txtEstJur.TabIndex = 22;
-            // 
-            // txtEstFis
-            // 
-            this.txtEstFis.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEstFis.Location = new System.Drawing.Point(615, 283);
-            this.txtEstFis.Name = "txtEstFis";
-            this.txtEstFis.Size = new System.Drawing.Size(125, 23);
-            this.txtEstFis.TabIndex = 21;
             // 
             // LocalizarCliente
             // 

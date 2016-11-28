@@ -34,7 +34,7 @@ namespace PIM
             {
                 this.Close();
             }
-        }
+        } // fecha o metodo
 
         //metodo para limpar os campos preenchidos
         public void LimparCampos()
@@ -47,19 +47,19 @@ namespace PIM
             mskCpf.Text = "";
             mskTel.Text = "";
             mskCel.Text = "";            
-        }
+        } // fecha o metodo
 
         // metodo para limpar os campos do formulario
         private void btnLimpar_Click(object sender, EventArgs e)
         {
             LimparCampos();
-        }
+        } // fecha o metodo
 
         // metodo que se carrega ao abrir o formulario
         private void CadastroFuncionario_Load(object sender, EventArgs e)
         {
-            mskDataCadastro.Text = Convert.ToString(DateTime.Now);
-        }
+            mskDataCadastro.Text = Convert.ToString(DateTime.Now); // inicia com a data do dia automaticamente
+        } // fecha o metodo
 
         // metodo que recebe os dados do formulario preenchido
         public void ReceberDados()
@@ -102,7 +102,6 @@ namespace PIM
                         MessageBox.Show(" O email informado é invalido! ", "Validacao de dados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     } // fecha a validacao de email
 
-                    
                     if (string.IsNullOrEmpty(mskTel.Text)) // valida campo telefone
                     {
                         erro = true;
@@ -212,7 +211,6 @@ namespace PIM
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             ReceberDados(); // chama o metodo receberDados
-        }
-
+        } // fecha o metodo
     } // fecha a classe
 } // fecha o namespace
