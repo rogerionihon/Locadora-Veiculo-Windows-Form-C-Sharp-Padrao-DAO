@@ -109,7 +109,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Razao social</Value>
+                              <Value>Razão social</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -134,6 +134,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -1364,7 +1365,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Relatório Pessoa Juridica</Value>
+                <Value>Relatório Pessoa Jurídica</Value>
                 <Style>
                   <FontSize>22pt</FontSize>
                   <FontWeight>Bold</FontWeight>

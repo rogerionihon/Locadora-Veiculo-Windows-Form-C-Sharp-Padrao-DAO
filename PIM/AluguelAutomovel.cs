@@ -493,6 +493,10 @@ namespace PIM
                         LimparCampos();
                     } 
                 } // fecha o else if
+                else if (rbtVeiculo.Checked == true)
+                {
+                     MessageBox.Show("Selecione a opção de pessoa física ou jurídica! ", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
             } // fecha o try
             catch (Exception)
             {

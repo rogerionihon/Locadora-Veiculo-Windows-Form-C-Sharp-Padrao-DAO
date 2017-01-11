@@ -59,7 +59,7 @@
             this.Controls.Add(this.reportViewer1);
             this.MaximizeBox = false;
             this.Name = "RelatorioVeiculo";
-            this.Text = "Relátorio de Veículos";
+            this.Text = "Relatório de Veículos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.RelatorioVeiculo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.VeiculoBindingSource)).EndInit();

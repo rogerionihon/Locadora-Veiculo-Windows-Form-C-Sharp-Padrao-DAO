@@ -154,7 +154,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Tipo locacao</Value>
+                              <Value>Tipo locação</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -226,7 +226,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Valor locacao</Value>
+                              <Value>Valor locação</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -707,7 +707,7 @@
         <DataSetName>RelatorioLocacaoPfDs</DataSetName>
         <Top>2.09021cm</Top>
         <Height>1.2cm</Height>
-        <Width>31.16094cm</Width>
+        <Width>31.16093cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -721,7 +721,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Relátorio Locação Pessoa Física</Value>
+                <Value>Relatório Locação Pessoa Física</Value>
                 <Style>
                   <FontSize>22pt</FontSize>
                   <FontWeight>Bold</FontWeight>

@@ -723,10 +723,10 @@
             // 
             // txtEstJur
             // 
-            this.txtEstJur.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEstJur.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEstJur.Location = new System.Drawing.Point(600, 278);
             this.txtEstJur.Name = "txtEstJur";
-            this.txtEstJur.Size = new System.Drawing.Size(125, 23);
+            this.txtEstJur.Size = new System.Drawing.Size(125, 22);
             this.txtEstJur.TabIndex = 22;
             // 
             // btnConsultJur

@@ -59,7 +59,7 @@
             this.Controls.Add(this.reportViewer1);
             this.MaximizeBox = false;
             this.Name = "RelatorioLocacaoPj";
-            this.Text = "Relatorio Locacao Pessoa Juridica";
+            this.Text = "Relatório Locação Pessoa Juridica";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.RelatorioLocacaoPj_Load);
             ((System.ComponentModel.ISupportInitialize)(this.LocacaoBindingSource)).EndInit();
