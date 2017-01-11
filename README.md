@@ -2,10 +2,11 @@
 
 Projeto locadora de veículos desenvolvido em C# com MySql
 
-Instalação
+<b>Instalação</b> <br/>
+
 Importar o dump para o MySql
 Abra o arquivo app.config em um editor de texto e preencha os seus dados de banco de dados
 
-Acesso
-User name: root
-password: root
+<b>Acesso</b> <br/>
+User name: root </br/>
+Password: root
